@@ -1,4 +1,3 @@
-<!-- Archivo: java-legacy-market-size-framework-gap.md -->
 ---
 titulo: "La brecha de modernización Java es real, pero está fragmentada"
 extracto: "Un análisis profundo del mercado legacy Java, el perfil del comprador enterprise y las rutas de modernización disponibles para arquitectos y CTOs."

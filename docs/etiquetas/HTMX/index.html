@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>#HTMX | hana</title><meta name="description" content="Artículos sobre HTMX"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='20' fill='%233b82f6'/&gt;&lt;text x='50' y='72' font-size='60' font-family='Inter,sans-serif' fill='white' text-anchor='middle' font-weight='bold'&gt;h&lt;/text&gt;&lt;/svg&gt;"><link rel="stylesheet" href="/hana/global.css"></head><body><header class="site-header"><div class="nav-container"><div class="logo"><a href="/hana/">han<span>a</span></a></div><button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"><!-- Icono Sol (Visible por defecto en claro) --><svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><!-- Icono Luna (Visible en oscuro) --><svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></div></header><main class="newsroom-container"><section class="hero-news" style="background: none; border: none; box-shadow: none; padding: 2rem 0;"><span class="kicker">Etiqueta</span><h1 style="font-size: 3rem; margin: 0.5rem 0; font-weight: 900;">#HTMX</h1><p class="hero-extracto">1 artículo(s) encontrado(s) bajo esta etiqueta.</p></section><section class="news-grid-wrapper"><h2 class="section-title">Resultados</h2><div class="news-grid"><article class="news-card"><span class="kicker">Arquitectura de Software</span><h3><a href="/hana/articulos/java-legacy-market-size-framework-gap">La brecha de modernización Java es real, pero está fragmentada</a></h3><div class="byline">2 ago 2026 · 12 min</div><p>Un análisis profundo del mercado legacy Java, el perfil del comprador enterprise y las rutas de modernización disponibles para arquitectos y CTOs.</p></article></div></section></main><footer class="site-footer"><p>&copy; 2026 hana. Análisis periodístico de tecnología.</p></footer><script>
+        function initTheme() {
+            const savedTheme = localStorage.getItem('hana-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('hana-theme', newTheme);
+            window.dispatchEvent(new Event('themeChanged'));
+        }
+        function applyChartDefaults() {
+            if (typeof Chart === 'undefined') return;
+            const styles = getComputedStyle(document.documentElement);
+            Chart.defaults.color = styles.getPropertyValue('--text-muted').trim();
+            Chart.defaults.borderColor = styles.getPropertyValue('--chart-grid').trim();
+            Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                initTheme();
+                applyChartDefaults();
+                const toggleBtn = document.getElementById('theme-toggle');
+                if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
+                window.addEventListener('themeChanged', () => { location.reload(); });
+            } catch (err) { console.error('hana: error:', err); }
+        });
+    </script></body></html>
