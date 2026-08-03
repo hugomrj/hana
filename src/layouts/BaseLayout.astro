@@ -9,13 +9,8 @@ const { title, description } = Astro.props;
     <title>{title} | hana</title>
     <meta name="description" content={description} />
     <script is:inline src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><text x='50' y='72' font-size='60' font-family='Georgia,serif' fill='white' text-anchor='middle' font-weight='bold'>h</text></svg>">
-    
-    <!-- Ruta fija y exacta a tu archivo style.css en la carpeta public -->
-
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23c5283d'/><text x='50' y='72' font-size='60' font-family='Georgia,serif' fill='white' text-anchor='middle' font-weight='bold'>h</text></svg>">
     <link rel="stylesheet" href="/hana/global.css">
-
-
 </head>
 <body>
     <header class="site-header">
@@ -23,7 +18,12 @@ const { title, description } = Astro.props;
             <div class="logo">
                 <a href="/hana/">han<span>a</span></a>
             </div>
-            <button id="theme-toggle" class="theme-toggle">🌙 Oscuro</button>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                <!-- Icono Sol -->
+                <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <!-- Icono Luna -->
+                <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
         </div>
     </header>
 
@@ -37,19 +37,13 @@ const { title, description } = Astro.props;
         function initTheme() {
             const savedTheme = localStorage.getItem('hana-theme') || 'light';
             document.documentElement.setAttribute('data-theme', savedTheme);
-            updateToggleIcon(savedTheme);
         }
         function toggleTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             document.documentElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('hana-theme', newTheme);
-            updateToggleIcon(newTheme);
             window.dispatchEvent(new Event('themeChanged'));
-        }
-        function updateToggleIcon(theme) {
-            const button = document.getElementById('theme-toggle');
-            if (button) button.textContent = theme === 'dark' ? '☀️ Claro' : '🌙 Oscuro';
         }
         function applyChartDefaults() {
             if (typeof Chart === 'undefined') return;

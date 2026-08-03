@@ -1,17 +1,17 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getCollection, render } from 'astro:content'; // ← Importamos 'render'
+import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
     const articles = await getCollection('blog');
     return articles.map(article => ({
         params: { slug: article.id },
-        props: { article }, // ← Pasamos el artículo como propiedad
+        props: { article },
     }));
 }
 
 const { article } = Astro.props;
-const { Content } = await render(article); // ← Usamos la función render
+const { Content } = await render(article);
 ---
 <BaseLayout title={article.data.titulo} description={article.data.extracto}>
     <article>
@@ -24,7 +24,7 @@ const { Content } = await render(article); // ← Usamos la función render
         <Content />
 
         <div class="tags">
-            {article.data.etiquetas.map(tag => <a href="#" class="tag">#{tag}</a>)}
+            {article.data.etiquetas.map(tag => <a href={`/hana/etiquetas/${tag}`} class="tag">#{tag}</a>)}
         </div>
     </article>
 </BaseLayout>

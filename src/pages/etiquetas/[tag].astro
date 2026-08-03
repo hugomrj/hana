@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+    const articles = await getCollection('blog');
+    // Extraer todas las etiquetas únicas
+    const tags = [...new Set(articles.flatMap(article => article.data.etiquetas))];
+    
+    return tags.map(tag => ({
+        params: { tag },
+        props: {
+            tag,
+            articles: articles.filter(article => article.data.etiquetas.includes(tag))
+        }
+    }));
+}
+
+const { tag, articles } = Astro.props;
+const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date(a.data.fecha));
+---
+<BaseLayout title={`#${tag}`} description={`Artículos sobre ${tag}`}>
+    <main class="newsroom-container">
+        <section class="hero-news">
+            <span class="kicker">Etiqueta</span>
+            <h1 style="font-size: 3rem; margin: 0.5rem 0; font-family: Georgia, serif;">#{tag}</h1>
+            <p class="hero-extracto">{sortedArticles.length} artículo(s) encontrado(s) bajo esta etiqueta.</p>
+        </section>
+
+        <section class="news-grid-wrapper">
+            <h2 class="section-title">Resultados</h2>
+            <div class="news-grid">
+                {sortedArticles.map(art => (
+                    <article class="news-card">
+                        <span class="kicker">{art.data.categoria}</span>
+                        <h3><a href={`/hana/articulos/${art.id}`}>{art.data.titulo}</a></h3>
+                        <div class="byline">{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })} · {art.data.tiempo_lectura}</div>
+                        <p>{art.data.extracto}</p>
+                    </article>
+                ))}
+            </div>
+        </section>
+    </main>
+</BaseLayout>
