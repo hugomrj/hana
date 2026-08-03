@@ -1,7 +1,5 @@
 ---
 const { title, description } = Astro.props;
-// Obtenemos la ruta base configurada en astro.config.mjs (/hana/)
-const cssPath = `${import.meta.env.BASE_URL}global.css`;
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -13,8 +11,8 @@ const cssPath = `${import.meta.env.BASE_URL}global.css`;
     <script is:inline src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><text x='50' y='72' font-size='60' font-family='Georgia,serif' fill='white' text-anchor='middle' font-weight='bold'>h</text></svg>">
     
-    <!-- Aquí llamamos al CSS externo de forma dinámica -->
-    <link rel="stylesheet" href={cssPath}>
+    <!-- Ruta fija y exacta a tu archivo style.css en la carpeta public -->
+    <link rel="stylesheet" href="/hana/style.css">
 </head>
 <body>
     <header class="site-header">
