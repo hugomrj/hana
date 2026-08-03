@@ -1,17 +1,15 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 const articles = await getCollection('blog');
 const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date(a.data.fecha));
-// Mostrar solo los 6 más recientes en la portada
-const recentArticles = sortedArticles.slice(0, 6);
 ---
-<BaseLayout title="hana" description="Análisis tecnológico profundo">
+<BaseLayout title="Archivo" description="Todos los análisis de hana">
     <main class="newsroom-container">
         <section class="news-grid-wrapper">
             <div class="news-grid">
-                {recentArticles.map(art => (
+                {sortedArticles.map(art => (
                     <a href={`/hana/articulos/${art.id}`} class="news-card">
                         <div class="card-top">
                             <span class="kicker">{art.data.categoria}</span>
@@ -26,12 +24,6 @@ const recentArticles = sortedArticles.slice(0, 6);
                     </a>
                 ))}
             </div>
-            
-            {articles.length > 6 && (
-                <div style="text-align: center; margin-top: 3rem;">
-                    <a href="/hana/archivo" class="read-more" style="font-size: 1.1rem;">Ver archivo completo →</a>
-                </div>
-            )}
         </section>
     </main>
-</BaseLayout> 
+</BaseLayout>
