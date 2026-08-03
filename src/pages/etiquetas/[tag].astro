@@ -30,12 +30,18 @@ const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date
             <h2 class="section-title">Resultados</h2>
             <div class="news-grid">
                 {sortedArticles.map(art => (
-                    <article class="news-card">
-                        <span class="kicker">{art.data.categoria}</span>
-                        <h3><a href={`/hana/articulos/${art.id}`}>{art.data.titulo}</a></h3>
-                        <div class="byline">{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })} · {art.data.tiempo_lectura}</div>
+                    <a href={`/hana/articulos/${art.id}`} class="news-card">
+                        <div class="card-top">
+                            <span class="kicker">{art.data.categoria}</span>
+                        </div>
+                        <h3>{art.data.titulo}</h3>
                         <p>{art.data.extracto}</p>
-                    </article>
+                        <div class="byline">
+                            <span>{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                            <span class="dot">•</span>
+                            <span>{art.data.tiempo_lectura}</span>
+                        </div>
+                    </a>
                 ))}
             </div>
         </section>
