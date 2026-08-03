@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('blog');
+const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date(a.data.fecha));
+const heroArticle = sortedArticles[0];
+const restArticles = sortedArticles.slice(1);
+---
+<BaseLayout title="hana" description="Análisis tecnológico profundo">
+    <main class="newsroom-container">
+        {heroArticle && (
+            <section id="hero-section" class="hero-news">
+                <article class="hero-article">
+                    <span class="kicker">{heroArticle.data.categoria}</span>
+                    <h1><a href={`/hana/articulos/${heroArticle.id}`}>{heroArticle.data.titulo}</a></h1>
+                    <div class="byline">{new Date(heroArticle.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })} · {heroArticle.data.tiempo_lectura} de lectura</div>
+                    <p class="hero-extracto">{heroArticle.data.extracto}</p>
+                    <a href={`/hana/articulos/${heroArticle.id}`} class="read-more">Leer análisis completo →</a>
+                </article>
+            </section>
+        )}
+
+        <section class="news-grid-wrapper">
+            <h2 class="section-title">Últimos análisis</h2>
+            <div id="news-grid" class="news-grid">
+                {restArticles.map(art => (
+                    <article class="news-card">
+                        <span class="kicker">{art.data.categoria}</span>
+                        <h3><a href={`/hana/articulos/${art.id}`}>{art.data.titulo}</a></h3>
+                        <div class="byline">{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })} · {art.data.tiempo_lectura}</div>
+                        <p>{art.data.extracto}</p>
+                    </article>
+                ))}
+            </div>
+        </section>
+    </main>
+</BaseLayout>

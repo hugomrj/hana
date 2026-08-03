@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content'; // ← Importamos 'render'
+
+export async function getStaticPaths() {
+    const articles = await getCollection('blog');
+    return articles.map(article => ({
+        params: { slug: article.id },
+        props: { article }, // ← Pasamos el artículo como propiedad
+    }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article); // ← Usamos la función render
+---
+<BaseLayout title={article.data.titulo} description={article.data.extracto}>
+    <article>
+        <div class="article-meta">
+            <span class="kicker">{article.data.categoria}</span>
+            <h1>{article.data.titulo}</h1>
+            <div class="byline">Por <strong>hana</strong> · {new Date(article.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })} · {article.data.tiempo_lectura} de lectura</div>
+        </div>
+        
+        <Content />
+
+        <div class="tags">
+            {article.data.etiquetas.map(tag => <a href="#" class="tag">#{tag}</a>)}
+        </div>
+    </article>
+</BaseLayout>
