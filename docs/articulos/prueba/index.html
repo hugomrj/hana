@@ -5,4 +5,38 @@
 <blockquote>
 <p>El flujo de trabajo, no la etiqueta de IA, determina si cierran más ventas.</p>
 </blockquote>
-<div class="tags"><a href="#" class="tag">#IA</a><a href="#" class="tag">#WhatsApp</a><a href="#" class="tag">#Ventas</a></div></article><footer class="site-footer"><p>&copy; 2026 hana. Análisis periodístico de tecnología.</p></footer><script type="module">function e(){let e=localStorage.getItem(`hana-theme`)||`light`;document.documentElement.setAttribute(`data-theme`,e),n(e)}function t(){let e=document.documentElement.getAttribute(`data-theme`)===`dark`?`light`:`dark`;document.documentElement.setAttribute(`data-theme`,e),localStorage.setItem(`hana-theme`,e),n(e),window.dispatchEvent(new Event(`themeChanged`))}function n(e){let t=document.getElementById(`theme-toggle`);t&&(t.textContent=e===`dark`?`☀️ Claro`:`🌙 Oscuro`)}function r(){if(typeof Chart>`u`)return;let e=getComputedStyle(document.documentElement);Chart.defaults.color=e.getPropertyValue(`--text-muted`).trim(),Chart.defaults.borderColor=e.getPropertyValue(`--chart-grid`).trim(),Chart.defaults.font.family=`system-ui, -apple-system, sans-serif`}document.addEventListener(`DOMContentLoaded`,()=>{try{e(),r();let n=document.getElementById(`theme-toggle`);n&&n.addEventListener(`click`,t),window.addEventListener(`themeChanged`,()=>{location.reload()})}catch(e){console.error(`hana: error:`,e)}});</script></body></html>
+<div class="tags"><a href="#" class="tag">#IA</a><a href="#" class="tag">#WhatsApp</a><a href="#" class="tag">#Ventas</a></div></article><footer class="site-footer"><p>&copy; 2026 hana. Análisis periodístico de tecnología.</p></footer><script>
+        function initTheme() {
+            const savedTheme = localStorage.getItem('hana-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+            updateToggleIcon(savedTheme);
+        }
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('hana-theme', newTheme);
+            updateToggleIcon(newTheme);
+            window.dispatchEvent(new Event('themeChanged'));
+        }
+        function updateToggleIcon(theme) {
+            const button = document.getElementById('theme-toggle');
+            if (button) button.textContent = theme === 'dark' ? '☀️ Claro' : '🌙 Oscuro';
+        }
+        function applyChartDefaults() {
+            if (typeof Chart === 'undefined') return;
+            const styles = getComputedStyle(document.documentElement);
+            Chart.defaults.color = styles.getPropertyValue('--text-muted').trim();
+            Chart.defaults.borderColor = styles.getPropertyValue('--chart-grid').trim();
+            Chart.defaults.font.family = "system-ui, -apple-system, sans-serif";
+        }
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                initTheme();
+                applyChartDefaults();
+                const toggleBtn = document.getElementById('theme-toggle');
+                if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
+                window.addEventListener('themeChanged', () => { location.reload(); });
+            } catch (err) { console.error('hana: error:', err); }
+        });
+    </script></body></html>
