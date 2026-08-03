@@ -10,30 +10,44 @@ const restArticles = sortedArticles.slice(1);
 <BaseLayout title="hana" description="Análisis tecnológico profundo">
     <main class="newsroom-container">
         {heroArticle && (
-            <section id="hero-section" class="hero-news">
-                <article class="hero-article">
+            <section class="hero-news">
+                <div class="hero-content">
                     <span class="kicker">{heroArticle.data.categoria}</span>
                     <h1><a href={`/hana/articulos/${heroArticle.id}`}>{heroArticle.data.titulo}</a></h1>
-                    <div class="byline">{new Date(heroArticle.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })} · {heroArticle.data.tiempo_lectura} de lectura</div>
                     <p class="hero-extracto">{heroArticle.data.extracto}</p>
-                    <a href={`/hana/articulos/${heroArticle.id}`} class="read-more">Leer análisis completo →</a>
-                </article>
+                    <div class="hero-meta">
+                        <span>{new Date(heroArticle.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                        <span class="dot">•</span>
+                        <span>{heroArticle.data.tiempo_lectura} de lectura</span>
+                        <a href={`/hana/articulos/${heroArticle.id}`} class="read-more">Leer análisis completo →</a>
+                    </div>
+                </div>
             </section>
         )}
 
-        <section class="news-grid-wrapper">
-
-            <h5 class="section-title">Últimos análisis</h5>
-            <div id="news-grid" class="news-grid">
-                {restArticles.map(art => (
-                    <article class="news-card">
-                        <span class="kicker">{art.data.categoria}</span>
-                        <h3><a href={`/hana/articulos/${art.id}`}>{art.data.titulo}</a></h3>
-                        <div class="byline">{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })} · {art.data.tiempo_lectura}</div>
-                        <p>{art.data.extracto}</p>
-                    </article>
-                ))}
-            </div>
-        </section>
+        {restArticles.length > 0 && (
+            <section class="news-grid-wrapper">
+                <div class="section-header">
+                    <h2 class="section-title">Últimos análisis</h2>
+                    <p class="section-subtitle">Investigación y métricas para arquitectos y CTOs</p>
+                </div>
+                <div class="news-grid">
+                    {restArticles.map(art => (
+                        <a href={`/hana/articulos/${art.id}`} class="news-card">
+                            <div class="card-top">
+                                <span class="kicker">{art.data.categoria}</span>
+                            </div>
+                            <h3>{art.data.titulo}</h3>
+                            <p>{art.data.extracto}</p>
+                            <div class="byline">
+                                <span>{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                                <span class="dot">•</span>
+                                <span>{art.data.tiempo_lectura}</span>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+            </section>
+        )}
     </main>
 </BaseLayout>

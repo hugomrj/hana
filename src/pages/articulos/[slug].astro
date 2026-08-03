@@ -13,7 +13,6 @@ export async function getStaticPaths() {
 const { article, allArticles } = Astro.props;
 const { Content } = await render(article);
 
-// Lógica para sugerir lectura (excluyendo el actual y ordenando por fecha)
 const suggestedArticles = allArticles
     .filter(a => a.id !== article.id)
     .sort((a, b) => new Date(b.data.fecha) - new Date(a.data.fecha))
@@ -21,30 +20,36 @@ const suggestedArticles = allArticles
 ---
 <BaseLayout title={article.data.titulo} description={article.data.extracto}>
     <article>
-        <div class="article-meta">
+        <div class="article-hero">
             <span class="kicker">{article.data.categoria}</span>
             <h1>{article.data.titulo}</h1>
-            <div class="byline">Por <strong>hana</strong> · {new Date(article.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })} · {article.data.tiempo_lectura} de lectura</div>
+            <div class="byline">
+                <div class="author">Por <strong>hana</strong></div>
+                <span class="dot">•</span>
+                <span>{new Date(article.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                <span class="dot">•</span>
+                <span>{article.data.tiempo_lectura} de lectura</span>
+            </div>
         </div>
         
-        <Content />
+        <div class="article-content">
+            <Content />
+        </div>
 
         <div class="tags">
             {article.data.etiquetas.map(tag => <a href={`/hana/etiquetas/${tag}`} class="tag">#{tag}</a>)}
         </div>
 
-        <!-- Sección Sigue Leyendo -->
         {suggestedArticles.length > 0 && (
             <section class="related-articles">
                 <h2 class="section-title">Sigue leyendo</h2>
                 <div class="news-grid">
                     {suggestedArticles.map(art => (
-                        <article class="news-card">
+                        <a href={`/hana/articulos/${art.id}`} class="news-card">
                             <span class="kicker">{art.data.categoria}</span>
-                            <h3><a href={`/hana/articulos/${art.id}`}>{art.data.titulo}</a></h3>
-                            <div class="byline">{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })} · {art.data.tiempo_lectura}</div>
+                            <h3>{art.data.titulo}</h3>
                             <p>{art.data.extracto}</p>
-                        </article>
+                        </a>
                     ))}
                 </div>
             </section>
