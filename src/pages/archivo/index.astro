@@ -6,21 +6,22 @@ const articles = await getCollection('blog');
 const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date(a.data.fecha));
 ---
 <BaseLayout title="Archivo" description="Todos los análisis de hana">
-    <main class="newsroom-container">
+    <main class="newsroom-container" style="max-width: 800px;">
         <section class="news-grid-wrapper">
-            <div class="news-grid">
+            <div class="section-header" style="margin-bottom: 2rem;">
+                <h2 class="section-title">Archivo</h2>
+                <p class="section-subtitle">{sortedArticles.length} análisis publicados</p>
+            </div>
+            
+            <div class="archive-list">
                 {sortedArticles.map(art => (
-                    <a href={`/hana/articulos/${art.id}`} class="news-card">
-                        <div class="card-top">
+                    <a href={`/hana/articulos/${art.id}`} class="archive-item">
+                        <div class="archive-meta">
+                            <span class="archive-date">{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
                             <span class="kicker">{art.data.categoria}</span>
                         </div>
                         <h3>{art.data.titulo}</h3>
                         <p>{art.data.extracto}</p>
-                        <div class="byline">
-                            <span>{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
-                            <span class="dot">•</span>
-                            <span>{art.data.tiempo_lectura}</span>
-                        </div>
                     </a>
                 ))}
             </div>

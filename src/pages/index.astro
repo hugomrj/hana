@@ -4,34 +4,52 @@ import { getCollection } from 'astro:content';
 
 const articles = await getCollection('blog');
 const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date(a.data.fecha));
-// Mostrar solo los 6 más recientes en la portada
-const recentArticles = sortedArticles.slice(0, 6);
+const heroArticle = sortedArticles[0];
+const restArticles = sortedArticles.slice(1, 7); 
 ---
 <BaseLayout title="hana" description="Análisis tecnológico profundo">
     <main class="newsroom-container">
-        <section class="news-grid-wrapper">
-            <div class="news-grid">
-                {recentArticles.map(art => (
-                    <a href={`/hana/articulos/${art.id}`} class="news-card">
-                        <div class="card-top">
-                            <span class="kicker">{art.data.categoria}</span>
-                        </div>
-                        <h3>{art.data.titulo}</h3>
-                        <p>{art.data.extracto}</p>
-                        <div class="byline">
-                            <span>{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
-                            <span class="dot">•</span>
-                            <span>{art.data.tiempo_lectura}</span>
-                        </div>
-                    </a>
-                ))}
-            </div>
-            
-            {articles.length > 6 && (
-                <div style="text-align: center; margin-top: 3rem;">
-                    <a href="/hana/archivo" class="read-more" style="font-size: 1.1rem;">Ver archivo completo →</a>
+        {heroArticle && (
+            <section class="hero-news">
+                <div class="hero-content">
+                    <span class="kicker">{heroArticle.data.categoria}</span>
+                    <h1><a href={`/hana/articulos/${heroArticle.id}`}>{heroArticle.data.titulo}</a></h1>
+                    <p class="hero-extracto">{heroArticle.data.extracto}</p>
+                    <div class="hero-meta">
+                        <span>{new Date(heroArticle.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                        <span class="dot">•</span>
+                        <span>{heroArticle.data.tiempo_lectura} de lectura</span>
+                        <a href={`/hana/articulos/${heroArticle.id}`} class="read-more">Leer análisis completo →</a>
+                    </div>
                 </div>
-            )}
-        </section>
+            </section>
+        )}
+
+        {restArticles.length > 0 && (
+            <section class="news-grid-wrapper">
+                <div class="news-grid">
+                    {restArticles.map(art => (
+                        <a href={`/hana/articulos/${art.id}`} class="news-card">
+                            <div class="card-top">
+                                <span class="kicker">{art.data.categoria}</span>
+                            </div>
+                            <h3>{art.data.titulo}</h3>
+                            <p>{art.data.extracto}</p>
+                            <div class="byline">
+                                <span>{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                                <span class="dot">•</span>
+                                <span>{art.data.tiempo_lectura}</span>
+                            </div>
+                        </a>
+                    ))}
+                </div>
+                
+                {articles.length > 7 && (
+                    <div style="text-align: center; margin-top: 3rem;">
+                        <a href="/hana/archivo" class="read-more" style="font-size: 1.1rem;">Ver archivo completo →</a>
+                    </div>
+                )}
+            </section>
+        )}
     </main>
-</BaseLayout> 
+</BaseLayout>
