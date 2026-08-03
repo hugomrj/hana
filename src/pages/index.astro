@@ -5,7 +5,8 @@ import { getCollection } from 'astro:content';
 const articles = await getCollection('blog');
 const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date(a.data.fecha));
 const heroArticle = sortedArticles[0];
-const restArticles = sortedArticles.slice(1, 7); 
+const gridArticles = sortedArticles.slice(1, 7); // 6 artículos en el grid
+const archiveArticles = sortedArticles.slice(7); // El resto en la lista compacta
 ---
 <BaseLayout title="hana" description="Análisis tecnológico profundo">
     <main class="newsroom-container">
@@ -25,31 +26,69 @@ const restArticles = sortedArticles.slice(1, 7);
             </section>
         )}
 
-        {restArticles.length > 0 && (
-            <section class="news-grid-wrapper">
-                <div class="news-grid">
-                    {restArticles.map(art => (
-                        <a href={`/hana/articulos/${art.id}`} class="news-card">
-                            <div class="card-top">
-                                <span class="kicker">{art.data.categoria}</span>
-                            </div>
-                            <h3>{art.data.titulo}</h3>
-                            <p>{art.data.extracto}</p>
-                            <div class="byline">
-                                <span>{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
-                                <span class="dot">•</span>
-                                <span>{art.data.tiempo_lectura}</span>
-                            </div>
+        <!-- Barra de Búsqueda -->
+        <div class="search-container">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="search-input" class="search-input" placeholder="Buscar análisis..." />
+        </div>
+
+        <!-- Grid de artículos recientes -->
+        <section class="news-grid-wrapper" id="article-grid">
+            <div class="news-grid">
+                {gridArticles.map(art => (
+                    <a href={`/hana/articulos/${art.id}`} class="news-card">
+                        <div class="card-top">
+                            <span class="kicker">{art.data.categoria}</span>
+                        </div>
+                        <h3>{art.data.titulo}</h3>
+                        <p>{art.data.extracto}</p>
+                        <div class="byline">
+                            <span>{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                            <span class="dot">•</span>
+                            <span>{art.data.tiempo_lectura}</span>
+                        </div>
+                    </a>
+                ))}
+            </div>
+        </section>
+
+        <!-- Sección de Archivo Compacta -->
+        {archiveArticles.length > 0 && (
+            <section class="archive-section" id="archive-section">
+                <h2 class="section-title">Archivo</h2>
+                <div class="archive-list-compact">
+                    {archiveArticles.map(art => (
+                        <a href={`/hana/articulos/${art.id}`} class="archive-item-compact">
+                            <span class="archive-title">{art.data.titulo}</span>
+                            <span class="archive-date">{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
                         </a>
                     ))}
                 </div>
-                
-                {articles.length > 7 && (
-                    <div style="text-align: center; margin-top: 3rem;">
-                        <a href="/hana/archivo" class="read-more" style="font-size: 1.1rem;">Ver archivo completo →</a>
-                    </div>
-                )}
             </section>
         )}
     </main>
+
+    <!-- Script para la búsqueda en vivo -->
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('search-input');
+            if (!searchInput) return;
+
+            searchInput.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                const cards = document.querySelectorAll('.news-card, .archive-item-compact');
+                let visibleCount = 0;
+
+                cards.forEach(card => {
+                    const text = card.textContent.toLowerCase();
+                    if (text.includes(query)) {
+                        card.style.display = '';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </BaseLayout>
