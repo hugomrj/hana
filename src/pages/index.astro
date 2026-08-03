@@ -5,7 +5,9 @@ import { getCollection } from 'astro:content';
 const articles = await getCollection('blog');
 const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date(a.data.fecha));
 const heroArticle = sortedArticles[0];
-const restArticles = sortedArticles.slice(1);
+// Mostrar solo 6 artículos en la cuadrícula (excluyendo el principal)
+const restArticles = sortedArticles.slice(1, 7); 
+
 ---
 <BaseLayout title="hana" description="Análisis tecnológico profundo">
     <main class="newsroom-container">
@@ -46,8 +48,14 @@ const restArticles = sortedArticles.slice(1);
                             </div>
                         </a>
                     ))}
+                
+                </div>
+                <!-- Añade esto justo debajo del cierre del news-grid -->
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="/hana/archivo" class="read-more" style="font-size: 1.1rem;">Ver todos los análisis →</a>
                 </div>
             </section>
+
         )}
     </main>
 </BaseLayout>
