@@ -6,12 +6,18 @@ export async function getStaticPaths() {
     const articles = await getCollection('blog');
     return articles.map(article => ({
         params: { slug: article.id },
-        props: { article },
+        props: { article, allArticles: articles },
     }));
 }
 
-const { article } = Astro.props;
+const { article, allArticles } = Astro.props;
 const { Content } = await render(article);
+
+// Lógica para sugerir lectura (excluyendo el actual y ordenando por fecha)
+const suggestedArticles = allArticles
+    .filter(a => a.id !== article.id)
+    .sort((a, b) => new Date(b.data.fecha) - new Date(a.data.fecha))
+    .slice(0, 2);
 ---
 <BaseLayout title={article.data.titulo} description={article.data.extracto}>
     <article>
@@ -26,5 +32,22 @@ const { Content } = await render(article);
         <div class="tags">
             {article.data.etiquetas.map(tag => <a href={`/hana/etiquetas/${tag}`} class="tag">#{tag}</a>)}
         </div>
+
+        <!-- Sección Sigue Leyendo -->
+        {suggestedArticles.length > 0 && (
+            <section class="related-articles">
+                <h2 class="section-title">Sigue leyendo</h2>
+                <div class="news-grid">
+                    {suggestedArticles.map(art => (
+                        <article class="news-card">
+                            <span class="kicker">{art.data.categoria}</span>
+                            <h3><a href={`/hana/articulos/${art.id}`}>{art.data.titulo}</a></h3>
+                            <div class="byline">{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })} · {art.data.tiempo_lectura}</div>
+                            <p>{art.data.extracto}</p>
+                        </article>
+                    ))}
+                </div>
+            </section>
+        )}
     </article>
 </BaseLayout>

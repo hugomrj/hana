@@ -4,7 +4,6 @@ import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
     const articles = await getCollection('blog');
-    // Extraer todas las etiquetas únicas
     const tags = [...new Set(articles.flatMap(article => article.data.etiquetas))];
     
     return tags.map(tag => ({
@@ -21,9 +20,9 @@ const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date
 ---
 <BaseLayout title={`#${tag}`} description={`Artículos sobre ${tag}`}>
     <main class="newsroom-container">
-        <section class="hero-news">
+        <section class="hero-news" style="background: none; border: none; box-shadow: none; padding: 2rem 0;">
             <span class="kicker">Etiqueta</span>
-            <h1 style="font-size: 3rem; margin: 0.5rem 0; font-family: Georgia, serif;">#{tag}</h1>
+            <h1 style="font-size: 3rem; margin: 0.5rem 0; font-weight: 900;">#{tag}</h1>
             <p class="hero-extracto">{sortedArticles.length} artículo(s) encontrado(s) bajo esta etiqueta.</p>
         </section>
 

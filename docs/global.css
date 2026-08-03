@@ -217,3 +217,20 @@ code { background-color: var(--code-bg); padding: 0.2rem 0.4rem; border-radius: 
     article h1 { font-size: 2rem; }
     .nav-container { padding: 1rem; }
 }
+
+
+/* === Artículos Relacionados (Sigue leyendo) === */
+.related-articles {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--border);
+}
+.related-articles .news-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+@media (min-width: 640px) {
+    .related-articles .news-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
