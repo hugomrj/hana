@@ -385,7 +385,7 @@ code { background-color: var(--code-bg); padding: 0.2rem 0.4rem; border-radius: 
     transition: padding-left 0.2s ease;
 }
 .archive-item:hover {
-    padding-left: 1rem;
+    padding-left: 0.1rem;
 }
 .archive-item:last-child {
     border-bottom: none;
