@@ -111,10 +111,15 @@ Aquí tienes los requisitos obligatorios:
     });
 </script>
 
+
+
 4. CRÉDITOS Y FUENTES:
-- Al final del artículo, incluye una sección con el subtítulo "## Fuentes y Créditos".
-- Debes mencionar explícitamente: "Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original."
-- Lista todas las fuentes originales verificadas usando SIEMPRE el formato Markdown: `- [Nombre de la fuente](https://url.com)`
+- Al final del artículo, incluye una sección con el subtítulo "### Fuentes y Créditos".
+- El primer párrafo de esta sección debe ser EXACTAMENTE: "Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original."
+- Justo debajo, el PRIMER elemento de la lista de fuentes debe ser el enlace al deck de Hanademi, usando el formato: `- [Hanademi - Título del deck original](URL_PROPORCIONADA)`
+- A continuación, lista todas las fuentes originales verificadas usando SIEMPRE el formato Markdown: `- [Nombre de la fuente](https://url.com)
+
+
 
 5. FORMATO DE SALIDA OBLIGATORIO (TEXTO PLANO):
 - Genera un "slug" corto, descriptivo y sin acentos para el nombre del archivo.

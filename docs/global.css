@@ -4,6 +4,8 @@
     --surface: #f9fafb;
     --surface-2: #ffffff;
     --text: #0f172a;
+    --text: #1e293b; /* Slate 800: Negro suave para no cansar la vista */
+
     --text-muted: #64748b; /* Mejor contraste */
     --border: #e2e8f0;
 
@@ -246,7 +248,9 @@ article {
 }
 
 .article-hero { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
-article h1 { font-size: clamp(2rem, 3vw + 1rem, 3.5rem); margin-bottom: 1.5rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; }
+
+article h1 { font-size: clamp(2rem, 3vw + 1rem, 3.5rem); margin-bottom: 1.5rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; color: #1e293b; }
+
 article h2 { font-size: clamp(1.5rem, 1vw + 1rem, 2.2rem); margin: 3rem 0 1rem; font-weight: 800; }
 article h3 { font-size: 1.3rem; margin: 2rem 0 0.5rem; font-weight: 700; }
 

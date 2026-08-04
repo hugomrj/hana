@@ -86,7 +86,7 @@ CheerpJ 3.0, lanzado en 2023 por Leaning Technologies, representa la aproximaci�
 
 La brecha de modernización Java es real, pero no es un mercado homogéneo. Es un mosaico de compradores enterprise que protegen su inversión en conocimiento, de geografías donde la contratación y la formación siguen ritmos diferentes, y de ciclos de inversión que exigen ahorros medibles, no promesas técnicas. Las startups de modernización que logren escalar no serán las que ofrezcan el framework más elegante, sino las que entiendan que el primer contrato es un piloto de sesenta mil dólares en un departamento, no una transformación de siete cifras en toda la empresa. Porque en el mercado Java legacy, como en cualquier mercado enterprise maduro, ganar la venta es la mitad del trabajo. Sobrevivir a la integración con un sistema que tiene quince años y tres millones de líneas de código es el resto.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 
