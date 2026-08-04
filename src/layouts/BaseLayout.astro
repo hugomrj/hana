@@ -26,16 +26,13 @@ const ogImage = `${siteUrl}/og-image.jpg`;
     <script is:inline src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text x='50' y='72' font-size='60' font-family='Inter,sans-serif' fill='white' text-anchor='middle' font-weight='bold'>h</text></svg>">
     
-    <!-- Transiciones de Astro -->
     <ClientRouter />
 
     <!-- Script crítico para evitar el flash blanco (FOUC) en modo oscuro -->
     <script is:inline>
-        // Aplicar el tema inmediatamente antes de que se pinte la página
         const savedTheme = localStorage.getItem('hana-theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
 
-        // Mantener el tema durante la transición de Astro
         document.addEventListener('astro:before-swap', (event) => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             event.newDocument.documentElement.setAttribute('data-theme', currentTheme);
@@ -109,9 +106,6 @@ const ogImage = `${siteUrl}/og-image.jpg`;
             });
         }
 
-
-
-
         document.addEventListener('astro:page-load', () => {
             try {
                 applyChartDefaults();
@@ -119,23 +113,8 @@ const ogImage = `${siteUrl}/og-image.jpg`;
                 initNavSearch();
                 const toggleBtn = document.getElementById('theme-toggle');
                 if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
-                
-  
-                // Forzar la ejecución de los scripts de Chart.js después de la transición
-                const scripts = document.querySelectorAll('article script:not([type="module"])');
-                scripts.forEach(oldScript => {
-                    const newScript = document.createElement('script');
-                    newScript.textContent = oldScript.textContent;
-                    oldScript.parentNode.replaceChild(newScript, oldScript);
-                });
-  
             } catch (err) { console.error('hana: error:', err); }
         });
-
-
-
-
-        
 
         window.addEventListener('themeChanged', () => { 
             applyChartDefaults(); 

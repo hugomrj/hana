@@ -18,12 +18,12 @@
     --radius: 16px;
     
     /* Colores para Gráficos Chart.js */
-    --chart-1: #3b82f6; /* Azul Base (500) */
-    --chart-2: #1e40af; /* Azul Muy Oscuro (800) */
-    --chart-3: #60a5fa; /* Azul Claro (400) */
-    --chart-4: #1d4ed8; /* Azul Oscuro (700) */
-    --chart-5: #93c5fd; /* Azul Muy Claro (300) */
-    --chart-6: #94a3b8; /* Gris Slate (Para "Otros") */
+    --chart-1: #3b82f6; /* Azul Base */
+    --chart-2: #1e40af; /* Azul Muy Oscuro (por si hay 2 datasets) */
+    --chart-3: #60a5fa; /* Azul Claro */
+    --chart-4: #1d4ed8; /* Azul Oscuro */
+    --chart-5: #93c5fd; /* Azul Muy Claro */
+    --chart-6: #94a3b8; /* Gris Slate */
 
 
 }
@@ -46,15 +46,17 @@
     --chart-grid: #27272a;
     --code-bg: #1e1e22;
     
+
     /* Colores para Gráficos Chart.js en Oscuro */
-    --chart-1: #60a5fa; /* Azul Base (400) */
-    --chart-2: #bfdbfe; /* Azul Muy Claro (200) */
-    --chart-3: #2563eb; /* Azul Medio (600) */
-    --chart-4: #93c5fd; /* Azul Claro (300) */
-    --chart-5: #3b82f6; /* Azul Estándar (500) */
-    --chart-6: #64748b; /* Gris Slate (Para "Otros") */
+    --chart-1: #60a5fa; /* Azul Base en oscuro */
+    --chart-2: #bfdbfe; /* Azul Muy Claro */
+    --chart-3: #2563eb; /* Azul Medio */
+    --chart-4: #93c5fd; /* Azul Claro */
+    --chart-5: #3b82f6; /* Azul Estándar */
+    --chart-6: #64748b; /* Gris Slate */
 
 }
+
 
 
 /* === Reset === */

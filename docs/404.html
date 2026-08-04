@@ -1,9 +1,7 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>404 - No encontrado | hana</title><meta name="description" content="Página no encontrada"><!-- Open Graph / Redes Sociales --><meta property="og:type" content="article"><meta property="og:title" content="404 - No encontrado"><meta property="og:description" content="Página no encontrada"><meta property="og:image" content="https://hugomrj.github.io/hana/og-image.jpg"><meta property="og:url" content="https://hugomrj.github.io/hana/404/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="404 - No encontrado"><meta name="twitter:description" content="Página no encontrada"><meta name="twitter:image" content="https://hugomrj.github.io/hana/og-image.jpg"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='20' fill='%233b82f6'/&gt;&lt;text x='50' y='72' font-size='60' font-family='Inter,sans-serif' fill='white' text-anchor='middle' font-weight='bold'&gt;h&lt;/text&gt;&lt;/svg&gt;"><!-- Transiciones de Astro --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/hana/_astro/ClientRouter.astro_astro_type_script_index_0_lang.jmhnZfFy.js"></script><!-- Script crítico para evitar el flash blanco (FOUC) en modo oscuro --><script>
-        // Aplicar el tema inmediatamente antes de que se pinte la página
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>404 - No encontrado | hana</title><meta name="description" content="Página no encontrada"><!-- Open Graph / Redes Sociales --><meta property="og:type" content="article"><meta property="og:title" content="404 - No encontrado"><meta property="og:description" content="Página no encontrada"><meta property="og:image" content="https://hugomrj.github.io/hana/og-image.jpg"><meta property="og:url" content="https://hugomrj.github.io/hana/404/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="404 - No encontrado"><meta name="twitter:description" content="Página no encontrada"><meta name="twitter:image" content="https://hugomrj.github.io/hana/og-image.jpg"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='20' fill='%233b82f6'/&gt;&lt;text x='50' y='72' font-size='60' font-family='Inter,sans-serif' fill='white' text-anchor='middle' font-weight='bold'&gt;h&lt;/text&gt;&lt;/svg&gt;"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/hana/_astro/ClientRouter.astro_astro_type_script_index_0_lang.jmhnZfFy.js"></script><!-- Script crítico para evitar el flash blanco (FOUC) en modo oscuro --><script>
         const savedTheme = localStorage.getItem('hana-theme') || 'light';
         document.documentElement.setAttribute('data-theme', savedTheme);
 
-        // Mantener el tema durante la transición de Astro
         document.addEventListener('astro:before-swap', (event) => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             event.newDocument.documentElement.setAttribute('data-theme', currentTheme);
@@ -47,9 +45,6 @@
             });
         }
 
-
-
-
         document.addEventListener('astro:page-load', () => {
             try {
                 applyChartDefaults();
@@ -57,23 +52,8 @@
                 initNavSearch();
                 const toggleBtn = document.getElementById('theme-toggle');
                 if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
-                
-  
-                // Forzar la ejecución de los scripts de Chart.js después de la transición
-                const scripts = document.querySelectorAll('article script:not([type="module"])');
-                scripts.forEach(oldScript => {
-                    const newScript = document.createElement('script');
-                    newScript.textContent = oldScript.textContent;
-                    oldScript.parentNode.replaceChild(newScript, oldScript);
-                });
-  
             } catch (err) { console.error('hana: error:', err); }
         });
-
-
-
-
-        
 
         window.addEventListener('themeChanged', () => { 
             applyChartDefaults(); 

@@ -2,7 +2,7 @@
 titulo: "Cuando la IA Sube las Notas y Baja el Aprendizaje: Lo que la Evidencia Científica Revela sobre el Uso de ChatGPT en el Aula"
 extracto: "Un panel de diez años con 3,2 millones de interacciones de aprendizaje demuestra que los estudiantes dedican menos tiempo a las tareas susceptibles de IA, pero retienen menos conocimiento. Este artículo examina la evidencia empírica sobre el impacto de la inteligencia artificial en la educación."
 fecha: "2026-08-04T13:33:00"
-categoria: "Educación y Tecnología"
+categoria: "Educación"
 etiquetas: ["Inteligencia Artificial", "Educación", "ChatGPT", "Aprendizaje", "Evaluación"]
 link_original: "https://hanademi.com/decks/ai-learning-sol-compact-under20-20260711/es/"
 ---
