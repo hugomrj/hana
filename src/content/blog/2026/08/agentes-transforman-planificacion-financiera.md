@@ -99,7 +99,7 @@ Quizás la conclusión más incómoda del análisis de Hanademi sea también la 
 
 La pregunta correcta no es si los agentes de IA pueden planificar financieramente, sino bajo qué condiciones una organización puede confiar en esa planificación lo suficiente como para actuar sobre ella. La evidencia sugiere que, en el estado actual de la tecnología, la configuración más prudente es la de aumento humano (augmentation), no la de automatización completa. Los agentes pueden acelerar la recopilación de datos, generar borradores de escenarios, identificar anomalías y liberar al analista financiero para el juicio profesional. Pero la decisión final sobre presupuestos, pronósticos y asignación de capital sigue requiriendo una mente humana que comprenda el contexto, evalúe el riesgo y asuma la responsabilidad. La tecnología puede avanzar a la velocidad de los tokens; la confianza financiera avanza a la velocidad de la verificación. Y entre esas dos velocidades reside el espacio donde se juega el futuro de la planificación financiera.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

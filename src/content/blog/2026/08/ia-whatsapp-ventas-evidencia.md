@@ -97,7 +97,7 @@ Este no es solo un proyecto de chatbot. La arquitectura que lo sostiene requiere
 
 La pregunta que debe responder cualquier despliegue de IA en ventas por WhatsApp no es cuántos mensajes envió el bot, sino si el embudo completo mejoró. Eso implica rastrear desde el lead entrante hasta la venta cerrada, pasando por la respuesta, la calificación, la propuesta y la negociación. La automatización funciona mejor cuando la tarea encaja con fortalezas probadas del modelo: preguntas frecuentes, programación de citas, seguimiento de estado y recopilación de información inicial. En tareas fuera de esa frontera, la IA puede empeorar el resultado. El diseño correcto no es reemplazar al vendedor, sino equiparlo con una recepción que nunca cierre, una memoria que nunca olvide y una escalada que nunca bloquee.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

@@ -122,7 +122,7 @@ La investigación de Hanademi construye un argumento que va en contra de la indu
 
 Para analistas de datos, arquitectos de sistemas y cualquier profesional que trabaje con indicadores globales, la lección es clara: un ranking es una herramienta de comunicación, no de comprensión. Antes de repetir que Cuba "cayó 68 puestos", hay que preguntar qué año se comparó, qué tipo de cambio se usó, qué países se incluyeron y qué historia se está omitiendo. La economía cubana no cabe en un solo número. Y ninguna economía compleja debería hacerlo.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

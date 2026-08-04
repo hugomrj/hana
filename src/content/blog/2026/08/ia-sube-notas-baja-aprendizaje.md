@@ -149,7 +149,7 @@ La evidencia disponible apunta a una transformación educativa en curso, no a un
 
 Pero la misma tecnología, diseñada con propósito pedagógico, puede duplicar los avances de aprendizaje. La diferencia no está en la IA. Está en si la IA entra antes o después de que el estudiante empiece a pensar. La pregunta para educadores, desarrolladores y legisladores no es si prohibir o permitir la IA en el aula. Es cómo diseñar sistemas donde pensar primero no sea opcional, sino obligatorio.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

@@ -20,14 +20,14 @@ Aquí tienes los requisitos obligatorios:
 
 3. VISUALIZACIÓN DE DATOS (CON CHART.JS):
 - Debes recrear los gráficos del deck usando Chart.js.
-- AMPLIACIÓN VISUAL: Visita y analiza la librería de ejemplos de Chart.js (https://www.chartjs.org/docs/latest/samples/information.html) para inspirarte. No te limitas a gráficos de barras simples. Si los datos lo permiten, utiliza gráficos de líneas con múltiples ejes, barras apiladas (stacked), radar, scatter, o doughnuts.
+- AMPLIACIÓN VISUAL: Visita y analiza la librería de ejemplos de Chart.js (https://www.chartjs.org/docs/latest/samples/information.html) para inspirarte. No te limites a gráficos de barras simples. Si los datos lo permiten, utiliza gráficos de líneas con múltiples ejes, barras apiladas (stacked), radar, scatter, o doughnuts.
 - REGLAS CRÍTICAS DE SENTIDO COMÚN GRÁFICO (¡CUMPLIR OBLIGATORIAMENTE!):
   1. EVOLUCIÓN TEMPORAL: Si el dato muestra cambios en el tiempo (ej. 2018, 2020, 2025), DEBES usar type: 'line'.
   2. PROPORCIONES: Si el dato es un porcentaje o parte de un total, DEBES usar type: 'doughnut'.
   3. COMPARACIÓN: Si comparas 2 o más categorías, USA type: 'bar'.
   4. PROHIBIDO BARRAS DE 1 ELEMENTO: NUNCA hagas un gráfico 'bar' con un solo dato. Si solo hay un número aislado sin con quién compararlo, OMITE el gráfico (escribe el dato en el texto) o usa 'doughnut' si representa un porcentaje (ej. 40% vs 60%).
   5. VARIEDAD: Exige variedad visual. No hagas todos los gráficos de barras. Analiza el deck original y replica su lógica visual.
-  6. LÍMITE DE GRÁFICOS: El artículo debe tener un MÁXIMO de 5 a 6 gráficos en total. Si el deck original tiene más datos, selecciona solo los más impactantes y relevantes para la narrativa. No satures el artículo con visualizaciones; Prioriza calidad sobre cantidad. Los demás datos pueden mencionarse en el texto de forma narrativa.
+  6. LÍMITE DE GRÁFICOS: El artículo debe tener un MÁXIMO de 5 a 6 gráficos en total. Si el deck original tiene más datos, selecciona solo los más impactantes y relevantes para la narrativa. No satures el artículo con visualizaciones; prioriza calidad sobre cantidad. Los demás datos pueden mencionarse en el texto de forma narrativa.
 
 - En el Markdown, inserta directamente este HTML donde corresponda un gráfico (respetando las clases y los saltos de línea):
 <div class="chart-container">
@@ -112,7 +112,7 @@ Aquí tienes los requisitos obligatorios:
 </script>
 
 4. CRÉDITOS Y FUENTES:
-- Al final del artículo, incluye una sección con el subtítulo "## Fuentes y Créditos".
+- Al final del artículo, incluye una sección con el subtítulo "### Fuentes y Créditos".
 - El primer párrafo de esta sección debe ser EXACTAMENTE: "Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original."
 - Justo debajo, el PRIMER elemento de la lista de fuentes debe ser el enlace al deck de Hanademi, usando el formato: `- [Hanademi - Título del deck original](URL_PROPORCIONADA)`
 - A continuación, lista todas las fuentes originales verificadas usando SIEMPRE el formato Markdown: `- [Nombre de la fuente](https://url.com)`
@@ -141,149 +141,7 @@ link_original: "[URL_PROPORCIONADA]"
 
 (Texto del artículo, con divs de gráficos intercalados en líneas separadas)
 
-#Actúa como un periodista técnico especializado y desarrollador front-end. Tu tarea es tomar la presentación de Hanademi que te proporcionaré y convertirla en un artículo de lectura profunda, verificado y autónomo. 
-
-El sitio web donde se publicará está hecho con Astro. El artículo debe entregarse en formato Markdown (con frontmatter) y gráficos Chart.js embebidos.
-
-Aquí tienes los requisitos obligatorios:
-
-1. VERIFICACIÓN Y PROFUNDIZACIÓN DE DATOS:
-- Analiza el deck de Hanademi (URL más abajo).
-- Extrae las fuentes citadas en el deck (CISQ, Eurostat, Hanademi, etc.).
-- Realiza búsquedas web para verificar que los datos y estadísticas son precisos y actuales. 
-- Si encuentras datos actualizados, estudios complementarios de las fuentes originales o métricas adicionales de la industria, inclúyelos para enriquecer y profundizar el artículo. 
-- Incluye enlaces hiperenlazados en formato Markdown estricto [texto](url) a las fuentes originales dentro del cuerpo del texto y en la sección de créditos.
-
-2. ESTRUCTURA, NARRATIVA Y EXTENSIÓN:
-- No escribas una lista de diapositivas. Escribe un ARTÍCULO fluido con introducción, desarrollo y conclusión.
-- Usa un tono técnico pero accesible (para perfiles de arquitectos, CTOs y desarrolladores).
-- REGLA ANTI-ABURRIMIENTO (MUY IMPORTANTE): Evita las "listas de la compra" de números y porcentajes en el texto. Los datos fríos (cifras exactas, montos, años) deben vivir en los GRÁFICOS. El texto debe usarse para explicar el *porqué*, el contexto y el impacto de esos datos, no para repetirlos. Escribe de forma narrativa y atractiva. Si mencionas un número en el texto, úsalo para dar impacto, no para amontonar estadísticas.
-- EXTENSIÓN OBLIGATORIA: El artículo debe tener un MÍNIMO de 1200 palabras. Si al terminar el borrador tienes menos, amplía las secciones con más contexto, ejemplos de la industria y análisis técnico, NO añadiendo más números.
-
-3. VISUALIZACIÓN DE DATOS (CON CHART.JS):
-- Debes recrear los gráficos del deck usando Chart.js.
-- AMPLIACIÓN VISUAL: Visita y analiza la librería de ejemplos de Chart.js (https://www.chartjs.org/docs/latest/samples/information.html) para inspirarte. No te limitas a gráficos de barras simples. Si los datos lo permiten, utiliza gráficos de líneas con múltiples ejes, barras apiladas (stacked), radar, scatter, o doughnuts.
-- REGLAS CRÍTICAS DE SENTIDO COMÚN GRÁFICO (¡CUMPLIR OBLIGATORIAMENTE!):
-  1. EVOLUCIÓN TEMPORAL: Si el dato muestra cambios en el tiempo (ej. 2018, 2020, 2025), DEBES usar type: 'line'.
-  2. PROPORCIONES: Si el dato es un porcentaje o parte de un total, DEBES usar type: 'doughnut'.
-  3. COMPARACIÓN: Si comparas 2 o más categorías, USA type: 'bar'.
-  4. PROHIBIDO BARRAS DE 1 ELEMENTO: NUNCA hagas un gráfico 'bar' con un solo dato. Si solo hay un número aislado sin con quién compararlo, OMITE el gráfico (escribe el dato en el texto) o usa 'doughnut' si representa un porcentaje (ej. 40% vs 60%).
-  5. VARIEDAD: Exige variedad visual. No hagas todos los gráficos de barras. Analiza el deck original y replica su lógica visual.
-  6. LÍMITE DE GRÁFICOS: El artículo debe tener un MÁXIMO de 5 a 6 gráficos en total. Si el deck original tiene más datos, selecciona solo los más impactantes y relevantes para la narrativa. No satures el artículo con visualizaciones; Prioriza calidad sobre cantidad. Los demás datos pueden mencionarse en el texto de forma narrativa.
-
-- En el Markdown, inserta directamente este HTML donde corresponda un gráfico (respetando las clases y los saltos de línea):
-<div class="chart-container">
-    <div class="chart-title">Título del gráfico y fuente</div>
-    <div class="chart-canvas-wrapper">
-        <canvas id="graficoN"></canvas>
-    </div>
-</div>
-- Al final del archivo Markdown, inserta UN ÚNICO bloque `<script>` con la configuración de todos los gráficos. ES OBLIGATORIO leer los colores del CSS del sitio usando este patrón exacto para que los gráficos se vean bien en modo claro y oscuro:
-<script>
-    document.addEventListener('astro:page-load', () => {
-        const styles = getComputedStyle(document.documentElement);
-        const textColor = styles.getPropertyValue('--text-muted').trim();
-        const gridColor = styles.getPropertyValue('--chart-grid').trim();
-        const surfaceColor = styles.getPropertyValue('--surface').trim();
-        
-        // Colores para datasets (usar en orden si hay múltiples)
-        const color1 = styles.getPropertyValue('--chart-1').trim();
-        const color2 = styles.getPropertyValue('--chart-2').trim();
-        const color3 = styles.getPropertyValue('--chart-3').trim();
-        const color4 = styles.getPropertyValue('--chart-4').trim();
-
-        // Configuración global de Tooltips para que se vean premium
-        const premiumTooltip = {
-            backgroundColor: surfaceColor,
-            titleColor: textColor,
-            bodyColor: textColor,
-            borderColor: gridColor,
-            borderWidth: 1,
-            padding: 12,
-            cornerRadius: 8,
-            displayColors: true
-        };
-
-        // Ejemplo de configuración para el Gráfico 1
-        const ctx1 = document.getElementById('grafico1');
-        if (ctx1) {
-            new Chart(ctx1, {
-                type: 'line', // ELIGE SEGÚN LAS REGLAS (line, bar, doughnut, radar, scatter, bubble, etc.)
-                data: { 
-                    /* datos verificados */,
-                    datasets: [{
-                        // REGLAS DE ESTILO (SEGÚN EL TIPO DE GRÁFICO):
-                        // 1. Bar (Vertical): usa color1 puro. borderRadius: 4.
-                        // 2. Bar (Horizontal): añade indexAxis: 'y' en options. borderRadius: 4.
-                        // 3. Line: usa borderColor: color1, tension: 0.3, pointRadius: 4, fill: true, backgroundColor: color1 + '22' (relleno sutil).
-                        // 4. Doughnut: usa un array de colores [color1, color2, color3, color4], cutout: '60%', y borderColor: surfaceColor.
-                        // 5. Radar: usa color1 para borderColor y color1 + '33' para backgroundColor. pointRadius: 4.
-                        // 6. Scatter: usa backgroundColor: color1, pointRadius: 6, borderColor: surfaceColor, borderWidth: 2.
-                        // 7. NUNCA uses opacidades aleatorias (no añadas '77' o 'aa' al hex), excepto el relleno '22' o '33' indicado.
-                        backgroundColor: color1, 
-                        borderColor: color1,
-                        borderWidth: 1,
-                        borderRadius: 4
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: { 
-                        legend: { 
-                            display: false, // Falso si hay 1 solo dataset. Verdadero si hay múltiples.
-                            position: 'bottom', // Siempre abajo para mejor responsive
-                            labels: { color: textColor, usePointStyle: true, padding: 20 } 
-                        },
-                        tooltip: premiumTooltip // Siempre usar el tooltip premium
-                    },
-                    scales: { 
-                        x: { ticks: { color: textColor }, grid: { display: false } }, 
-                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true } 
-                    }
-                }
-            });
-        }
-
-        // Configuración para el Gráfico 2 (si existe)
-        const ctx2 = document.getElementById('grafico2');
-        if (ctx2) {
-            // ... mismo patrón
-        }
-    });
-</script>
-
-4. CRÉDITOS Y FUENTES:
-- Al final del artículo, incluye una sección con el subtítulo "## Fuentes y Créditos".
-- El primer párrafo de esta sección debe ser EXACTAMENTE: "Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original."
-- Justo debajo, el PRIMER elemento de la lista de fuentes debe ser el enlace al deck de Hanademi, usando el formato: `- [Hanademi - Título del deck original](URL_PROPORCIONADA)`
-- A continuación, lista todas las fuentes originales verificadas usando SIEMPRE el formato Markdown: `- [Nombre de la fuente](https://url.com)`
-
-5. FORMATO DE SALIDA OBLIGATORIO (COMANDO BASH):
-- NO envuelvas tu respuesta en bloques de código Markdown (no uses ```bash ni ``` al final).
-- NO escribas texto plano antes del comando. Devuelve ÚNICAMENTE el comando de terminal listo para ser ejecutado.
-- Las dos primeras líneas son comentarios (usando #) para mi registro interno.
-- Genera un "slug" corto, descriptivo y sin acentos para el nombre del archivo.
-
-# Archivo: [slug-generado].md
-# URL: [URL_PROPORCIONADA]
-cat << 'EOF' > src/content/blog/[slug-generado].md
----
-titulo: "Título generado"
-extracto: "Resumen de 1-2 frases para la portada"
-fecha: "AAAA-MM-DDTHH:MM:SS"
-categoria: "Categoría generada"
-etiquetas: ["Etiqueta1", "Etiqueta2", "Etiqueta3"]
-link_original: "[URL_PROPORCIONADA]"
----
-
-(Introducción del artículo en su propio párrafo)
-
-## (Subtítulo en Markdown con ##)
-
-(Texto del artículo, con divs de gráficos intercalados en líneas separadas)
-
-### Fuentes y Créditos
+## Fuentes y Créditos
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 
 - [Hanademi - Título del deck original]([URL_PROPORCIONADA])
@@ -301,27 +159,7 @@ REGLA CRÍTICA DE ASTRO (NO ROMPER EL SITIO):
 - En el cuerpo del artículo, cada párrafo debe estar separado por una línea en blanco.
 - Los divs de los gráficos y las etiquetas <script> deben ir en líneas separadas, no pegados al texto.
 - BAJO NINGUNA CIRCUNSTANCIA compactes todo el artículo en una sola línea o en pocos párrafos gigantes.
-
-Aquí tienes la URL de la presentación de Hanademi a procesar: [PEGA AQUÍ LA URL DE HANADEMI]# Fuentes y Créditos
-Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
-
-- [Hanademi - Título del deck original]([URL_PROPORCIONADA])
-- [Fuente 1](url)
-
-<script>
-(Todos los scripts de Chart.js juntos aquí)
-</script>
-EOF
-
-REGLA CRÍTICA DE ASTRO (NO ROMPER EL SITIO):
-- El archivo Markdown debe empezar **INMEDIATAMENTE** con `---` (después del cat << 'EOF'). 
-- Es OBLIGATORIO mantener los saltos de línea exactos como en un archivo de texto normal.
-- En el frontmatter, cada campo debe ir en una línea separada.
-- En el cuerpo del artículo, cada párrafo debe estar separado por una línea en blanco.
-- Los divs de los gráficos y las etiquetas <script> deben ir en líneas separadas, no pegados al texto.
-- BAJO NINGUNA CIRCUNSTANCIA compactes todo el artículo en una sola línea o en pocos párrafos gigantes.
-
-
 
 Aquí tienes la URL de la presentación de Hanademi a procesar: 
+
 [PEGA AQUÍ LA URL DE HANADEMI]

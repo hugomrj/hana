@@ -93,7 +93,7 @@ El precedente de las aplicaciones educativas muestra por qué la participación 
 
 La regla útil para el aula es sorprendentemente simple: piensa primero, usa la IA después. En un estudio con ciento noventa y seis participantes, quienes generaron ideas propias antes de consultar ChatGPT mejoraron su creatividad independiente posterior. Las aplicaciones interactivas alineadas con el currículo pueden mejorar los resultados cuando ofrecen práctica estructurada. La IA debe entrar después de que el estudiante empiece a pensar, no antes. La ventana de política pública se está reduciendo: los modelos de frontera ganaron treinta puntos porcentuales en un año en pruebas diseñadas para desafiar a IA de nivel experto, según el [AI Index Report 2026](https://hai.stanford.edu) de Stanford. Mejores modelos pueden volver la tutoría más personal y la retroalimentación más útil. También pueden hacer que el trabajo delegado sea más difícil de detectar y más fácil de creer. La pregunta no es si la IA pertenece al aula, sino quién diseña las reglas de su uso antes de que las reglas las imponga la desconfianza.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

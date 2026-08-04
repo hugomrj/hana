@@ -129,7 +129,7 @@ Para arquitectos de sistemas, CTOs y desarrolladores de robótica, la lección e
 
 La oportunidad para los proveedores de datos táctiles es real pero condicional. La tecnología sensorial es viable económicamente —materiales de menos de seis dólares lo demuestran— y la transferencia zero-shot desde demostraciones humanas ya es un resultado publicado. Pero el modelo de negocio no se sostiene con datasets grandes ni con capital de riesgo ajeno. Se sostiene cuando un operador robótico industrial —como Figure en BMW, JD.com en Suqian o un fabricante japonés dentro del ecosistema Noetra— decide que la señal de contacto vale más que el costo de obtenerla. Hasta que esa decisión se materialice en contratos firmados y renovados, el tacto seguirá siendo una promesa técnica brillante en busca de su primer cliente que pague por ella.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

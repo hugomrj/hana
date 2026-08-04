@@ -161,7 +161,7 @@ La venta enterprise en la era de la IA no es más rápida. Es diferente. Las sta
 
 Para los arquitectos y desarrolladores que construyen en este mercado, la lección es clara: la velocidad de crecimiento no garantiza la durabilidad del valor. La pregunta que importa no es cuánto puede crecer una startup de IA en doce meses, sino cuánto valor puede entregar a sus clientes enterprise en los doce meses siguientes a la firma del contrato. Porque en este mercado, ganar la venta es la mitad del trabajo. Sobrevivir a producción es el resto.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

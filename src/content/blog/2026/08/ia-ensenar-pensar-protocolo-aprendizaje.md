@@ -193,7 +193,7 @@ La evidencia disponible apunta a una transformación educativa en curso, no a un
 
 El protocolo es claro: asistir la práctica, exigir el razonamiento, verificar sin ayuda. Los tres ensayos aleatorios de tutoría guiada, el meta-análisis de 35 experimentos y el modelo de evaluación auténtica convergen en la misma dirección. La pregunta para educadores, desarrolladores y legisladores no es si prohibir o permitir la IA en el aula. Es cómo diseñar sistemas donde pensar primero no sea opcional, sino obligatorio.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

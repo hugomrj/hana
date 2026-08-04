@@ -89,7 +89,7 @@ La evaluación debe dejar de tratar un producto pulido como el resultado complet
 
 El curso solo tiene éxito cuando el aprendizaje sobrevive al retirar la ayuda. Eso implica medir cinco resultados separados: el resultado asistido, la transferencia sin ayuda, la retención retrasada, la precisión de las fuentes y la calidad de la explicación. La tecnología que puede eliminar el pensamiento también puede redirigir el esfuerzo hacia él, pero solo cuando la arquitectura pedagógica lo exige. El objetivo no es prohibir la ayuda. Es lograr que la ayuda fortalezca el razonamiento en vez de sustituirlo. La prueba decisiva es lo que los estudiantes pueden explicar, verificar y repetir sin ayuda.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

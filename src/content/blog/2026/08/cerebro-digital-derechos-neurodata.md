@@ -104,7 +104,7 @@ Para quienes diseñan sistemas tecnológicos, la lección es clara: la neurotecn
 
 El valor de la investigación no está solo en cada fuente, sino en lo que aparece al combinar sus evidencias. La neurotecnología necesita coordinación entre reguladores médicos, autoridades de protección de datos, comités de ética y desarrolladores de productos. Ninguna ley neurotecnológica puede cubrir toda la cadena por sí sola. La protección debe seguir los datos desde la recopilación hasta la inferencia, el intercambio y el uso con consecuencias. Tu cerebro ya está generando datos. La pregunta es quién estará obligado a protegerlos.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

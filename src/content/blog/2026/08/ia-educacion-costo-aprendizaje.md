@@ -123,7 +123,7 @@ La evaluación debe medir al alumno, no la entrega. Cuando un parcial para casa 
 
 La educación debe preparar a los estudiantes para fronteras móviles. Los currículos que tardan cinco años en revisarse no pueden competir con una tecnología que duplica su capacidad cada siete meses. En ese contexto, el juicio crítico, la autonomía intelectual y el dominio de la IA como herramienta —no como muleta— se convierten en resultados educativos por derecho propio. No se trata de volver a un mundo sin asistentes digitales. Se trata de construir uno donde el alumno sepa qué puede hacer la máquina, qué debe hacer él mismo, y por qué la diferencia importa.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

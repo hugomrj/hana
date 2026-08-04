@@ -106,7 +106,7 @@ La contratación basada en habilidades —no en credenciales— está ganando te
 
 El paradojo del título de este artículo no es que la experiencia sea irrelevante. Es que la estamos midiendo con el instrumento equivocado. Cuando la IA puede escribir el primer borrador de cualquier función en segundos, el valor del desarrollador ya no está en la velocidad de tecleo. Está en el juicio para decidir qué código merece existir, qué deuda técnica es aceptable, y qué sistema de 51 años no puede fallar mañana. Ese juicio no se acumula automáticamente con los años. Se construye con intención, con mentoría, con exposición a problemas reales. Y se puede cultivar en menos tiempo del que exige un anuncio de empleo promedio.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

@@ -84,7 +84,7 @@ Los trabajadores independientes no facturan cada hora que trabajan. Con un 60% d
 
 La meta del primer año es tener tres clientes recurrentes, ninguno sobre el 40% de los ingresos, y tres meses de reservas domésticas. Si las entrevistas siguen débiles, nadie paga o las reservas caen demasiado, hay que detenerse o cambiar. No se trata de persistencia ciega, sino de evidencia disciplinada.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

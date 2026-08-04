@@ -132,7 +132,7 @@ La investigación de Hanademi construye una narrativa que va en contra de la ind
 
 Para arquitectos de sistemas, CTOs y directores financieros, la implicación es clara: el valor no está en la etiqueta "agente autónomo", sino en la arquitectura que lo sostiene. Datos estandarizados, gobernanza de riesgos, checkpoints humanos y métricas de negocio son los cimientos. El agente es solo la estructura que se construye sobre ellos. Y como cualquier estructura, si los cimientos son débiles, no importa cuán sofisticado sea el diseño: terminará colapsando.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

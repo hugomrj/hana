@@ -117,7 +117,7 @@ La evidencia acumulada durante los últimos tres años apunta a una conclusión 
 
 Para arquitectos de sistemas, CTOs y desarrolladores, el mensaje es operativo. La frontera de capacidades de un modelo de lenguaje es irregular: brillante en tareas bien delimitadas, frágil en situaciones que requieren juicio contextual. La inversión en IA generativa seguirá creciendo —los 33.900 millones de dólares de 2024 probablemente parecerán modestos en retrospectiva— pero el retorno de la inversión no llegará por la autonomía desatada, sino por la integración disciplinada en flujos de trabajo donde la máquina y el humano se complementan. La oportunidad está abierta. La pregunta no es si adoptar, sino cómo diseñar para que la adopción sea sostenible, medible y, sobre todo, digna de confianza.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

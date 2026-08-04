@@ -147,7 +147,7 @@ La investigación de Hanademi construye una narrativa que va en contra del hype 
 
 Para arquitectos de sistemas, CTOs y desarrolladores front-end, la implicación es clara: el valor no está en eliminar campos, sino en diseñar arquitecturas donde la complejidad de la captura de datos sea invisible para el usuario pero trazable y validable para el sistema. Eso significa invertir en estandarización de datos antes que en chatbots; en gobernanza de riesgos antes que en autonomía; en validación humana en el ciclo antes que en promesas de "zero-touch". Un formulario bien diseñado puede ser menos frustrante que un agente conversacional que alucina el 15% de las veces. La pregunta correcta no es "¿podemos eliminar los formularios?", sino "¿podemos hacer que la captura de datos sea tan fluida que el usuario ni siquiera note que está completando un formulario?". La respuesta, con la tecnología actual, es: a veces, en algunos contextos, con la arquitectura adecuada. No siempre. No todavía.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 

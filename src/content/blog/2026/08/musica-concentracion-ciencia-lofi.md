@@ -113,7 +113,7 @@ La evidencia científica converge hacia un consejo sorprendentemente simple pero
 
 El lo-fi no es magia. Es un compromiso acústico: suficientemente estructurado para bloquear el ruido ambiental, suficientemente predecible para no generar sorpresas cognitivas, y suficientemente lento para no competir con tus propios pensamientos. No te hará más inteligente. Pero si encaja en tu perfil cognitivo y en la tarea que tienes entre manos, puede ser el aliado silencioso que necesitas para mantener el foco en un mundo cada vez más ruidoso.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 
