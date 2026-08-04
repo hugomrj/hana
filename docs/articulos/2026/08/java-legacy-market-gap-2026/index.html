@@ -250,7 +250,7 @@
                 }
             });
         }
-
+        
         document.addEventListener('astro:page-load', () => {
             try {
                 applyChartDefaults();
@@ -258,21 +258,6 @@
                 initNavSearch();
                 const toggleBtn = document.getElementById('theme-toggle');
                 if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
-                
-                // --- LA MAGIA PARA LOS GRÁFICOS ---
-                // Buscamos todos los scripts que están dentro del artículo
-                const scripts = document.querySelectorAll('article script:not([type="module"])');
-                scripts.forEach(oldScript => {
-                    // Clonamos el script y lo volvemos a inyectar para forzar su ejecución
-                    const newScript = document.createElement('script');
-                    for (let i = 0; i < oldScript.attributes.length; i++) {
-                        newScript.setAttribute(oldScript.attributes[i].name, oldScript.attributes[i].value);
-                    }
-                    newScript.textContent = oldScript.textContent;
-                    oldScript.parentNode.replaceChild(newScript, oldScript);
-                });
-                // -----------------------------------
-
             } catch (err) { console.error('hana: error:', err); }
         });
 
