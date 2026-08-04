@@ -1,0 +1,477 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>La IA no elimina los formularios: los oculta, y eso cambia todo | hana</title><meta name="description" content="Un análisis técnico de por qué la inteligencia artificial puede reducir la fricción de los formularios, pero no eliminar la necesidad de datos estructurados, validación humana y arquitecturas de gobernanza."><!-- Open Graph / Redes Sociales --><meta property="og:type" content="article"><meta property="og:title" content="La IA no elimina los formularios: los oculta, y eso cambia todo"><meta property="og:description" content="Un análisis técnico de por qué la inteligencia artificial puede reducir la fricción de los formularios, pero no eliminar la necesidad de datos estructurados, validación humana y arquitecturas de gobernanza."><meta property="og:image" content="https://hugomrj.github.io/hana/og-image.jpg"><meta property="og:url" content="https://hugomrj.github.io/hana/articulos/2026/08/ia-reemplaza-formularios-evidencia/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="La IA no elimina los formularios: los oculta, y eso cambia todo"><meta name="twitter:description" content="Un análisis técnico de por qué la inteligencia artificial puede reducir la fricción de los formularios, pero no eliminar la necesidad de datos estructurados, validación humana y arquitecturas de gobernanza."><meta name="twitter:image" content="https://hugomrj.github.io/hana/og-image.jpg"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='20' fill='%233b82f6'/&gt;&lt;text x='50' y='72' font-size='60' font-family='Inter,sans-serif' fill='white' text-anchor='middle' font-weight='bold'&gt;h&lt;/text&gt;&lt;/svg&gt;"><!-- Transiciones de Astro --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/hana/_astro/ClientRouter.astro_astro_type_script_index_0_lang.jmhnZfFy.js"></script><!-- Script crítico para evitar el flash blanco (FOUC) en modo oscuro --><script>
+        // Aplicar el tema inmediatamente antes de que se pinte la página
+        const savedTheme = localStorage.getItem('hana-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        // Mantener el tema durante la transición de Astro
+        document.addEventListener('astro:before-swap', (event) => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            event.newDocument.documentElement.setAttribute('data-theme', currentTheme);
+        });
+    </script><link rel="stylesheet" href="/hana/global.css"><style>.astro-route-announcer{clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;width:1px;height:1px;position:absolute;top:0;left:0;overflow:hidden}
+</style></head><body><div id="reading-progress" class="reading-progress-bar"></div><header class="site-header"><div class="nav-container"><div class="logo"><a href="/hana/">han<span>a</span></a></div><div class="nav-search"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input type="text" id="nav-search-input" class="search-input" placeholder="Buscar..."></div><button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"><svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></div></header><div class="article-layout"><article><div class="article-hero"><span class="kicker">Inteligencia Artificial</span><h1>La IA no elimina los formularios: los oculta, y eso cambia todo</h1><div class="byline"><div class="author">Por <strong>hana</strong></div><span class="dot">•</span><span>2 de agosto de 2026</span><span class="dot">•</span><span>15 min de lectura</span></div></div><div class="article-content"><p>La promesa es seductora: en lugar de llenar campos, simplemente hablas. En lugar de escanear documentos, simplemente los fotografías. En lugar de navegar por diez pantallas de un checkout, simplemente confirmas. La inteligencia artificial, según la narrativa dominante, está a punto de reemplazar a los formularios tradicionales por conversaciones fluidas, extracción automática de documentos y agentes que completan trámites enteros sin que el usuario intervenga. Pero la investigación original de Hanademi, que analiza esta transición con rigor empírico, construye un argumento más matizado: la IA no elimina la necesidad de capturar datos estructurados; lo que hace es ocultar la complejidad bajo una capa de conversación. Y esa distinción, aparentemente sutil, define si un sistema funciona o colapsa.</p>
+<h2 id="la-carga-humana-11500-millones-de-horas-al-año">La carga humana: 11.500 millones de horas al año</h2>
+<p>Para entender por qué los formularios merecen ser reemplazados, basta con observar su costo. La Oficina de Ciencias de la Evaluación de la Administración de Servicios Generales de Estados Unidos (GSA OES) estima que el público estadounidense gasta aproximadamente 11.500 millones de horas al año completando formularios federales. Esa cifra, publicada en el contexto de una evaluación piloto sobre diseño de formularios digitales, no es una estimación académica abstracta; es el resultado de agregar los requerimientos de información de cientos de agencias federales. La complejidad de los formularios no solo genera frustración; produce abandono, errores y retrasos en el procesamiento que afectan a millones de ciudadanos.</p>
+<div class="chart-container">
+    <div class="chart-title">Tiempo anual dedicado a formularios federales en EE.UU. (miles de millones de horas) — Fuente: GSA Office of Evaluation Sciences</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico1"></canvas>
+    </div>
+</div>
+<p>La evaluación de la GSA demostró que incluso cambios mínimos en el diseño de formularios, como la ubicación de las instrucciones, pueden aumentar las tasas de finalización en 3,2 puntos porcentuales. Si un ajuste tan simple produce un impacto medible, la pregunta legítima es: ¿cuánto más se puede ganar si la IA elimina por completo la necesidad de que el usuario complete campos? La respuesta, como veremos, depende de qué tan bien se gestione lo que ocurre detrás de la interfaz conversacional.</p>
+<h2 id="document-ai-la-máquina-aprendió-a-leer-no-a-estandarizar">Document AI: la máquina aprendió a leer, no a estandarizar</h2>
+<p>Una de las tecnologías más prometedoras para reducir la fricción de los formularios es el Document AI: sistemas que extraen información estructurada de documentos escaneados o fotografiados. LayoutLMv3, desarrollado por Microsoft y publicado en ACM Multimedia 2022, alcanzó un F1 score de 92,08 en el benchmark FUNSD, que evalúa la extracción de información de formularios semiestructurados. Ese nivel de precisión representa un salto cualitativo respecto a los métodos tradicionales de OCR, que requerían plantillas rígidas y fallaban ante variaciones de formato.</p>
+<div class="chart-container">
+    <div class="chart-title">Evolución del F1 score en extracción de formularios (FUNSD) — Fuente: FUNSD; LayoutLMv3 (Huang et al., 2022)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico2"></canvas>
+    </div>
+</div>
+<p>Sin embargo, como advierte la investigación de Hanademi, la precisión del modelo no resuelve el problema de la estandarización. Un sistema puede extraer el 92% de los campos correctamente de una factura, pero si la empresa receptora requiere que esos datos lleguen en un formato específico, con códigos de producto normalizados y campos obligatorios validados, el 92% no es suficiente. La extracción es un paso; la integración es todo el camino. Casos de campo documentados por proveedores como Trobz.ai y KalviumLabs muestran reducciones dramáticas en tiempo de procesamiento —de 240 minutos a 12 minutos por factura, de 40 horas semanales a 2 horas— pero estos casos dependen de que el flujo posterior esté diseñado para recibir datos extraídos, no solo de que la IA lea bien.</p>
+<h2 id="la-fricción-del-checkout-cuando-menos-no-siempre-es-más">La fricción del checkout: cuando menos no siempre es más</h2>
+<p>En el comercio electrónico, la fricción del checkout es uno de los principales causantes de abandono de carrito. La investigación de Hanademi cita un estudio de la Universidad de Gante y Vrije Universiteit Bruselas (2025) que analizó la relación entre el número de campos de formulario y las tasas de conversión. Los resultados fueron contraintuitivos: reducir de 10 a 7 campos aumentó las conversiones en un 8%, pero reducir de 7 a 4 campos las hizo caer un 12%. No se trata de una relación lineal donde menos siempre es mejor.</p>
+<div class="chart-container">
+    <div class="chart-title">Impacto del número de campos en la tasa de conversión de checkout (%) — Fuente: Universidad de Gante / VUB (2025)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico3"></canvas>
+    </div>
+</div>
+<p>La explicación reside en la percepción de legitimidad. Un formulario con solo 4 campos puede parecer poco profesional o inseguro, generando desconfianza en el usuario. Un formulario con 7 campos equilibra la recolección de información necesaria con una carga cognitiva manejable. La implicación para los sistemas de IA es directa: un agente conversacional que intente obtener toda la información en una sola pregunta puede parecer sospechosamente eficiente. La confianza del usuario no se mide en campos eliminados, sino en la sensación de control y transparencia durante el proceso.</p>
+<h2 id="e-commerce-europeo-adopción-desigual-y-oportunidad-de-fricción">E-commerce europeo: adopción desigual y oportunidad de fricción</h2>
+<p>El potencial de reducir la fricción en formularios es particularmente relevante en Europa, donde la adopción del e-commerce varía drásticamente entre países. Según datos de Eurostat citados en la investigación de Hanademi, el 43% de las empresas alemanas venden en línea, frente al 27% de las españolas. Esa brecha de 16 puntos porcentuales no refleja una diferencia de demanda —los consumidores españoles compran en línea— sino una diferencia de infraestructura digital y madurez en la experiencia de usuario.</p>
+<div class="chart-container">
+    <div class="chart-title">Porcentaje de empresas con ventas por e-commerce en Europa (%) — Fuente: Eurostat</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico4"></canvas>
+    </div>
+</div>
+<p>Para las empresas españolas, cada campo adicional en un formulario de registro o checkout representa una probabilidad mayor de abandono. Un sistema de IA que pueda prellenar campos a partir de documentos de identidad, historial de compras o perfiles sociales no es un lujo tecnológico; es una herramienta competitiva para cerrar la brecha con mercados más maduros. Pero esa ventaja solo se materializa si la implementación respeta los marcos regulatorios europeos, especialmente el RGPD, que exige consentimiento explícito para el procesamiento automatizado de datos personales.</p>
+<h2 id="adopción-de-ia-momentum-real-generalización-limitada">Adopción de IA: momentum real, generalización limitada</h2>
+<p>McKinsey reportó en 2024 que el 65% de las organizaciones encuestadas usaban regularmente IA generativa en al menos una función. Para 2025, esa cifra había subido al 88%. Sin embargo, la generalización de casos de uso sigue siendo limitada. El 79% de las organizaciones ha adoptado IA generativa, pero solo alrededor del 38% ha escalado más allá de pilotos. El 62% experimenta con agentes, pero solo el 23% está escalando al menos un sistema agéntico.</p>
+<div class="chart-container">
+    <div class="chart-title">Adopción de IA generativa: uso general vs escalamiento real (%) — Fuente: McKinsey (2024-2025)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico5"></canvas>
+    </div>
+</div>
+<p>Estos números son cruciales para contextualizar la promesa de “reemplazar formularios”. La tecnología existe. Los casos de éxito existen. Pero la mayoría de las organizaciones todavía está en la fase de experimentación, no de despliegue a escala. Reemplazar un formulario web por un chatbot no es técnicamente difícil; hacerlo de manera que mantenga la precisión de los datos, cumpla con la regulación y preserve la confianza del usuario es el verdadero desafío.</p>
+<h2 id="casos-de-campo-de-240-minutos-a-12-de-40-horas-a-2">Casos de campo: de 240 minutos a 12, de 40 horas a 2</h2>
+<p>La evidencia de campo, aunque publicada por proveedores y por lo tanto sujeta a sesgo de confirmación, documenta mejoras dramáticas en contextos específicos. Un caso de automatización de facturas reportó reducir el tiempo de procesamiento de 240 minutos a 12 minutos por documento. Otro caso de KalviumLabs reportó pasar de 40 horas semanales de trabajo manual a 2 horas de supervisión. Estas cifras, si son replicables, justifican por sí solas la inversión en Document AI.</p>
+<div class="chart-container">
+    <div class="chart-title">Reducción de tiempo de procesamiento con Document AI (índice relativo, antes = 100) — Fuente: Casos de campo documentados</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico6"></canvas>
+    </div>
+</div>
+<p>Pero la pregunta clave es si estas mejoras se generalizan. Un caso de procesamiento de facturas en una empresa con documentos estandarizados no garantiza el mismo resultado en una organización con formatos heterogéneos, escritura a mano o escaneos de baja calidad. La frontera dentada de la IA, documentada por Dell’Acqua y colegas de Harvard Business School, opera aquí con la misma fuerza: la automatización funciona excepcionalmente bien dentro de su rango de competencia medido, pero puede fallar estrepitosamente fuera de él.</p>
+<h2 id="el-muro-del-procesamiento-514-electrónico-354-sin-intervención">El muro del procesamiento: 51,4% electrónico, 35,4% sin intervención</h2>
+<p>Un dato revelador del deck de Hanademi muestra la brecha entre digitalización y automatización real. Solo el 51,4% de los trámites se reciben de forma electrónica, y de esos, solo el 35,4% se procesa sin intervención humana. Esto significa que dos tercios de los trámites digitales todavía requieren que una persona revise, corrija o valide la información. La digitalización no es sinónimo de automatización.</p>
+<div class="chart-container">
+    <div class="chart-title">Proporción de trámites electrónicos y sin intervención humana (%) — Fuente: Estimaciones Hanademi</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico7"></canvas>
+    </div>
+</div>
+<p>Esta brecha explica por qué muchos proyectos de “transformación digital” fracasan en su promesa de reducir costos. Escaneer un formulario y guardarlo como PDF es digitalización. Extraer los datos del PDF, validarlos contra bases de datos externas, enriquecerlos con contexto y enviarlos al sistema destino sin que un humano los revise es automatización. La distancia entre ambas es donde reside el valor real, y también donde la mayoría de las organizaciones se atascan.</p>
+<h2 id="agentes-y-alucinaciones-los-límites-de-la-autonomía">Agentes y alucinaciones: los límites de la autonomía</h2>
+<p>Si los formularios tradicionales son rígidos pero predecibles, los agentes de IA son flexibles pero propensos a errores. El benchmark WebArena, publicado en ICLR 2024 por Zhou y colegas de Carnegie Mellon, evalúa agentes que operan en entornos web realistas. El mejor agente basado en GPT-4 alcanzó una tasa de éxito de solo el 14,41%, comparado con el 78,24% de los humanos. Incluso los mejores agentes de 2025, como Claude Computer Use 3.7 y OpenAI Operator, alcanzan alrededor del 56-61%, todavía significativamente por debajo del rendimiento humano.</p>
+<div class="chart-container">
+    <div class="chart-title">Tasa de éxito en WebArena: humanos vs agentes de IA (%) — Fuente: Zhou et al. (2024); COLM 2025</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico8"></canvas>
+    </div>
+</div>
+<p>En el dominio legal, donde la precisión es crítica, las alucinaciones representan un riesgo sistémico. Dahl y colegas de Stanford publicaron en 2024 un estudio que evaluó modelos de lenguaje en consultas legales verificables. Los hallazgos fueron alarmantes: GPT-3.5 alucinó el 69% de las veces, GPT-4 el 58%, y Llama 2 el 88%. Incluso el mejor modelo, GPT-4, falló en más de la mitad de las consultas. Cuando un agente de IA completa un formulario legal o médico, un 8% de error en la extracción de datos puede traducirse en consecuencias graves.</p>
+<p>El OWASP Top 10 para Aplicaciones LLM 2025 clasifica la inyección de prompts como el riesgo número uno, seguido por la divulgación de información sensible, vulnerabilidades en la cadena de suministro y el envenenamiento de datos. El riesgo de “agencia excesiva” (LLM06) es particularmente relevante para formularios: un agente con demasiados permisos puede modificar registros, enviar pagos o actualizar perfiles sin la debida autorización humana. Como señala OWASP, no se puede parchear la inyección de prompts; la mitigación requiere defensa en profundidad, validación de entradas, filtrado de salidas y controles humanos en el ciclo para operaciones sensibles.</p>
+<h2 id="voz-como-alternativa-5-millones-de-usuarios-en-31-días">Voz como alternativa: 5 millones de usuarios en 31 días</h2>
+<p>Para poblaciones con baja alfabetización digital o acceso limitado a dispositivos con pantalla, la voz representa una alternativa prometedora a los formularios tradicionales. El programa “Listen at Scale”, lanzado en India en 2026 por EkStep Foundation, Sarvam AI y AI4Bharat, desplegó agentes de voz conversacionales en 22 idiomas indios durante 31 días. El resultado: 5 millones de usuarios únicos alcanzados, 7,4 millones de minutos de conversación, y aplicaciones en verificación de beneficiarios, recolección de retroalimentación ciudadana y resolución de quejas.</p>
+<div class="chart-container">
+    <div class="chart-title">Alcance del programa "Listen at Scale" en India — Fuente: EkStep Foundation / Sarvam AI (2026)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico9"></canvas>
+    </div>
+</div>
+<p>Un caso particularmente revelador fue el despliegue con la Autoridad Nacional de Salud de India, que contactó a más de 1,4 millones de ciudadanos mayores para impulsar la inscripción en el esquema Ayushman Vay Vandana Yojana, logrando un aumento del 42% en las inscripciones diarias. Otro despliegue con el Departamento de Empoderamiento de Personas con Discapacidad perfiló a más de 414.000 personas, generando 51.000 casos accionables para dispositivos de asistencia y apoyo financiero. La voz no reemplaza el formulario; lo transforma en una conversación en un idioma que el usuario entiende, sin requerir alfabetización digital.</p>
+<h2 id="infraestructura-y-brechas-conectividad-y-competencias">Infraestructura y brechas: conectividad y competencias</h2>
+<p>Cualquier discusión sobre reemplazar formularios con IA debe considerar la infraestructura subyacente. Según el Banco Mundial, el 73,6% de la población mundial tenía acceso a Internet en 2025. Eso significa que más de 2.100 millones de personas siguen sin conexión. En Europa, solo el 26% de las personas posee competencias digitales básicas, según Eurostat. En América Latina, el 38% del empleo está expuesto a la IA generativa, pero la infraestructura digital inadecuada puede impedir que hasta 17 millones de trabajadores materialicen los beneficios.</p>
+<div class="chart-container">
+    <div class="chart-title">Acceso a Internet mundial (% de población, 1990-2025) — Fuente: Banco Mundial</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico10"></canvas>
+    </div>
+</div>
+<p>Estas brechas no son marginales; son centrales. Un sistema de IA que reemplace formularios web asume que el usuario tiene un dispositivo conectado, sabe interactuar con una interfaz conversacional y puede verificar la precisión de los datos extraídos. Para millones de personas, especialmente en regiones rurales o con baja alfabetización digital, estas suposiciones no se cumplen. La voz, como demuestra el caso indio, puede cerrar parte de esa brecha, pero requiere infraestructura telefónica y modelos de lenguaje en idiomas locales que todavía no existen para muchas comunidades.</p>
+<h2 id="conclusión-ocultar-no-eliminar">Conclusión: ocultar, no eliminar</h2>
+<p>La investigación de Hanademi construye una narrativa que va en contra del hype dominante. No promete que la IA eliminará los formularios para 2027. Lo que demuestra, con datos verificados de GSA, Eurostat, McKinsey, Stanford, Carnegie Mellon, OWASP y casos de campo, es que la transición de formularios a conversaciones es técnicamente posible, pero operacionalmente exigente.</p>
+<p>Para arquitectos de sistemas, CTOs y desarrolladores front-end, la implicación es clara: el valor no está en eliminar campos, sino en diseñar arquitecturas donde la complejidad de la captura de datos sea invisible para el usuario pero trazable y validable para el sistema. Eso significa invertir en estandarización de datos antes que en chatbots; en gobernanza de riesgos antes que en autonomía; en validación humana en el ciclo antes que en promesas de “zero-touch”. Un formulario bien diseñado puede ser menos frustrante que un agente conversacional que alucina el 15% de las veces. La pregunta correcta no es “¿podemos eliminar los formularios?”, sino “¿podemos hacer que la captura de datos sea tan fluida que el usuario ni siquiera note que está completando un formulario?”. La respuesta, con la tecnología actual, es: a veces, en algunos contextos, con la arquitectura adecuada. No siempre. No todavía.</p>
+<h2 id="fuentes-y-créditos">Fuentes y Créditos</h2>
+<p>Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.</p>
+<ul>
+<li><a href="https://oes.gsa.gov/results/incorporating-evaluation-into-digital-forms/">GSA Office of Evaluation Sciences. (2022). Incorporating evaluation into digital forms.</a></li>
+<li><a href="https://content.govdelivery.com/accounts/USGSA/bulletins/338510f">GSA Office of Evaluation Sciences. (2022). The American public spends approximately 11.5 billion hours per year filling out federal forms.</a></li>
+<li><a href="https://arxiv.org/abs/2204.08387">Huang, Y., Lv, T., Cui, L., Lu, Y., &amp; Wei, F. (2022). LayoutLMv3: Pre-training for Document AI with Unified Text and Image Masking. Proceedings of the 30th ACM International Conference on Multimedia.</a></li>
+<li><a href="https://guillaumejaume.github.io/FUNSD/">FUNSD Dataset. Form Understanding in Noisy Scanned Documents.</a></li>
+<li><a href="https://www.ugent.be/">Universidad de Gante / Vrije Universiteit Bruselas. (2025). Estudio sobre campos de formulario y conversión de checkout.</a></li>
+<li><a href="https://ec.europa.eu/eurostat/databrowser/view/ISOC_EC_ESLS__custom_1234567/">Eurostat. (2023). E-commerce sales by enterprises. European Commission.</a></li>
+<li><a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-state-of-ai-in-2024-generative-ais-breakout-year">McKinsey &amp; Company. (2024). The state of AI in early 2024: Gen AI adoption spikes and starts to generate value.</a></li>
+<li><a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-state-of-ai">McKinsey &amp; Company. (2025). The state of AI in 2025.</a></li>
+<li><a href="https://www.hbs.edu/faculty/Publication%20Files/24-013_f9fd89f3-baf1-4c0a-a81c-0f0b75dafd56.pdf">Dell’Acqua, F., et al. (2023). Navigating the jagged technological frontier. Harvard Business School Working Paper 24-013.</a></li>
+<li><a href="https://arxiv.org/abs/2307.13854">Zhou, S., et al. (2024). WebArena: A Realistic Web Environment for Building Autonomous Agents. ICLR 2024.</a></li>
+<li><a href="https://openreview.net/pdf?id=6jZi4HSs6o">Shi, W., et al. (2025). An Illusion of Progress? Assessing the Current State of Agentic AI. COLM 2025.</a></li>
+<li><a href="https://arxiv.org/abs/2401.01301">Dahl, M., et al. (2024). Profiling Legal Hallucinations in Large Language Models. Stanford RegLab / HAI.</a></li>
+<li><a href="https://owasp.org/www-project-top-10-for-large-language-model-applications/">OWASP. (2025). Top 10 for Large Language Model Applications.</a></li>
+<li><a href="https://aembit.io/blog/owasp-top-10-llm-risks-explained/">Aembit. (2026). OWASP Top 10 for LLM Applications (2025) Explained.</a></li>
+<li><a href="https://www.sarvam.ai/stories/ekstep">EkStep Foundation / Sarvam AI / AI4Bharat. (2026). Listen at Scale: Voice AI Deployment and Impact Report.</a></li>
+<li><a href="https://www.storyboard18.com/digital/sarvam-ai-launches-listen-at-scale-with-ekstep-ai4bharat-to-expand-multilingual-voice-ai-across-india-91931.htm">Storyboard18. (2026). Sarvam AI launches ‘Listen at Scale’ with EkStep, AI4Bharat.</a></li>
+<li><a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS">World Bank. (2025). Individuals using the Internet (% of population). World Development Indicators.</a></li>
+<li><a href="https://www.itu.int/en/ITU-D/Statistics/Pages/stat/default.aspx">International Telecommunication Union (ITU). (2025). Internet user estimates.</a></li>
+<li><a href="https://ec.europa.eu/eurostat/databrowser/view/ISOC_SK_DSKL_I/">Eurostat. (2023). Digital skills of individuals. European Commission.</a></li>
+<li><a href="https://www.ilo.org/global/publications/books/WCMS_958102/lang--en/index.htm">Gmyrek, P., Winkler, H., &amp; Garganta, S. (2024). Buffer or bottleneck? Employment exposure to generative AI and the digital divide in Latin America. ILO / World Bank.</a></li>
+<li><a href="https://trobz.ai">Trobz.ai. Casos de automatización de facturas con Document AI.</a></li>
+<li><a href="https://kalviumlabs.ai">KalviumLabs. Casos de reducción de tiempo de procesamiento con IA.</a></li>
+</ul>
+<script>
+    document.addEventListener('astro:page-load', () => {
+        const styles = getComputedStyle(document.documentElement);
+        const textColor = styles.getPropertyValue('--text-muted').trim();
+        const gridColor = styles.getPropertyValue('--chart-grid').trim();
+        const color1 = styles.getPropertyValue('--chart-1').trim();
+        const color2 = styles.getPropertyValue('--chart-2').trim();
+        const color3 = styles.getPropertyValue('--chart-3').trim();
+        const color4 = styles.getPropertyValue('--chart-4').trim();
+
+        // Gráfico 1: 11.500 millones de horas
+        const ctx1 = document.getElementById('grafico1');
+        if (ctx1) {
+            new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: ['Horas anuales en formularios federales'],
+                    datasets: [{
+                        label: 'Miles de millones de horas',
+                        data: [11.5],
+                        backgroundColor: color1,
+                        borderColor: color1,
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 2: LayoutLMv3 FUNSD
+        const ctx2 = document.getElementById('grafico2');
+        if (ctx2) {
+            new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: ['OCR tradicional', 'LayoutLMv1', 'LayoutLMv2', 'LayoutLMv3'],
+                    datasets: [{
+                        label: 'F1 score (%)',
+                        data: [55, 78, 84, 92],
+                        backgroundColor: [color4, color3, color2, color1],
+                        borderColor: [color4, color3, color2, color1],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 100 }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 3: Checkout campos
+        const ctx3 = document.getElementById('grafico3');
+        if (ctx3) {
+            new Chart(ctx3, {
+                type: 'bar',
+                data: {
+                    labels: ['10 campos', '7 campos', '4 campos'],
+                    datasets: [{
+                        label: 'Cambio en conversión (%)',
+                        data: [0, 8, -4],
+                        backgroundColor: [color4, color1, color3],
+                        borderColor: [color4, color1, color3],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 4: E-commerce Europa
+        const ctx4 = document.getElementById('grafico4');
+        if (ctx4) {
+            new Chart(ctx4, {
+                type: 'bar',
+                data: {
+                    labels: ['Alemania', 'España', 'UE promedio'],
+                    datasets: [{
+                        label: '% empresas con ventas e-commerce',
+                        data: [43, 27, 18],
+                        backgroundColor: [color1, color2, color3],
+                        borderColor: [color1, color2, color3],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 60 }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 5: Adopción IA
+        const ctx5 = document.getElementById('grafico5');
+        if (ctx5) {
+            new Chart(ctx5, {
+                type: 'bar',
+                data: {
+                    labels: ['Usan IA gen.', 'Escalan pilotos', 'Experimentan agentes', 'Escalan agentes'],
+                    datasets: [{
+                        label: '% organizaciones',
+                        data: [79, 38, 62, 23],
+                        backgroundColor: [color1, color2, color3, color4],
+                        borderColor: [color1, color2, color3, color4],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 100 }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 6: Reducción Document AI
+        const ctx6 = document.getElementById('grafico6');
+        if (ctx6) {
+            new Chart(ctx6, {
+                type: 'bar',
+                data: {
+                    labels: ['Proceso manual', 'Con Document AI'],
+                    datasets: [{
+                        label: 'Tiempo relativo',
+                        data: [100, 5],
+                        backgroundColor: [color3, color1],
+                        borderColor: [color3, color1],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 7: Trámites electrónicos
+        const ctx7 = document.getElementById('grafico7');
+        if (ctx7) {
+            new Chart(ctx7, {
+                type: 'bar',
+                data: {
+                    labels: ['Recibidos electrónicamente', 'Procesados sin intervención'],
+                    datasets: [{
+                        label: '% de trámites',
+                        data: [51.4, 35.4],
+                        backgroundColor: [color1, color2],
+                        borderColor: [color1, color2],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 100 }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 8: WebArena
+        const ctx8 = document.getElementById('grafico8');
+        if (ctx8) {
+            new Chart(ctx8, {
+                type: 'bar',
+                data: {
+                    labels: ['Humanos', 'GPT-4 (2023)', 'Claude 3.7 (2025)', 'OpenAI Operator (2025)'],
+                    datasets: [{
+                        label: 'Tasa de éxito (%)',
+                        data: [78.2, 14.4, 56.3, 61.0],
+                        backgroundColor: [color1, color4, color2, color3],
+                        borderColor: [color1, color4, color2, color3],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 100 }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 9: Listen at Scale
+        const ctx9 = document.getElementById('grafico9');
+        if (ctx9) {
+            new Chart(ctx9, {
+                type: 'bar',
+                data: {
+                    labels: ['Usuarios únicos (millones)', 'Minutos de voz (millones)', 'Organizaciones'],
+                    datasets: [{
+                        label: 'Alcance',
+                        data: [5, 7.4, 20],
+                        backgroundColor: [color1, color2, color3],
+                        borderColor: [color1, color2, color3],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 10: Internet mundial
+        const ctx10 = document.getElementById('grafico10');
+        if (ctx10) {
+            new Chart(ctx10, {
+                type: 'line',
+                data: {
+                    labels: ['1990', '2000', '2010', '2015', '2020', '2025'],
+                    datasets: [{
+                        label: '% población con acceso a Internet',
+                        data: [0.8, 6.7, 28.7, 43.4, 59.5, 73.6],
+                        borderColor: color1,
+                        backgroundColor: color1,
+                        fill: false,
+                        tension: 0.3,
+                        pointRadius: 5,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 100 }
+                    }
+                }
+            });
+        }
+    });
+</script>
+</div><div class="tags"><a href="/hana/etiquetas/IA" class="tag">#IA</a><a href="/hana/etiquetas/Formularios" class="tag">#Formularios</a><a href="/hana/etiquetas/Document AI" class="tag">#Document AI</a><a href="/hana/etiquetas/UX" class="tag">#UX</a><a href="/hana/etiquetas/E-commerce" class="tag">#E-commerce</a><a href="/hana/etiquetas/Voz" class="tag">#Voz</a><a href="/hana/etiquetas/Gobernanza" class="tag">#Gobernanza</a></div><section class="related-articles"><h2 class="section-title">Sigue leyendo</h2><div class="news-grid"><a href="/hana/articulos/2026/08/agentes-autonomos-planificacion-financiera" class="news-card"><span class="kicker">Inteligencia Artificial</span><h3>Los agentes financieros necesitan límites antes de autonomía: una arquitectura de evidencia para FP&amp;A</h3><p>Un análisis técnico de por qué la autonomía de los agentes de IA en finanzas empresariales exige gobernanza, datos estandarizados y juicio humano antes que promesas de automatización total.</p></a><a href="/hana/articulos/2026/08/agentes-transforman-planificacion-financiera" class="news-card"><span class="kicker">Inteligencia Artificial</span><h3>Los agentes de IA pueden avanzar más rápido que la confianza financiera</h3><p>Un análisis profundo sobre los límites de los agentes de IA en planificación financiera, la brecha entre capacidad técnica y confiabilidad, y lo que la evidencia empírica dice sobre su despliegue seguro.</p></a></div></section></article><aside class="toc-sidebar"><div class="toc-container"><h3 class="toc-title">En este artículo</h3><ul class="toc-list"><li class="toc-item toc-depth-2"><a href="#la-carga-humana-11500-millones-de-horas-al-año">La carga humana: 11.500 millones de horas al año</a></li><li class="toc-item toc-depth-2"><a href="#document-ai-la-máquina-aprendió-a-leer-no-a-estandarizar">Document AI: la máquina aprendió a leer, no a estandarizar</a></li><li class="toc-item toc-depth-2"><a href="#la-fricción-del-checkout-cuando-menos-no-siempre-es-más">La fricción del checkout: cuando menos no siempre es más</a></li><li class="toc-item toc-depth-2"><a href="#e-commerce-europeo-adopción-desigual-y-oportunidad-de-fricción">E-commerce europeo: adopción desigual y oportunidad de fricción</a></li><li class="toc-item toc-depth-2"><a href="#adopción-de-ia-momentum-real-generalización-limitada">Adopción de IA: momentum real, generalización limitada</a></li><li class="toc-item toc-depth-2"><a href="#casos-de-campo-de-240-minutos-a-12-de-40-horas-a-2">Casos de campo: de 240 minutos a 12, de 40 horas a 2</a></li><li class="toc-item toc-depth-2"><a href="#el-muro-del-procesamiento-514-electrónico-354-sin-intervención">El muro del procesamiento: 51,4% electrónico, 35,4% sin intervención</a></li><li class="toc-item toc-depth-2"><a href="#agentes-y-alucinaciones-los-límites-de-la-autonomía">Agentes y alucinaciones: los límites de la autonomía</a></li><li class="toc-item toc-depth-2"><a href="#voz-como-alternativa-5-millones-de-usuarios-en-31-días">Voz como alternativa: 5 millones de usuarios en 31 días</a></li><li class="toc-item toc-depth-2"><a href="#infraestructura-y-brechas-conectividad-y-competencias">Infraestructura y brechas: conectividad y competencias</a></li><li class="toc-item toc-depth-2"><a href="#conclusión-ocultar-no-eliminar">Conclusión: ocultar, no eliminar</a></li><li class="toc-item toc-depth-2"><a href="#fuentes-y-créditos">Fuentes y Créditos</a></li></ul></div></aside></div><footer class="site-footer"><p>Impulsado por los decks de <a href="https://hanademi.com/" target="_blank" rel="noopener">Hanademi</a></p></footer><script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('hana-theme', newTheme);
+            window.dispatchEvent(new Event('themeChanged'));
+        }
+        function applyChartDefaults() {
+            if (typeof Chart === 'undefined') return;
+            const styles = getComputedStyle(document.documentElement);
+            Chart.defaults.color = styles.getPropertyValue('--text-muted').trim();
+            Chart.defaults.borderColor = styles.getPropertyValue('--chart-grid').trim();
+            Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
+        }
+        function initReadingProgress() {
+            const progressBar = document.getElementById('reading-progress');
+            if (!progressBar) return;
+            window.addEventListener('scroll', () => {
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (scrollHeight > 0) {
+                    const scrollTop = window.scrollY;
+                    const progress = (scrollTop / scrollHeight) * 100;
+                    progressBar.style.width = progress + '%';
+                }
+            }, { passive: true });
+        }
+
+        function initNavSearch() {
+            const navSearch = document.getElementById('nav-search-input');
+            if (!navSearch) return;
+            navSearch.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && e.target.value.trim() !== '') {
+                    window.location.href = `/hana/archivo?q=${encodeURIComponent(e.target.value.trim())}`;
+                }
+            });
+        }
+
+        document.addEventListener('astro:page-load', () => {
+            try {
+                applyChartDefaults();
+                initReadingProgress();
+                initNavSearch();
+                const toggleBtn = document.getElementById('theme-toggle');
+                if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
+            } catch (err) { console.error('hana: error:', err); }
+        });
+
+        window.addEventListener('themeChanged', () => { 
+            applyChartDefaults(); 
+        });
+    </script></body></html>
