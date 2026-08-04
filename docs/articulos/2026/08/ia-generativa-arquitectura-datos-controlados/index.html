@@ -1,0 +1,359 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>El modelo de IA no es tu ventaja competitiva: lo son tus datos y tu arquitectura | hana</title><meta name="description" content="Mientras las empresas compiten por el modelo más grande, la evidencia muestra que la verdadera ventaja defendible está en el conocimiento controlado y la arquitectura que rodea a modelos intercambiables. Un escritorio más grande no encuentra el párrafo correcto."><!-- Open Graph / Redes Sociales --><meta property="og:type" content="article"><meta property="og:title" content="El modelo de IA no es tu ventaja competitiva: lo son tus datos y tu arquitectura"><meta property="og:description" content="Mientras las empresas compiten por el modelo más grande, la evidencia muestra que la verdadera ventaja defendible está en el conocimiento controlado y la arquitectura que rodea a modelos intercambiables. Un escritorio más grande no encuentra el párrafo correcto."><meta property="og:image" content="https://hugomrj.github.io/hana/og-image.jpg"><meta property="og:url" content="https://hugomrj.github.io/hana/articulos/2026/08/ia-generativa-arquitectura-datos-controlados/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="El modelo de IA no es tu ventaja competitiva: lo son tus datos y tu arquitectura"><meta name="twitter:description" content="Mientras las empresas compiten por el modelo más grande, la evidencia muestra que la verdadera ventaja defendible está en el conocimiento controlado y la arquitectura que rodea a modelos intercambiables. Un escritorio más grande no encuentra el párrafo correcto."><meta name="twitter:image" content="https://hugomrj.github.io/hana/og-image.jpg"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='20' fill='%233b82f6'/&gt;&lt;text x='50' y='72' font-size='60' font-family='Inter,sans-serif' fill='white' text-anchor='middle' font-weight='bold'&gt;h&lt;/text&gt;&lt;/svg&gt;"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/hana/_astro/ClientRouter.astro_astro_type_script_index_0_lang.jmhnZfFy.js"></script><!-- Script crítico para evitar el flash blanco (FOUC) en modo oscuro --><script>
+        const savedTheme = localStorage.getItem('hana-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        document.addEventListener('astro:before-swap', (event) => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            event.newDocument.documentElement.setAttribute('data-theme', currentTheme);
+        });
+    </script><link rel="stylesheet" href="/hana/global.css"><style>.astro-route-announcer{clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;width:1px;height:1px;position:absolute;top:0;left:0;overflow:hidden}
+</style></head><body><div id="reading-progress" class="reading-progress-bar"></div><header class="site-header"><div class="nav-container"><div class="logo"><a href="/hana/">han<span>a</span></a></div><div class="nav-search"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input type="text" id="nav-search-input" class="search-input" placeholder="Buscar..."></div><button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"><svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></div></header><div class="article-layout"><article><div class="article-hero"><span class="kicker">Arquitectura de IA</span><h1>El modelo de IA no es tu ventaja competitiva: lo son tus datos y tu arquitectura</h1><div class="byline"><span>5 de agosto de 2026</span></div></div><div class="article-content"><p>Existe una narrativa dominante en la industria de la inteligencia artificial que sugiere que el modelo lo es todo: quien tenga el modelo más grande, más rápido o más barato ganará. Pero esa narrativa confunde la herramienta con el sistema. Un escritorio más grande puede sostener más carpetas, pero no encuentra el párrafo correcto. La evidencia acumulada en 2024 y 2025 muestra que la ventaja competitiva defendible no está en el modelo, sino en el conocimiento controlado y la arquitectura que lo rodea.</p>
+<h2 id="el-falso-dilema-entre-long-context-y-rag">El falso dilema entre Long Context y RAG</h2>
+<p>Durante años, los arquitectos han debatido si es mejor enviar todo el contexto posible al modelo (Long Context) o recuperar selectivamente la evidencia relevante antes de generar la respuesta (RAG - Retrieval-Augmented Generation). La respuesta, según la investigación reciente, es que ambos enfoques tienen fortalezas distintas que dependen del caso de uso.</p>
+<p>Un <a href="https://arxiv.org/abs/2407.16833">estudio comprehensivo de 2024</a> encontró que cuando los modelos de Long Context reciben recursos suficientes, superan consistentemente a RAG en rendimiento promedio. Pero RAG sigue siendo sustancialmente más económico en los escenarios probados. Una <a href="https://hanademi.com/decks/ia-generativa-requiere-arquitectura-propia-y-datos-controlados-20260802-144843/es/">mini-evaluación de 2026</a> confirmó esta tendencia: Long Context produjo 75.9% de respuestas correctas, mientras que Semantic RAG alcanzó 67.3%.</p>
+<div class="chart-container">
+    <div class="chart-title">Precisión de respuestas: Long Context vs Semantic RAG. Fuente: Evaluación 2026</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico1"></canvas>
+    </div>
+</div>
+<p>La diferencia de 8.6 puntos porcentuales parece significativa, pero oculta un detalle crucial: la recuperación selectiva compra margen económico incluso cuando el contexto completo responde mejor. Enviar un millón de tokens cuesta aproximadamente 100 veces más que enviar 10,000 tokens a las mismas tarifas. Con precios representativos de 2024 que oscilan entre <a href="https://www.anthropic.com/pricing">$3 y $7 por millón de tokens de entrada</a>, la ventaja de precisión se evapora rápidamente cuando el volumen de consultas aumenta.</p>
+<h2 id="el-impuesto-del-token-y-la-economía-de-la-escala">El impuesto del token y la economía de la escala</h2>
+<p>La economía del procesamiento de tokens tiene una estructura contraintuitiva. A tarifas iguales por token, procesar un millón de tokens de entrada cuesta 100 veces más que procesar 10,000. Esto significa que el consumo solo es estructuralmente más barato cuando cada solicitud recupera un conjunto pequeño de evidencia. Enviar un corpus completo invierte la comparación en apenas cinco consultas.</p>
+<div class="chart-container">
+    <div class="chart-title">Costo relativo de procesamiento por volumen de tokens. Fuente: OpenAI Pricing</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico2"></canvas>
+    </div>
+</div>
+<p>Esta economía explica por qué las ventanas de contexto han crecido tan dramáticamente. El <a href="https://openai.com/index/new-models-and-developer-products-announced-at-devday/">contexto anunciado</a> pasó de 128,000 tokens en GPT-4 Turbo a 200,000 en <a href="https://www.anthropic.com/news/claude-3-family">Claude 3</a> y 1 millón en <a href="https://deepmind.google/technologies/gemini/">Gemini 1.5</a>. Pero un contexto más grande no garantiza la misma confiabilidad de recuperación.</p>
+<div class="chart-container">
+    <div class="chart-title">Evolución de la capacidad de contexto anunciada por modelo. Fuentes: OpenAI, Anthropic, Google</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico3"></canvas>
+    </div>
+</div>
+<p>A un millón de tokens, la <a href="https://hanademi.com/decks/ia-generativa-requiere-arquitectura-propia-y-datos-controlados-20260802-144843/es/">recuperación de aguja única reportada varía entre 78% y 99%</a>, dependiendo del modelo y la posición de la información relevante. Esta variabilidad significa que el procurement no puede comparar solo límites de contexto; debe probar el comportamiento de recuperación bajo condiciones realistas. Un modelo con ventana de 1M tokens y 78% de confiabilidad puede ser peor que uno con 200K tokens y 99% de confiabilidad, dependiendo de dónde esté la evidencia crítica.</p>
+<h2 id="casos-empresariales-cuando-la-arquitectura-propia-genera-valor">Casos empresariales: cuando la arquitectura propia genera valor</h2>
+<p>Los casos de uso empresarial más convincentes no son aquellos donde el modelo es excepcional, sino donde la arquitectura y los datos controlados multiplican el impacto del modelo.</p>
+<p><a href="https://www.adnoc.ae/en/news-and-media/press-releases/2024/adnoc-and-aiq-developing-first-of-a-kind-agentic-ai-solution-for-global-energy-transformation">ADNOC</a> reportó mejoras de hasta 75% en modelado geológico y 70% en interpretación sísmica con ENERGYai, su solución que combina modelos de lenguaje con conocimiento propietario de subsuelo y flujos de trabajo industriales. El valor no está en el modelo de lenguaje, sino en los petabytes de datos propietarios de ADNOC que abarcan décadas de operaciones, y en la arquitectura que los hace accesibles de forma controlada.</p>
+<div class="chart-container">
+    <div class="chart-title">Mejoras reportadas en casos de uso empresarial. Fuentes: ADNOC, Factory Case Study</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico4"></canvas>
+    </div>
+</div>
+<p>En el sector manufacturero, un caso de estudio mostró que indexar 4,500 documentos redujo el tiempo promedio de búsqueda de 18 minutos a 40 segundos. Para una cohorte de 100,000 trabajadores, esto representó un ahorro agregado de 28,889 horas de búsqueda. El modelo de lenguaje era intercambiable; lo que generó el valor fue la arquitectura de indexación y recuperación que hizo el conocimiento corporativo accesible.</p>
+<p>El <a href="https://www.anthropic.com/news/alberta-government-claude-cybersecurity">gobierno de Alberta</a> desplegó aproximadamente 50 agentes para escanear 466 millones de líneas de código gubernamental en unas 20 horas. La estimación de Anthropic para un equivalente liderado por humanos es de 6.5 años. La ventaja no estuvo en Claude Code específicamente, sino en la arquitectura de agentes paralelos que permitió distribuir el trabajo masivo sobre un corpus controlado.</p>
+<h2 id="la-paradoja-de-la-productividad-percibida">La paradoja de la productividad percibida</h2>
+<p>Los <a href="https://www.microsoft.com/en-us/worklab/work-trend-index/copilots-earliest-users-teach-us-about-generative-ai-at-work">usuarios tempranos de Microsoft Copilot</a> reportaron que el 70% se sentía más productivo y el 77% no quería dejar de usarlo. Un despliegue de 1,000 asientos cuesta aproximadamente $30,000 al mes al precio histórico. Pero estas métricas miden percepción, no resultado empresarial verificable.</p>
+<div class="chart-container">
+    <div class="chart-title">Métricas de percepción vs resultado en usuarios tempranos de Copilot. Fuente: Microsoft Work Trend Index</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico5"></canvas>
+    </div>
+</div>
+<p>La <a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024">encuesta de McKinsey sobre el estado de la IA en 2024</a> encontró que la adopción de IA generativa saltó al 72% de las organizaciones, casi el doble del porcentaje reportado en 2023. Pero los anuncios industriales rara vez divulgan los cinco elementos esenciales necesarios para juzgar un resultado: línea base, tamaño de muestra, usuarios activos, definición de error y validación independiente.</p>
+<h2 id="el-mejor-método-puntúa-3296-sobre-100">El mejor método puntúa 32.96 sobre 100</h2>
+<p>Si la percepción de productividad es alta pero los resultados empresariales son modestos, ¿qué tan buenos son realmente los sistemas de RAG empresarial? Un <a href="https://arxiv.org/html/2506.23139v1">benchmark de 2025 sobre búsqueda profunda en corpus empresariales heterogéneos</a> probó los mejores métodos de RAG agéntico sobre un pool de 39,190 artefactos mixtos. El mejor método puntuó 32.96 sobre 100.</p>
+<p>Esta puntuación es devastadora porque demuestra que incluso los sistemas más sofisticados fallan en la mayoría de las consultas empresariales reales. El cuello de botella no es el modelo de lenguaje, sino la recuperación. RAG no puede garantizar por sí solo versiones actuales, permisos heredados o citas válidas, porque estas dependen de la gobernanza de fuentes y controles de validación.</p>
+<h2 id="gobernanza-de-riesgos-el-marco-nist">Gobernanza de riesgos: el marco NIST</h2>
+<p>La <a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework (AI RMF 1.0)</a> organiza el trabajo de gestión de riesgos de IA en cuatro funciones: Govern (Gobernar), Map (Mapear), Measure (Medir) y Manage (Gestionar). Identifica 12 categorías de riesgo de IA generativa, incluyendo confabulación, privacidad y seguridad de la información.</p>
+<div class="chart-container">
+    <div class="chart-title">Funciones del marco NIST AI RMF 1.0. Fuente: NIST</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico6"></canvas>
+    </div>
+</div>
+<p>Para tecnología operativa (OT), la <a href="https://csrc.nist.gov/pubs/sp/800/82/r3/final">NIST SP 800-82 Rev. 3</a> trata estos sistemas por separado porque los fallos pueden afectar seguridad, confiabilidad, producción y procesos físicos. Las mediciones industriales comúnmente requieren identidad del equipo, unidad de ingeniería, marca de tiempo y contexto operativo antes de una interpretación segura. Una temperatura es insegura de interpretar sin estos cuatro elementos.</p>
+<h2 id="conclusión-la-arquitectura-como-foso-defendible">Conclusión: La arquitectura como foso defendible</h2>
+<p>La evidencia disponible sugiere que las organizaciones que invierten en modelos más grandes están optimizando la variable equivocada. El modelo es intercambiable; lo que no lo es son los datos propietarios, la arquitectura de recuperación, los controles de gobernanza y los flujos de trabajo industriales que hacen que el modelo sea útil en un contexto específico.</p>
+<p>ENERGYai de ADNOC no es valioso porque use un modelo de lenguaje específico, sino porque combina ese modelo con petabytes de datos de subsuelo acumulados durante décadas y flujos de trabajo de interpretación sísmica refinados por geólogos expertos. El escaneo de código de Alberta no fue exitoso porque Claude Code sea único, sino porque la arquitectura de 50 agentes paralelos permitió distribuir una tarea masiva sobre un corpus controlado.</p>
+<p>La verdadera ventaja competitiva en la era de la IA generativa no está en qué modelo usas, sino en qué tan bien has resuelto los problemas que el modelo no puede resolver por sí solo: gobernanza de datos, recuperación confiable, control de permisos, validación de citas y integración con flujos de trabajo empresariales. Esos son los fosos defendibles. El modelo es solo la herramienta que los explota.</p>
+<h3 id="fuentes-y-créditos">Fuentes y Créditos</h3>
+<p>Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.</p>
+<ul>
+<li><a href="https://hanademi.com/decks/ia-generativa-requiere-arquitectura-propia-y-datos-controlados-20260802-144843/es/">Hanademi - IA generativa requiere arquitectura propia y datos controlados</a></li>
+<li><a href="https://www.adnoc.ae/en/news-and-media/press-releases/2024/adnoc-and-aiq-developing-first-of-a-kind-agentic-ai-solution-for-global-energy-transformation">ADNOC - ENERGYai Agentic AI Solution</a></li>
+<li><a href="https://www.anthropic.com/news/alberta-government-claude-cybersecurity">Government of Alberta - Claude Cybersecurity Case Study</a></li>
+<li><a href="https://arxiv.org/abs/2407.16833">Li et al. - Retrieval Augmented Generation or Long-Context LLMs? (2024)</a></li>
+<li><a href="https://www.microsoft.com/en-us/worklab/work-trend-index/copilots-earliest-users-teach-us-about-generative-ai-at-work">Microsoft - What Can Copilot’s Earliest Users Teach Us?</a></li>
+<li><a href="https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024">McKinsey - The State of AI in Early 2024</a></li>
+<li><a href="https://www.nist.gov/itl/ai-risk-management-framework">NIST AI Risk Management Framework (AI RMF 1.0)</a></li>
+<li><a href="https://csrc.nist.gov/pubs/sp/800/82/r3/final">NIST SP 800-82 Rev. 3 - Guide to Operational Technology Security</a></li>
+<li><a href="https://arxiv.org/html/2506.23139v1">Particula Tech - Deep Search Benchmark (2025)</a></li>
+<li><a href="https://openai.com/index/new-models-and-developer-products-announced-at-devday">OpenAI - New Models and Developer Products (DevDay)</a></li>
+<li><a href="https://www.anthropic.com/news/claude-3-family">Anthropic - Claude 3 Model Family</a></li>
+<li><a href="https://deepmind.google/technologies/gemini/">Google - Gemini 1.5</a></li>
+</ul>
+<script is:inline data-astro-rerun>
+    const styles = getComputedStyle(document.documentElement);
+    const textColor = styles.getPropertyValue('--text-muted').trim();
+    const gridColor = styles.getPropertyValue('--chart-grid').trim();
+    const surfaceColor = styles.getPropertyValue('--surface').trim();
+    
+    const color1 = styles.getPropertyValue('--chart-1').trim();
+
+    const premiumTooltip = {
+        backgroundColor: surfaceColor,
+        titleColor: textColor,
+        bodyColor: textColor,
+        borderColor: gridColor,
+        borderWidth: 1,
+        padding: 12,
+        cornerRadius: 8,
+        displayColors: true
+    };
+
+    const ctx1 = document.getElementById('grafico1');
+    if (ctx1) {
+        new Chart(ctx1, {
+            type: 'bar',
+            data: { 
+                labels: ['Long Context', 'Semantic RAG'],
+                datasets: [{
+                    label: 'Precisión de respuestas (%)',
+                    data: [75.9, 67.3],
+                    backgroundColor: [color1, color1 + '99'],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.parsed.y + '% de respuestas correctas' }
+                    }
+                },
+                scales: { 
+                    x: { ticks: { color: textColor }, grid: { display: false } }, 
+                    y: { ticks: { color: textColor, callback: v => v + '%' }, grid: { color: gridColor }, beginAtZero: true, max: 100 } 
+                }
+            }
+        });
+    }
+
+    const ctx2 = document.getElementById('grafico2');
+    if (ctx2) {
+        new Chart(ctx2, {
+            type: 'bar',
+            data: { 
+                labels: ['10,000 tokens', '100,000 tokens', '1,000,000 tokens'],
+                datasets: [{
+                    label: 'Costo relativo',
+                    data: [1, 10, 100],
+                    backgroundColor: [color1 + '99', color1 + 'cc', color1],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.parsed.y + 'x el costo base' }
+                    }
+                },
+                scales: { 
+                    x: { ticks: { color: textColor }, grid: { display: false } }, 
+                    y: { ticks: { color: textColor, callback: v => v + 'x' }, grid: { color: gridColor }, beginAtZero: true, max: 120 } 
+                }
+            }
+        });
+    }
+
+    const ctx3 = document.getElementById('grafico3');
+    if (ctx3) {
+        new Chart(ctx3, {
+            type: 'line',
+            data: { 
+                labels: ['GPT-4 Turbo', 'Claude 3', 'Gemini 1.5'],
+                datasets: [{
+                    label: 'Tokens de contexto (miles)',
+                    data: [128, 200, 1000],
+                    borderColor: color1,
+                    backgroundColor: color1 + '22',
+                    borderWidth: 3,
+                    tension: 0.3,
+                    pointRadius: 8,
+                    pointHoverRadius: 10,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.parsed.y + 'K tokens' }
+                    }
+                },
+                scales: { 
+                    x: { ticks: { color: textColor }, grid: { display: false } }, 
+                    y: { ticks: { color: textColor, callback: v => v + 'K' }, grid: { color: gridColor }, beginAtZero: true } 
+                }
+            }
+        });
+    }
+
+    const ctx4 = document.getElementById('grafico4');
+    if (ctx4) {
+        new Chart(ctx4, {
+            type: 'bar',
+            data: { 
+                labels: ['ADNOC Modelado', 'ADNOC Sísmica', 'Factory Search'],
+                datasets: [{
+                    label: 'Mejora porcentual',
+                    data: [75, 70, 96],
+                    backgroundColor: [color1, color1 + 'cc', color1 + '99'],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.parsed.x + '% de mejora' }
+                    }
+                },
+                scales: { 
+                    y: { ticks: { color: textColor }, grid: { display: false } }, 
+                    x: { ticks: { color: textColor, callback: v => v + '%' }, grid: { color: gridColor }, beginAtZero: true, max: 100 } 
+                }
+            }
+        });
+    }
+
+    const ctx5 = document.getElementById('grafico5');
+    if (ctx5) {
+        new Chart(ctx5, {
+            type: 'doughnut',
+            data: { 
+                labels: ['Se sienten más productivos (70%)', 'No quieren dejarlo (77%)'],
+                datasets: [{
+                    data: [70, 77],
+                    backgroundColor: [color1, color1 + 'cc'],
+                    borderColor: surfaceColor,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '65%',
+                plugins: { 
+                    legend: { 
+                        display: true,
+                        position: 'bottom', 
+                        labels: { color: textColor, usePointStyle: true, padding: 15 } 
+                    },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.label }
+                    }
+                }
+            }
+        });
+    }
+
+    const ctx6 = document.getElementById('grafico6');
+    if (ctx6) {
+        new Chart(ctx6, {
+            type: 'doughnut',
+            data: { 
+                labels: ['Govern', 'Map', 'Measure', 'Manage'],
+                datasets: [{
+                    data: [25, 25, 25, 25],
+                    backgroundColor: [color1, color1 + 'cc', color1 + '99', color1 + '66'],
+                    borderColor: surfaceColor,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: { 
+                    legend: { 
+                        display: true,
+                        position: 'bottom', 
+                        labels: { color: textColor, usePointStyle: true, padding: 15 } 
+                    },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.label }
+                    }
+                }
+            }
+        });
+    }
+</script>
+</div><div class="tags"><a href="/hana/etiquetas/IA Generativa" class="tag">#IA Generativa</a><a href="/hana/etiquetas/RAG" class="tag">#RAG</a><a href="/hana/etiquetas/Long Context" class="tag">#Long Context</a><a href="/hana/etiquetas/Arquitectura" class="tag">#Arquitectura</a><a href="/hana/etiquetas/Gobernanza de Datos" class="tag">#Gobernanza de Datos</a><a href="/hana/etiquetas/CTO" class="tag">#CTO</a></div><section class="related-articles"><h2 class="section-title">Sigue leyendo</h2><div class="news-grid"><a href="/hana/articulos/2026/08/ai-code-quality-constraints-guardrails" class="news-card"><span class="kicker">Ingeniería de Software</span><h3>Por qué los desarrolladores que más confían en AI escriben el código más peligroso</h3><p>Un estudio de campo con 16 desarrolladores experimentados demostró que AI los hizo 19% más lentos mientras creían ser 20% más rápidos. La paradoja de la calidad percibida vs. la estabilidad real obliga a repensar cómo medimos la productividad asistida por modelos.</p></a><a href="/hana/articulos/2026/08/metodologia-estimacion-costos-modernizacion" class="news-card"><span class="kicker">Gestión de Proyectos</span><h3>Por qué los presupuestos de modernización de legacy casi siempre fallan (y cómo evitarlo)</h3><p>El 27% de sobrecosto promedio oculta el verdadero peligro: uno de cada seis proyectos de TI se desvía 200%. Una metodología probabilística basada en evidencia auditable puede convertir estimaciones opacas en decisiones defendibles.</p></a></div></section></article><aside class="toc-sidebar"><div class="toc-container"><h3 class="toc-title">En este artículo</h3><ul class="toc-list"><li class="toc-item toc-depth-2"><a href="#el-falso-dilema-entre-long-context-y-rag">El falso dilema entre Long Context y RAG</a></li><li class="toc-item toc-depth-2"><a href="#el-impuesto-del-token-y-la-economía-de-la-escala">El impuesto del token y la economía de la escala</a></li><li class="toc-item toc-depth-2"><a href="#casos-empresariales-cuando-la-arquitectura-propia-genera-valor">Casos empresariales: cuando la arquitectura propia genera valor</a></li><li class="toc-item toc-depth-2"><a href="#la-paradoja-de-la-productividad-percibida">La paradoja de la productividad percibida</a></li><li class="toc-item toc-depth-2"><a href="#el-mejor-método-puntúa-3296-sobre-100">El mejor método puntúa 32.96 sobre 100</a></li><li class="toc-item toc-depth-2"><a href="#gobernanza-de-riesgos-el-marco-nist">Gobernanza de riesgos: el marco NIST</a></li><li class="toc-item toc-depth-2"><a href="#conclusión-la-arquitectura-como-foso-defendible">Conclusión: La arquitectura como foso defendible</a></li><li class="toc-item toc-depth-3"><a href="#fuentes-y-créditos">Fuentes y Créditos</a></li></ul></div></aside></div><footer class="site-footer"><h3>Impulsado por los decks de <a href="https://hanademi.com/" target="_blank" rel="noopener">Hanademi</a></h3></footer><script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('hana-theme', newTheme);
+            window.dispatchEvent(new Event('themeChanged'));
+        }
+        function applyChartDefaults() {
+            if (typeof Chart === 'undefined') return;
+            const styles = getComputedStyle(document.documentElement);
+            Chart.defaults.color = styles.getPropertyValue('--text-muted').trim();
+            Chart.defaults.borderColor = styles.getPropertyValue('--chart-grid').trim();
+            Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
+        }
+        function initReadingProgress() {
+            const progressBar = document.getElementById('reading-progress');
+            if (!progressBar) return;
+            window.addEventListener('scroll', () => {
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (scrollHeight > 0) {
+                    const scrollTop = window.scrollY;
+                    const progress = (scrollTop / scrollHeight) * 100;
+                    progressBar.style.width = progress + '%';
+                }
+            }, { passive: true });
+        }
+
+        function initNavSearch() {
+            const navSearch = document.getElementById('nav-search-input');
+            if (!navSearch) return;
+            navSearch.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && e.target.value.trim() !== '') {
+                    window.location.href = `/hana/archivo?q=${encodeURIComponent(e.target.value.trim())}`;
+                }
+            });
+        }
+
+        document.addEventListener('astro:page-load', () => {
+            try {
+                applyChartDefaults();
+                initReadingProgress();
+                initNavSearch();
+                const toggleBtn = document.getElementById('theme-toggle');
+                if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
+            } catch (err) { console.error('hana: error:', err); }
+        });
+
+        window.addEventListener('themeChanged', () => { 
+            applyChartDefaults(); 
+        });
+    </script></body></html>
