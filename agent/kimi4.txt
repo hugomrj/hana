@@ -9,7 +9,7 @@ Aquí tienes los requisitos obligatorios:
 - Extrae las fuentes citadas en el deck (CISQ, Eurostat, Hanademi, etc.).
 - Realiza búsquedas web para verificar que los datos y estadísticas son precisos y actuales. 
 - Si encuentras datos actualizados, estudios complementarios de las fuentes originales o métricas adicionales de la industria, inclúyelos para enriquecer y profundizar el artículo. 
-- Incluye enlaces hiperenlazados en formato Markdown estricto [texto](url) a las fuentes originales dentro del cuerpo del texto y en la sección de créditos.
+- Incluye enlaces hiperenlazados en formato Markdown estricto texto a las fuentes originales dentro del cuerpo del texto y en la sección de créditos. NUNCA uses marcadores numéricos académicos como [[1]] o [[2]]. Si mencionas un dato, enlaza la fuente directamente en las palabras relevantes.
 
 2. ESTRUCTURA, NARRATIVA Y EXTENSIÓN:
 - No escribas una lista de diapositivas. Escribe un ARTÍCULO fluido con introducción, desarrollo y conclusión.
