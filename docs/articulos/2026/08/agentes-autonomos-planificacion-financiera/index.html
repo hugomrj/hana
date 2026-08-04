@@ -1,0 +1,366 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Los agentes financieros necesitan límites antes de autonomía: una arquitectura de evidencia para FP&amp;A | hana</title><meta name="description" content="Un análisis técnico de por qué la autonomía de los agentes de IA en finanzas empresariales exige gobernanza, datos estandarizados y juicio humano antes que promesas de automatización total."><!-- Open Graph / Redes Sociales --><meta property="og:type" content="article"><meta property="og:title" content="Los agentes financieros necesitan límites antes de autonomía: una arquitectura de evidencia para FP&amp;A"><meta property="og:description" content="Un análisis técnico de por qué la autonomía de los agentes de IA en finanzas empresariales exige gobernanza, datos estandarizados y juicio humano antes que promesas de automatización total."><meta property="og:image" content="https://hugomrj.github.io/hana/og-image.jpg"><meta property="og:url" content="https://hugomrj.github.io/hana/articulos/2026/08/agentes-autonomos-planificacion-financiera/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Los agentes financieros necesitan límites antes de autonomía: una arquitectura de evidencia para FP&amp;A"><meta name="twitter:description" content="Un análisis técnico de por qué la autonomía de los agentes de IA en finanzas empresariales exige gobernanza, datos estandarizados y juicio humano antes que promesas de automatización total."><meta name="twitter:image" content="https://hugomrj.github.io/hana/og-image.jpg"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='20' fill='%233b82f6'/&gt;&lt;text x='50' y='72' font-size='60' font-family='Inter,sans-serif' fill='white' text-anchor='middle' font-weight='bold'&gt;h&lt;/text&gt;&lt;/svg&gt;"><!-- ¡Esta línea es la que carga tu diseño! --><link rel="stylesheet" href="/hana/global.css"></head><body><!-- Barra de progreso de lectura --><div id="reading-progress" class="reading-progress-bar"></div><header class="site-header"><div class="nav-container"><div class="logo"><a href="/hana/">han<span>a</span></a></div><!-- Barra de búsqueda en Navbar --><div class="nav-search"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input type="text" id="nav-search-input" class="search-input" placeholder="Buscar..."></div><button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"><!-- Icono Sol --><svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><!-- Icono Luna --><svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></div></header><article><div class="article-hero"><span class="kicker">Inteligencia Artificial</span><h1>Los agentes financieros necesitan límites antes de autonomía: una arquitectura de evidencia para FP&amp;A</h1><div class="byline"><div class="author">Por <strong>hana</strong></div><span class="dot">•</span><span>2 de agosto de 2026</span><span class="dot">•</span><span>15 min de lectura</span></div></div><div class="article-content"><p>La promesa de los agentes autónomos de inteligencia artificial en finanzas empresariales es seductora: un sistema que percibe datos de múltiples fuentes, razona sobre presupuestos y pronósticos, planifica acciones correctivas y ejecuta pagos, conciliaciones o reportes sin intervención humana. Para los directores financieros y equipos de FP&amp;A (Financial Planning and Analysis) agobiados por ciclos de cierre mensuales que consumen semanas, la idea de delegar la operación rutinaria a una máquina inteligente es irresistible. Pero la investigación original de Hanademi, que analiza la transformación de la planificación financiera por agentes autónomos, construye un argumento mucho más cauteloso: antes de otorgar autonomía, las organizaciones necesitan límites claros, datos estandarizados y un marco de gobernanza que preserve el juicio humano en las decisiones que importan.</p>
+<h2 id="de-la-conversación-a-la-acción-qué-distingue-a-un-agente-de-un-modelo-de-lenguaje">De la conversación a la acción: qué distingue a un agente de un modelo de lenguaje</h2>
+<p>El primer obstáculo conceptual en cualquier discusión sobre agentes autónomos es la propia definición. Un modelo de lenguaje grande (LLM) aconseja: recibe una pregunta, procesa patrones estadísticos aprendidos de billones de tokens y genera una respuesta plausible. Un agente, en cambio, puede recordar, planificar y ejecutar. Wang y colegas, en una de las revisiones más citadas del campo publicada en Frontiers of Computer Science (2023), organizan la arquitectura de los agentes basados en LLM en cuatro componentes: perfil, memoria, planificación y acción. El perfil define el rol y la persona del agente; la memoria almacena y recupera información a través de sesiones; la planificación produce secuencias de acciones hacia una meta; y la acción materializa las decisiones mediante llamadas a herramientas externas.</p>
+<p>Esta distinción no es académica. Cuando un CFO le pregunta a un chatbot “¿cuál fue la variación del EBITDA en el tercer trimestre?”, el sistema responde con un número. Cuando un agente autónomo recibe la instrucción “reconcilia el presupuesto contra lo ejecutado del tercer trimestre, identifica los drivers de variación por encima del umbral y genera un informe ejecutivo”, el sistema debe descomponer la tarea en subpasos, extraer datos del ERP, cruzarlos con el modelo de forecasting, calcular desviaciones, redactar narrativa y entregar un documento estructurado. La diferencia entre responder y actuar es la diferencia entre un asistente conversacional y un agente financiero.</p>
+<p>Sin embargo, como advierte la investigación de Hanademi, una etiqueta no es una prueba de capacidad. Xi y colegas (2023) publicaron una revisión complementaria que analiza el auge y el potencial de los agentes basados en LLM, pero su taxonomía, las etiquetas comerciales, los estudios de producción y los índices de despliegue responden preguntas distintas. En conjunto, muestran por qué llamar “agente” a un sistema no establece su capacidad autónoma. La conversación fluida no demuestra por sí sola agencia organizacional.</p>
+<h2 id="la-frontera-dentada-donde-la-ia-brilla-y-donde-falla">La frontera dentada: donde la IA brilla y donde falla</h2>
+<p>El estudio más citado en el deck de Hanademi es el de Dell’Acqua y colegas de Harvard Business School (2023), que evaluó a 758 consultores utilizando GPT-4 en tareas dentro de su límite de competencia medido. Los resultados fueron impresionantes: los usuarios de GPT-4 completaron un 12,2% más de tareas, trabajaron un 25,1% más rápido y produjeron resultados con más de un 40% de mejora en calidad evaluada. Pero el mismo estudio introdujo un hallazgo que debería inscribirse en mármol sobre la puerta de cualquier departamento de finanzas: en una tarea fuera del límite confiable del modelo, los usuarios asistidos fueron 19 puntos porcentuales menos propensos a llegar a la respuesta correcta que quienes trabajaron sin asistencia.</p>
+<div class="chart-container">
+    <div class="chart-title">Impacto de GPT-4 en consultores: tareas dentro de la frontera de competencia (%) — Fuente: Dell'Acqua et al., Harvard Business School (2023)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico1"></canvas>
+    </div>
+</div>
+<p>Esta “frontera dentada” tiene implicaciones directas para FP&amp;A. Las tareas financieras no son homogéneas. Reconciliar una cuenta bancaria contra el libro mayor es un procedimiento estructurado con reglas claras, candidato ideal para automatización. Pero interpretar por qué una división latinoamericana desvió un 23% del presupuesto de marketing requiere contexto organizacional, juicio sobre causas raíz y negociación con stakeholders humanos. Un agente puede calcular la desviación con precisión milimétrica y aún así fallar estrepitosamente al atribuirla correctamente. La frontera dentada no es un defecto del modelo; es una característica del dominio.</p>
+<p>Otro estudio fundamental citado en la investigación es el de Brynjolfsson, Li y Raymond (NBER 2023, QJE 2025), que analizó a 5.179 agentes de soporte asistidos por IA generativa. La asistencia aumentó los casos resueltos por hora en un 14% promedio, pero el hallazgo más relevante para finanzas es que un responsable humano conservó el control de las interacciones con clientes y eligió qué recomendaciones utilizar. La evidencia más sólida adyacente apoya el juicio asistido, no la agencia sin supervisión. En FP&amp;A, esto se traduce en un principio de diseño: el agente puede ensamblar evidencia, pero una persona debe conservar la autoridad para revisar y decidir.</p>
+<h2 id="el-razonamiento-financiero-donde-las-palabras-se-encuentran-con-los-números">El razonamiento financiero: donde las palabras se encuentran con los números</h2>
+<p>La planificación y análisis financiero presenta un desafío técnico que la mayoría de las aplicaciones de IA no enfrentan: el razonamiento híbrido. Una respuesta de FP&amp;A puede exigir leer una narrativa textual, encontrar valores numéricos en una tabla, realizar un cálculo aritmético y expresar el resultado en lenguaje natural. Los benchmarks académicos han documentado esta complejidad con precisión creciente.</p>
+<p>Chen y colegas publicaron en EMNLP 2021 FinQA, un dataset de 8.281 pares de pregunta-respuesta que requieren razonamiento numérico sobre datos financieros. Zhu y colegas presentaron en ACL-IJCNLP 2021 TAT-QA, con 16.552 elementos que combinan contenido tabular y textual. Islam y colegas (2023) lanzaron FinanceBench, con 10.231 ítems diseñados para evaluar sistemas de respuesta a preguntas financieras. Juntos, estos benchmarks demuestran que la automatización clásica funciona mejor cuando la entrada y la regla ya se conocen. FP&amp;A es más difícil porque una respuesta puede exigir lectura, búsqueda y cálculo en secuencia.</p>
+<div class="chart-container">
+    <div class="chart-title">Tamaño de benchmarks de razonamiento financiero (elementos) — Fuente: Chen et al. (2021); Zhu et al. (2021); Islam et al. (2023)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico2"></canvas>
+    </div>
+</div>
+<p>La metáfora del iceberg, usada en el deck de Hanademi, es particularmente apropiada. Una respuesta financiera es solo la punta visible; debajo están los datos, los supuestos y las excepciones. Un agente puede generar una proyección de flujo de caja con aparente sofisticación, pero si los datos subyacentes provienen de sistemas desconectados, con formatos inconsistentes y sin auditoría de linaje, la respuesta es un castillo de naipes. Como señala la investigación citada de Diginomica: el problema de la IA en FP&amp;A, una y otra vez, son los datos debajo de ella.</p>
+<h2 id="rpa-y-agentes-la-diferencia-entre-un-lavavajillas-y-un-cocinero">RPA y agentes: la diferencia entre un lavavajillas y un cocinero</h2>
+<p>Para entender qué puede automatizarse hoy y qué requiere juicio humano, es útil distinguir entre RPA (Robotic Process Automation) y agentes autónomos. La investigación de Hanademi cita dos estudios seminales sobre RPA en contabilidad: Kokina y Blanchette (2019) en Journal of Emerging Technologies in Accounting, y Cooper y colegas (2019) en Accounting Horizons. Ambos convergen en un patrón: la automatización robótica funciona mejor con reglas estandarizadas, entradas estructuradas y excepciones manejables. Se parece a un lavavajillas que ejecuta un ciclo conocido. Los objetos inusuales todavía requieren intervención humana.</p>
+<p>Los agentes autónomos prometen ir más allá. Pero la evidencia de campo muestra que la fricción de implementación es real. El estudio de las tarjetas inteligentes en India, publicado por J-PAL (Abdul Latif Jameel Poverty Action Lab), documenta un caso instructivo. El sistema de pagos con tarjetas inteligentes redujo las fugas en más de un 40% y generó un ahorro agregado de tiempo estimado en 4,5 millones de dólares. Sin embargo, después de dos años, solo el 50% de los pagos se procesaban con el nuevo sistema porque la inscripción de beneficiarios era difícil. La tecnología funcionó; la adopción no fue automática. La misma fricción opera en las empresas: un agente puede ser técnicamente capaz, pero si requiere reestructurar procesos, reentrenar equipos y rediseñar controles, el despliegue real se retrasa meses o años.</p>
+<div class="chart-container">
+    <div class="chart-title">Confiabilidad total ilustrativa según número de pasos independientes (95% por paso) — Fuente: Cálculo Hanademi</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico3"></canvas>
+    </div>
+</div>
+<p>Una preocupación técnica adicional es la acumulación de errores en cadenas de pasos. El deck de Hanademi presenta un cálculo ilustrativo devastador: si cada paso independiente de un agente tiene una confiabilidad del 95%, cinco pasos producen una confiabilidad total del 77,4%; diez pasos, del 59,9%; y veinte pasos, del 35,8%. Un paso que acierta el 95% de las veces suena confiable. Bajo un supuesto de independencia, diez pasos producen menos del 60% de confiabilidad end-to-end. En FP&amp;A, donde un flujo de trabajo puede involucrar extracción de datos del ERP, transformación, cálculo de métricas, generación de narrativa y distribución a stakeholders, la cadena de veinte pasos no es una exageración. Es una descripción conservadora.</p>
+<h2 id="los-benchmarks-hablan-gaia-agentbench-y-la-brecha-con-los-humanos">Los benchmarks hablan: GAIA, AgentBench y la brecha con los humanos</h2>
+<p>Si los agentes financieros autónomos fueran ya una realidad madura, los benchmarks deberían reflejarlo. La evidencia dice lo contrario. Mialon y colegas (2024) publicaron GAIA, un benchmark para asistentes de IA generales que evalúa el desempeño en 466 preguntas reales del mundo. Los humanos alcanzaron cerca de un 92% de precisión. Un sistema temprano GPT-4 con complementos quedó en aproximadamente un 15%. La brecha fue de unos 77 puntos porcentuales. Incluso en el leaderboard actualizado de GAIA (2025), los mejores agentes generalistas alcanzan alrededor de un 74,5% con Claude Sonnet 4.5, todavía significativamente por debajo del desempeño humano.</p>
+<p>AgentBench, publicado por Liu y colegas en ICLR 2024, evalúa a los LLM como agentes en ocho entornos distintos que abarcan código, juegos y web. Los autores encontraron que, aunque los modelos comerciales de primer nivel muestran una fuerte capacidad de actuar como agentes en entornos complejos, hay una disparidad significativa entre ellos y muchos competidores de código abierto. Más importante aún, identificaron que la razón típica de fallo es el límite de tareas excedido (TLE): los agentes no resuelven el problema después de alcanzar el máximo de rondas de interacción. El obstáculo principal no es la longitud del contexto, sino la profundidad del razonamiento.</p>
+<div class="chart-container">
+    <div class="chart-title">Desempeño en benchmark GAIA: humanos vs GPT-4 temprano (%) — Fuente: Mialon et al. (2024); HAL Leaderboard (2025)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico4"></canvas>
+    </div>
+</div>
+<p>Estos benchmarks no miden directamente FP&amp;A, pero establecen un techo de capacidad. Si un agente generalista no puede navegar una web, operar una base de datos o resolver un puzzle de pensamiento lateral con confiabilidad superior al 75%, es arriesgado asumir que puede manejar autónomamente la planificación financiera de una empresa con múltiples subsidiarias, monedas y regímenes regulatorios.</p>
+<h2 id="la-realidad-de-la-adopción-entre-el-entusiasmo-y-la-gobernanza">La realidad de la adopción: entre el entusiasmo y la gobernanza</h2>
+<p>McKinsey reportó en 2024 que el 65% de las organizaciones encuestadas usaban regularmente IA generativa en al menos una función. La encuesta incluyó redacción, resúmenes y otros usos que no planifican ni ejecutan flujos de trabajo. No permite establecer una tasa equivalente para agentes financieros autónomos. Los datos de 2025 muestran una evolución: el 88% de las organizaciones ahora usan IA en alguna función, el 79% ha adoptado IA generativa, pero solo alrededor del 38% ha escalado más allá de pilotos. El 62% de las organizaciones experimenta con agentes, pero solo el 23% está escalando al menos un sistema agéntico.</p>
+<p>En el ámbito financiero específico, Deloitte encontró en su encuesta de CFOs del cuarto trimestre de 2025 que el 54% de los directores financieros considera que integrar agentes de IA en sus departamentos será una prioridad de transformación en 2026, y el 87% cree que la IA será extremadamente o muy importante para las operaciones financieras. Sin embargo, Wolters Kluwer proyecta que el 44% de los equipos financieros usará IA agéntica en 2026, un aumento del 600% sobre 2025, pero el 99% de las empresas planea desplegar agentes autónomos mientras solo el 11% lo ha hecho realmente. La brecha entre intención y ejecución es abismal.</p>
+<p>Una encuesta de campo a 277 contadores profesionales, citada en el deck de Hanademi, encontró diferencias importantes en patrones de adopción, beneficios y preocupaciones. Una sola tasa organizacional no puede describir una profesión que vive la IA generativa de maneras muy distintas. Algunos equipos usan IA para redactar narrativas de variación; otros para detectar anomalías en transacciones; muy pocos para ejecutar flujos de trabajo de principio a fin sin supervisión humana.</p>
+<div class="chart-container">
+    <div class="chart-title">Adopción de IA generativa en empresas: uso vs escalamiento (%) — Fuente: McKinsey (2024-2025)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico5"></canvas>
+    </div>
+</div>
+<h2 id="el-contexto-latinoamericano-infraestructura-antes-que-autonomía">El contexto latinoamericano: infraestructura antes que autonomía</h2>
+<p>El deck de Hanademi incluye un análisis detallado de la capacidad digital en Latinoamérica que cualquier arquitecto de sistemas financieros debería considerar. Según estimaciones de la OIT y el Banco Mundial (2024), el 38% del empleo latinoamericano y caribeño está bajo algún grado de exposición a IA generativa. Sin embargo, la infraestructura digital inadecuada puede impedir que hasta 17 millones de trabajadores expuestos materialicen los beneficios.</p>
+<p>Los datos de exportaciones de servicios TIC del Banco Mundial revelan una heterogeneidad regional pronunciada. Brasil alcanzó 7.440 millones de dólares en exportaciones TIC en 2025, superando ampliamente a México (3.260 millones) y Argentina (2.830 millones). Colombia aceleró fuertemente después de 2021 y llegó a 2.310 millones, mientras que Costa Rica creció de forma constante hasta 2.670 millones. Uruguay construyó una base de 1.500 millones desde apenas 210 millones en 2010. Chile, por su parte, terminó el periodo por debajo de 1.000 millones. La capacidad regional es desigual incluso antes de considerar la adopción de agentes.</p>
+<div class="chart-container">
+    <div class="chart-title">Exportaciones de servicios TIC en Latinoamérica (USD millones, 2025) — Fuente: Banco Mundial</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico6"></canvas>
+    </div>
+</div>
+<p>La infraestructura interna presenta desafíos adicionales. Argentina multiplicó por once sus suscripciones de banda ancha fija entre 2005 y 2024, pasando de 2,36 a 26,10 por cada 100 personas. México, sin embargo, vio su gasto en investigación y desarrollo caer del 0,47% del PIB en 2010 al 0,25% en 2024, cerca de la mitad. La producción por trabajador en Argentina permanece un 14% por debajo de su pico de 2011. Estos indicadores no demuestran que la región no pueda adoptar agentes financieros, pero sí establecen que la brecha digital es una variable activa del diseño: un agente que depende de APIs en tiempo real, datos limpios y conectividad estable operará de manera muy diferente en São Paulo que en una ciudad intermediaria de la región.</p>
+<div class="chart-container">
+    <div class="chart-title">Exportaciones de servicios TIC como % de exportaciones de servicios (2025) — Fuente: Banco Mundial</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico7"></canvas>
+    </div>
+</div>
+<h2 id="hacia-una-arquitectura-de-agentes-financieros-con-gobernanza">Hacia una arquitectura de agentes financieros con gobernanza</h2>
+<p>La investigación de Hanademi no concluye que los agentes autónomos sean imposibles o indeseables. Concluye que la autonomía debe construirse sobre cimientos sólidos, no sobre hype tecnológico. A partir de la evidencia revisada, es posible esbozar un marco de diseño para FP&amp;A.</p>
+<p>Primero, la estandarización de datos como prerequisito. La reforma china de facturación digital elevó las tasas efectivas de impuestos en 0,91 puntos porcentuales no porque la tecnología fuera mágica, sino porque una capa transaccional estandarizada cambió los resultados financieros. Un agente financiero no puede razonar sobre datos que no existen, están duplicados o son inaccesibles. La inversión en data lakes, modelos semánticos y gobernanza de datos no es un lujo previo a la IA; es la condición de posibilidad de la IA.</p>
+<p>Segundo, la segmentación del trabajo entre humanos y máquinas. Las tareas repetibles con reglas claras —conciliaciones bancarias, clasificación de gastos, generación de reportes recurrentes— son candidatas para RPA y, eventualmente, para agentes supervisados. Las tareas que requieren juicio contextual —interpretación de desviaciones estratégicas, negociación de presupuestos, comunicación con inversionistas— deben permanecer bajo control humano. El agente ensambla evidencia; el humano decide.</p>
+<p>Tercero, la gobernanza por diseño. El Instituto Nacional de Estándares y Tecnología de Estados Unidos (NIST) publicó en 2023 su Marco de Gestión de Riesgos de IA (AI RMF 1.0), que proporciona pautas prácticas para evaluar riesgos antes del despliegue. En finanzas, esto se traduce en requerir aprobación humana antes de pagos, asientos contables o pronósticos publicados; mantener registros de auditoría de cada acción del agente; definir permisos basados en roles; y establecer mecanismos de recuperación cuando el agente falle. Como señala el deck de Hanademi: cuando un agente puede actuar, cada conexión se convierte en otra ruta que exige permisos, monitoreo y recuperación.</p>
+<p>Cuarto, la medición de resultados, no de actividad. El hecho de que un agente procese 10.000 transacciones por hora no prueba valor si el 5% de ellas requieren corrección manual posterior. Los indicadores correctos son la reducción del ciclo de cierre, la precisión de las proyecciones, la disminución de horas extra del equipo y la satisfacción de los usuarios internos. Sin métricas de negocio, la automatización es un gasto, no una inversión.</p>
+<h2 id="conclusión-límites-antes-que-autonomía">Conclusión: límites antes que autonomía</h2>
+<p>La investigación de Hanademi construye una narrativa que va en contra de la industria del hype de agentes autónomos. No promete que un agente de IA reemplazará al equipo de FP&amp;A para el próximo cierre trimestral. Lo que demuestra, con datos verificados de Harvard, NBER, McKinsey, la OIT, el Banco Mundial y benchmarks académicos como GAIA y AgentBench, es que la autonomía es una gradiente, no un interruptor. Los agentes pueden asistir, acelerar y reducir errores en tareas estructuradas. Pero en tareas que requieren razonamiento de largo alcance, contexto organizacional y juicio bajo incertidumbre, la evidencia más sólida apoya el modelo humano-asistido, no el agente sin supervisión.</p>
+<p>Para arquitectos de sistemas, CTOs y directores financieros, la implicación es clara: el valor no está en la etiqueta “agente autónomo”, sino en la arquitectura que lo sostiene. Datos estandarizados, gobernanza de riesgos, checkpoints humanos y métricas de negocio son los cimientos. El agente es solo la estructura que se construye sobre ellos. Y como cualquier estructura, si los cimientos son débiles, no importa cuán sofisticado sea el diseño: terminará colapsando.</p>
+<h2 id="fuentes-y-créditos">Fuentes y Créditos</h2>
+<p>Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.</p>
+<ul>
+<li><a href="https://www.hbs.edu/faculty/Publication%20Files/24-013_f9fd89f3-baf1-4c0a-a81c-0f0b75dafd56.pdf">Dell’Acqua, F., et al. (2023). Navigating the jagged technological frontier: Field experimental evidence of the effects of AI on knowledge worker productivity and quality. Harvard Business School Working Paper 24-013.</a></li>
+<li><a href="https://www.nber.org/papers/w31161">Brynjolfsson, E., Li, D., &amp; Raymond, L. R. (2023). Generative AI at work. NBER Working Paper No. 31161.</a></li>
+<li><a href="https://academic.oup.com/qje/article/140/2/889/7909479">Brynjolfsson, E., Li, D., &amp; Raymond, L. R. (2025). Generative AI at work. Quarterly Journal of Economics, 140(2), 889-942.</a></li>
+<li><a href="https://arxiv.org/abs/2308.11432">Wang, L., et al. (2023). A survey on large language model based autonomous agents. arXiv:2308.11432. Subsequently published in Frontiers of Computer Science.</a></li>
+<li><a href="https://arxiv.org/abs/2309.07864">Xi, Z., et al. (2023). The rise and potential of large language model based agents: A survey. arXiv:2309.07864.</a></li>
+<li><a href="https://aclanthology.org/2021.emnlp-main.460/">Chen, Z., et al. (2021). FinQA: A dataset of numerical reasoning over financial data. Proceedings of EMNLP 2021.</a></li>
+<li><a href="https://aclanthology.org/2021.findings-acl.177/">Zhu, F., et al. (2021). TAT-QA: A question answering benchmark on a hybrid of tabular and textual content in finance. Proceedings of ACL-IJCNLP 2021.</a></li>
+<li><a href="https://arxiv.org/abs/2311.11944">Islam, P., et al. (2023). FinanceBench: A new benchmark for financial question answering. arXiv.</a></li>
+<li><a href="https://meridian.allenpress.com/jeta/article/16/1/1/223689/">Kokina, J., &amp; Blanchette, S. (2019). Early evidence of digital labor in accounting: Innovation with robotic process automation. Journal of Emerging Technologies in Accounting, 16(1), 1-12.</a></li>
+<li><a href="https://meridian.allenpress.com/accounting-horizons/article/33/4/15/203918/">Cooper, L. A., et al. (2019). Robotic process automation in public accounting. Accounting Horizons, 33(4), 15-35.</a></li>
+<li><a href="https://arxiv.org/abs/2311.12983">Mialon, G., et al. (2024). GAIA: A benchmark for general AI assistants. International Conference on Learning Representations.</a></li>
+<li><a href="https://arxiv.org/abs/2308.03688">Liu, X., et al. (2024). AgentBench: Evaluating LLMs as agents. International Conference on Learning Representations.</a></li>
+<li><a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-state-of-ai-in-2024-generative-ais-breakout-year">McKinsey &amp; Company. (2024). The state of AI in early 2024: Gen AI adoption spikes and starts to generate value.</a></li>
+<li><a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/the-state-of-ai">McKinsey &amp; Company. (2025). The state of AI in 2025.</a></li>
+<li><a href="https://www.ilo.org/global/publications/books/WCMS_958102/lang--en/index.htm">Gmyrek, P., Winkler, H., &amp; Garganta, S. (2024). Buffer or bottleneck? Employment exposure to generative AI and the digital divide in Latin America. International Labour Organization and World Bank.</a></li>
+<li><a href="https://www.nist.gov/itl/ai-risk-management-framework">National Institute of Standards and Technology. (2023). Artificial Intelligence Risk Management Framework, AI RMF 1.0. U.S. Department of Commerce.</a></li>
+<li><a href="https://www.povertyactionlab.org/sites/default/files/publication/smartcards-for-smarter-payments.pdf">Abdul Latif Jameel Poverty Action Lab (J-PAL). Smartcards for smarter payments.</a></li>
+<li><a href="https://data.worldbank.org/indicator/BX.GSR.CCIS.ZS">World Bank. (n.d.). ICT service exports (% of service exports, BoP). World Bank Open Data.</a></li>
+<li><a href="https://data.worldbank.org/indicator/BX.GSR.CCIS.CD">World Bank. (n.d.). ICT service exports (BoP, current US$). World Bank Open Data.</a></li>
+<li><a href="https://data.worldbank.org/indicator/IT.NET.BBND.P2">World Bank. (n.d.). Fixed broadband subscriptions (per 100 people). World Bank Open Data.</a></li>
+<li><a href="https://data.worldbank.org/indicator/GB.XPD.RSDV.GD.ZS">World Bank. (n.d.). Research and development expenditure (% of GDP). World Bank Open Data.</a></li>
+<li><a href="https://www2.deloitte.com/us/en/insights/focus/cfo-signals.html">Deloitte. (2025). CFO Signals Q4 2025.</a></li>
+<li><a href="https://wolterskluwer.com/en/solutions/cch-tagetik">Wolters Kluwer. (2025). FP&amp;A roles in the agentic era.</a></li>
+<li><a href="https://www.bmj.com/content/372/bmj.n71">Page, M. J., et al. (2021). The PRISMA 2020 statement: An updated guideline for reporting systematic reviews. BMJ, 372, n71.</a></li>
+</ul>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const styles = getComputedStyle(document.documentElement);
+        const accentColor = styles.getPropertyValue('--accent').trim();
+        const textColor = styles.getPropertyValue('--text-muted').trim();
+        const gridColor = styles.getPropertyValue('--chart-grid').trim();
+
+        // Gráfico 1: Impacto GPT-4 consultores
+        const ctx1 = document.getElementById('grafico1');
+        if (ctx1) {
+            new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: ['Más tareas', 'Más rápido', 'Mayor calidad'],
+                    datasets: [{
+                        label: 'Mejora (%)',
+                        data: [12.2, 25.1, 40],
+                        backgroundColor: [accentColor + '77', accentColor + 'bb', accentColor],
+                        borderColor: accentColor,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { color: gridColor } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 2: Benchmarks financieros
+        const ctx2 = document.getElementById('grafico2');
+        if (ctx2) {
+            new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: ['FinQA', 'FinanceBench', 'TAT-QA'],
+                    datasets: [{
+                        label: 'Elementos de prueba',
+                        data: [8281, 10231, 16552],
+                        backgroundColor: [accentColor + '55', accentColor + 'aa', accentColor],
+                        borderColor: accentColor,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { color: gridColor } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 3: Confiabilidad end-to-end
+        const ctx3 = document.getElementById('grafico3');
+        if (ctx3) {
+            new Chart(ctx3, {
+                type: 'line',
+                data: {
+                    labels: ['1 paso', '5 pasos', '10 pasos', '20 pasos'],
+                    datasets: [{
+                        label: 'Confiabilidad total (%)',
+                        data: [95, 77.4, 59.9, 35.8],
+                        backgroundColor: accentColor + '33',
+                        borderColor: accentColor,
+                        borderWidth: 3,
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointBackgroundColor: accentColor
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { labels: { color: textColor } } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { color: gridColor } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 100 }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 4: GAIA benchmark
+        const ctx4 = document.getElementById('grafico4');
+        if (ctx4) {
+            new Chart(ctx4, {
+                type: 'bar',
+                data: {
+                    labels: ['Humanos', 'GPT-4 temprano', 'Mejor agente 2025 (Claude 4.5)'],
+                    datasets: [{
+                        label: 'Precisión (%)',
+                        data: [92, 15, 74.55],
+                        backgroundColor: [accentColor, accentColor + '44', accentColor + 'aa'],
+                        borderColor: accentColor,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { color: gridColor } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 100 }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 5: Adopción IA
+        const ctx5 = document.getElementById('grafico5');
+        if (ctx5) {
+            new Chart(ctx5, {
+                type: 'bar',
+                data: {
+                    labels: ['Usan IA generativa', 'Escalan más allá de pilotos', 'Experimentan con agentes', 'Escalan agentes'],
+                    datasets: [{
+                        label: '% de organizaciones',
+                        data: [79, 38, 62, 23],
+                        backgroundColor: [accentColor + 'cc', accentColor + '88', accentColor + 'aa', accentColor],
+                        borderColor: accentColor,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { color: gridColor } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 100 }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 6: Exportaciones TIC Latinoamérica
+        const ctx6 = document.getElementById('grafico6');
+        if (ctx6) {
+            new Chart(ctx6, {
+                type: 'bar',
+                data: {
+                    labels: ['Brasil', 'México', 'Costa Rica', 'Argentina', 'Colombia', 'Uruguay', 'Chile'],
+                    datasets: [{
+                        label: 'USD millones (2025)',
+                        data: [7440, 3260, 2670, 2830, 2310, 1500, 950],
+                        backgroundColor: [accentColor, accentColor + 'dd', accentColor + 'bb', accentColor + 'cc', accentColor + 'aa', accentColor + '99', accentColor + '77'],
+                        borderColor: accentColor,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { color: gridColor } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 7: Exportaciones TIC como % de servicios
+        const ctx7 = document.getElementById('grafico7');
+        if (ctx7) {
+            new Chart(ctx7, {
+                type: 'bar',
+                data: {
+                    labels: ['Argentina', 'Costa Rica', 'Colombia', 'Chile', 'México'],
+                    datasets: [{
+                        label: '% de exportaciones de servicios (2025)',
+                        data: [15.66, 14.75, 11.79, 5.5, 5.09],
+                        backgroundColor: [accentColor, accentColor + 'ee', accentColor + 'cc', accentColor + '88', accentColor + '77'],
+                        borderColor: accentColor,
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { color: gridColor } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                    }
+                }
+            });
+        }
+    });
+</script>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span></span></span></code></pre>
+</div><div class="tags"><a href="/hana/etiquetas/Agentes Autónomos" class="tag">#Agentes Autónomos</a><a href="/hana/etiquetas/FP&amp;A" class="tag">#FP&amp;A</a><a href="/hana/etiquetas/Finanzas" class="tag">#Finanzas</a><a href="/hana/etiquetas/IA Generativa" class="tag">#IA Generativa</a><a href="/hana/etiquetas/Gobernanza" class="tag">#Gobernanza</a><a href="/hana/etiquetas/RPA" class="tag">#RPA</a><a href="/hana/etiquetas/Latinoamérica" class="tag">#Latinoamérica</a></div><section class="related-articles"><h2 class="section-title">Sigue leyendo</h2><div class="news-grid"><a href="/hana/articulos/2026/08/agentes-transforman-planificacion-financiera" class="news-card"><span class="kicker">Inteligencia Artificial</span><h3>Los agentes de IA pueden avanzar más rápido que la confianza financiera</h3><p>Un análisis profundo sobre los límites de los agentes de IA en planificación financiera, la brecha entre capacidad técnica y confiabilidad, y lo que la evidencia empírica dice sobre su despliegue seguro.</p></a><a href="/hana/articulos/2026/08/ia-whatsapp-ventas-automatizacion" class="news-card"><span class="kicker">Inteligencia Artificial</span><h3>Cómo la IA convierte chats de WhatsApp en ventas: una arquitectura basada en evidencia</h3><p>Análisis técnico de cómo la inteligencia artificial, combinada con CRM y experimentación controlada, puede transformar la velocidad de respuesta en conversión comercial a través de WhatsApp.</p></a></div></section></article><footer class="site-footer"><h3>Impulsado por los decks de<a href="https://hanademi.com/" target="_blank" rel="noopener">Hanademi</a></h3></footer><script>
+        function initTheme() {
+            const savedTheme = localStorage.getItem('hana-theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        }
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('hana-theme', newTheme);
+            window.dispatchEvent(new Event('themeChanged'));
+        }
+        function applyChartDefaults() {
+            if (typeof Chart === 'undefined') return;
+            const styles = getComputedStyle(document.documentElement);
+            Chart.defaults.color = styles.getPropertyValue('--text-muted').trim();
+            Chart.defaults.borderColor = styles.getPropertyValue('--chart-grid').trim();
+            Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
+        }
+        function initReadingProgress() {
+            const progressBar = document.getElementById('reading-progress');
+            if (!progressBar) return;
+            window.addEventListener('scroll', () => {
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (scrollHeight > 0) {
+                    const scrollTop = window.scrollY;
+                    const progress = (scrollTop / scrollHeight) * 100;
+                    progressBar.style.width = progress + '%';
+                }
+            }, { passive: true });
+        }
+
+        // Lógica de búsqueda global
+        function initNavSearch() {
+            const navSearch = document.getElementById('nav-search-input');
+            if (!navSearch) return;
+            navSearch.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && e.target.value.trim() !== '') {
+                    // Redirige a la página de archivo con el parámetro de búsqueda ?q=
+                    window.location.href = `/hana/archivo?q=${encodeURIComponent(e.target.value.trim())}`;
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                initTheme();
+                applyChartDefaults();
+                initReadingProgress();
+                initNavSearch();
+                const toggleBtn = document.getElementById('theme-toggle');
+                if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
+                window.addEventListener('themeChanged', () => { location.reload(); });
+            } catch (err) { console.error('hana: error:', err); }
+        });
+    </script></body></html>
