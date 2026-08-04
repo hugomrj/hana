@@ -59,8 +59,8 @@
 
 /* === Scrollbar Minimalista (Webkit / Chrome / Safari / Edge) === */
 *::-webkit-scrollbar {
-    width: 6px;  /* Ancho vertical ultra fino */
-    height: 6px; /* Alto horizontal ultra fino */
+    width: 2px;  /* Ancho vertical ultra fino */
+    height: 2px; /* Alto horizontal ultra fino */
 }
 *::-webkit-scrollbar-track {
     background: transparent; /* El fondo es invisible */
