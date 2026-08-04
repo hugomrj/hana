@@ -15,8 +15,13 @@ const sortedArticles = articles.sort((a, b) => {
 
 const heroArticle = sortedArticles[0];
 const gridArticles = sortedArticles.slice(1, 7); // 6 artículos en el grid
-const archiveArticles = sortedArticles.slice(7); // El resto en la lista compacta
+
+const archiveArticles = sortedArticles.slice(7, 20); // Solo 10 artículos en la lista
+const hasMoreArticles = sortedArticles.length > 20; // Saber si hay más para mostrar el botón
+
+
 ---
+
 <BaseLayout title="hana" description="Análisis tecnológico profundo">
     <main class="newsroom-container">
         {heroArticle && (
@@ -81,7 +86,15 @@ const archiveArticles = sortedArticles.slice(7); // El resto en la lista compact
                         </a>
                     ))}
                 </div>
+                
+                {/* Botón para ver TODOS los artículos en la página /archivo */}
+                {hasMoreArticles && (
+                    <div style="text-align: center; margin-top: 2.5rem;">
+                        <a href="/hana/archivo" class="read-more" style="font-size: 1.1rem;">Ver archivo completo ({sortedArticles.length} artículos) →</a>
+                    </div>
+                )}
             </section>
         )}
+        
     </main>
 </BaseLayout>
