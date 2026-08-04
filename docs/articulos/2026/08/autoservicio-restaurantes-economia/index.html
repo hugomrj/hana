@@ -1,0 +1,313 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Cuando el autoservicio realmente paga: la matemática oculta detrás de la automatización en restaurantes | hana</title><meta name="description" content="Un margen del 26% en una cocina robotizada suena espectacular, pero la verdadera historia no está en el robot sino en la teoría de colas, los costos ocultos de soporte y la palanca desproporcionada de pequeños ahorros sobre márgenes del 5%."><!-- Open Graph / Redes Sociales --><meta property="og:type" content="article"><meta property="og:title" content="Cuando el autoservicio realmente paga: la matemática oculta detrás de la automatización en restaurantes"><meta property="og:description" content="Un margen del 26% en una cocina robotizada suena espectacular, pero la verdadera historia no está en el robot sino en la teoría de colas, los costos ocultos de soporte y la palanca desproporcionada de pequeños ahorros sobre márgenes del 5%."><meta property="og:image" content="https://hugomrj.github.io/hana/og-image.jpg"><meta property="og:url" content="https://hugomrj.github.io/hana/articulos/2026/08/autoservicio-restaurantes-economia/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Cuando el autoservicio realmente paga: la matemática oculta detrás de la automatización en restaurantes"><meta name="twitter:description" content="Un margen del 26% en una cocina robotizada suena espectacular, pero la verdadera historia no está en el robot sino en la teoría de colas, los costos ocultos de soporte y la palanca desproporcionada de pequeños ahorros sobre márgenes del 5%."><meta name="twitter:image" content="https://hugomrj.github.io/hana/og-image.jpg"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='20' fill='%233b82f6'/&gt;&lt;text x='50' y='72' font-size='60' font-family='Inter,sans-serif' fill='white' text-anchor='middle' font-weight='bold'&gt;h&lt;/text&gt;&lt;/svg&gt;"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/hana/_astro/ClientRouter.astro_astro_type_script_index_0_lang.jmhnZfFy.js"></script><!-- Script crítico para evitar el flash blanco (FOUC) en modo oscuro --><script>
+        const savedTheme = localStorage.getItem('hana-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        document.addEventListener('astro:before-swap', (event) => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            event.newDocument.documentElement.setAttribute('data-theme', currentTheme);
+        });
+    </script><link rel="stylesheet" href="/hana/global.css"><style>.astro-route-announcer{clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;width:1px;height:1px;position:absolute;top:0;left:0;overflow:hidden}
+</style></head><body><div id="reading-progress" class="reading-progress-bar"></div><header class="site-header"><div class="nav-container"><div class="logo"><a href="/hana/">han<span>a</span></a></div><div class="nav-search"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input type="text" id="nav-search-input" class="search-input" placeholder="Buscar..."></div><button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"><svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></div></header><div class="article-layout"><article><div class="article-hero"><span class="kicker">Operaciones y Negocios</span><h1>Cuando el autoservicio realmente paga: la matemática oculta detrás de la automatización en restaurantes</h1><div class="byline"><span>5 de agosto de 2026</span></div></div><div class="article-content"><p>La industria de restaurantes opera con una paradoja financiera brutal: márgenes netos que promedian entre <a href="https://pos.toasttab.com/blog/on-the-line/average-restaurant-profit-margin">3% y 5%</a>, donde <a href="https://restaurant.org/research-and-media/research/restaurant-economic-insights/analysis-commentary/elevated-costs-continue-to-pressure-restaurant-profitability/">el 42% de los operadores reportaron no ser rentables en 2025</a>. En este contexto, cualquier innovación que prometa ampliar márgenes genera expectativas desproporcionadas. Pero la diferencia entre una promesa publicitaria y una ventaja operativa defendible está en comprender matemáticas que pocos discursos de ventas revelan.</p>
+<h2 id="la-palanca-de-los-márgenes-delgados">La palanca de los márgenes delgados</h2>
+<p>Cuando el margen inicial es diminuto, pequeños ahorros operativos producen aumentos porcentuales enormes en el beneficio. Esta es la regla más contraintuitiva y más importante de la economía del autoservicio: con un margen base del 5%, un ahorro equivalente al 1% de las ventas eleva el beneficio modelado en un 20%; un 2% de ahorro lo eleva en un 40%; y un 3% lo eleva en un 60%.</p>
+<div class="chart-container">
+    <div class="chart-title">Impacto del ahorro operativo sobre el beneficio (margen base 5%). Fuente: Cost Reduction Impact Calculator</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico1"></canvas>
+    </div>
+</div>
+<p>Esta palanca explica por qué operadores con márgenes estrechos están dispuestos a pagar primas de capital enormes por automatización. El problema es que la matemática solo funciona si los costos ocultos no se comen la ganancia. Y en automatización de restaurantes, los costos ocultos son casi siempre el capítulo que el vendedor omite.</p>
+<h2 id="el-caso-sweetgreen-26-de-margen-medio-millón-de-inversión">El caso Sweetgreen: 26% de margen, medio millón de inversión</h2>
+<p>El caso emblemático es <a href="https://www.restaurantbusinessonline.com/operations/sweetgreen-plans-open-more-automated-restaurants-next-year">Sweetgreen con su Infinite Kitchen</a>. La ubicación de Naperville reportó un margen a nivel restaurante del 26% en su primer mes, muy superior al 20.4% corporativo. Cifras posteriores mostraron márgenes trimestrales del <a href="https://www.restaurantdive.com/news/sweetgreen-automated-kitchen-higher-margins-sales-labor-retention/723863/">31.1% en Q2</a>, con ventas anuales de $2.8 millones.</p>
+<div class="chart-container">
+    <div class="chart-title">Comparación de márgenes a nivel restaurante: Sweetgreen automatizado vs corporativo. Fuente: QSR Magazine, Restaurant Dive</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico2"></canvas>
+    </div>
+</div>
+<p>Pero la promesa del margen viene con una barrera de capital difícil de ignorar: cada instalación de Infinite Kitchen añade entre <a href="https://www.nrn.com/top-500-restaurants/sweetgreen-s-bet-on-technology-pays-off-with-10-higher-checks-at-infinite-kitchens">$450,000 y $550,000</a> sobre una construcción estándar. Ese diferencial debe recuperarse dentro de la vida útil del activo, lo que significa que la pregunta real no es “¿cuál es el margen?” sino “¿cuál es el periodo de recuperación simple?” Y ese periodo depende de variables que el anuncio rara vez menciona: volumen sostenido, mix de productos, estacionalidad y, crucialmente, costos de soporte no contabilizados inicialmente.</p>
+<h2 id="el-impuesto-del-soporte-cómo-desaparece-el-75-del-ahorro">El impuesto del soporte: cómo desaparece el 75% del ahorro</h2>
+<p>El error más común en el análisis de automatización es contabilizar solo las horas de cajero ahorradas. La realidad operativa es más sucia: si ahorrar 2 horas de cajero requiere añadir 1.5 horas de soporte técnico, limpieza de pantallas, resolución de errores de pago o asistencia a clientes confundidos, solo queda el 25% del ahorro bruto original.</p>
+<div class="chart-container">
+    <div class="chart-title">Ahorro neto de mano de obra tras añadir horas de soporte. Fuente: Customer Support Automation Savings Calculator</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico3"></canvas>
+    </div>
+</div>
+<p>Esta erosión del ahorro explica por qué algunos operadores que implementaron kioscos de autoservicio terminaron con plantillas iguales o mayores que antes: el trabajo no desapareció, se redistribuyó hacia funciones que no estaban presupuestadas. El modelo correcto contabiliza horas ahorradas menos horas reasignadas, y ese saldo neto es el único que entra en la ecuación de recuperación.</p>
+<h2 id="la-teoría-de-colas-que-nadie-quiere-explicar">La teoría de colas que nadie quiere explicar</h2>
+<p>La capacidad teórica de una estación de pedido escala inversamente con el tiempo medio por orden. Si el paso de toma de pedido consume 4 minutos, una estación procesa 15 pedidos teóricos por hora. Si se reduce a 1 minuto, esa misma estación puede procesar 60 pedidos por hora: una multiplicación por cuatro de la capacidad.</p>
+<div class="chart-container">
+    <div class="chart-title">Capacidad teórica por estación según tiempo de pedido. Fuente: Orders Per Hour Calculator</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico4"></canvas>
+    </div>
+</div>
+<p>Pero aquí viene la parte que los vendedores de kioscos raramente mencionan: la congestión no crece suavemente cuando la utilización se acerca al 100%. Según los principios de <a href="https://teropa.info/blog/2016/04/02/a-dash-of-queueing-theory">teoría de colas</a>, un indicador ilustrativo de congestión puede pasar de 2.3 al 70% de utilización, a saltar hasta 19 al llegar al 95%. Esto significa que duplicar el flujo en horas pico puede multiplicar por ocho los tiempos de espera reales del cliente. La pantalla no es el cuello de botella; la línea de producción completa sí lo es.</p>
+<h2 id="el-autoservicio-como-autonomía-no-como-hardware">El autoservicio como autonomía, no como hardware</h2>
+<p>La distinción conceptual más importante es que el autoservicio crea autonomía solo cuando el cliente puede completar la tarea sin asistencia. Si la interfaz confunde, si el flujo de personalización es opaco, si el pago falla frecuentemente, el “autoservicio” se convierte en “asistencia remota con más pasos”. Un <a href="https://pubsonline.informs.org/doi/10.1287/mksc.2023.0643">estudio de la FTC</a> sobre rediseño de sitios web mostró que cuando se simplificó un formulario de denuncias, las quejas completadas saltaron un 28% usando un análisis de discontinuidad de regresión. La lección aplica directamente: la fricción mata la adopción más rápido que el precio.</p>
+<p>Esta realidad varía enormemente entre mercados, porque la capacidad del cliente para operar kioscos depende de variables estructurales. En 2024, <a href="https://datahub.itu.int/data/?e=1&amp;i=11624">China alcanzó 91.6%</a> de penetración de internet mientras <a href="https://apiardata.com/statistics/mx-internet-users-pct">México llegó a 83.1%</a>, una brecha de aproximadamente 8.5 puntos porcentuales. Las diferencias en edad promedio, alfabetización digital y familiaridad con pagos electrónicos determinan qué porcentaje de la base de clientes puede realmente autoservirse sin asistencia.</p>
+<div class="chart-container">
+    <div class="chart-title">Penetración de internet por país como proxy de capacidad de autoservicio (2024). Fuente: ITU, World Bank</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico5"></canvas>
+    </div>
+</div>
+<h2 id="la-inflación-como-variable-estructural">La inflación como variable estructural</h2>
+<p>Otra variable que los casos de éxito raramente revelan es el contexto inflacionario. La <a href="https://www.destatis.de/EN/Press/2026/01/PE26_019_611.html">inflación en Alemania fue del 2.2%</a> en 2025, mientras economías como la española han tenido presiones inflacionarias persistentemente mayores, creando brechas que afectan tanto el costo laboral como la disposición del cliente a pagar precios mayores. Una operación automatizada que funciona en un entorno de inflación baja puede fracasar en otro de inflación alta simplemente porque el cliente resiste el precio necesario para amortizar el capital invertido.</p>
+<h2 id="conclusión-la-pantalla-crea-valor-solo-cuando-responde-toda-la-línea">Conclusión: la pantalla crea valor solo cuando responde toda la línea</h2>
+<p>La automatización puede ampliar márgenes, pero un restaurante no representa un resultado universal. La narrativa de la industria vende la pantalla táctil y el brazo robótico, pero lo que realmente determina el retorno es la física completa del sistema: capacidad de la cocina, velocidad de ensamblaje, confiabilidad del pago, ausencia de fricción cognitiva para el usuario, volumen predecible y estructura de costos que contabilice el soporte real, no solo el ahorro teórico.</p>
+<p>El autoservicio realmente paga cuando el operador comprende tres reglas básicas: primero, que los márgenes delgados convierten ahorros modestos en ganancias porcentuales enormes; segundo, que la utilización —no el hardware— determina si la inversión funciona; tercero, que el soporte no presupuestado puede borrar hasta tres cuartas partes del ahorro laboral prometido. Ignorar cualquiera de estas reglas convierte la automatización en una forma costosa de decorar la línea de caja.</p>
+<h3 id="fuentes-y-créditos">Fuentes y Créditos</h3>
+<p>Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.</p>
+<ul>
+<li><a href="https://hanademi.com/decks/how-self-service-changes-restaurant-economics-20260802-052045/es/">Hanademi - How self-service changes restaurant economics</a></li>
+<li><a href="https://www.qsrmagazine.com/growth/finance/sweetgreens-automated-infinite-kitchen-readies-for-a-step-up-in-2025/">QSR Magazine - Sweetgreen’s Automated Infinite Kitchen</a></li>
+<li><a href="https://www.restaurantdive.com/news/sweetgreen-automated-kitchen-higher-margins-sales-labor-retention/723863/">Restaurant Dive - Sweetgreen automated kitchen margins</a></li>
+<li><a href="https://www.nrn.com/top-500-restaurants/sweetgreen-s-bet-on-technology-pays-off-with-10-higher-checks-at-infinite-kitchens">NRN - Sweetgreen Infinite Kitchen 10% higher checks</a></li>
+<li><a href="https://restaurant.org/research-and-media/research/restaurant-economic-insights/analysis-commentary/elevated-costs-continue-to-pressure-restaurant-profitability/">National Restaurant Association - Restaurant profitability 2025</a></li>
+<li><a href="https://pos.toasttab.com/blog/on-the-line/average-restaurant-profit-margin">Toast - Average Restaurant Profit Margin 2026</a></li>
+<li><a href="https://pubsonline.informs.org/doi/10.1287/mksc.2023.0643">Grosz (2025) - FTC Report Fraud Website Redesign</a></li>
+<li><a href="https://www.itu.int/itu-d/reports/statistics/2024/11/10/ff24-internet-use/">ITU Facts and Figures 2024 - Internet use</a></li>
+<li><a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS">World Bank - Individuals using the Internet</a></li>
+<li><a href="https://www.destatis.de/EN/Press/2026/01/PE26_019_611.html">Destatis - Germany inflation rate 2025</a></li>
+</ul>
+<script is:inline data-astro-rerun>
+    const styles = getComputedStyle(document.documentElement);
+    const textColor = styles.getPropertyValue('--text-muted').trim();
+    const gridColor = styles.getPropertyValue('--chart-grid').trim();
+    const surfaceColor = styles.getPropertyValue('--surface').trim();
+    
+    const color1 = styles.getPropertyValue('--chart-1').trim();
+
+    const premiumTooltip = {
+        backgroundColor: surfaceColor,
+        titleColor: textColor,
+        bodyColor: textColor,
+        borderColor: gridColor,
+        borderWidth: 1,
+        padding: 12,
+        cornerRadius: 8,
+        displayColors: true
+    };
+
+    const ctx1 = document.getElementById('grafico1');
+    if (ctx1) {
+        new Chart(ctx1, {
+            type: 'bar',
+            data: { 
+                labels: ['1% de ventas ahorrado', '2% de ventas ahorrado', '3% de ventas ahorrado'],
+                datasets: [{
+                    label: 'Aumento del beneficio (%)',
+                    data: [20, 40, 60],
+                    backgroundColor: [color1 + '99', color1 + 'cc', color1],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => '+' + ctx.parsed.y + '% en beneficio' }
+                    }
+                },
+                scales: { 
+                    x: { ticks: { color: textColor }, grid: { display: false } }, 
+                    y: { ticks: { color: textColor, callback: v => '+' + v + '%' }, grid: { color: gridColor }, beginAtZero: true, max: 70 } 
+                }
+            }
+        });
+    }
+
+    const ctx2 = document.getElementById('grafico2');
+    if (ctx2) {
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: { 
+                labels: ['Sweetgreen Naperville (26%)', 'Sweetgreen corporativo (20.4%)'],
+                datasets: [{
+                    data: [26, 20.4],
+                    backgroundColor: [color1, color1 + '88'],
+                    borderColor: surfaceColor,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '65%',
+                plugins: { 
+                    legend: { 
+                        display: true,
+                        position: 'bottom', 
+                        labels: { color: textColor, usePointStyle: true, padding: 15 } 
+                    },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.label + ' margen' }
+                    }
+                }
+            }
+        });
+    }
+
+    const ctx3 = document.getElementById('grafico3');
+    if (ctx3) {
+        new Chart(ctx3, {
+            type: 'line',
+            data: { 
+                labels: ['0.5h soporte', '1.0h soporte', '1.5h soporte'],
+                datasets: [{
+                    label: 'Ahorro neto restante (%)',
+                    data: [75, 50, 25],
+                    borderColor: color1,
+                    backgroundColor: color1 + '22',
+                    borderWidth: 3,
+                    tension: 0.3,
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.parsed.y + '% del ahorro original' }
+                    }
+                },
+                scales: { 
+                    x: { ticks: { color: textColor }, grid: { display: false } }, 
+                    y: { ticks: { color: textColor, callback: v => v + '%' }, grid: { color: gridColor }, beginAtZero: true, max: 100 } 
+                }
+            }
+        });
+    }
+
+    const ctx4 = document.getElementById('grafico4');
+    if (ctx4) {
+        new Chart(ctx4, {
+            type: 'bar',
+            data: { 
+                labels: ['4 min/pedido', '2 min/pedido', '1 min/pedido'],
+                datasets: [{
+                    label: 'Pedidos teóricos por hora',
+                    data: [15, 30, 60],
+                    backgroundColor: [color1 + '99', color1 + 'cc', color1],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.parsed.y + ' pedidos/hora' }
+                    }
+                },
+                scales: { 
+                    x: { ticks: { color: textColor }, grid: { display: false } }, 
+                    y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 70 } 
+                }
+            }
+        });
+    }
+
+    const ctx5 = document.getElementById('grafico5');
+    if (ctx5) {
+        new Chart(ctx5, {
+            type: 'bar',
+            data: { 
+                labels: ['China', 'México', 'India'],
+                datasets: [{
+                    label: 'Penetración de internet (%)',
+                    data: [91.6, 83.1, 52.4],
+                    backgroundColor: [color1, color1 + 'cc', color1 + '88'],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.parsed.x + '% de la población' }
+                    }
+                },
+                scales: { 
+                    y: { ticks: { color: textColor }, grid: { display: false } }, 
+                    x: { ticks: { color: textColor, callback: v => v + '%' }, grid: { color: gridColor }, beginAtZero: true, max: 100 } 
+                }
+            }
+        });
+    }
+</script>
+</div><div class="tags"><a href="/hana/etiquetas/Restaurantes" class="tag">#Restaurantes</a><a href="/hana/etiquetas/Automatización" class="tag">#Automatización</a><a href="/hana/etiquetas/Autoservicio" class="tag">#Autoservicio</a><a href="/hana/etiquetas/Unit Economics" class="tag">#Unit Economics</a><a href="/hana/etiquetas/Teoría de Colas" class="tag">#Teoría de Colas</a></div><section class="related-articles"><h2 class="section-title">Sigue leyendo</h2><div class="news-grid"><a href="/hana/articulos/2026/08/ia-generativa-arquitectura-datos-controlados" class="news-card"><span class="kicker">Arquitectura de IA</span><h3>El modelo de IA no es tu ventaja competitiva: lo son tus datos y tu arquitectura</h3><p>Mientras las empresas compiten por el modelo más grande, la evidencia muestra que la verdadera ventaja defendible está en el conocimiento controlado y la arquitectura que rodea a modelos intercambiables. Un escritorio más grande no encuentra el párrafo correcto.</p></a><a href="/hana/articulos/2026/08/ai-code-quality-constraints-guardrails" class="news-card"><span class="kicker">Ingeniería de Software</span><h3>Por qué los desarrolladores que más confían en AI escriben el código más peligroso</h3><p>Un estudio de campo con 16 desarrolladores experimentados demostró que AI los hizo 19% más lentos mientras creían ser 20% más rápidos. La paradoja de la calidad percibida vs. la estabilidad real obliga a repensar cómo medimos la productividad asistida por modelos.</p></a></div></section></article><aside class="toc-sidebar"><div class="toc-container"><h3 class="toc-title">En este artículo</h3><ul class="toc-list"><li class="toc-item toc-depth-2"><a href="#la-palanca-de-los-márgenes-delgados">La palanca de los márgenes delgados</a></li><li class="toc-item toc-depth-2"><a href="#el-caso-sweetgreen-26-de-margen-medio-millón-de-inversión">El caso Sweetgreen: 26% de margen, medio millón de inversión</a></li><li class="toc-item toc-depth-2"><a href="#el-impuesto-del-soporte-cómo-desaparece-el-75-del-ahorro">El impuesto del soporte: cómo desaparece el 75% del ahorro</a></li><li class="toc-item toc-depth-2"><a href="#la-teoría-de-colas-que-nadie-quiere-explicar">La teoría de colas que nadie quiere explicar</a></li><li class="toc-item toc-depth-2"><a href="#el-autoservicio-como-autonomía-no-como-hardware">El autoservicio como autonomía, no como hardware</a></li><li class="toc-item toc-depth-2"><a href="#la-inflación-como-variable-estructural">La inflación como variable estructural</a></li><li class="toc-item toc-depth-2"><a href="#conclusión-la-pantalla-crea-valor-solo-cuando-responde-toda-la-línea">Conclusión: la pantalla crea valor solo cuando responde toda la línea</a></li><li class="toc-item toc-depth-3"><a href="#fuentes-y-créditos">Fuentes y Créditos</a></li></ul></div></aside></div><footer class="site-footer"><h3>Impulsado por los decks de <a href="https://hanademi.com/" target="_blank" rel="noopener">Hanademi</a></h3></footer><script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('hana-theme', newTheme);
+            window.dispatchEvent(new Event('themeChanged'));
+        }
+        function applyChartDefaults() {
+            if (typeof Chart === 'undefined') return;
+            const styles = getComputedStyle(document.documentElement);
+            Chart.defaults.color = styles.getPropertyValue('--text-muted').trim();
+            Chart.defaults.borderColor = styles.getPropertyValue('--chart-grid').trim();
+            Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
+        }
+        function initReadingProgress() {
+            const progressBar = document.getElementById('reading-progress');
+            if (!progressBar) return;
+            window.addEventListener('scroll', () => {
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (scrollHeight > 0) {
+                    const scrollTop = window.scrollY;
+                    const progress = (scrollTop / scrollHeight) * 100;
+                    progressBar.style.width = progress + '%';
+                }
+            }, { passive: true });
+        }
+
+        function initNavSearch() {
+            const navSearch = document.getElementById('nav-search-input');
+            if (!navSearch) return;
+            navSearch.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && e.target.value.trim() !== '') {
+                    window.location.href = `/hana/archivo?q=${encodeURIComponent(e.target.value.trim())}`;
+                }
+            });
+        }
+
+        document.addEventListener('astro:page-load', () => {
+            try {
+                applyChartDefaults();
+                initReadingProgress();
+                initNavSearch();
+                const toggleBtn = document.getElementById('theme-toggle');
+                if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
+            } catch (err) { console.error('hana: error:', err); }
+        });
+
+        window.addEventListener('themeChanged', () => { 
+            applyChartDefaults(); 
+        });
+    </script></body></html>
