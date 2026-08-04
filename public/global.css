@@ -183,7 +183,7 @@ body {
     border-radius: var(--radius);
     box-shadow: 0 4px 20px rgba(0,0,0,0.02);
 }
-.hero-news h1 { margin: 1rem 0; font-size: clamp(2.2rem, 4vw + 1rem, 3.6rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; }
+.hero-news h1 { margin: 1rem 0; font-size: clamp(2.2rem, 4vw + 1rem, 3.4rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; }
 .hero-news h1 a { color: var(--text); text-decoration: none; transition: color 0.2s; }
 .hero-news h1 a:hover { color: var(--accent); }
 .hero-extracto { color: var(--text-muted); max-width: 700px; margin: 1rem 0 1.5rem 0; font-size: 1.25rem; line-height: 1.6; }

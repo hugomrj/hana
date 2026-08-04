@@ -5,7 +5,7 @@ import { getCollection } from 'astro:content';
 const articles = await getCollection('blog');
 const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date(a.data.fecha));
 
-// Lógica para detectar enlaces duplicados
+// Lógica para detectar enlaces duplicados en TODOS los artículos
 const linkCounts = {};
 sortedArticles.forEach(art => {
     if (art.data.link_original) {
@@ -17,6 +17,9 @@ sortedArticles.forEach(art => {
 });
 
 const duplicates = Object.entries(linkCounts).filter(([link, titles]) => titles.length > 1);
+
+// Limitamos el historial renderizado a los últimos 50 para no saturar el navegador
+const recentArticles = sortedArticles.slice(0, 50);
 ---
 <BaseLayout title="Base de Datos" description="Panel interno">
     <main class="newsroom-container" style="max-width: 900px; margin: 4rem auto;">
@@ -43,10 +46,10 @@ const duplicates = Object.entries(linkCounts).filter(([link, titles]) => titles.
             </div>
         )}
 
-        {/* Historial */}
-        <h2 class="section-title" style="font-size: 1.5rem;">Historial ({sortedArticles.length} artículos)</h2>
+        {/* Historial Limitado */}
+        <h2 class="section-title" style="font-size: 1.5rem;">Historial Reciente ({recentArticles.length} de {sortedArticles.length} artículos)</h2>
         <div class="archive-list">
-            {sortedArticles.map(art => (
+            {recentArticles.map(art => (
                 <div class="archive-item" style="text-decoration: none; color: var(--text);">
                     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 1rem;">
                         <div>
