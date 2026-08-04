@@ -1,7 +1,7 @@
 ---
 titulo: "Lo que la música le hace a tu cerebro: treinta años de evidencia sobre enfoque, memoria y productividad"
 extracto: "Un análisis técnico de tres décadas de investigación científica que desmonta mitos, valida hallazgos y dibuja una arquitectura sonora para trabajar mejor."
-fecha: "2026-08-03T01:10    :00" 
+fecha: "2026-08-03T01:10:00" 
 tiempo_lectura: "14 min"
 categoria: "Neurociencia"
 etiquetas: ["Música", "Neurociencia", "Productividad", "Cognición", "Efecto Mozart", "Ruido Blanco", "Psicología"]
