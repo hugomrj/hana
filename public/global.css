@@ -556,19 +556,25 @@ pre.astro-code span {
 
 /* === Animación de Transición de Astro === */
 @keyframes fade-in {
-    from { opacity: 0; transform: translateY(8px); }
+    from { opacity: 0; transform: translateY(4px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Astro aplica esta clase al contenido que entra */
 ::view-transition-old(root),
 ::view-transition-new(root) {
-    animation-duration: 0.25s;
+    animation-duration: 0.2s; /* Un poco más rápida para no cansar */
+    animation-timing-function: ease-out;
 }
 
-/* Opcional: Hacer que el header no parpadee durante la transición */
+/* El header no hace fade, se queda fijo para dar sensación de app nativa */
 .site-header {
     view-transition-name: header;
+}
+::view-transition-old(header) {
+    animation: none;
+}
+::view-transition-new(header) {
+    animation: none;
 }
 
 

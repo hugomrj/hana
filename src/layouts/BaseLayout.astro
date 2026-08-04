@@ -28,7 +28,20 @@ const ogImage = `${siteUrl}/og-image.jpg`;
     
     <!-- Transiciones de Astro -->
     <ClientRouter />
-    
+
+    <!-- Script crítico para evitar el flash blanco (FOUC) en modo oscuro -->
+    <script is:inline>
+        // Aplicar el tema inmediatamente antes de que se pinte la página
+        const savedTheme = localStorage.getItem('hana-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        // Mantener el tema durante la transición de Astro
+        document.addEventListener('astro:before-swap', (event) => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            event.newDocument.documentElement.setAttribute('data-theme', currentTheme);
+        });
+    </script>
+
     <link rel="stylesheet" href="/hana/global.css">
 </head>
 <body>
@@ -55,14 +68,10 @@ const ogImage = `${siteUrl}/og-image.jpg`;
     <slot />
 
     <footer class="site-footer">
-        <h3>Impulsado por los decks de <a href="https://hanademi.com/" target="_blank" rel="noopener">Hanademi</a></h3>    
+        <p>Impulsado por los decks de <a href="https://hanademi.com/" target="_blank" rel="noopener">Hanademi</a></p>    
     </footer>
 
     <script is:inline>
-        function initTheme() {
-            const savedTheme = localStorage.getItem('hana-theme') || 'light';
-            document.documentElement.setAttribute('data-theme', savedTheme);
-        }
         function toggleTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
@@ -100,10 +109,8 @@ const ogImage = `${siteUrl}/og-image.jpg`;
             });
         }
 
-        // Usamos astro:page-load para que funcione con las transiciones
         document.addEventListener('astro:page-load', () => {
             try {
-                initTheme();
                 applyChartDefaults();
                 initReadingProgress();
                 initNavSearch();
