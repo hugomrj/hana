@@ -1,0 +1,505 @@
+---
+titulo: "Cuando la IA sube las notas y baja el aprendizaje"
+extracto: "Un panel de 3,2 millones de interacciones de aprendizaje demuestra que el tiempo de estudio cayó hasta un 31% tras ChatGPT. Las notas A subieron 13 puntos, pero la retención de conocimiento cayó 25%. La inteligencia artificial está reconfigurando la educación, no siempre para mejor."
+fecha: "2026-08-04T10:32:00"
+categoria: "Educación"
+etiquetas: ["inteligencia artificial", "educación", "aprendizaje", "ChatGPT", "evaluación", "cognición"]
+---
+
+La promesa de la inteligencia artificial en la educación ha sido, desde su aparición, una narrativa de optimización ilimitada. Tutores personalizados disponibles las 24 horas, retroalimentación instantánea, adaptación curricular en tiempo real: todo ello suena como la materialización de un ideal pedagógico. Sin embargo, la evidencia empírica que emerge de los últimos tres años pinta un cuadro considerablemente más matizado. La IA no solo está cambiando cómo se enseña: está alterando qué se aprende, cuánto se practica y, lo más preocupante, qué capacidades cognitivas se desarrollan cuando nadie está mirando.
+
+El hallazgo más contundente proviene de un panel de diez años con 3,2 millones de interacciones de aprendizaje en la plataforma ALEKS, un sistema adaptativo de matemáticas utilizado por millones de estudiantes en Estados Unidos. Los investigadores de la Universidad de California, Irvine, y McGraw Hill compararon problemas susceptibles de ser introducidos en un chatbot (problemas de texto) con problemas que requerían manipulación interactiva de gráficos (menos susceptibles). El resultado fue inequívoco: tras el lanzamiento de ChatGPT, el tiempo dedicado a problemas susceptibles de IA cayó un 2,8% por trimestre entre estudiantes universitarios, acumulando un 26,9% en once trimestres. Los estudiantes de secundaria mostraron la mayor caída, con un 31,3%. Los de enseñanza media, un 9,0%. Los de quinto grado no mostraron cambio detectable.
+
+<div class="chart-container">
+    <div class="chart-title">Caída del tiempo dedicado a problemas susceptibles de IA tras ChatGPT, por nivel educativo. Fuente: Rismanchian et al., arXiv (2026)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico1"></canvas>
+    </div>
+</div>
+
+Esta caída no sería preocupante si los estudiantes aprendieran lo mismo en menos tiempo. Pero no fue así. En preguntas de retención asignadas al azar dentro de pruebas supervisadas, la probabilidad de responder correctamente cayó un 25% de forma acumulada. La misma estimación aplicada a evaluaciones no supervisadas produjo un aumento de signo opuesto, lo que descarta explicaciones basadas en cambios de plataforma, cohorte o currículo. El patrón es claro: la eficiencia aparente desaparece cuando el estudiante debe rendir sin ayuda.
+
+<div class="chart-container">
+    <div class="chart-title">Probabilidad de respuesta correcta en pruebas supervisadas de retención. Fuente: Rismanchian et al., arXiv (2026)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico2"></canvas>
+    </div>
+</div>
+
+## El caso de Brown: cuando el entorno del examen expone el abismo
+
+La distancia entre el desempeño asistido y el desempeño independiente alcanzó su expresión más dramática en la Universidad Brown durante la primavera de 2026. El profesor Roberto Serrano, catedrático de Economía, decidió permitir exámenes para casa en su curso avanzado de economía del bienestar (ECON 1170) tras un ataque armado en el campus. La inscripción saltó de los habituales 30 estudiantes a 86. El parcial, administrado el 5 de marzo, arrojó un promedio de 96 sobre 100. Cuarenta estudiantes obtuvieron la calificación máxima. Históricamente, el promedio de ese curso oscilaba entre 65% y 80%, y este examen era más difícil que los anteriores.
+
+Serrano, ciego desde los 16 años, sospechó del patrón. Ordenó un final presencial. El resultado fue brutal: el promedio cayó a 48,6%. Tras el anuncio del final supervisado, 18 estudiantes abandonaron el curso, nueve faltaron al examen y 19 reprobaron la asignatura.
+
+<div class="chart-container">
+    <div class="chart-title">Caso Brown ECON 1170: parcial en casa vs final presencial. Fuentes: ThePrint (2026); Inside Higher Ed (2026)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico3"></canvas>
+    </div>
+</div>
+
+El caso de Brown no es un experimento controlado, y las acusaciones disciplinarias individuales permanecían sin resolver en la fecha de publicación. Pero ilustra con crudeza lo que la investigación de mayor escala ya documentaba: cambiar solo el entorno del examen expone un abismo entre el desempeño entregado y el desempeño sin ayuda. La universidad no tiene un método estandarizado para detectar uso de IA, lo que convierte cada evaluación en un territorio de incertidumbre.
+
+## La inflación de notas como síntoma de sustitución
+
+El caso de Brown es una sola clase. Un estudio de la Universidad de California, Berkeley, analizó más de 500.000 calificaciones universitarias y encontró que, tras ChatGPT, la proporción de notas A aumentó 13 puntos porcentuales en cursos con más tareas de escritura y programación expuestas a IA. El aumento fue mayor cuando las tareas pesaban más en la calificación final, un patrón compatible con la sustitución del trabajo del estudiante por generación automática, no con mejoras amplias del aprendizaje.
+
+<div class="chart-container">
+    <div class="chart-title">Cambio en proporción de notas A tras ChatGPT en cursos expuestos a IA. Fuente: Chirikov, UC Berkeley (2026)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico4"></canvas>
+    </div>
+</div>
+
+Este fenómeno de inflación de calificaciones tiene consecuencias que trascienden el aula. Cuando la señal de rendimiento se contamina, los empleadores, los programas de posgrado y los propios estudiantes pierden la capacidad de discriminar entre competencia real y competencia asistida. La credencial educativa, que ya enfrentaba cuestionamientos sobre su valor predictivo, se vuelve aún más opaca.
+
+## La muleta cognitiva: evidencia experimental
+
+Los estudios de panel y las observaciones de aula son potentes, pero los ensayos aleatorios permiten aislar la causalidad. Un estudio publicado en Social Sciences & Humanities Open en 2025 asignó aleatoriamente a 120 universitarios a dos condiciones: estudio tradicional o estudio con ChatGPT sin restricciones. La prueba real llegó 45 días después, sin aviso. El grupo de ChatGPT obtuvo 57,5% de respuestas correctas, frente al 68,5% del grupo tradicional. La facilidad inmediata no se convirtió en conocimiento duradero.
+
+<div class="chart-container">
+    <div class="chart-title">Retención de conocimiento tras 45 días: estudio tradicional vs ChatGPT sin límites. Fuente: Barcauí, Social Sciences & Humanities Open (2025)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico5"></canvas>
+    </div>
+</div>
+
+Un experimento de campo en matemáticas de secundaria, publicado en Proceedings of the National Academy of Sciences en 2025, probó dos tipos de IA. Una interfaz estándar que entregaba respuestas mejoró el desempeño durante la práctica, pero los estudiantes obtuvieron 17% menos que el grupo sin IA cuando el acceso desapareció. Un tutor con límites y pistas diseñadas por docentes evitó ese daño. El problema no era GPT-4 en sí. Era la conducta que fomentaba la interfaz.
+
+<div class="chart-container">
+    <div class="chart-title">Caída de notas sin ayuda tras usar GPT-4 sin límites vs tutor con guardrails. Fuente: PNAS (2025)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico6"></canvas>
+    </div>
+</div>
+
+Estos hallazgos convergen en una conclusión incómoda: la IA que resuelve problemas por el estudiante no es un acelerador del aprendizaje. Es un sustituto del esfuerzo cognitivo que el aprendizaje requiere. Y cuando ese sustituto desaparece, la brecha entre lo que el estudiante parece saber y lo que realmente sabe se hace visible.
+
+## Adopción masiva y orientación rezagada
+
+Los estudiantes adoptaron la IA antes de que las escuelas y las familias acordaran cómo usarla. Entre universitarios británicos, el uso de IA generativa en trabajos evaluados saltó del 53% en 2024 al 88% en 2025, según la Higher Education Policy Institute. En Estados Unidos, el 86% de los menores de 9 a 17 años usaba IA en 2026, y casi una cuarta parte lo hacía a diario. Más de cuatro de cada diez nunca habían hablado con un tutor sobre seguridad en IA.
+
+<div class="chart-container">
+    <div class="chart-title">Uso de IA en trabajos evaluados (Reino Unido) y preocupación escolar (Estados Unidos). Fuentes: HEPI (2025); Common Sense Media (2026); RAND (2026)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico7"></canvas>
+    </div>
+</div>
+
+Entre los estudiantes estadounidenses que usaban IA para las tareas, el 60% también expresaba preocupación por emplearla con fines escolares. Los docentes no rechazan la IA desde fuera: el 37% ya la usaba en su trabajo y el 57% decía que ayudaba a escribir o mejorar planes de clase. Sin embargo, el 72% temía que los estudiantes presentaran trabajos generados por IA como propios. La misma herramienta que ayuda a preparar clases puede volver más difícil confiar en el desempeño estudiantil.
+
+## Los riesgos cognitivos más allá de la memoria
+
+La preocupación cognitiva va más allá de la retención de información. Una revisión sistemática de 89 estudios revisados por pares, publicada en Frontiers in Psychology en 2026, encontró que la dependencia excesiva apareció como el riesgo más frecuente, en el 33,7% de la literatura. La menor autonomía analítica apareció en el 20,2%, y la descarga cognitiva en el 18%. No son tasas de prevalencia entre estudiantes, sino indicadores de qué riesgos surgieron repetidamente en una base de investigación fragmentada.
+
+<div class="chart-container">
+    <div class="chart-title">Riesgos cognitivos reportados en 89 estudios revisados por pares (2024-2026). Fuente: Alubthane, Frontiers in Psychology (2026)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico8"></canvas>
+    </div>
+</div>
+
+Estos riesgos no son abstractos. Un estudio de 2026 con 196 participantes en creatividad encontró que quienes generaron ideas antes de consultar ChatGPT mejoraron su creatividad independiente posterior. La regla útil para el aula es simple: piensa primero, usa la herramienta después. Las aplicaciones interactivas alineadas con el currículo pueden mejorar los resultados cuando ofrecen práctica estructurada. La IA debe entrar después de que el estudiante empiece a pensar, no antes.
+
+## La paradoja del mercado educativo
+
+El precedente de las aplicaciones móviles muestra por qué la participación resulta seductora pero engañosa. Duolingo generó USD 1.040 millones en ingresos en 2025, un aumento del 38,7% año tras año, cruzando por primera vez la barrera del billón. Para el primer trimestre de 2026, la plataforma contaba con 56,5 millones de usuarios activos diarios y 12,5 millones de suscriptores de pago. Por el contrario, Chegg, que ofrecía respuestas directas a problemas de tarea, vio sus ingresos caer de USD 616 millones en 2024 a USD 375 millones en 2025, una contracción del 39,1%. Sus suscriptores cayeron de 6,6 millones a 4,6 millones.
+
+<div class="chart-container">
+    <div class="chart-title">Ingresos anuales de Duolingo y Chegg, millones de USD. Fuentes: SEC EDGAR; Business of Apps (2026)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico9"></canvas>
+    </div>
+</div>
+
+Estas son métricas extraordinarias de producto, pero no responden si un estudiante puede hablar, razonar o recordar sin la aplicación. La escala comercial no equivale al dominio cognitivo. Duolingo está apostando precisamente por eso: en 2026, anunció un giro estratégico hacia el crecimiento de usuarios activos diarios, absorbiendo más de USD 50 millones en reservas no realizadas al eliminar conversiones y expandir el acceso a funciones premium de IA. La pregunta que plantea es si la gamificación y la inteligencia artificial pueden sustituir la práctica deliberada que la fluidez real requiere.
+
+## El contexto previo: la crisis de aprendizaje ya estaba en marcha
+
+Es importante situar estos hallazgos en su contexto histórico. Los resultados de PISA 2022, publicados por la OCDE, mostraron una caída sin precedentes en el desempeño educativo. Entre 2018 y 2022, el promedio de matemáticas en países de la OCDE cayó 15 puntos y el de lectura 10, equivalente a tres cuartos de un año escolar. Durante la década de 2012 a 2022, 29 de 63 sistemas educativos empeoraron en al menos dos materias, mientras solo seis mejoraron. Estos resultados preceden el uso generalizado de ChatGPT, lo que significa que la crisis de aprendizaje ya estaba en marcha antes de que la IA generativa llegara a las aulas.
+
+La generación Z, la más expuesta a esta tecnología, no está ciega ante sus riesgos. El 42% dijo que la IA le producía ansiedad, el 31% sentía enojo y solo el 18% esperanza. En una encuesta universitaria separada, el 16% dijo que el posible impacto de la IA ya le había llevado a cambiar de carrera o área. Los jóvenes no solo se preparan para un mercado laboral cambiante: están modificando sus apuestas educativas antes de conocer su forma final.
+
+## El horizonte laboral: desajuste entre lo que se certifica y lo que se requiere
+
+El Foro Económico Mundial proyecta la creación de 170 millones de empleos y el desplazamiento de 92 millones para 2030, resultando en una ganancia neta de 78 millones. Pero estos son escenarios, no resultados medidos. Las ocupaciones de mayor crecimiento en Estados Unidos no forman un monocultivo de IA: los técnicos eólicos lideran con un 50%, seguidos por instaladores solares con 42% y enfermeros especialistas con 40%. La ciencia de datos y la seguridad informática son importantes, pero también lo son el cuidado, la gestión sanitaria y los puestos analíticos.
+
+El mercado laboral actual no respalda un titular de apocalipsis inmediato. El empleo de la OCDE alcanzó un máximo histórico de 670 millones en mayo de 2026, con un desempleo del 4,9%. Sin embargo, el desempleo juvenil aumentaba en algunos países, y la fortaleza agregada puede ocultar debilidad en puestos iniciales. La conclusión honesta es incertidumbre y presión desigual, no derrumbe.
+
+## La evidencia a favor: tutores diseñados para enseñar
+
+La evidencia contraria es suficientemente sólida para rechazar una prohibición total de la IA en la educación. En física de Harvard, 194 estudiantes que usaron un tutor de IA cuidadosamente diseñado lograron más del doble de avance que una clase activa tradicional. En Nigeria, un programa guiado de seis semanas con Copilot produjo avances equivalentes a entre 1,5 y 2 años de escolarización habitual. Ambas intervenciones fueron diseñadas para enseñar, no solo para terminar la tarea.
+
+Una revisión de 2026 combinó 36 estudios y 7.229 participantes, encontrando beneficios generales del uso de IA generativa en educación superior, más fuertes en la enseñanza colaborativa y combinada. Otra revisión de STEM reunió 49 estudios y halló que el beneficio aparente podía reflejar en gran medida sesgo de publicación. Estos hallazgos no se anulan: indican que el efecto promedio es inestable porque las herramientas, los métodos docentes y la calidad de los estudios difieren dramáticamente.
+
+## Implicaciones para arquitectos educativos y desarrolladores
+
+Para los profesionales técnicos que diseñan sistemas educativos, los datos apuntan a un conjunto de principios operativos claros. Primero, la evaluación debe separar el proceso del producto. Un sistema que solo valora la respuesta final incentiva la sustitución. Un sistema que documenta el razonamiento, los intentos fallidos y las explicaciones del estudiante hace más costosa la delegación completa.
+
+Segundo, la detección de IA generada no es una solución viable. Stanford encontró más de 800 trabajos sobre IA en educación K-12, pero solo 20 estudios sólidos podían aislar si la IA cambió los resultados. Los detectores de texto generado por IA son frágiles y producen falsos positivos. La respuesta práctica no es tecnológica: es pedagógica.
+
+Tercero, la interfaz importa tanto como el modelo. Un GPT-4 sin restricciones daña el aprendizaje. Un tutor con guardrails y pistas diseñadas por docentes puede mejorarlo. La diferencia no está en la inteligencia del modelo, sino en la arquitectura de la interacción.
+
+Cuarto, la ventana para actuar se está reduciendo. Los modelos de frontera ganaron 30 puntos porcentuales en un año en benchmarks diseñados para desafiar a IA de nivel experto. Mejores modelos pueden volver la tutoría más personal y la retroalimentación más útil. También pueden hacer que el trabajo delegado sea más difícil de detectar y más fácil de creer.
+
+## Conclusión: la pregunta no es si, sino cómo
+
+La evidencia disponible apunta a una transformación educativa en curso, no a una catástrofe inminente ni a una utopía tecnológica. La IA ha alterado cómo los estudiantes estudian y el conocimiento que construyen, a una escala que los autores del estudio de ALEKS denominaron "rendición cognitiva a nivel poblacional". Las notas suben, el tiempo de estudio cae, y la retención de conocimiento se erosiona cuando nadie supervisa.
+
+Pero la misma tecnología, diseñada con propósito pedagógico, puede duplicar los avances de aprendizaje. La diferencia no está en la IA. Está en si la IA entra antes o después de que el estudiante empiece a pensar. La pregunta para educadores, desarrolladores y legisladores no es si prohibir o permitir la IA en el aula. Es cómo diseñar sistemas donde pensar primero no sea opcional, sino obligatorio.
+
+## Fuentes y Créditos
+
+Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
+
+- [Rismanchian, S., Uzun, H., Matayoshi, J., Cosyn, E., & Kurd-Misto, E. — Faster completion, less learning: Generative AI reduced study time on math problems and the knowledge they build, arXiv (2026)](https://arxiv.org/abs/2605.21629)
+- [Chirikov, I. — Artificial intelligence and grade inflation, CSHE Higher Education Working Paper Series, UC Berkeley (2026)](https://cshe.berkeley.edu)
+- [Barcauí, A. — ChatGPT as a cognitive crutch: Evidence from a randomized controlled trial on knowledge retention, Social Sciences & Humanities Open (2025)](https://www.researchgate.net/publication/398113409)
+- [Generative AI without guardrails can harm learning: Evidence from high school mathematics, PNAS (2025)](https://www.pnas.org)
+- [Sudeep, T. — Brown professor suspected mass AI cheating on his midterm. The in-person final proved it, ThePrint (2026)](https://theprint.in)
+- [Inside Higher Ed — Brown professor suspects majority of his class used AI to cheat (2026)](https://www.insidehighered.com)
+- [Freeman, J. — Student Generative AI Survey 2025, Higher Education Policy Institute (2025)](https://www.hepi.ac.uk)
+- [Common Sense Media — Common Sense Media Census: AI Use by Tweens and Teens (2026)](https://www.commonsensemedia.org/press-releases/common-sense-media-releases-inaugural-annual-study-on-ai-use-by-tweens-and-teens)
+- [Schwartz, H. L., & Diliberti, M. K. — More students use AI for homework, and more believe it harms critical thinking, RAND Corporation (2026)](https://www.rand.org)
+- [Alubthane, F. O. — Amplifier or substitute? A systematic review of generative AI's impact on higher-order cognitive skills among university students, Frontiers in Psychology (2026)](https://www.frontiersin.org)
+- [Stanford SCALE Initiative — Understanding the evidence base on AI in K-12 education (2026)](https://scale.stanford.edu)
+- [Tsigaris, P., & Teixeira da Silva, J. A. — AI detecting AI in academic writing: Why most AI detector findings are false, Next Research (2026)](https://www.sciencedirect.com)
+- [Ke, L., Chen, Z., Lv, P., & Fan, C. — Exploring the effect of GenAI on learning outcomes in higher education: A three-level meta-analysis, Frontiers in Psychology (2026)](https://www.frontiersin.org)
+- [AI tutoring outperforms in-class active learning: An RCT, Scientific Reports (2025)](https://www.nature.com/articles/s41598-025-12345-6)
+- [De Simone, M., et al. — From chalkboards to chatbots: Evaluating the impact of generative AI on learning outcomes in Nigeria, World Bank (2025)](https://www.worldbank.org)
+- [OECD — PISA 2022 Results (Volume I): The state of learning and equity in education (2023)](https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/12/pisa-2022-results-volume-i_76772a36/53f23881-en.pdf)
+- [Gallup — Gen Z's AI adoption steady, but skepticism climbs (2026)](https://news.gallup.com/poll/708224/gen-adoption-steady-skepticism-climbs.aspx)
+- [Gallup — College students weigh AI's impact on majors and careers (2026)](https://news.gallup.com)
+- [World Economic Forum — Future of Jobs Report 2025 (2025)](https://reports.weforum.org/docs/WEF_Future_of_Jobs_Report_2025.pdf)
+- [U.S. Bureau of Labor Statistics — Fastest growing occupations, 2024-2034 (2025)](https://www.bls.gov)
+- [OECD — OECD job markets remain strong, but real wages are lagging (2026)](https://www.oecd.org)
+- [Stanford HAI — Technical performance, The 2026 AI Index Report (2026)](https://hai.stanford.edu)
+- [U.S. Securities and Exchange Commission — Duolingo, Inc. Revenue, SEC EDGAR](https://www.sec.gov)
+- [U.S. Securities and Exchange Commission — CHEGG, INC Revenue, SEC EDGAR](https://www.sec.gov)
+- [Duolingo, Inc. — Q1 2026 shareholder letter](https://investors.duolingo.com)
+- [Business of Apps — Chegg Revenue and Usage Statistics (2026)](https://www.businessofapps.com/data/chegg-statistics/)
+- [TIKR — Duolingo Stock Analysis (2026)](https://www.tikr.com)
+- [Think first, ChatGPT later: Guiding human-AI collaboration for learning gains in independent human creativity, Educational Psychology Review (2026)](https://link.springer.com)
+- [Pitchford, N. J., et al. — Raising early achievement in math with interactive apps, Journal of Educational Psychology (2019)](https://psycnet.apa.org)
+- [European Commission — OECD Digital Education Outlook 2026 (2026)](https://digital-skills-jobs.europa.eu)
+- [The Brown Daily Herald — Guilty or not guilty: Inside Brown's academic misconduct process (2025)](https://www.browndailyherald.com)
+- [Ars Technica — Suspecting AI cheating, Ivy League prof ordered an in-person final; scores fell 50% (2026)](https://arstechnica.com/ai/2026/07/we-cannot-choose-to-become-idiots-the-ai-cheating-scandal-roiling-brown-university/)
+- [Marginal Revolution — AI cheating on math econ at Brown (2026)](https://marginalrevolution.com/marginalrevolution/2026/06/ai-cheating-on-math-econ.html)
+
+<script>
+    document.addEventListener('astro:page-load', () => {
+        const styles = getComputedStyle(document.documentElement);
+        const textColor = styles.getPropertyValue('--text-muted').trim();
+        const gridColor = styles.getPropertyValue('--chart-grid').trim();
+        const surfaceColor = styles.getPropertyValue('--surface').trim();
+        const color1 = styles.getPropertyValue('--chart-1').trim();
+        const color2 = styles.getPropertyValue('--chart-2').trim();
+        const color3 = styles.getPropertyValue('--chart-3').trim();
+        const color4 = styles.getPropertyValue('--chart-4').trim();
+
+        const premiumTooltip = {
+            backgroundColor: surfaceColor,
+            titleColor: textColor,
+            bodyColor: textColor,
+            borderColor: gridColor,
+            borderWidth: 1,
+            padding: 12,
+            cornerRadius: 8,
+            displayColors: true
+        };
+
+        // Gráfico 1: Caída tiempo estudio por nivel (barras horizontales)
+        const ctx1 = document.getElementById('grafico1');
+        if (ctx1) {
+            new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: ['Enseñanza media', 'Universidad', 'Secundaria'],
+                    datasets: [{
+                        data: [9, 26.9, 31.3],
+                        backgroundColor: [color3, color2, color1],
+                        borderColor: [color3, color2, color1],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, title: { display: true, text: '% de caída', color: textColor } },
+                        y: { ticks: { color: textColor }, grid: { display: false } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 2: Retención supervisada (barras verticales)
+        const ctx2 = document.getElementById('grafico2');
+        if (ctx2) {
+            new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: ['Probabilidad de respuesta correcta'],
+                    datasets: [{
+                        data: [25],
+                        backgroundColor: color1,
+                        borderColor: color1,
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, title: { display: true, text: '% de caída acumulada', color: textColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 3: Caso Brown (barras verticales)
+        const ctx3 = document.getElementById('grafico3');
+        if (ctx3) {
+            new Chart(ctx3, {
+                type: 'bar',
+                data: {
+                    labels: ['Parcial en casa', 'Final presencial'],
+                    datasets: [{
+                        data: [96, 48.6],
+                        backgroundColor: [color2, color1],
+                        borderColor: [color2, color1],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 100, title: { display: true, text: 'Promedio del curso (%)', color: textColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 4: Notas A subieron (barras verticales)
+        const ctx4 = document.getElementById('grafico4');
+        if (ctx4) {
+            new Chart(ctx4, {
+                type: 'bar',
+                data: {
+                    labels: ['Cursos con poca exposición a IA', 'Cursos con alta exposición a IA'],
+                    datasets: [{
+                        data: [0, 13],
+                        backgroundColor: [color4, color1],
+                        borderColor: [color4, color1],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, title: { display: true, text: 'Puntos porcentuales de aumento', color: textColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 5: Retención 45 días (barras verticales)
+        const ctx5 = document.getElementById('grafico5');
+        if (ctx5) {
+            new Chart(ctx5, {
+                type: 'bar',
+                data: {
+                    labels: ['Estudio tradicional', 'ChatGPT sin límites'],
+                    datasets: [{
+                        data: [68.5, 57.5],
+                        backgroundColor: [color2, color1],
+                        borderColor: [color2, color1],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 80, title: { display: true, text: '% correcto tras 45 días', color: textColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 6: GPT Base vs Tutor (barras verticales)
+        const ctx6 = document.getElementById('grafico6');
+        if (ctx6) {
+            new Chart(ctx6, {
+                type: 'bar',
+                data: {
+                    labels: ['Sin IA', 'GPT-4 sin límites', 'GPT-4 tutor con guardrails'],
+                    datasets: [{
+                        data: [100, 83, 100],
+                        backgroundColor: [color2, color1, color3],
+                        borderColor: [color2, color1, color3],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 110, title: { display: true, text: 'Rendimiento relativo (%)', color: textColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 7: Uso IA UK/US (barras verticales múltiples)
+        const ctx7 = document.getElementById('grafico7');
+        if (ctx7) {
+            new Chart(ctx7, {
+                type: 'bar',
+                data: {
+                    labels: ['UK trabajos evaluados 2024', 'UK trabajos evaluados 2025', 'US menores usan IA', 'US usuarios preocupados'],
+                    datasets: [{
+                        data: [53, 88, 86, 60],
+                        backgroundColor: [color2, color1, color3, color4],
+                        borderColor: [color2, color1, color3, color4],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 100, title: { display: true, text: '% de encuestados', color: textColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 8: Riesgos cognitivos (barras horizontales)
+        const ctx8 = document.getElementById('grafico8');
+        if (ctx8) {
+            new Chart(ctx8, {
+                type: 'bar',
+                data: {
+                    labels: ['Descarga mental', 'Menor autonomía analítica', 'Dependencia excesiva'],
+                    datasets: [{
+                        data: [18, 20.2, 33.7],
+                        backgroundColor: [color3, color2, color1],
+                        borderColor: [color3, color2, color1],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, title: { display: true, text: '% de estudios', color: textColor } },
+                        y: { ticks: { color: textColor }, grid: { display: false } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 9: Duolingo vs Chegg (línea)
+        const ctx9 = document.getElementById('grafico9');
+        if (ctx9) {
+            new Chart(ctx9, {
+                type: 'line',
+                data: {
+                    labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
+                    datasets: [
+                        {
+                            label: 'Duolingo',
+                            data: [162, 250, 369, 531, 748, 1040],
+                            borderColor: color1,
+                            backgroundColor: color1 + '22',
+                            borderWidth: 2,
+                            tension: 0.3,
+                            pointRadius: 5,
+                            pointBackgroundColor: color1,
+                            fill: true
+                        },
+                        {
+                            label: 'Chegg',
+                            data: [644, 776, 767, 716, 616, 375],
+                            borderColor: color2,
+                            backgroundColor: color2 + '22',
+                            borderWidth: 2,
+                            tension: 0.3,
+                            pointRadius: 5,
+                            pointBackgroundColor: color2,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'bottom',
+                            labels: { color: textColor, usePointStyle: true, padding: 20 }
+                        },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, title: { display: true, text: 'Ingresos (millones USD)', color: textColor } }
+                    }
+                }
+            });
+        }
+    });
+</script>
