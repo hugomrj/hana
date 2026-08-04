@@ -48,7 +48,7 @@ const duplicates = Object.entries(linkCounts).filter(([link, titles]) => titles.
         <div class="archive-list">
             {sortedArticles.map(art => (
                 <div class="archive-item" style="text-decoration: none; color: var(--text);">
-                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 1rem;">
                         <div>
                             <span class="kicker">{art.data.categoria}</span>
                             <h3 style="font-size: 1.2rem; margin: 0.25rem 0;">{art.data.titulo}</h3>
