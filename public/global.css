@@ -1,10 +1,10 @@
-/* === Variables de Tema (Claro - SaaS Premium) === */
+/* === Variables de Tema (Claro - SaaS Premium Mejorado) === */
 :root {
-    --bg: #ffffff;
-    --surface: #f9fafb;
+    --bg: #fcfcfd; /* Fondo ligeramente cálidamente */
+    --surface: #ffffff;
     --surface-2: #ffffff;
     --text: #0f172a;
-    --text-muted: #64748b;
+    --text-muted: #475569; /* Mejor contraste para leer */
     --border: #e2e8f0;
     --accent: #3b82f6;
     --accent-hover: #2563eb;
@@ -12,21 +12,35 @@
     --chart-grid: #e2e8f0;
     --code-bg: #f1f5f9;
     --radius: 16px;
+    
+    /* Colores para gráficos */
+    --chart-1: #3b82f6;
+    --chart-2: #10b981;
+    --chart-3: #f59e0b;
+    --chart-4: #ef4444;
+    --chart-5: #8b5cf6;
 }
 
 /* === Tema Oscuro === */
 [data-theme="dark"] {
-    --bg: #09090b;
-    --surface: #18181b;
-    --surface-2: #1e1e22;
+    --bg: #0a0c10; /* Negro con toque sutil azul */
+    --surface: #111317;
+    --surface-2: #161a20;
     --text: #fafafa;
-    --text-muted: #a1a1aa;
-    --border: #27272a;
+    --text-muted: #94a3b8;
+    --border: #1f242c;
     --accent: #60a5fa;
     --accent-hover: #93c5fd;
     --accent-light: rgba(96, 165, 250, 0.1);
-    --chart-grid: #27272a;
-    --code-bg: #1e1e22;
+    --chart-grid: #1f242c;
+    --code-bg: #161a20;
+    
+    /* Colores para gráficos en oscuro */
+    --chart-1: #60a5fa;
+    --chart-2: #34d399;
+    --chart-3: #fbbf24;
+    --chart-4: #f87171;
+    --chart-5: #a78bfa;
 }
 
 /* === Reset === */
