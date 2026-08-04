@@ -701,3 +701,27 @@ pre.astro-code span {
 .site-footer {
     margin-top: 4rem;
 }
+
+
+
+
+/* === Eliminar viñetas de la bibliografía/fuentes === */
+article ul {
+    list-style: none; /* Quita el punto o número de la viñeta */
+    padding: 0; /* Elimina la sangría por defecto */
+    margin-top: 1.5rem;
+}
+
+article ul li {
+    margin-bottom: 0.75rem; /* Espacio limpio entre cada fuente */
+    padding-left: 0;
+}
+
+/* Si en algún artículo la IA usa listas numeradas para otro contenido, las restauramos */
+article ol {
+    padding-left: 1.5rem;
+    margin-top: 1.5rem;
+}
+article ol li {
+    margin-bottom: 0.75rem;
+}
