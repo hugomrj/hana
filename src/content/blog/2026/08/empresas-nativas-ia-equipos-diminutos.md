@@ -1,0 +1,504 @@
+---
+titulo: "Cómo las empresas nativas de IA ganan con equipos diminutos"
+extracto: "Midjourney factura $4,1M por empleado. Cursor alcanzó $4.000M de ARR con 300 personas. La inteligencia artificial no solo acelera el software: está redefiniendo la estructura misma de las organizaciones tecnológicas."
+fecha: "2026-08-04T10:04:00"
+categoria: "Inteligencia Artificial"
+etiquetas: ["IA nativa", "productividad", "SaaS", "Cursor", "Midjourney", "venture capital", "eficiencia"]
+---
+
+Durante décadas, la regla de oro del software empresarial fue clara: para escalar ingresos, escalaba la plantilla. Una startup que quería pasar de un millón a cien millones de dólares de ingresos recurrentes anuales (ARR) necesitaba contratar decenas de ingenieros, un equipo de ventas, soporte al cliente, marketing y operaciones. Esa ecuación se está rompiendo en tiempo real. La llegada de la inteligencia artificial generativa no está simplemente automatizando tareas existentes: está reescribiendo la arquitectura organizacional de las empresas tecnológicas desde sus cimientos.
+
+El caso más ilustrativo es el de Lovable, una empresa sueca de vibe coding que en marzo de 2026 sumó USD 100 millones en ingresos en un solo mes con apenas 146 empleados. La compañía alcanzó USD 400 millones de ARR apenas ocho meses después de su lanzamiento, el ritmo más veloz jamás registrado para una empresa de software, y siguió escalando hasta superar los USD 500 millones. Pero Lovable no es una anomalía: es el síntoma de un patrón sistémico que atraviesa toda la industria.
+
+## La nueva densidad de ingresos
+
+Las firmas nativas de IA punteras facturan entre USD 3 y 4 millones por empleado, mientras que una empresa de SaaS tradicional ronda los USD 300.000. Midjourney, con aproximadamente 40 empleados y cero financiamiento externo, genera unos USD 500 millones de ARR, lo que arroja una densidad de ingresos de aproximadamente USD 12,5 millones por persona. Cursor, por su parte, alcanzó USD 4.000 millones de ARR en mayo de 2026 con un equipo estimado en 300 personas, lo que representa más de USD 13 millones por empleado. Incluso OpenAI, que opera a una escala mucho mayor, mantiene una densidad de USD 1,5 millones por persona, cinco veces el estándar del software tradicional.
+
+<div class="chart-container">
+    <div class="chart-title">Ingresos por empleado, miles de USD. Fuentes: yarnnn (2026); Charaka Notes (2026); Sacra</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico1"></canvas>
+    </div>
+</div>
+
+Estas cifras no son meramente estadísticas de productividad: son indicadores de una transformación estructural. La distribución de productos como Midjourney ocurrió a través de Discord y el boca a boca, sin equipos de ventas ni presupuestos de marketing tradicionales. Cursor fue descubierto por desarrolladores dentro de sus propios entornos de desarrollo integrado (IDE). En ambos casos, el producto está donde el usuario ya se encuentra, y los costos marginales de entrega se acercan a cero porque la infraestructura escala sin que la plantilla crezca proporcionalmente.
+
+La trayectoria de Cursor es particularmente reveladora. Fundada en 2022 por cuatro estudiantes del MIT, la empresa pasó de USD 1 millón de ARR en 2023 a USD 100 millones en enero de 2025, USD 500 millones en junio de 2025, USD 1.000 millones en noviembre de 2025, USD 2.000 millones en marzo de 2026, USD 3.000 millones en abril de 2026 y USD 4.000 millones en mayo de 2026. Eso significa que duplicó sus ingresos aproximadamente cada dos meses durante un año y medio. En junio de 2026, SpaceX anunció la adquisición de Cursor por USD 60.000 millones en una operación totalmente accionaria, descrita como la mayor adquisición de una startup respaldada por capital de riesgo jamás registrada.
+
+## El costo de la inteligencia y el nuevo reparto del gasto operativo
+
+La base económica que hace posible este modelo es la caída vertiginosa del costo de la inteligencia artificial. En marzo de 2023, GPT-4 costaba USD 60 por millón de tokens de salida. Para abril de 2025, la misma calidad estaba disponible entre USD 0,30 y USD 0,60 por millón de tokens, una reducción del 97% en dos años. A16z acuñó el término "LLMflation" para describir este fenómeno: la unidad de inteligencia se abarata de manera drástica año tras año, a un ritmo aproximado de 10 veces anual para una barra de calidad fija.
+
+<div class="chart-container">
+    <div class="chart-title">Costo de salida de IA de frontera, USD por millón de tokens. Fuente: dataku (2025)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico2"></canvas>
+    </div>
+</div>
+
+Esta caída de costos está reconfigurando la estructura del gasto operativo en las empresas de software. En las firmas B2B de IA en expansión, el costo de inferencia consume ya el 23% de los ingresos, casi al nivel del presupuesto total de talento, que representa el 26%. El talento humano aún lidera, pero el gasto en tokens se acerca rápidamente: en ingeniería de software, el gasto en tokens es hoy apenas el 1% o 2% del costo de personal, pero se proyecta hacia el 20% o 30% de la nómina de ingeniería.
+
+<div class="chart-container">
+    <div class="chart-title">Participación en ingresos de firmas IA B2B (%). Fuentes: SaaStr (2026); Bain & Company (2026)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico3"></canvas>
+    </div>
+</div>
+
+El caso de Swan AI ilustra esta transición de manera contundente: la empresa gasta USD 113.000 al mes en tokens de IA para su equipo de cuatro personas. Como declaró su director ejecutivo, ese dinero va a tokens en vez de salarios humanos. El mayor "empleado" es ahora una factura de cómputo. Este fenómeno no es anecdótico: representa un cambio de paradigma en cómo las empresas tecnológicas asignan capital entre personas y máquinas.
+
+## Productividad del desarrollador y la saturación de benchmarks
+
+La mejora en la capacidad de los modelos de IA para programar ha sido igualmente vertiginosa. En la prueba SWE-bench, que mide la resolución de problemas reales de código en repositorios de GitHub, la IA resolvió apenas el 4,4% de los problemas en 2023. Esa cifra saltó al 71,7% en 2024 y, para junio de 2026, el mejor modelo superó el 90% por primera vez, alcanzando el 93,9%. Los mismos motores hicieron a los desarrolladores un 55,8% más rápidos en un estudio controlado, sobre un cómputo de entrenamiento que crece aproximadamente cinco veces al año desde 2020.
+
+<div class="chart-container">
+    <div class="chart-title">Puntaje en SWE-bench Verified (% resuelto). Fuentes: CodingFleet (2026); Stanford HAI (2025)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico4"></canvas>
+    </div>
+</div>
+
+Sin embargo, hay una advertencia importante: un análisis de 2025 encontró que el 19,78% de los casos etiquetados como "resueltos" en SWE-bench son semánticamente incorrectos, pasan las pruebas unitarias por coincidencia o por manipulación del sistema de evaluación. Esto significa que el leaderboard luce mejor que la realidad. Los agentes que puntúan por debajo del 80% en SWE-bench, como Devin 2.0 con un 45,8% bajo restricciones de "sin humano en el bucle", a veces superan a los ganadores del leaderboard en tareas que realmente importan a los humanos: refactorizaciones multiarchivo de largo alcance, depuración de errores novedosos y navegación por bases de código desconocidas.
+
+## La otra cara: retención y churn en SaaS de IA
+
+El crecimiento veloz tiene una fisura estructural. Los planes de IA de menos de USD 50 al mes retienen solo el 23% de sus ingresos anuales, frente al 70% en los planes de USD 250 o más y al 85-93% del SaaS tradicional. Según datos de ChartMogul basados en aproximadamente 3.500 empresas, el SaaS nativo de IA retiene solo el 40% de sus ingresos año tras año, contra una mediana del 82% para el SaaS B2B tradicional.
+
+<div class="chart-container">
+    <div class="chart-title">Retención bruta de ingresos (GRR) por tier de precio. Fuente: ChartMogul / Minbook (2026)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico5"></canvas>
+    </div>
+</div>
+
+La razón no es que los productos de IA sean malos, sino que atraen una avalancha de usuarios de bajo compromiso, a menudo impulsados por la curiosidad. Cuando se filtra por usuarios de alto compromiso en planes premium, la retención del SaaS nativo de IA se parece mucho a la del software tradicional: un 70% de GRR y un 85% de NRR en el tier superior. La buena noticia es que la retención está mejorando: la GRR mediana para SaaS nativo de IA subió del 27% en enero de 2025 al 40% en septiembre de 2025, a medida que la ola inicial de "turistas de IA" se disipó y la base restante mostró mayor compromiso.
+
+## El auge del fundador en solitario
+
+La capacidad de una sola persona para construir y escalar un negocio de software ha alcanzado niveles sin precedentes. Los fundadores de software en solitario con ingresos superiores a un millón de dólares pasaron de unos 800 en 2022 a 3.400 en 2025, con proyecciones de 4.500 para 2026. Los fundadores en solitario representaron aproximadamente el 14-15% de los lotes de Y Combinator en 2025.
+
+Pieter Levels opera Photo AI completamente solo, generando USD 138.000 al mes (USD 1,65 millones anuales) con cero empleados y márgenes de beneficio superiores al 87%. Su cartera completa, que incluye Interior AI, Nomad List y Remote OK, supera los USD 250.000 mensuales. Marc Lou, por su parte, generó USD 1.032.000 en 2025 a través de 15 fuentes de ingresos, incluyendo ShipFast, CodeFast y DataFast. Base44, una startup de vibe coding fundada por Maor Shlomo, fue adquirida por Wix por USD 80 millones en efectivo cuando tenía apenas seis meses de existencia y ocho empleados.
+
+<div class="chart-container">
+    <div class="chart-title">Fundadores de software en solitario con ingresos >$1M/año. Fuentes: 500k.io (2026); TechCrunch (2025)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico6"></canvas>
+    </div>
+</div>
+
+Este fenómeno no implica que cualquier persona pueda replicar estos resultados. Levels construyó una audiencia de más de 600.000 seguidores en X durante una década de publicación constante. Su tasa de éxito fue de apenas 4 proyectos rentables de más de 70 intentos. Lo que sí ha cambiado es el techo: el límite superior de lo que una sola persona puede construir con asistencia de IA ha subido drásticamente.
+
+## Concentración de capital y cierre de salidas
+
+Mientras las empresas nativas de IA demuestran que se puede escalar con equipos mínimos, el ecosistema de venture capital se concentra cada vez más. En 2025, las empresas de IA captaron el 61% de todo el capital de riesgo mundial, unos USD 258.700 millones de los USD 427.100 millones invertidos, más del doble de su participación en 2022 (30%). Los mega acuerdos de más de USD 100 millones representaron aproximadamente el 73% del valor total de inversión en IA, y los acuerdos superiores a USD 1.000 millones representaron aproximadamente la mitad de ese valor.
+
+<div class="chart-container">
+    <div class="chart-title">Inversión de venture capital global en IA, miles de millones de USD. Fuente: OECD (2026)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico7"></canvas>
+    </div>
+</div>
+
+La valoración de Anthropic saltó de USD 500 millones en mayo de 2021 a USD 380.000 millones en febrero de 2026, una escalada de 760 veces en cinco años. Reportes posteriores la acercaron a los USD 900.000 millones. OpenAI cerró una ronda de USD 110.000 millones con una valoración de USD 840.000 millones, la mayor recaudación privada jamás registrada. Estas cifras indican que el capital no solo fluye hacia la IA: se está concentrando en un puñado de actores dominantes.
+
+<div class="chart-container">
+    <div class="chart-title">Valoración de Anthropic, miles de millones de USD (escala logarítmica). Fuente: WealthUnion (2026)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico8"></canvas>
+    </div>
+</div>
+
+Paralelamente, las salidas tradicionales se están estrechando. Las compras de startups por las grandes tecnológicas cayeron de 43 operaciones por USD 19.200 millones en 2020 a 17 operaciones por USD 3.300 millones en 2024, según datos de PitchBook. Google pagó USD 2.400 millones por contratar al director de Windsurf y licenciar su tecnología sin realizar una adquisición completa. En 2024, Apple integró funciones que duplicaban aplicaciones como Otter, Grammarly y AllTrails directamente en iOS. El patrón es claro: los gigantes prefieren copiar o contratar talento antes que adquirir empresas completas.
+
+<div class="chart-container">
+    <div class="chart-title">Adquisiciones de startups por big tech (operaciones y valor, miles de millones USD). Fuentes: PitchBook (2025); TechCrunch (2024)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico9"></canvas>
+    </div>
+</div>
+
+## Implicaciones para arquitectos y CTOs
+
+Para los líderes técnicos evaluando estas tendencias, el mensaje es multifacético. Primero, la eficiencia del capital humano ya no está atada linealmente al tamaño del equipo. Una organización de 50 personas con herramientas de IA puede generar el mismo output que una de 500 sin ellas, pero solo si la arquitectura del trabajo se rediseña para aprovechar la automatización en lugar de simplemente añadir asistentes digitales a procesos existentes.
+
+Segundo, el costo de la inferencia se convertirá en una partida presupuestaria comparable al talento. Las proyecciones de Bain & Company sugieren que el gasto en tokens pasará del 1-2% actual al 20-30% de la nómina de ingeniería. Esto implica que los CTOs necesitarán modelos de costos de IA tan sofisticados como sus modelos de costos de personal.
+
+Tercero, la retención de clientes en productos de IA de bajo costo es fundamentalmente diferente al SaaS tradicional. Los planes por debajo de USD 50 al mes enfrentan un churn estructural que no se resuelve con mejoras de producto: se resuelve con mayor integración en flujos de trabajo, mayores costos de cambio y migración hacia tiers de mayor compromiso.
+
+Cuarto, la velocidad de lanzamiento de modelos, aproximadamente cada 37 a 45 días para los principales modelos de frontera, convierte cada release en una actualización gratuita para los productos construidos sobre ellos. Esto crea un efecto de palanca sin precedentes para las startups nativas de IA, pero también una dependencia crítica de proveedores cuyos ciclos de lanzamiento determinan la competitividad del producto.
+
+## Conclusión: una reordenación en tiempo real
+
+La evidencia disponible apunta a un mercado que se está reordenando en tiempo real. Las empresas nativas de IA demuestran que es posible generar miles de millones de dólares con equipos que, hace cinco años, habrían sido considerados equipos de prototipo. La densidad de ingresos por empleado ha aumentado un orden de magnitud. El costo de la inteligencia ha caído un 97% en dos años. Los fundadores en solitario construyen imperios que antes requerían cientos de personas.
+
+Sin embargo, este panorama no está exento de riesgos. La retención de clientes en tiers bajos es frágil. La concentración de capital de riesgo en mega acuerdos reduce las oportunidades para startups en etapas tempranas. Las salidas por adquisición se contraen mientras los gigantes tecnológicos prefieren internalizar capacidades. Y la dependencia de proveedores de modelos de frontera introduce una vulnerabilidad sistémica que pocos han modelado adecuadamente.
+
+La pregunta para las organizaciones no es si adoptar IA, sino cómo rediseñar la arquitectura del trabajo para que la IA no sea un acelerador marginal sino un multiplicador estructural. Las empresas que entiendan esta distinción construirán con equipos diminutos. Las que no, competirán contra ellas con estructuras de costos del siglo pasado.
+
+## Fuentes y Créditos
+
+Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
+
+- [Heim, A. — Lovable says it added $100M in revenue last month alone, with just 146 employees, TechCrunch (2026)](https://techcrunch.com/2026/03/11/lovable-says-it-added-100m-in-revenue-last-month-alone-with-just-146-employees/)
+- [Tech.eu — Lovable becomes fastest software company ever to reach $100M ARR (2025)](https://tech.eu)
+- [yarnnn — The AI workplace thesis, part 4: The OpEx equation (2026)](https://yarnnn.com)
+- [Charaka Notes — The $5M employee: What AI-native revenue density means for valuation (2026)](https://getmanthan.com/charaka-notes/ai-native-revenue-density/)
+- [TechCrunch — Cursor has reportedly surpassed $2B in annualized revenue (2026)](https://techcrunch.com)
+- [GTMnow — Deconstructing Cursor's growth playbook: $4M to $2B ARR in 18 months (2026)](https://gtmnow.com)
+- [Minbook — The structural problem of AI SaaS: What a 40% GRR really means (2026)](https://minbook.com)
+- [ChartMogul — The SaaS Retention Report 2026: The AI Churn Wave](https://chartmogul.com)
+- [Artisan Growth Strategies — AI SaaS Churn & Retention Benchmarks 2026](https://www.artisangrowthstrategies.com/blog/ai-saas-churn-retention-benchmarks-2026)
+- [dataku — The cost of AI dropped 97% in two years: One chart (2025)](https://dataku.com)
+- [ValueAddVC — AI Inference: 95% Cost Cut in Two Years (2026)](https://valueaddvc.com/blog/how-ai-inference-costs-have-dropped-95-in-two-years-and-what-happens-next)
+- [SaaStr — Inference costs average 23% of revenue at AI B2B companies (2026)](https://saastr.com)
+- [Bain & Company — How token economics will change opex (2026)](https://bain.com)
+- [NEWSx.io — Startups brag they spend more money on AI than human employees (2026)](https://newsx.io)
+- [CodingFleet — AI coding progress tracker: 14 months of benchmark scores (2024-2026)](https://codingfleet.com)
+- [Stanford HAI — Technical performance: The 2025 AI Index report (2025)](https://hai.stanford.edu)
+- [Peng, S., et al. — The impact of AI on developer productivity: Evidence from GitHub Copilot, arXiv (2023)](https://arxiv.org)
+- [Epoch AI — Trends in machine learning (2026)](https://epochai.org)
+- [WealthUnion — Anthropic pre-IPO & private investment profile (2026)](https://wealthunion.com)
+- [500k.io — Solopreneur statistics 2026: What the data says (2026)](https://500k.io)
+- [Bort, J. — 6-month-old, solo-owned vibe coder Base44 sells to Wix for $80M cash, TechCrunch (2025)](https://techcrunch.com/2025/06/18/6-month-old-solo-owned-vibe-coder-base44-sells-to-wix-for-80m-cash/)
+- [Tycoon — Photo AI: $0 to $138K MRR solo (2026)](https://tycoon.com)
+- [PitchBook — VC-backed companies taking advantage of slow M&A market (2025)](https://pitchbook.com)
+- [TechCrunch — The apps that Apple Sherlocked at WWDC (2024)](https://techcrunch.com/2024/06/12/the-apps-that-apple-sherlocked-at-wwdc/)
+- [OECD — Venture capital investments in artificial intelligence through 2025 (2026)](https://www.oecd.org/content/dam/oecd/en/publications/reports/2026/02/venture-capital-investments-in-artificial-intelligence-through-2025_3bcb227f/a13752f5-en.pdf)
+- [OECD — AI firms capture 61% of global venture capital in 2025 (2026)](https://www.oecd.org/en/about/news/announcements/2026/02/ai-firms-capture-61-percent-of-global-venture-capital-in-2025.html)
+- [South Summit — AI now captures 61% of global VC investment (2026)](https://www.southsummit.io/en/content/ai-now-captures-61-of-global-vc-investment-south-summit)
+- [Forbes — Cursor Hits $4 Billion Annualized Revenue Ahead Of SpaceX IPO (2026)](https://www.forbes.com/sites/richardnieva/2026/06/08/cursor-4-billion-annualized-revenue/)
+- [Digital Applied — SpaceX Buys Cursor for $60B: What the Deal Means in 2026 (2026)](https://www.digitalapplied.com/blog/spacex-acquires-cursor-anysphere-60b-ai-coding-2026)
+- [AI Business Weekly — Cursor AI Statistics 2026: Revenue, Users & SpaceX Deal (2026)](https://aibusinessweekly.net/p/cursor-ai-statistics)
+- [AI Business VC — AI Revenue Leaderboard 2026 (2026)](https://aibusiness.vc/startups/ai-revenue-leaderboard)
+- [sqmagazine — How Many People Work At Midjourney 2026 (2026)](https://sqmagazine.co.uk/how-many-people-work-at-midjourney/)
+- [GetLatka — Lovable Revenue 2026 (2026)](https://getlatka.com/companies/lovable.dev)
+- [Yildirim, E. — How Google killed OpenAI's $3 billion deal without an acquisition, Gizmodo (2025)](https://gizmodo.com)
+
+<script>
+    document.addEventListener('astro:page-load', () => {
+        const styles = getComputedStyle(document.documentElement);
+        const textColor = styles.getPropertyValue('--text-muted').trim();
+        const gridColor = styles.getPropertyValue('--chart-grid').trim();
+        const surfaceColor = styles.getPropertyValue('--surface').trim();
+        const color1 = styles.getPropertyValue('--chart-1').trim();
+        const color2 = styles.getPropertyValue('--chart-2').trim();
+        const color3 = styles.getPropertyValue('--chart-3').trim();
+        const color4 = styles.getPropertyValue('--chart-4').trim();
+
+        const premiumTooltip = {
+            backgroundColor: surfaceColor,
+            titleColor: textColor,
+            bodyColor: textColor,
+            borderColor: gridColor,
+            borderWidth: 1,
+            padding: 12,
+            cornerRadius: 8,
+            displayColors: true
+        };
+
+        // Gráfico 1: Ingresos por empleado (barras horizontales)
+        const ctx1 = document.getElementById('grafico1');
+        if (ctx1) {
+            new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: ['SaaS tradicional', 'OpenAI', 'Cursor', 'Midjourney'],
+                    datasets: [{
+                        data: [0.3, 1.5, 13.3, 12.5],
+                        backgroundColor: [color4, color3, color1, color2],
+                        borderColor: [color4, color3, color1, color2],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, title: { display: true, text: 'Millones USD por empleado', color: textColor } },
+                        y: { ticks: { color: textColor }, grid: { display: false } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 2: Costo de salida de IA (barras verticales)
+        const ctx2 = document.getElementById('grafico2');
+        if (ctx2) {
+            new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: ['Mar 2023 (GPT-4)', 'Abr 2025 (equivalente)'],
+                    datasets: [{
+                        data: [60, 0.30],
+                        backgroundColor: [color1, color2],
+                        borderColor: [color1, color2],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { type: 'logarithmic', ticks: { color: textColor }, grid: { color: gridColor }, title: { display: true, text: 'USD por millón de tokens (escala log)', color: textColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 3: Inferencia vs Talento (barras verticales, 2 datasets)
+        const ctx3 = document.getElementById('grafico3');
+        if (ctx3) {
+            new Chart(ctx3, {
+                type: 'bar',
+                data: {
+                    labels: ['Inferencia (% ingresos)', 'Talento (% ingresos)'],
+                    datasets: [{
+                        data: [23, 26],
+                        backgroundColor: [color1, color2],
+                        borderColor: [color1, color2],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 35, title: { display: true, text: '% de ingresos', color: textColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 4: SWE-bench (línea)
+        const ctx4 = document.getElementById('grafico4');
+        if (ctx4) {
+            new Chart(ctx4, {
+                type: 'line',
+                data: {
+                    labels: ['2023', 'Mar 2024', 'Oct 2025', 'Abr 2026', 'May 2026', 'Jun 2026'],
+                    datasets: [{
+                        data: [4.4, 33, 71.7, 90, 92, 93.9],
+                        borderColor: color1,
+                        backgroundColor: color1 + '22',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointBackgroundColor: color1,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 100, title: { display: true, text: '% resuelto', color: textColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 5: Retención por tier (barras verticales)
+        const ctx5 = document.getElementById('grafico5');
+        if (ctx5) {
+            new Chart(ctx5, {
+                type: 'bar',
+                data: {
+                    labels: ['<$50/mes', '$50-249/mes', '$250+/mes', 'SaaS tradicional'],
+                    datasets: [{
+                        data: [23, 45, 70, 89],
+                        backgroundColor: [color4, color3, color2, color1],
+                        borderColor: [color4, color3, color2, color1],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 100, title: { display: true, text: 'GRR (% ingresos retenidos)', color: textColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 6: Fundadores en solitario (barras verticales)
+        const ctx6 = document.getElementById('grafico6');
+        if (ctx6) {
+            new Chart(ctx6, {
+                type: 'bar',
+                data: {
+                    labels: ['2022', '2025', '2026 (proy.)'],
+                    datasets: [{
+                        data: [800, 3400, 4500],
+                        backgroundColor: color1,
+                        borderColor: color1,
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, title: { display: true, text: 'Fundadores', color: textColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 7: VC global en IA (barras verticales)
+        const ctx7 = document.getElementById('grafico7');
+        if (ctx7) {
+            new Chart(ctx7, {
+                type: 'bar',
+                data: {
+                    labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
+                    datasets: [{
+                        label: 'Total VC global',
+                        data: [350, 800, 450, 350, 340, 427],
+                        backgroundColor: color2,
+                        borderColor: color2,
+                        borderWidth: 1,
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'VC en IA',
+                        data: [75, 257, 135, 124, 165, 259],
+                        backgroundColor: color1,
+                        borderColor: color1,
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'bottom',
+                            labels: { color: textColor, usePointStyle: true, padding: 20 }
+                        },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, title: { display: true, text: 'Miles de millones USD', color: textColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 8: Valoración Anthropic (línea logarítmica)
+        const ctx8 = document.getElementById('grafico8');
+        if (ctx8) {
+            new Chart(ctx8, {
+                type: 'line',
+                data: {
+                    labels: ['May 2021', 'Abr 2022', 'Sep 2023', '2024', '2025', 'Feb 2026'],
+                    datasets: [{
+                        data: [0.5, 4.1, 18, 40, 180, 380],
+                        borderColor: color1,
+                        backgroundColor: color1 + '22',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointBackgroundColor: color1,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { type: 'logarithmic', ticks: { color: textColor }, grid: { color: gridColor }, title: { display: true, text: 'Miles de millones USD (escala log)', color: textColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 9: Adquisiciones big tech (barras horizontales, 2 métricas)
+        const ctx9 = document.getElementById('grafico9');
+        if (ctx9) {
+            new Chart(ctx9, {
+                type: 'bar',
+                data: {
+                    labels: ['2020', '2024'],
+                    datasets: [
+                        {
+                            label: 'Operaciones',
+                            data: [43, 17],
+                            backgroundColor: color1,
+                            borderColor: color1,
+                            borderWidth: 1,
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'Valor (miles de millones USD)',
+                            data: [19.2, 3.3],
+                            backgroundColor: color2,
+                            borderColor: color2,
+                            borderWidth: 1,
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'bottom',
+                            labels: { color: textColor, usePointStyle: true, padding: 20 }
+                        },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                    }
+                }
+            });
+        }
+    });
+</script>
