@@ -551,3 +551,22 @@ pre.astro-code span {
         border: 1px solid #ddd !important;
     }
 }
+
+
+
+/* === Animación de Transición de Astro === */
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Astro aplica esta clase al contenido que entra */
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.25s;
+}
+
+/* Opcional: Hacer que el header no parpadee durante la transición */
+.site-header {
+    view-transition-name: header;
+}

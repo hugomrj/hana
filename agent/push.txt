@@ -1,0 +1,5 @@
+rm -rf docs
+bun run build
+git add .
+git commit -m "Feat: mensaje definido por la ia"
+git push
