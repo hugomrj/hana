@@ -51,7 +51,7 @@ const duplicates = Object.entries(linkCounts).filter(([link, titles]) => titles.
                     <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 1rem;">
                         <div>
                             <span class="kicker">{art.data.categoria}</span>
-                            <h3 style="font-size: 1.2rem; margin: 0.25rem 0;">{art.data.titulo}</h3>
+                            <h3 style="font-size: 1rem; margin: 0.25rem 0;">{art.data.titulo}</h3>
                         </div>
                         <div style="font-size: 0.85rem; color: var(--text-muted); text-align: right;">
                             <div>{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</div>
