@@ -40,6 +40,9 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+
+
+
 /* === Header Flotante Moderno === */
 .site-header {
     background-color: rgba(255, 255, 255, 0.8);
@@ -59,6 +62,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1.5rem;
 }
 
 .logo a {
@@ -68,8 +72,13 @@ body {
     text-decoration: none;
     color: var(--text);
     letter-spacing: -0.02em;
+    white-space: nowrap; /* Evita que el logo se rompa */
 }
 .logo span { color: var(--accent); }
+
+
+
+
 
 /* === Botón de Tema Minimalista === */
 .theme-toggle {
@@ -223,6 +232,8 @@ code { background-color: var(--code-bg); padding: 0.2rem 0.4rem; border-radius: 
 /* === Footer === */
 .site-footer { border-top: 1px solid var(--border); margin-top: 6rem; padding: 3rem 2rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
 
+
+
 /* === Responsive === */
 @media (max-width: 768px) {
     .hero-news { padding: 2rem; margin-bottom: 3rem; }
@@ -230,10 +241,32 @@ code { background-color: var(--code-bg); padding: 0.2rem 0.4rem; border-radius: 
     .hero-extracto { font-size: 1.1rem; }
     .news-grid { grid-template-columns: 1fr; }
     article h1 { font-size: 2.2rem; }
-    .nav-container { padding: 1rem; }
+    
+    /* Ajustes para la Navbar en móvil */
+    .nav-container {
+        flex-wrap: wrap; /* Permite que los elementos bajen a la siguiente línea */
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .logo a { font-size: 1.2rem; }
+    .theme-toggle { padding: 0.4rem; }
+    
+    /* La búsqueda ocupa todo el ancho en la segunda línea */
+    .nav-search {
+        order: 3; /* La mandamos al final para que baje */
+        flex-basis: 100%;
+        max-width: none;
+        margin: 0;
+    }
+    .nav-search .search-input {
+        padding: 0.6rem 1rem 0.6rem 2.5rem;
+    }
+    
     .hero-meta { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
     .read-more { margin-left: 0; }
 }
+
+
 
 /* === Paginación === */
 .pagination {
