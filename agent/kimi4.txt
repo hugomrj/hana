@@ -49,6 +49,8 @@ Aquí tienes los requisitos obligatorios:
         const color2 = styles.getPropertyValue('--chart-2').trim();
         const color3 = styles.getPropertyValue('--chart-3').trim();
         const color4 = styles.getPropertyValue('--chart-4').trim();
+        const color5 = styles.getPropertyValue('--chart-5').trim();
+        const color6 = styles.getPropertyValue('--chart-6').trim();
 
         // Configuración global de Tooltips para que se vean premium
         const premiumTooltip = {
@@ -74,7 +76,7 @@ Aquí tienes los requisitos obligatorios:
                         // 1. Bar (Vertical): usa color1 puro. borderRadius: 4.
                         // 2. Bar (Horizontal): añade indexAxis: 'y' en options. borderRadius: 4.
                         // 3. Line: usa borderColor: color1, tension: 0.3, pointRadius: 4, fill: true, backgroundColor: color1 + '22' (relleno sutil).
-                        // 4. Doughnut: usa un array de colores [color1, color2, color3, color4], cutout: '60%', y borderColor: surfaceColor.
+                                                // 4. Doughnut: usa un array de colores [color1, color2, color3, color4, color5, color6], cutout: '60%', y borderColor: surfaceColor.
                         // 5. Radar: usa color1 para borderColor y color1 + '33' para backgroundColor. pointRadius: 4.
                         // 6. Scatter: usa backgroundColor: color1, pointRadius: 6, borderColor: surfaceColor, borderWidth: 2.
                         // 7. NUNCA uses opacidades aleatorias (no añadas '77' o 'aa' al hex), excepto el relleno '22' o '33' indicado.
