@@ -26,7 +26,7 @@ const ogImage = `${siteUrl}/og-image.jpg`;
     <script is:inline src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text x='50' y='72' font-size='60' font-family='Inter,sans-serif' fill='white' text-anchor='middle' font-weight='bold'>h</text></svg>">
     
-    <!-- Transiciones de Astro (El truco de magia) -->
+    <!-- Transiciones de Astro -->
     <ClientRouter />
     
     <link rel="stylesheet" href="/hana/global.css">
@@ -100,8 +100,7 @@ const ogImage = `${siteUrl}/og-image.jpg`;
             });
         }
 
-        // ¡IMPORTANTE! Usamos astro:page-load en lugar de DOMContentLoaded
-        // para que el JS se vuelva a ejecutar en cada transición de página.
+        // Usamos astro:page-load para que funcione con las transiciones
         document.addEventListener('astro:page-load', () => {
             try {
                 initTheme();
@@ -113,9 +112,7 @@ const ogImage = `${siteUrl}/og-image.jpg`;
             } catch (err) { console.error('hana: error:', err); }
         });
 
-        // Mantenemos este listener separado para el cambio de tema manual
         window.addEventListener('themeChanged', () => { 
-            // No recargamos la página completa para no romper la transición
             applyChartDefaults(); 
         });
     </script>

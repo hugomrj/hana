@@ -27,7 +27,7 @@ Aquí tienes los requisitos obligatorios:
 </div>
 - Al final del archivo Markdown, inserta un script con la configuración de Chart.js. ES OBLIGATORIO leer los colores del CSS del sitio usando este patrón exacto para que los gráficos se vean bien en modo claro y oscuro:
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('astro:page-load', () => {
         const ctx = document.getElementById('graficoN');
         if (ctx) {
             const styles = getComputedStyle(document.documentElement);

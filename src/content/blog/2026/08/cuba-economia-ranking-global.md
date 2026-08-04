@@ -157,7 +157,7 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [El País. (2025). Cuba gets older: The island reports its lowest birth rate since the Revolution.](https://english.elpais.com/)
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
         const gridColor = styles.getPropertyValue('--chart-grid').trim();

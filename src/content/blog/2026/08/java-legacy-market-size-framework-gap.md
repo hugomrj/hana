@@ -140,7 +140,7 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [GWT Project — Release History](https://www.gwtproject.org/release-notes.html)
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const accentColor = styles.getPropertyValue('--accent').trim();
         const textColor = styles.getPropertyValue('--text-muted').trim();

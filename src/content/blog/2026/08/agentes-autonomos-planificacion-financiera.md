@@ -162,7 +162,7 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Page, M. J., et al. (2021). The PRISMA 2020 statement: An updated guideline for reporting systematic reviews. BMJ, 372, n71.](https://www.bmj.com/content/372/bmj.n71)
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const accentColor = styles.getPropertyValue('--accent').trim();
         const textColor = styles.getPropertyValue('--text-muted').trim();

@@ -156,7 +156,7 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Environmental Noise Alters Neural Regulation Without Behavioral Impairment: A Pilot EEG Study. bioRxiv (2025).](https://www.biorxiv.org/content/10.1101/2025.11.04.685163v1)
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const accentColor = styles.getPropertyValue('--accent').trim();
         const textColor = styles.getPropertyValue('--text-muted').trim();

@@ -119,7 +119,7 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Kokina, J., Gilleran, R., Blanchette, S., & Stoddard, D. (2021). Accountant as digital innovator: Roles and competencies in the age of automation. Accounting Horizons.](https://meridian.allenpress.com/ahorizons)
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const accentColor = styles.getPropertyValue('--accent').trim();
         const textColor = styles.getPropertyValue('--text-muted').trim();

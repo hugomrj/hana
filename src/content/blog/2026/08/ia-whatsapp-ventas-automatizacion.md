@@ -162,7 +162,7 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Consorci AOC de Cataluña. Chatbots de IA y ahorro operativo.](https://aoc.cat)
 
 <script>
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const accentColor = styles.getPropertyValue('--accent').trim();
         const textColor = styles.getPropertyValue('--text-muted').trim();
