@@ -47,6 +47,9 @@
             });
         }
 
+
+
+
         document.addEventListener('astro:page-load', () => {
             try {
                 applyChartDefaults();
@@ -54,8 +57,23 @@
                 initNavSearch();
                 const toggleBtn = document.getElementById('theme-toggle');
                 if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
+                
+  
+                // Forzar la ejecución de los scripts de Chart.js después de la transición
+                const scripts = document.querySelectorAll('article script:not([type="module"])');
+                scripts.forEach(oldScript => {
+                    const newScript = document.createElement('script');
+                    newScript.textContent = oldScript.textContent;
+                    oldScript.parentNode.replaceChild(newScript, oldScript);
+                });
+  
             } catch (err) { console.error('hana: error:', err); }
         });
+
+
+
+
+        
 
         window.addEventListener('themeChanged', () => { 
             applyChartDefaults(); 

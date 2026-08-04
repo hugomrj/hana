@@ -26,6 +26,8 @@ Aquí tienes los requisitos obligatorios:
   3. COMPARACIÓN: Si comparas 2 o más categorías, USA type: 'bar'.
   4. PROHIBIDO BARRAS DE 1 ELEMENTO: NUNCA hagas un gráfico 'bar' con un solo dato. Si solo hay un número aislado sin con quién compararlo, OMITE el gráfico (escribe el dato en el texto) o usa 'doughnut' si representa un porcentaje (ej. 40% vs 60%).
   5. VARIEDAD: Exige variedad visual. No hagas todos los gráficos de barras. Analiza el deck original y replica su lógica visual.
+  6. LÍMITE DE GRÁFICOS: El artículo debe tener un MÁXIMO de 5 a 6 gráficos en total. Si el deck original tiene más datos, selecciona solo los más impactantes y relevantes para la narrativa. No satures el artículo con visualizaciones; Prioriza calidad sobre cantidad. Los demás datos pueden mencionarse en el texto de forma narrativa.
+
 
 - En el Markdown, inserta directamente este HTML donde corresponda un gráfico (respetando las clases y los saltos de línea):
 <div class="chart-container">
