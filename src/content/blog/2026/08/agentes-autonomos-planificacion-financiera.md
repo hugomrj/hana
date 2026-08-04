@@ -1,7 +1,7 @@
 ---
 titulo: "Los agentes financieros necesitan límites antes de autonomía: una arquitectura de evidencia para FP&A"
 extracto: "Un análisis técnico de por qué la autonomía de los agentes de IA en finanzas empresariales exige gobernanza, datos estandarizados y juicio humano antes que promesas de automatización total."
-fecha: "2026-08-03"
+fecha: "2026-08-03T01:03:00" 
 tiempo_lectura: "15 min"
 categoria: "Inteligencia Artificial"
 etiquetas: ["Agentes Autónomos", "FP&A", "Finanzas", "IA Generativa", "Gobernanza", "RPA", "Latinoamérica"]

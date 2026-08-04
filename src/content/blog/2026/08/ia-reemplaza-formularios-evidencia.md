@@ -1,7 +1,7 @@
 ---
 titulo: "La IA no elimina los formularios: los oculta, y eso cambia todo"
 extracto: "Un análisis técnico de por qué la inteligencia artificial puede reducir la fricción de los formularios, pero no eliminar la necesidad de datos estructurados, validación humana y arquitecturas de gobernanza."
-fecha: "2026-08-03"
+fecha: "2026-08-03T01:07:00" 
 tiempo_lectura: "15 min"
 categoria: "Inteligencia Artificial"
 etiquetas: ["IA", "Formularios", "Document AI", "UX", "E-commerce", "Voz", "Gobernanza"]

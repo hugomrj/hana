@@ -1,7 +1,7 @@
 ---
 titulo: "Los agentes de IA pueden avanzar más rápido que la confianza financiera"
 extracto: "Un análisis profundo sobre los límites de los agentes de IA en planificación financiera, la brecha entre capacidad técnica y confiabilidad, y lo que la evidencia empírica dice sobre su despliegue seguro."
-fecha: "2026-08-03"
+fecha: "2026-08-03T01:04:00" 
 tiempo_lectura: "14 min"
 categoria: "Inteligencia Artificial"
 etiquetas: ["Agentes IA", "FP&A", "GenAI", "Finanzas", "RAG", "Confiabilidad"]

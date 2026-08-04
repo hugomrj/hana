@@ -1,7 +1,7 @@
 ---
 titulo: "La brecha de modernización Java es real, pero está fragmentada"
 extracto: "Un análisis profundo del mercado legacy Java, el perfil del comprador enterprise y las rutas de modernización disponibles para arquitectos y CTOs."
-fecha: "2026-08-03"
+fecha: "2026-08-03T01:09:00" 
 tiempo_lectura: "12 min"
 categoria: "Arquitectura de Software"
 etiquetas: ["Java", "Legacy", "Modernización", "Spring", "HTMX", "Vaadin", "Eurostat", "CISQ"]

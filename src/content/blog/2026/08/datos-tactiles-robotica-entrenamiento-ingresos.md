@@ -1,7 +1,7 @@
 ---
 titulo: "Los datos táctiles como llave para desbloquear el entrenamiento robótico y sus ingresos"
 extracto: "Un análisis técnico y de mercado sobre el estado de los datasets robóticos, la inversión en IA física, y por qué el tacto humano podría ser la señal de entrenamiento que la robótica industrial aún no ha monetizado."
-fecha: "2026-08-04"
+fecha: "2026-08-04T01:06:00" 
 tiempo_lectura: "16 min"
 categoria: "Robótica"
 etiquetas: ["IA física", "datos táctiles", "embodied AI", "humanoides", "datasets robóticos", "Nerve"]

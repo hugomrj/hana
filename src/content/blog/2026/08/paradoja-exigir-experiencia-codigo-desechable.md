@@ -1,7 +1,7 @@
 ---
 titulo: "El paradoja de exigir experiencia para código desechable"
 extracto: "Por qué los años de experiencia predicen menos que una entrevista estructurada, por qué el código desechable no elimina el conocimiento operativo, y qué dicen los datos sobre contratar desarrolladores en la era de la IA generativa."
-fecha: "2026-08-05T01:01:00" 
+fecha: "2026-08-03T01:01:00" 
 tiempo_lectura: "15 min"
 categoria: "Gestión de equipos"
 etiquetas: ["contratación técnica", "código desechable", "validez predictiva", "DORA", "experiencia laboral"]

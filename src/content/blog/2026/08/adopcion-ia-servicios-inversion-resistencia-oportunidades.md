@@ -1,7 +1,7 @@
 ---
 titulo: "Adopción de IA en servicios: inversión, resistencia y oportunidades"
 extracto: "Un análisis basado en datos verificados de Eurostat, Gartner, Stanford HAI y el Banco Mundial sobre el estado real de la inteligencia artificial en el sector servicios, la brecha entre grandes y pequeñas empresas, y el diseño que gana la confianza del cliente."
-fecha: "2026-08-04"
+fecha: "2026-08-04T01:02:00" 
 tiempo_lectura: "14 min"
 categoria: "Inteligencia Artificial"
 etiquetas: ["IA generativa", "servicio al cliente", "adopción empresarial", "Eurostat", "productividad", "ciberseguridad"]

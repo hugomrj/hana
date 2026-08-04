@@ -1,7 +1,7 @@
 ---
 titulo: "Cuba: la trampa de reducir una economía a un número de ranking"
 extracto: "Un análisis técnico de por qué la caída de 68 posiciones en rankings económicos globales esconde una historia mucho más compleja de colapsos externos, resiliencia sanitaria y contradicciones estructurales."
-fecha: "2026-08-03"
+fecha: "2026-08-03T01:05:00" 
 tiempo_lectura: "16 min"
 categoria: "Economía"
 etiquetas: ["Cuba", "Economía", "Latinoamérica", "PIB", "Embargo", "Demografía", "Desarrollo"]

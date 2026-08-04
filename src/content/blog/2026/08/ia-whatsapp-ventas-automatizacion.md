@@ -1,7 +1,7 @@
 ---
 titulo: "Cómo la IA convierte chats de WhatsApp en ventas: una arquitectura basada en evidencia"
 extracto: "Análisis técnico de cómo la inteligencia artificial, combinada con CRM y experimentación controlada, puede transformar la velocidad de respuesta en conversión comercial a través de WhatsApp."
-fecha: "2026-08-03"
+fecha: "2026-08-03T01:08:00" 
 tiempo_lectura: "12 min"
 categoria: "Inteligencia Artificial"
 etiquetas: ["IA", "WhatsApp", "Ventas", "Automatización", "CRM", "Conversational Commerce", "GenAI"]
