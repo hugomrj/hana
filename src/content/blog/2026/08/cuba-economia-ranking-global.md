@@ -1,0 +1,386 @@
+---
+titulo: "Cuba: la trampa de reducir una economía a un número de ranking"
+extracto: "Un análisis técnico de por qué la caída de 68 posiciones en rankings económicos globales esconde una historia mucho más compleja de colapsos externos, resiliencia sanitaria y contradicciones estructurales."
+fecha: "2026-08-03"
+tiempo_lectura: "16 min"
+categoria: "Economía"
+etiquetas: ["Cuba", "Economía", "Latinoamérica", "PIB", "Embargo", "Demografía", "Desarrollo"]
+---
+
+El titular es contundente: Cuba cayó 68 posiciones en el ranking económico global. Pero detrás de esa cifra redonda hay una advertencia metodológica que cualquier analista de datos debería tomar en serio. Un ranking de PIB agregado no es una fotografía objetiva de una economía; es una reconstrucción que depende del año elegido, del tipo de cambio aplicado, de la definición de PIB utilizada y del conjunto de países incluidos. La investigación original de Hanademi, que desmonta esta narrativa simplificada, demuestra que la economía cubana no cabe en una sola posición de tabla. Su historia es de colapsos externos, resiliencia sanitaria, contradicciones estructurales y, más recientemente, una crisis multidimensional que la CEPAL proyecta como la segunda peor de la región, solo por detrás de Haití.
+
+## El mito del puesto 28: reconstrucciones, no certezas
+
+La afirmación de que Cuba ocupaba el puesto 28 en 1958 proviene de reconstrucciones históricas del Maddison Project Database, que cubre 169 países. Pero como advierte la investigación de Hanademi, esa base no publica un ranking definitivo para Cuba en 1958. La posición reconstruida puede variar sustancialmente según se use un método de tipo de cambio nominal, paridad de poder adquisitivo o producción real histórica. Tres enfoques de medición, tres resultados posibles. El número 28.5 es una estimación, no un dato primario.
+
+El problema se agrava cuando se compara con el supuesto puesto 96 actual. El Banco Mundial reporta un PIB cubano de aproximadamente 107.400 millones de dólares en 2020 bajo conversión oficial. Ese nivel es incompatible con una posición cercana al 96 si se usa la misma conversión. Un ranking reproducible necesita especificar año, definición de PIB, tipo de cambio y lista de economías comparadas. Sin esos cuatro parámetros, la cifra de 96 no es un resultado estable; es una etiqueta sin sustento metodológico.
+
+<div class="chart-container">
+    <div class="chart-title">Crecimiento anual del PIB real en Cuba (%) — Fuente: CEPAL, Economic Survey 2024</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico1"></canvas>
+    </div>
+</div>
+
+La trayectoria del PIB real cubano entre 1971 y 2024 revela una economía mucho más inestable de lo que sugiere cualquier ranking puntual. La contracción de 1993 alcanzó el 14,9%, el mínimo de toda la serie. El crecimiento de 1971 fue del 8,6%. Y 2020 trajo otra caída del 10,9%. Un solo número de ranking borra esta historia central de volatilidad extrema, donde períodos de expansión rápida alternan con retrocesos devastadores.
+
+## La Cuba anterior a 1959: promedios que ocultaban el campo
+
+La investigación de Hanademi recupera datos del censo cubano de 1953 que desdibujan la imagen de una isla próspera antes de la revolución. El analfabetismo nacional se situaba en el 23,6%, una cifra relativamente favorable para América Latina en esa época. Pero el analfabetismo rural alcanzaba el 41,7%, casi el doble. Un relato de MEDICC Review señala que la Cuba pre-1959 contaba con un solo hospital rural. Los promedios nacionales eran buenos; la distribución territorial, no.
+
+Esta distinción es crucial para entender lo que vino después. El sistema revolucionario invirtió masivamente en educación y salud, logrando resultados que los rankings económicos puros no capturan. Pero esa inversión se financió, en parte, mediante una dependencia comercial que volvería a cobrar factura décadas más tarde.
+
+## El Período Especial: cuando desapareció el motor externo
+
+Durante los años ochenta, los países socialistas representaban aproximadamente el 70% o más del comercio de mercancías de Cuba. Esa concentración no era solo una preferencia ideológica; era la red comercial dominante que suministraba combustible, crédito, mercados y subsidios. Cuando el bloque soviético colapsó, las importaciones totales cayeron un 75% y las de petróleo un 53%. El PIB real reconstruido disminuyó cerca de un 35% entre 1989 y 1993.
+
+<div class="chart-container">
+    <div class="chart-title">Colapso del PIB real e importaciones durante el Período Especial (1985-2022) — Fuente: CEPAL (1997); Yale Global Health Review</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico2"></canvas>
+    </div>
+</div>
+
+La disponibilidad de energía alimentaria cayó de unas 2.900 calorías diarias por persona en 1989 a menos de 2.000 alrededor de 1993, según datos de la FAO citados en la investigación. El Período Especial no fue una recesión cíclica; fue una desconexión abrupta del sistema que sostenía la mayor parte de la actividad económica cubana. Reveló cuántos engranajes productivos dependían del mismo motor externo.
+
+## La paradoja del turismo: de motor de crecimiento a colapso
+
+Después del Período Especial, el turismo emergió como una de las historias de crecimiento más claras de Cuba. Las llegadas internacionales aumentaron de 745.000 en 1995 a 4,7 millones en 2018. Pero la pandemia de COVID-19 y la intensificación de sanciones estadounidenses transformaron esa narrativa. En 2020, las llegadas cayeron a 1,1 millones, una pérdida de unos 3,2 millones de visitantes respecto a 2019.
+
+<div class="chart-container">
+    <div class="chart-title">Visitantes internacionales a Cuba (millones) — Fuente: ONEI (2023)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico3"></canvas>
+    </div>
+</div>
+
+La recuperación post-pandemia ha sido lenta y dolorosa. Entre enero y mayo de 2025, las llegadas turísticas cayeron un 26,6% interanual y un 60% respecto a 2019, según datos de Coface. La reinserción de Cuba en la lista de países patrocinadores del terrorismo por parte de Estados Unidos, junto con la reactivación del Título III de la Ley Helms-Burton, ha disuadido a inversores y turistas por igual. El turismo, que antes representaba alrededor del 10% del PIB, se ha convertido en un símbolo de la vulnerabilidad estructural de la economía cubana.
+
+## El embargo: presión externa en cifras
+
+En 1992, 59 países votaron en la Asamblea General de las Naciones Unidas a favor de poner fin al embargo estadounidense contra Cuba. Para 2023, la cifra había llegado a 187. En octubre de 2025, la votación fue de 165 a favor, 7 en contra y 12 abstenciones, reflejando una campaña de presión del Departamento de Estado de Estados Unidos para influir en el resultado. Israel, Argentina, Hungría, Paraguay, Macedonia del Norte y Ucrania se sumaron a Estados Unidos en la oposición.
+
+<div class="chart-container">
+    <div class="chart-title">Votación anual de la ONU contra el embargo estadounidense a Cuba — Fuente: Asamblea General de la ONU (2023, 2025)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico4"></canvas>
+    </div>
+</div>
+
+Esta votación no mide el costo económico del embargo, pero sí refleja un juicio diplomático extraordinariamente amplio. Según cifras del gobierno cubano, las sanciones representaron un impacto de más de 7.500 millones de dólares entre marzo de 2024 y febrero de 2025. El ministro de Relaciones Exteriores Bruno Rodríguez ha señalado que el costo acumulado supera los 130.000 millones de dólares desde 1962. Aunque analistas independientes cuestionan la metodología de estos cálculos, la realidad es que el embargo limita el acceso a financiamiento internacional, tecnología, mercados y divisas, encareciendo y distorsionando el suministro de bienes esenciales.
+
+## La crisis actual: contracción, inflación y colapso sectorial
+
+La economía cubana atraviesa su peor crisis desde el colapso soviético. Según la CEPAL, el PIB se contrajo un 1,1% en 2024, acumulando una caída del 11% entre 2019 y 2024. Las proyecciones para 2025 anticipan una nueva contracción del 1,5%, con un crecimiento marginal del 0,1% en 2026. Solo Haití tiene un panorama peor en la región.
+
+<div class="chart-container">
+    <div class="chart-title">Caída sectorial en Cuba (2018-2023, %) — Fuente: ONEI; Horizonte Cubano, Columbia University</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico5"></canvas>
+    </div>
+</div>
+
+Los datos sectoriales son demoledores. Entre 2018 y 2023, la agricultura cayó un 51,3%, la pesca un 52,7%, la industria azucarera un 67,7% y la manufactura un 40,7%. La producción de azúcar en la zafra 2024-2025 no superó los 160.000 toneladas, el nivel más bajo en más de un siglo y apenas el 2,7% de la producción de 1989. Cuba, que alguna vez fue uno de los mayores exportadores mundiales de azúcar, ahora importa para cubrir su demanda doméstica estimada entre 600.000 y 700.000 toneladas anuales.
+
+La inflación oficial cerró 2024 en un 25%, tras picos del 77% en 2021, el 39% en 2022 y el 31% en 2023. Pero el índice de precios al consumidor subestima la realidad porque excluye los mercados informales donde la mayoría de los cubanos compra sus alimentos. En abril de 2025, el dólar en el mercado informal cotizaba a 365 pesos cubanos, mientras la tasa oficial se mantenía en 24. Esa brecha cambiaria de más de 15 veces distorsiona cada cálculo económico y erosiona el poder adquisitivo de salarios y pensiones.
+
+## Demografía: el éxodo que vacía la isla
+
+Mientras la economía se contrae, la población desaparece. Cuba tenía 11.301.572 habitantes en 2013. Para 2023, la cifra oficial era de 11.019.932. Pero los datos más recientes sugieren una caída mucho más pronunciada. La ONEI reportó una población de 9.748.532 a finales de 2024, una reducción de 307.436 habitantes en un solo año. Algunos economistas independientes estiman que la población real podría estar entre 8,6 y 8,9 millones.
+
+<div class="chart-container">
+    <div class="chart-title">Población de Cuba (millones, 1950-2023) — Fuente: Our World in Data</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico6"></canvas>
+    </div>
+</div>
+
+Los encuentros fronterizos de Estados Unidos con ciudadanos cubanos saltaron de 39.303 en el año fiscal 2021 a 224.607 en 2022. Los nacimientos registrados cayeron de 109.707 en 2019 a 71.000 en 2024, la cifra más baja en 65 años. Más del 25% de la población tiene 60 años o más. Cuba se está vaciando de jóvenes y trabajadores, profundizando una carga fiscal y laboral insostenible para quienes permanecen.
+
+## La paradoja sanitaria: pobreza económica con longevidad
+
+Si los rankings económicos fueran la única medida de desarrollo, Cuba sería un caso perdido. Pero la esperanza de vida al nacer aumentó de 63,3 años en 1960 a 78,3 en 2024. La pandemia produjo una caída extraordinaria a 73,2 años en 2021, pero la recuperación fue rápida. En 2024, Cuba aún superaba a República Dominicana en 4,4 años de esperanza de vida, a pesar de que la economía dominicana ha crecido consistentemente mientras la cubana se contrae.
+
+<div class="chart-container">
+    <div class="chart-title">Esperanza de vida al nacer: Cuba vs República Dominicana (años) — Fuente: Banco Mundial</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico7"></canvas>
+    </div>
+</div>
+
+En densidad de médicos, Cuba alcanzó más de 8 médicos por cada 1.000 habitantes, superando a Argentina por 4,2 médicos por mil en 2021. El logro es real, aunque los bajos salarios y la productividad limitada puedan reducir su rendimiento económico. Esta paradoja —pobreza material con salud pública relativamente fuerte— desafía cualquier modelo de desarrollo que dependa exclusivamente del PIB per cápita.
+
+## Las 176 reformas de junio de 2026: apertura o ajuste
+
+En junio de 2026, la Asamblea Nacional de Cuba aprobó un paquete de 176 medidas económicas presentado por el primer ministro Manuel Marrero. El alcance es sin precedentes desde 1959: eliminación del requisito de joint venture con el estado para inversores extranjeros, autorización de bancos privados, eliminación de controles de precios generales, permiso para que los cubanos posean más de un negocio y participen en empresas de capitales mixtos, e incluso la posibilidad de que cadenas de comida rápida se establezcan en la isla.
+
+Pero la historia cubana está llena de reformas anunciadas que nunca se implementaron del todo. El patrón recurrente es crisis-reforma-contrarreforma. Cuando la economía muestra señales de recuperación, las reformas se frenan o revierten. Como señala la economista Tamarys Bahamonde, no hay garantía de que esta vez sea diferente. Además, las autoridades advirtieron que las medidas no serán viables si Estados Unidos no levanta el embargo energético y financiero.
+
+## Conclusión: más allá del ranking
+
+La investigación de Hanademi construye un argumento que va en contra de la industria del dato simplificado. No niega que la economía cubana se haya contraído dramáticamente; lo que rechaza es la pretensión de que un número de ranking capture esa realidad. La caída de 68 posiciones esconde dos generaciones de colapsos externos, una resiliencia sanitaria inesperada, una dependencia comercial concentrada que volvió frágil al sistema, un embargo que estrangula el acceso a mercados, una crisis demográfica que vacía la isla y un conjunto de reformas cuya implementación sigue siendo incierta.
+
+Para analistas de datos, arquitectos de sistemas y cualquier profesional que trabaje con indicadores globales, la lección es clara: un ranking es una herramienta de comunicación, no de comprensión. Antes de repetir que Cuba "cayó 68 puestos", hay que preguntar qué año se comparó, qué tipo de cambio se usó, qué países se incluyeron y qué historia se está omitiendo. La economía cubana no cabe en un solo número. Y ninguna economía compleja debería hacerlo.
+
+## Fuentes y Créditos
+
+Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
+
+- [Economic Commission for Latin America and the Caribbean (CEPAL). (2024). Economic Survey of Latin America and the Caribbean 2024. United Nations.](https://www.cepal.org)
+- [Economic Commission for Latin America and the Caribbean (CEPAL). (2025). Economic Survey of Latin America and the Caribbean 2025. United Nations.](https://www.cepal.org)
+- [Bolt, J., & van Zanden, J. L. (2024). Maddison Project Database 2023. Groningen Growth and Development Centre.](https://www.rug.nl/ggdc/historicaldevelopment/maddison/)
+- [World Bank. (2024). GDP, current US dollars, Cuba. World Development Indicators.](https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?locations=CU)
+- [World Bank. (2024). Life expectancy at birth, total, Cuba. World Development Indicators.](https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=CU)
+- [World Bank. (n.d.). Physicians (per 1,000 people). World Bank Open Data.](https://data.worldbank.org/indicator/SH.MED.PHYS.ZS)
+- [Our World in Data. (n.d.). GDP per capita [gdp-per-capita-maddison-project-database].](https://ourworldindata.org/grapher/gdp-per-capita-maddison-project-database)
+- [Our World in Data. (n.d.). Population [population].](https://ourworldindata.org/grapher/population)
+- [Our World in Data. (n.d.). GDP [gdp-maddison-project-database].](https://ourworldindata.org/grapher/gdp-maddison-project-database)
+- [República de Cuba. (1955). Censos de población, viviendas y electoral de 1953. Tribunal Superior Electoral.](https://scielosp.org)
+- [United Nations General Assembly. (2023). Necessity of ending the economic, commercial and financial embargo imposed by the United States of America against Cuba, A/RES/78/7.](https://www.un.org)
+- [Associated Press. (2025). UN condemns US embargo on Cuba once more.](https://apnews.com/article/cuba-embargo-us-un-general-assembly-9c48b48775f0089ba7c0156590c3a86e)
+- [Oficina Nacional de Estadística e Información (ONEI). (2023). Turismo internacional: Indicadores seleccionados.](http://www.onei.gob.cu/)
+- [Oficina Nacional de Estadística e Información (ONEI). (2024). Anuario demográfico de Cuba 2023.](http://www.onei.gob.cu/)
+- [U.S. Customs and Border Protection. (2024). Nationwide encounters by citizenship and fiscal year.](https://www.cbp.gov/)
+- [Economic Commission for Latin America and the Caribbean (CEPAL). (1997). The Cuban economy: Structural reforms and economic performance in the 1990s. United Nations.](https://www.cepal.org)
+- [World Health Organization. (2024). Global Health Observatory: Medical doctors.](https://www.who.int/data/gho/data/indicators/indicator-details/GHO/medical-doctors-(per-10-000-population))
+- [Horizonte Cubano, Columbia Law School. (2025). The Crisis of the Cuban Economy: Notes for an Evaluation.](https://horizontecubano.law.columbia.edu/)
+- [Horizonte Cubano, Columbia Law School. (2025). Cuba: Ten Consecutive Years of Macroeconomic Deterioration.](https://horizontecubano.law.columbia.edu/)
+- [Coface. (2025). Cuba: Country File, Economic Risk Analysis.](https://www.coface.com/)
+- [Bahamonde, T. L. (2026). Cuba's Reforms in 2026: Breaking Point or Adjustment? CEDA.](https://www.weareceda.org/)
+- [NBC News. (2026). Cuba pushes through sweeping free-market reforms in biggest economic shift since the revolution.](https://www.nbcnews.com/)
+- [PBS NewsHour. (2026). Cuba passes sweeping free-market reforms in biggest economic shift since revolution.](https://www.pbs.org/)
+- [Cubanet. (2025). ECLAC Forecasts Two More Years of Economic Contraction for Cuba.](https://www.cubanet.org/)
+- [University of Michigan Journal of Economics. (2026). The Cuban Economic Crisis: Impact of Government Mismanagement and International Sanctions.](https://sites.lsa.umich.edu/mje/)
+- [Chinimandi. (2025). Sugar production in Cuba fell below 150,000 tons in 2024-2025.](https://www.chinimandi.com/)
+- [Caribbean Council. (2025). Collapse in sugar production signals new economic crisis for Cuba.](https://www.caribbean-council.org/)
+- [Havana Times. (2025). An Aging Population Clouds Cuba's Future.](https://havanatimes.org/)
+- [El País. (2025). Cuba gets older: The island reports its lowest birth rate since the Revolution.](https://english.elpais.com/)
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const styles = getComputedStyle(document.documentElement);
+        const textColor = styles.getPropertyValue('--text-muted').trim();
+        const gridColor = styles.getPropertyValue('--chart-grid').trim();
+        const color1 = styles.getPropertyValue('--chart-1').trim();
+        const color2 = styles.getPropertyValue('--chart-2').trim();
+        const color3 = styles.getPropertyValue('--chart-3').trim();
+        const color4 = styles.getPropertyValue('--chart-4').trim();
+
+        // Gráfico 1: Crecimiento PIB real Cuba
+        const ctx1 = document.getElementById('grafico1');
+        if (ctx1) {
+            new Chart(ctx1, {
+                type: 'line',
+                data: {
+                    labels: ['1971', '1979', '1987', '1993', '1995', '2003', '2011', '2019', '2020', '2024'],
+                    datasets: [{
+                        label: 'Crecimiento anual del PIB real (%)',
+                        data: [8.6, 4.2, 1.5, -14.9, 2.5, 2.8, 2.9, -1.1, -10.9, -1.1],
+                        borderColor: color1,
+                        backgroundColor: color1,
+                        fill: false,
+                        tension: 0.3,
+                        pointRadius: 5,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor } }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 2: Colapso PIB e importaciones
+        const ctx2 = document.getElementById('grafico2');
+        if (ctx2) {
+            new Chart(ctx2, {
+                type: 'bar',
+                data: {
+                    labels: ['PIB real 1989', 'PIB real 1993', 'Importaciones totales', 'Importaciones petróleo'],
+                    datasets: [{
+                        label: 'Índice (1989 = 100)',
+                        data: [100, 65, 25, 47],
+                        backgroundColor: [color1, color2, color3, color4],
+                        borderColor: [color1, color2, color3, color4],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 3: Turismo
+        const ctx3 = document.getElementById('grafico3');
+        if (ctx3) {
+            new Chart(ctx3, {
+                type: 'line',
+                data: {
+                    labels: ['1995', '2000', '2005', '2010', '2015', '2018', '2019', '2020'],
+                    datasets: [{
+                        label: 'Millones de visitantes',
+                        data: [0.7, 1.7, 2.3, 2.5, 3.5, 4.7, 4.2, 1.1],
+                        borderColor: color1,
+                        backgroundColor: color1,
+                        fill: false,
+                        tension: 0.3,
+                        pointRadius: 5,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 4: Votación ONU
+        const ctx4 = document.getElementById('grafico4');
+        if (ctx4) {
+            new Chart(ctx4, {
+                type: 'bar',
+                data: {
+                    labels: ['1992', '2000', '2010', '2016', '2021', '2023', '2025'],
+                    datasets: [{
+                        label: 'Países a favor de levantar el embargo',
+                        data: [59, 167, 187, 191, 184, 187, 165],
+                        backgroundColor: color1,
+                        borderColor: color1,
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true, max: 200 }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 5: Caída sectorial
+        const ctx5 = document.getElementById('grafico5');
+        if (ctx5) {
+            new Chart(ctx5, {
+                type: 'bar',
+                data: {
+                    labels: ['Agricultura', 'Pesca', 'Minería', 'Azúcar', 'Manufactura', 'Electricidad'],
+                    datasets: [{
+                        label: 'Variación 2018-2023 (%)',
+                        data: [-51.3, -52.7, -30.4, -67.7, -40.7, -23.8],
+                        backgroundColor: [color1, color2, color3, color4, color1, color2],
+                        borderColor: [color1, color2, color3, color4, color1, color2],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 6: Población
+        const ctx6 = document.getElementById('grafico6');
+        if (ctx6) {
+            new Chart(ctx6, {
+                type: 'line',
+                data: {
+                    labels: ['1950', '1965', '1980', '1995', '2010', '2013', '2020', '2023'],
+                    datasets: [{
+                        label: 'Población (millones)',
+                        data: [5.9, 7.9, 9.7, 10.9, 11.2, 11.3, 11.2, 11.0],
+                        borderColor: color1,
+                        backgroundColor: color1,
+                        fill: false,
+                        tension: 0.3,
+                        pointRadius: 5,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: false }
+                    }
+                }
+            });
+        }
+
+        // Gráfico 7: Esperanza de vida Cuba vs RD
+        const ctx7 = document.getElementById('grafico7');
+        if (ctx7) {
+            new Chart(ctx7, {
+                type: 'line',
+                data: {
+                    labels: ['1960', '1970', '1980', '1990', '2000', '2010', '2020', '2024'],
+                    datasets: [
+                        {
+                            label: 'Cuba',
+                            data: [63.3, 69.0, 73.0, 74.5, 76.5, 78.5, 78.0, 78.3],
+                            borderColor: color1,
+                            backgroundColor: color1,
+                            fill: false,
+                            tension: 0.3,
+                            pointRadius: 4,
+                            borderWidth: 2
+                        },
+                        {
+                            label: 'Rep. Dominicana',
+                            data: [51.0, 56.0, 62.0, 66.5, 70.0, 72.5, 74.0, 73.9],
+                            borderColor: color2,
+                            backgroundColor: color2,
+                            fill: false,
+                            tension: 0.3,
+                            pointRadius: 4,
+                            borderWidth: 2
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { labels: { color: textColor } } },
+                    scales: {
+                        x: { ticks: { color: textColor }, grid: { display: false } },
+                        y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: false }
+                    }
+                }
+            });
+        }
+    });
+</script>
+```
