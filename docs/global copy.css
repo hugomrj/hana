@@ -4,14 +4,23 @@
     --surface: #f9fafb;
     --surface-2: #ffffff;
     --text: #0f172a;
-    --text-muted: #64748b;
+    --text-muted: #64748b; /* Mejor contraste */
     --border: #e2e8f0;
+
     --accent: #3b82f6;
-    --accent-hover: #2563eb;
+    --accent-hover: #1e40af; /* Azul marino elegante */
+
     --accent-light: rgba(59, 130, 246, 0.1);
     --chart-grid: #e2e8f0;
     --code-bg: #f1f5f9;
     --radius: 16px;
+    
+    /* Colores para Gráficos Chart.js */
+    --chart-1: #3b82f6; /* Azul */
+    --chart-2: #10b981; /* Verde */
+    --chart-3: #f59e0b; /* Naranja */
+    --chart-4: #ef4444; /* Rojo */
+    --chart-5: #8b5cf6; /* Violeta */
 }
 
 /* === Tema Oscuro === */
@@ -22,13 +31,23 @@
     --text: #fafafa;
     --text-muted: #a1a1aa;
     --border: #27272a;
+
+
     --accent: #60a5fa;
-    --accent-hover: #93c5fd;
+    --accent-hover: #93c5fd; /* Azul claro brillante */
+
+
     --accent-light: rgba(96, 165, 250, 0.1);
     --chart-grid: #27272a;
     --code-bg: #1e1e22;
+    
+    /* Colores para Gráficos Chart.js en Oscuro */
+    --chart-1: #60a5fa;
+    --chart-2: #34d399;
+    --chart-3: #fbbf24;
+    --chart-4: #f87171;
+    --chart-5: #a78bfa;
 }
-
 /* === Reset === */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
@@ -174,7 +193,9 @@ a.news-card:hover {
 }
 .news-card .card-top { margin-bottom: 0.5rem; }
 .news-card h3 { margin: 0.5rem 0; font-size: 1.35rem; font-weight: 700; line-height: 1.3; color: var(--text); }
-.news-card:hover h3 { color: var(--accent); }
+
+.news-card:hover h3 { color: var(--accent); opacity: 0.85; } /* Antes era color: var(--accent); */
+
 .news-card p { color: var(--text-muted); margin-top: 0.5rem; font-size: 0.95rem; flex-grow: 1; }
 .news-card .byline { margin-top: 1.5rem; font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem; }
 
@@ -210,8 +231,17 @@ article h3 { font-size: 1.3rem; margin: 2rem 0 0.5rem; font-weight: 700; }
 
 /* === Tipografía === */
 p { margin-bottom: 1.5rem; font-size: clamp(1.1rem, 0.2vw + 1rem, 1.25rem); line-height: 1.8; color: var(--text); }
-a { color: var(--accent); text-decoration: none; transition: color 0.2s ease; }
-a:hover { color: var(--accent-hover); text-decoration: underline; }
+a { color: var(--accent); text-decoration: none; transition: color 0.2s ease, opacity 0.2s ease; }
+a:hover { color: var(--accent-hover); text-decoration: none; } /* Sin subrayado global */
+
+/* Excepción: En los párrafos del artículo, sí usamos subrayado sutil al hacer hover */
+article p a:hover, article li a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 3px; /* Separa el subrayado del texto */
+    text-decoration-thickness: 1px; /* Lo hace más fino */
+}
+
 
 blockquote {
     margin: 2.5rem 0;
@@ -421,4 +451,15 @@ code { background-color: var(--code-bg); padding: 0.2rem 0.4rem; border-radius: 
     width: 20px !important;
     height: 20px !important;
     pointer-events: none;
+}
+
+
+/* === Fix para bloques de código (Shiki) === */
+pre.astro-code, code.astro-code {
+    background-color: var(--code-bg) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 8px !important;
+    padding: 1.5rem !important;
+    margin: 2rem 0 !important;
+    overflow-x: auto;
 }
