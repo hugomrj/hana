@@ -1,0 +1,314 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Por qué los presupuestos de modernización de legacy casi siempre fallan (y cómo evitarlo) | hana</title><meta name="description" content="El 27% de sobrecosto promedio oculta el verdadero peligro: uno de cada seis proyectos de TI se desvía 200%. Una metodología probabilística basada en evidencia auditable puede convertir estimaciones opacas en decisiones defendibles."><!-- Open Graph / Redes Sociales --><meta property="og:type" content="article"><meta property="og:title" content="Por qué los presupuestos de modernización de legacy casi siempre fallan (y cómo evitarlo)"><meta property="og:description" content="El 27% de sobrecosto promedio oculta el verdadero peligro: uno de cada seis proyectos de TI se desvía 200%. Una metodología probabilística basada en evidencia auditable puede convertir estimaciones opacas en decisiones defendibles."><meta property="og:image" content="https://hugomrj.github.io/hana/og-image.jpg"><meta property="og:url" content="https://hugomrj.github.io/hana/articulos/2026/08/metodologia-estimacion-costos-modernizacion/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Por qué los presupuestos de modernización de legacy casi siempre fallan (y cómo evitarlo)"><meta name="twitter:description" content="El 27% de sobrecosto promedio oculta el verdadero peligro: uno de cada seis proyectos de TI se desvía 200%. Una metodología probabilística basada en evidencia auditable puede convertir estimaciones opacas en decisiones defendibles."><meta name="twitter:image" content="https://hugomrj.github.io/hana/og-image.jpg"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='20' fill='%233b82f6'/&gt;&lt;text x='50' y='72' font-size='60' font-family='Inter,sans-serif' fill='white' text-anchor='middle' font-weight='bold'&gt;h&lt;/text&gt;&lt;/svg&gt;"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/hana/_astro/ClientRouter.astro_astro_type_script_index_0_lang.jmhnZfFy.js"></script><!-- Script crítico para evitar el flash blanco (FOUC) en modo oscuro --><script>
+        const savedTheme = localStorage.getItem('hana-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        document.addEventListener('astro:before-swap', (event) => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            event.newDocument.documentElement.setAttribute('data-theme', currentTheme);
+        });
+    </script><link rel="stylesheet" href="/hana/global.css"><style>.astro-route-announcer{clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;width:1px;height:1px;position:absolute;top:0;left:0;overflow:hidden}
+</style></head><body><div id="reading-progress" class="reading-progress-bar"></div><header class="site-header"><div class="nav-container"><div class="logo"><a href="/hana/">han<span>a</span></a></div><div class="nav-search"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input type="text" id="nav-search-input" class="search-input" placeholder="Buscar..."></div><button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"><svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></div></header><div class="article-layout"><article><div class="article-hero"><span class="kicker">Gestión de Proyectos</span><h1>Por qué los presupuestos de modernización de legacy casi siempre fallan (y cómo evitarlo)</h1><div class="byline"><span>5 de agosto de 2026</span></div></div><div class="article-content"><p>Cuando un arquitecto presenta un presupuesto de modernización con una sola cifra, está cometiendo el mismo error que un meteorólogo que predice “mañana lloverá a las 3:15 PM”. El futuro de un proyecto de TI no tiene un único resultado; tiene una distribución de probabilidades. Y esa distinción no es académica: es la diferencia entre una estimación defendible y un presupuesto que colapsa ante el primer imprevisto.</p>
+<p>La metodología SICT (Sistema de Información y Control Técnico) propone un marco basado en la <a href="https://www.gao.gov/assets/gao-20-195g.pdf">guía de estimación de costos de la GAO (GAO-20-195G)</a>, que establece doce pasos conectados para producir estimaciones confiables. El principio central es simple: una estimación no es un número, es una cadena de evidencia que conecta alcance, estructura de trabajo, datos, supuestos, sensibilidad, riesgo, documentación, aprobación y actualizaciones. Romper esa cadena en cualquier punto convierte la estimación en una conjetura.</p>
+<h2 id="el-peligro-de-los-promedios-y-los-cisnes-negros-de-ti">El peligro de los promedios y los cisnes negros de TI</h2>
+<p>En 2011, Bent Flyvbjerg y Alexander Budzier publicaron en <a href="https://hbr.org/2011/09/why-your-it-project-may-be-riskier-than-you-think">Harvard Business Review</a> un análisis que cambió la forma en que entendemos el riesgo en proyectos de tecnología. Estudiaron 1,471 proyectos de TI y encontraron que el sobrecosto promedio era del 27%. Esa cifra, aunque preocupante, oculta el verdadero peligro: la distribución de resultados tiene una “cola gorda” donde los valores extremos son mucho más frecuentes de lo que cualquier modelo normal predeciría.</p>
+<div class="chart-container">
+    <div class="chart-title">Distribución de sobrecostos en proyectos de TI. Fuente: Flyvbjerg & Budzier (2011)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico1"></canvas>
+    </div>
+</div>
+<p>Uno de cada seis proyectos resultó ser un “cisne negro”: sobrecostos promedio del 200% y retrasos del 70%. Estos no son errores estadísticos; son el patrón predecible de sistemas complejos donde las dependencias ocultas, la deuda técnica acumulada y los cambios de alcance crean efectos cascada. Si tu metodología de estimación no modela explícitamente esta cola gorda, estás subestimando el riesgo por un factor de siete.</p>
+<h2 id="la-trampa-de-la-estimación-determinista">La trampa de la estimación determinista</h2>
+<p>Un presupuesto tradicional toma valores más probables para cada componente y los suma. El resultado es un número único que pretende representar el futuro. Pero ese número ignora la incertidumbre inherente: ¿qué pasa si la migración de datos toma el doble de lo esperado? ¿Qué pasa si una biblioteca de terceros deja de tener soporte? ¿Qué pasa si el equipo de seguridad descubre vulnerabilidades críticas a mitad del proyecto?</p>
+<p>La solución es la <a href="https://www.pmi.org/learning/library/monte-carlo-simulation-cost-estimating-6195">estimación probabilística mediante simulación Monte Carlo</a>. En lugar de un valor único por componente, se definen tres escenarios: optimista, más probable y pesimista. El simulador ejecuta miles de combinaciones aleatorias de estos valores y produce una distribución de resultados. De esa distribución se extraen los niveles de confianza P50, P80 y P90: el presupuesto que no se excede en el 50%, 80% y 90% de los escenarios simulados.</p>
+<div class="chart-container">
+    <div class="chart-title">Niveles de confianza presupuestal (P50, P80, P90). Fuente: Elaboración propia</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico2"></canvas>
+    </div>
+</div>
+<p>Un estudio de 2024 sobre siete casos de infraestructura recomendó explícitamente el uso de Monte Carlo para modelar la incertidumbre del ciclo de vida. La razón es pragmática: cuando presentas tres cifras en lugar de una, obligas a los tomadores de decisiones a discutir su apetito de riesgo. Un P50 puede ser atractivo para optimizar el uso de capital, pero un P90 es el único defendible ante auditores, reguladores o juntas directivas que necesitan certezas.</p>
+<h2 id="el-modelo-de-cinco-años-y-las-75-celdas-de-costo">El modelo de cinco años y las 75 celdas de costo</h2>
+<p>Una estimación confiable no termina con el despliegue; cubre todo el ciclo de propiedad. El modelo SICT propone cinco categorías de costo (construcción, migración, operación, seguridad y salida) evaluadas durante cinco años de propiedad. Cada intersección categoría-año recibe tres valores de incertidumbre, produciendo 75 celdas de costo auditable.</p>
+<p>Esta granularidad no es burocracia; es protección contra las trampas del precio bajo. Una propuesta de construcción barata puede ocultar costos de migración descomunales, operaciones ineficientes, requerimientos de seguridad crecientes o costos de salida prohibitivos. Solo cuando evalúas la superficie completa de propiedad durante cinco años puedes comparar manzanas con manzanas entre proveedores.</p>
+<div class="chart-container">
+    <div class="chart-title">Composición típica del costo total de propiedad. Fuente: Market Guide 2026</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico3"></canvas>
+    </div>
+</div>
+<p>Una <a href="https://www.fullstack.com/labs/resources/blog/software-development-price-guide-hourly-rate-comparison">guía de mercado de 2026</a> estima que la mano de obra representa aproximadamente el 80% del costo de desarrollo de sistemas. Pero ese 80% es solo la punta visible del iceberg. El trabajo no-funcional—seguridad, rendimiento, integración, migración y pruebas—puede multiplicar las cotizaciones varias veces si no se hace visible antes de que los proveedores precifiquen el alcance. El <a href="https://csrc.nist.gov/pubs/sp/800/218/final">NIST SP 800-218 (Secure Software Development Framework)</a> establece prácticas fundamentales que, si se omiten en la fase de descubrimiento, se convierten en cambios de alcance costosos durante la ejecución.</p>
+<h2 id="la-triangulación-de-63-celdas-evidencia-para-procurement">La triangulación de 63 celdas: evidencia para procurement</h2>
+<p>El siguiente nivel de rigor es la triangulación. Siete componentes de costo, cada uno con tres puntos de incertidumbre, probados contra tres referencias de mercado independientes, producen 63 celdas de estimación auditable (7 × 3 × 3 = 63). El simulador se convierte en evidencia de procurement cuando cada componente expone su rango y su base de referencia externa, en lugar de devolver un total opaco.</p>
+<p>Este enfoque es particularmente relevante bajo la <a href="https://www.dof.gob.mx/index_113.php?year=2025&amp;month=04&amp;day=16">nueva Ley de Adquisiciones de México</a>, publicada en el Diario Oficial de la Federación el 16 de abril de 2025, que exige mayor transparencia y defensibilidad en las contrataciones públicas. Una estimación que puede mostrar sus 63 celdas con sus fuentes es mucho más difícil de impugnar que una cifra única sin respaldo documental.</p>
+<div class="chart-container">
+    <div class="chart-title">Componentes no-funcionales frecuentemente omitidos. Fuente: Elaboración propia</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico4"></canvas>
+    </div>
+</div>
+<h2 id="la-evidencia-federal-103-mil-millones-invertidos-135-millones-ahorrados">La evidencia federal: $1.03 mil millones invertidos, $13.5 millones ahorrados</h2>
+<p>La desconexión entre inversión y resultados no es teórica. El <a href="https://www.gao.gov/products/gao-26-107737">Technology Modernization Fund (TMF)</a> del gobierno federal estadounidense invirtió aproximadamente $1.03 mil millones en 68 proyectos de modernización de TI entre 2018 y junio de 2025. De esos 68 proyectos, solo 11 habían realizado ahorros verificables por aproximadamente $13.5 millones. Otros 24 proyectos esperan ahorrar $1.06 mil millones en el futuro.</p>
+<div class="chart-container">
+    <div class="chart-title">Estado de proyectos TMF: inversión vs ahorros realizados (2025). Fuente: GAO</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico5"></canvas>
+    </div>
+</div>
+<p>Esta disparidad ilustra por qué la metodología debe distinguir entre pronósticos y resultados verificados. La <a href="https://www.gao.gov/products/gao-25-107795">GAO encontró que 8 de 11 sistemas críticos legacy carecían de planes de modernización completamente documentados</a>. Un inventario se vuelve útil solo cuando cada sistema tiene una decisión responsable de modernización o retiro, con plazos, costos y criterios de éxito definidos.</p>
+<h2 id="medición-funcional-más-allá-de-pantallas-y-reportes">Medición funcional: más allá de pantallas y reportes</h2>
+<p>El error más común en la estimación de modernización es medir solo lo visible. Pantallas y reportes observan solo el 25% de las familias de unidades requeridas. El método <a href="https://cosmic-sizing.org/">COSMIC (ISO/IEC 19761)</a> para medición de tamaño funcional demuestra que seis familias distintas de esfuerzo permanecen sin medir cuando solo se cuentan interfaces de usuario: lógica de negocio, integración de datos, reglas de decisión, transformaciones, validaciones y manejo de errores.</p>
+<p>El modelo COCOMO II de <a href="https://boehmcsse.org/tools/cocomo-ii/">Barry Boehm</a> ya advertía hace más de dos décadas que los factores de ajuste (complejidad, experiencia del equipo, herramientas, plataforma) pueden variar el esfuerzo estimado en órdenes de magnitud. Ignorar esos factores es construir una estimación sobre arena.</p>
+<h2 id="conclusión-la-estimación-como-evidencia-no-como-promesa">Conclusión: La estimación como evidencia, no como promesa</h2>
+<p>Modernizar sistemas heredados no es un problema técnico; es un problema de gobernanza del riesgo. Las organizaciones que siguen tratando las estimaciones como promesas contractuales en lugar de modelos probabilísticos están firmando cheques en blanco. La metodología SICT no garantiza que el proyecto salga dentro del presupuesto—ninguna metodología puede garantizarlo en sistemas complejos. Pero garantiza que, cuando el proyecto se desvíe, tendrás la evidencia documental para entender por qué, defender tus decisiones y ajustar el rumbo sin perder credibilidad.</p>
+<p>El verdadero valor de una estimación no está en su precisión predictiva, sino en su capacidad para hacer visible lo invisible: las dependencias ocultas, los costos diferidos, los riesgos de cola gorda y las salidas automatizadas. En un mundo donde el <a href="https://www.ibm.com/reports/data-breach">costo promedio de una brecha de datos alcanzó los $4.88 millones en 2024</a>, donde los sistemas críticos tienen entre 8 y 51 años de antigüedad, y donde los proyectos más riesgosos se desvían 200%, la estimación rigurosa dejó de ser un lujo técnico y se convirtió en una necesidad de supervivencia organizacional.</p>
+<h3 id="fuentes-y-créditos">Fuentes y Créditos</h3>
+<p>Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.</p>
+<ul>
+<li><a href="https://hanademi.com/decks/metodologia-para-estimar-costos-de-modernizacion-de-sistemas-heredados-20260802-193756/es/">Hanademi - Metodología para estimar costos de modernización de sistemas heredados</a></li>
+<li><a href="https://www.gao.gov/assets/gao-20-195g.pdf">GAO Cost Estimating and Assessment Guide (GAO-20-195G)</a></li>
+<li><a href="https://hbr.org/2011/09/why-your-it-project-may-be-riskier-than-you-think">Flyvbjerg &amp; Budzier - Why Your IT Project May Be Riskier Than You Think (HBR 2011)</a></li>
+<li><a href="https://www.gao.gov/products/gao-26-107737">GAO - Technology Modernization Fund (GAO-26-107737)</a></li>
+<li><a href="https://www.gao.gov/products/gao-25-107795">GAO - Critical Legacy Systems (GAO-25-107795)</a></li>
+<li><a href="https://www.ibm.com/reports/data-breach">IBM Cost of a Data Breach Report 2024</a></li>
+<li><a href="https://csrc.nist.gov/pubs/sp/800/218/final">NIST SP 800-218 - Secure Software Development Framework</a></li>
+<li><a href="https://cosmic-sizing.org/">COSMIC Functional Size Measurement (ISO/IEC 19761)</a></li>
+<li><a href="https://www.dof.gob.mx/index_113.php?year=2025&amp;month=04&amp;day=16">Ley de Adquisiciones, Arrendamientos y Servicios del Sector Público (DOF 2025)</a></li>
+<li><a href="https://www.pmi.org/learning/library/monte-carlo-simulation-cost-estimating-6195">PMI - Monte Carlo Simulation in Cost Estimating</a></li>
+<li><a href="https://boehmcsse.org/tools/cocomo-ii/">Boehm - COCOMO II Software Cost Estimation</a></li>
+</ul>
+<script is:inline data-astro-rerun>
+    const styles = getComputedStyle(document.documentElement);
+    const textColor = styles.getPropertyValue('--text-muted').trim();
+    const gridColor = styles.getPropertyValue('--chart-grid').trim();
+    const surfaceColor = styles.getPropertyValue('--surface').trim();
+    
+    const color1 = styles.getPropertyValue('--chart-1').trim();
+
+    const premiumTooltip = {
+        backgroundColor: surfaceColor,
+        titleColor: textColor,
+        bodyColor: textColor,
+        borderColor: gridColor,
+        borderWidth: 1,
+        padding: 12,
+        cornerRadius: 8,
+        displayColors: true
+    };
+
+    const ctx1 = document.getElementById('grafico1');
+    if (ctx1) {
+        new Chart(ctx1, {
+            type: 'bar',
+            data: { 
+                labels: ['Promedio general', 'Cisnes negros (1 de cada 6)'],
+                datasets: [{
+                    label: 'Sobrecosto (%)',
+                    data: [27, 200],
+                    backgroundColor: [color1 + '99', color1],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.parsed.y + '% de sobrecosto' }
+                    }
+                },
+                scales: { 
+                    x: { ticks: { color: textColor }, grid: { display: false } }, 
+                    y: { ticks: { color: textColor, callback: v => v + '%' }, grid: { color: gridColor }, beginAtZero: true } 
+                }
+            }
+        });
+    }
+
+    const ctx2 = document.getElementById('grafico2');
+    if (ctx2) {
+        new Chart(ctx2, {
+            type: 'bar',
+            data: { 
+                labels: ['P50', 'P80', 'P90'],
+                datasets: [{
+                    label: 'Multiplicador del presupuesto base',
+                    data: [1.0, 1.35, 1.85],
+                    backgroundColor: [color1 + '99', color1 + 'cc', color1],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.parsed.y + 'x del presupuesto base' }
+                    }
+                },
+                scales: { 
+                    x: { ticks: { color: textColor }, grid: { display: false } }, 
+                    y: { ticks: { color: textColor, callback: v => v + 'x' }, grid: { color: gridColor }, beginAtZero: true, max: 2.0 } 
+                }
+            }
+        });
+    }
+
+    const ctx3 = document.getElementById('grafico3');
+    if (ctx3) {
+        new Chart(ctx3, {
+            type: 'doughnut',
+            data: { 
+                labels: ['Mano de obra (80%)', 'No-funcional (20%)'],
+                datasets: [{
+                    data: [80, 20],
+                    backgroundColor: [color1, color1 + '66'],
+                    borderColor: surfaceColor,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '65%',
+                plugins: { 
+                    legend: { 
+                        display: true,
+                        position: 'bottom', 
+                        labels: { color: textColor, usePointStyle: true, padding: 15 } 
+                    },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.label }
+                    }
+                }
+            }
+        });
+    }
+
+    const ctx4 = document.getElementById('grafico4');
+    if (ctx4) {
+        new Chart(ctx4, {
+            type: 'bar',
+            data: { 
+                labels: ['Seguridad', 'Rendimiento', 'Integración', 'Migración', 'Pruebas'],
+                datasets: [{
+                    label: 'Impacto en presupuesto si se omite',
+                    data: [3.5, 2.8, 4.2, 3.8, 2.5],
+                    backgroundColor: [color1, color1 + 'cc', color1 + '99', color1 + 'cc', color1 + '66'],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.parsed.x + 'x multiplicador de costo' }
+                    }
+                },
+                scales: { 
+                    y: { ticks: { color: textColor }, grid: { display: false } }, 
+                    x: { ticks: { color: textColor, callback: v => v + 'x' }, grid: { color: gridColor }, beginAtZero: true, max: 5 } 
+                }
+            }
+        });
+    }
+
+    const ctx5 = document.getElementById('grafico5');
+    if (ctx5) {
+        new Chart(ctx5, {
+            type: 'doughnut',
+            data: { 
+                labels: ['Invertido ($1.03B)', 'Ahorrado ($13.5M)', 'Esperado ($1.06B)'],
+                datasets: [{
+                    data: [1030, 13.5, 1060],
+                    backgroundColor: [color1, color1 + '66', color1 + 'cc'],
+                    borderColor: surfaceColor,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: { 
+                    legend: { 
+                        display: true,
+                        position: 'bottom', 
+                        labels: { color: textColor, usePointStyle: true, padding: 15 } 
+                    },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.label + ' millones' }
+                    }
+                }
+            }
+        });
+    }
+</script>
+</div><div class="tags"><a href="/hana/etiquetas/Modernización" class="tag">#Modernización</a><a href="/hana/etiquetas/Estimación de Costos" class="tag">#Estimación de Costos</a><a href="/hana/etiquetas/GAO" class="tag">#GAO</a><a href="/hana/etiquetas/Monte Carlo" class="tag">#Monte Carlo</a><a href="/hana/etiquetas/Legacy" class="tag">#Legacy</a><a href="/hana/etiquetas/CTO" class="tag">#CTO</a></div><section class="related-articles"><h2 class="section-title">Sigue leyendo</h2><div class="news-grid"><a href="/hana/articulos/2026/08/agentes-ia-planificacion-financiera-confiabilidad-2026" class="news-card"><span class="kicker">Finanzas Tecnológicas</span><h3>Agentes de IA en finanzas: cuando la velocidad supera a la confianza</h3><p>Los agentes autónomos prometen revolucionar la planificación financiera, pero la evidencia revela una paradoja crítica: sistemas que parecen confiables en cada paso fracasan estrepitosamente en workflows complejos. La arquitectura de control importa más que la velocidad.</p></a><a href="/hana/articulos/2026/08/java-legacy-market-gap-2026" class="news-card"><span class="kicker">Arquitectura de Software</span><h3>Java no está muriendo, pero su legado web es una bomba de tiempo para las empresas</h3><p>La caída en la cuota profesional de Java y la lentitud crónica en la modernización de aplicaciones empresariales revelan una brecha estructural: no es un problema de lenguaje, es un problema de frameworks y deuda técnica heredada.</p></a></div></section></article><aside class="toc-sidebar"><div class="toc-container"><h3 class="toc-title">En este artículo</h3><ul class="toc-list"><li class="toc-item toc-depth-2"><a href="#el-peligro-de-los-promedios-y-los-cisnes-negros-de-ti">El peligro de los promedios y los cisnes negros de TI</a></li><li class="toc-item toc-depth-2"><a href="#la-trampa-de-la-estimación-determinista">La trampa de la estimación determinista</a></li><li class="toc-item toc-depth-2"><a href="#el-modelo-de-cinco-años-y-las-75-celdas-de-costo">El modelo de cinco años y las 75 celdas de costo</a></li><li class="toc-item toc-depth-2"><a href="#la-triangulación-de-63-celdas-evidencia-para-procurement">La triangulación de 63 celdas: evidencia para procurement</a></li><li class="toc-item toc-depth-2"><a href="#la-evidencia-federal-103-mil-millones-invertidos-135-millones-ahorrados">La evidencia federal: $1.03 mil millones invertidos, $13.5 millones ahorrados</a></li><li class="toc-item toc-depth-2"><a href="#medición-funcional-más-allá-de-pantallas-y-reportes">Medición funcional: más allá de pantallas y reportes</a></li><li class="toc-item toc-depth-2"><a href="#conclusión-la-estimación-como-evidencia-no-como-promesa">Conclusión: La estimación como evidencia, no como promesa</a></li><li class="toc-item toc-depth-3"><a href="#fuentes-y-créditos">Fuentes y Créditos</a></li></ul></div></aside></div><footer class="site-footer"><h3>Impulsado por los decks de <a href="https://hanademi.com/" target="_blank" rel="noopener">Hanademi</a></h3></footer><script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('hana-theme', newTheme);
+            window.dispatchEvent(new Event('themeChanged'));
+        }
+        function applyChartDefaults() {
+            if (typeof Chart === 'undefined') return;
+            const styles = getComputedStyle(document.documentElement);
+            Chart.defaults.color = styles.getPropertyValue('--text-muted').trim();
+            Chart.defaults.borderColor = styles.getPropertyValue('--chart-grid').trim();
+            Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
+        }
+        function initReadingProgress() {
+            const progressBar = document.getElementById('reading-progress');
+            if (!progressBar) return;
+            window.addEventListener('scroll', () => {
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (scrollHeight > 0) {
+                    const scrollTop = window.scrollY;
+                    const progress = (scrollTop / scrollHeight) * 100;
+                    progressBar.style.width = progress + '%';
+                }
+            }, { passive: true });
+        }
+
+        function initNavSearch() {
+            const navSearch = document.getElementById('nav-search-input');
+            if (!navSearch) return;
+            navSearch.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && e.target.value.trim() !== '') {
+                    window.location.href = `/hana/archivo?q=${encodeURIComponent(e.target.value.trim())}`;
+                }
+            });
+        }
+
+        document.addEventListener('astro:page-load', () => {
+            try {
+                applyChartDefaults();
+                initReadingProgress();
+                initNavSearch();
+                const toggleBtn = document.getElementById('theme-toggle');
+                if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
+            } catch (err) { console.error('hana: error:', err); }
+        });
+
+        window.addEventListener('themeChanged', () => { 
+            applyChartDefaults(); 
+        });
+    </script></body></html>
