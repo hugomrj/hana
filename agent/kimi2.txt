@@ -104,7 +104,7 @@ Nombre del archivo: slug-generado.md
 ---
 titulo: "Título generado"
 extracto: "Resumen de 1-2 frases para la portada"
-fecha: "AAAA-MM-DD"
+fecha: "AAAA-MM-DDTHH:MM:SS" # Ejemplo: 2026-08-03T15:30:00
 categoria: "Categoría generada"
 etiquetas: ["Etiqueta1", "Etiqueta2", "Etiqueta3"]
 ---
