@@ -3,7 +3,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 const articles = await getCollection('blog');
-const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date(a.data.fecha));
+
+
+const sortedArticles = articles.sort((a, b) => {
+    const dateA = new Date(a.data.fecha).getTime();
+    const dateB = new Date(b.data.fecha).getTime();
+    if (dateB !== dateA) return dateB - dateA; // Ordena por fecha
+    return b.id.localeCompare(a.id); // Si la fecha es igual, desempata por nombre de archivo
+});
+
+
 const heroArticle = sortedArticles[0];
 const gridArticles = sortedArticles.slice(1, 7); // 6 artículos en el grid
 const archiveArticles = sortedArticles.slice(7); // El resto en la lista compacta
