@@ -1,5 +1,5 @@
 ---
-titulo: "El paradojo de exigir experiencia para código desechable"
+titulo: "La paradoja de exigir experiencia para código desechable"
 extracto: "Las ofertas de empleo tecnológico siguen pidiendo cinco años de experiencia, pero la evidencia científica y los datos del mercado laboral desmantelan esa lógica. Cuando la IA acelera la escritura de código y los sistemas heredados persisten décadas, ¿qué es lo que realmente estamos contratando?"
 fecha: "2026-08-04T16:15:00"
 categoria: "Carrera y Contratación"
