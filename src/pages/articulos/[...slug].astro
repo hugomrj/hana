@@ -11,7 +11,11 @@ export async function getStaticPaths() {
 }
 
 const { article, allArticles } = Astro.props;
-const { Content } = await render(article);
+// Astro extrae los subtítulos (headings) automáticamente
+const { Content, headings } = await render(article);
+
+// Filtramos solo los h2 y h3 para que no se llene de títulos pequeños
+const toc = headings.filter(h => h.depth === 2 || h.depth === 3);
 
 const suggestedArticles = allArticles
     .filter(a => a.id !== article.id)
@@ -19,40 +23,58 @@ const suggestedArticles = allArticles
     .slice(0, 2);
 ---
 <BaseLayout title={article.data.titulo} description={article.data.extracto}>
-    <article>
-        <div class="article-hero">
-            <span class="kicker">{article.data.categoria}</span>
-            <h1>{article.data.titulo}</h1>
-            <div class="byline">
-                <div class="author">Por <strong>hana</strong></div>
-                <span class="dot">•</span>
-                <span>{new Date(article.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                <span class="dot">•</span>
-                <span>{article.data.tiempo_lectura} de lectura</span>
-            </div>
-        </div>
-        
-        <div class="article-content">
-            <Content />
-        </div>
-
-        <div class="tags">
-            {article.data.etiquetas.map(tag => <a href={`/hana/etiquetas/${tag}`} class="tag">#{tag}</a>)}
-        </div>
-
-        {suggestedArticles.length > 0 && (
-            <section class="related-articles">
-                <h2 class="section-title">Sigue leyendo</h2>
-                <div class="news-grid">
-                    {suggestedArticles.map(art => (
-                        <a href={`/hana/articulos/${art.id}`} class="news-card">
-                            <span class="kicker">{art.data.categoria}</span>
-                            <h3>{art.data.titulo}</h3>
-                            <p>{art.data.extracto}</p>
-                        </a>
-                    ))}
+    <div class="article-layout">
+        <article>
+            <div class="article-hero">
+                <span class="kicker">{article.data.categoria}</span>
+                <h1>{article.data.titulo}</h1>
+                <div class="byline">
+                    <div class="author">Por <strong>hana</strong></div>
+                    <span class="dot">•</span>
+                    <span>{new Date(article.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
+                    <span class="dot">•</span>
+                    <span>{article.data.tiempo_lectura} de lectura</span>
                 </div>
-            </section>
+            </div>
+            
+            <div class="article-content">
+                <Content />
+            </div>
+
+            <div class="tags">
+                {article.data.etiquetas.map(tag => <a href={`/hana/etiquetas/${tag}`} class="tag">#{tag}</a>)}
+            </div>
+
+            {suggestedArticles.length > 0 && (
+                <section class="related-articles">
+                    <h2 class="section-title">Sigue leyendo</h2>
+                    <div class="news-grid">
+                        {suggestedArticles.map(art => (
+                            <a href={`/hana/articulos/${art.id}`} class="news-card">
+                                <span class="kicker">{art.data.categoria}</span>
+                                <h3>{art.data.titulo}</h3>
+                                <p>{art.data.extracto}</p>
+                            </a>
+                        ))}
+                    </div>
+                </section>
+            )}
+        </article>
+
+        {/* Tabla de Contenidos (TOC) */}
+        {toc.length > 0 && (
+            <aside class="toc-sidebar">
+                <div class="toc-container">
+                    <h3 class="toc-title">En este artículo</h3>
+                    <ul class="toc-list">
+                        {toc.map(h => (
+                            <li class={`toc-item toc-depth-${h.depth}`}>
+                                <a href={`#${h.slug}`}>{h.text}</a>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </aside>
         )}
-    </article>
+    </div>
 </BaseLayout>
