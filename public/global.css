@@ -40,9 +40,6 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
-
-
 /* === Header Flotante Moderno === */
 .site-header {
     background-color: rgba(255, 255, 255, 0.8);
@@ -72,13 +69,9 @@ body {
     text-decoration: none;
     color: var(--text);
     letter-spacing: -0.02em;
-    white-space: nowrap; /* Evita que el logo se rompa */
+    white-space: nowrap;
 }
 .logo span { color: var(--accent); }
-
-
-
-
 
 /* === Botón de Tema Minimalista === */
 .theme-toggle {
@@ -92,12 +85,46 @@ body {
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
+    flex-shrink: 0;
 }
 .theme-toggle:hover { border-color: var(--accent); color: var(--accent); }
 .theme-toggle svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .icon-moon { display: none; }
 [data-theme="dark"] .icon-sun { display: none; }
 [data-theme="dark"] .icon-moon { display: block; }
+
+/* === Búsqueda en Navbar === */
+.nav-search {
+    position: relative;
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 0 1rem;
+}
+.nav-search .search-input {
+    width: 100%;
+    padding: 0.6rem 1rem 0.6rem 2.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.nav-search .search-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
+}
+.nav-search .search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: var(--text-muted);
+    pointer-events: none;
+}
 
 /* === Portada (Landing Premium) === */
 .newsroom-container { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
@@ -110,12 +137,11 @@ body {
     border-radius: var(--radius);
     box-shadow: 0 4px 20px rgba(0,0,0,0.02);
 }
-.hero-article h1 { margin: 1rem 0; font-size: 3.5rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; }
-.hero-news h1 { margin: 1rem 0; font-size: 3.5rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; }
+.hero-news h1 { margin: 1rem 0; font-size: clamp(2.2rem, 4vw + 1rem, 4rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.03em; }
 .hero-news h1 a { color: var(--text); text-decoration: none; transition: color 0.2s; }
 .hero-news h1 a:hover { color: var(--accent); }
 .hero-extracto { color: var(--text-muted); max-width: 700px; margin: 1rem 0 1.5rem 0; font-size: 1.25rem; line-height: 1.6; }
-.hero-meta { display: flex; align-items: center; gap: 0.75rem; color: var(--text-muted); font-size: 0.9rem; }
+.hero-meta { display: flex; align-items: center; gap: 0.75rem; color: var(--text-muted); font-size: 0.9rem; flex-wrap: wrap; }
 .read-more { 
     color: var(--accent); font-weight: 600; text-decoration: none; 
     display: inline-flex; align-items: center; gap: 0.5rem; margin-left: 1rem;
@@ -168,14 +194,14 @@ a.news-card:hover {
 
 /* === Layout del Artículo (Lectura cómoda) === */
 article {
-    max-width: 760px;
+    max-width: 820px;
     margin: 4rem auto;
     padding: 0 1.5rem;
 }
 
 .article-hero { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
-article h1 { font-size: 2.75rem; margin-bottom: 1.5rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; }
-article h2 { font-size: 1.8rem; margin: 3rem 0 1rem; font-weight: 800; }
+article h1 { font-size: clamp(2rem, 3vw + 1rem, 3.5rem); margin-bottom: 1.5rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; }
+article h2 { font-size: clamp(1.5rem, 1vw + 1rem, 2.2rem); margin: 3rem 0 1rem; font-weight: 800; }
 article h3 { font-size: 1.3rem; margin: 2rem 0 0.5rem; font-weight: 700; }
 
 .byline { color: var(--text-muted); font-size: 0.9rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
@@ -183,7 +209,7 @@ article h3 { font-size: 1.3rem; margin: 2rem 0 0.5rem; font-weight: 700; }
 .dot { opacity: 0.5; }
 
 /* === Tipografía === */
-p { margin-bottom: 1.5rem; font-size: 1.125rem; color: var(--text); line-height: 1.75; }
+p { margin-bottom: 1.5rem; font-size: clamp(1.1rem, 0.2vw + 1rem, 1.25rem); line-height: 1.8; color: var(--text); }
 a { color: var(--accent); text-decoration: none; transition: color 0.2s ease; }
 a:hover { color: var(--accent-hover); text-decoration: underline; }
 
@@ -232,50 +258,61 @@ code { background-color: var(--code-bg); padding: 0.2rem 0.4rem; border-radius: 
 /* === Footer === */
 .site-footer { border-top: 1px solid var(--border); margin-top: 6rem; padding: 3rem 2rem; text-align: center; color: var(--text-muted); font-size: 0.8rem; }
 
-
-
-/* === Responsive === */
-@media (max-width: 768px) {
-    .hero-news { padding: 2rem; margin-bottom: 3rem; }
-    .hero-news h1, .hero-article h1 { font-size: 2.25rem; }
-    .hero-extracto { font-size: 1.1rem; }
-    .news-grid { grid-template-columns: 1fr; }
-    article h1 { font-size: 2.2rem; }
-    
-    /* Ajustes para la Navbar en móvil */
-    .nav-container {
-        flex-wrap: wrap; /* Permite que los elementos bajen a la siguiente línea */
-        padding: 1rem;
-        gap: 1rem;
-    }
-    .logo a { font-size: 1.2rem; }
-    .theme-toggle { padding: 0.4rem; }
-    
-    /* La búsqueda ocupa todo el ancho en la segunda línea */
-    .nav-search {
-        order: 3; /* La mandamos al final para que baje */
-        flex-basis: 100%;
-        max-width: none;
-        margin: 0;
-    }
-    .nav-search .search-input {
-        padding: 0.6rem 1rem 0.6rem 2.5rem;
-    }
-    
-    .hero-meta { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
-    .read-more { margin-left: 0; }
+/* === Sección de Archivo Compacta (Index) === */
+.archive-section {
+    margin-top: 6rem;
+    border-top: 1px solid var(--border);
+    padding-top: 3rem;
 }
-
-
-
-/* === Paginación === */
-.pagination {
-    margin-top: 3rem;
+.archive-section .section-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+.archive-list-compact {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+}
+.archive-item-compact {
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    transition: padding-left 0.2s ease;
+}
+.archive-item-compact:hover {
+    padding-left: 0.5rem;
+}
+.archive-item-compact .archive-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text);
+}
+.archive-item-compact:hover .archive-title {
+    color: var(--accent);
+}
+.archive-item-compact .archive-date {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-family: 'SF Mono', monospace;
 }
 
+/* === Barra de progreso de lectura === */
+.reading-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background-color: var(--accent);
+    z-index: 1100;
+    transition: width 0.1s ease-out;
+}
 
 /* === Página de Archivo (Lista) === */
 .archive-list {
@@ -321,147 +358,32 @@ code { background-color: var(--code-bg); padding: 0.2rem 0.4rem; border-radius: 
     font-weight: 500;
 }
 
-
-/* === Barra de progreso de lectura === */
-.reading-progress-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 3px;
-    width: 0%;
-    background-color: var(--accent);
-    z-index: 1100;
-    transition: width 0.1s ease-out;
-}
-
-/* === Mejoras Vercel-style (Pantallas grandes) === */
-article {
-    max-width: 820px; /* Un poco más ancho para pantallas grandes */
-}
-article h1 { font-size: clamp(2rem, 3vw + 1rem, 3.5rem); }
-article h2 { font-size: clamp(1.5rem, 1vw + 1rem, 2.2rem); }
-article p { font-size: clamp(1.1rem, 0.2vw + 1rem, 1.25rem); line-height: 1.8; }
-.hero-news h1 { font-size: clamp(2.2rem, 4vw + 1rem, 4rem); }
-
-/* === Barra de Búsqueda (Vercel Style) === */
-.search-container {
-    max-width: 720px;
-    margin: 0 auto 4rem;
-    position: relative;
-}
-.search-input {
-    width: 100%;
-    padding: 1rem 1.5rem 1rem 3rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    color: var(--text);
-    font-size: 1.05rem;
-    outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-.search-input::placeholder { color: var(--text-muted); }
-.search-input:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 4px var(--accent-light);
-}
-.search-icon {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-muted);
-    width: 20px;
-    height: 20px;
-    pointer-events: none;
-}
-
-/* === Sección de Archivo Compacta (Index) === */
-.archive-section {
-    margin-top: 6rem;
-    border-top: 1px solid var(--border);
-    padding-top: 3rem;
-}
-.archive-section .section-title {
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-    font-weight: 600;
-}
-.archive-list-compact {
-    display: flex;
-    flex-direction: column;
-}
-.archive-item-compact {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.25rem 0;
-    border-bottom: 1px solid var(--border);
-    text-decoration: none;
-    transition: padding-left 0.2s ease;
-}
-.archive-item-compact:hover {
-    padding-left: 0.5rem;
-}
-.archive-item-compact .archive-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: var(--text);
-}
-.archive-item-compact:hover .archive-title {
-    color: var(--accent);
-}
-.archive-item-compact .archive-date {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    font-family: 'SF Mono', monospace; /* Toque técnico */
-}
-
-
-/* === Búsqueda en Navbar === */
-.nav-search {
-    position: relative;
-    flex-grow: 1;
-    max-width: 400px;
-    margin: 0 1rem;
-}
-.nav-search .search-input {
-    width: 100%;
-    padding: 0.6rem 1rem 0.6rem 2.5rem;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    color: var(--text);
-    font-size: 0.9rem;
-    outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-.nav-search .search-input:focus {
-    border-color: var(--accent);
-    box-shadow: 0 0 0 3px var(--accent-light);
-}
-.nav-search .search-icon {
-    position: absolute;
-    left: 0.75rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 16px;
-    height: 16px;
-    color: var(--text-muted);
-    pointer-events: none;
-}
-
-/* En móviles, la búsqueda ocupa el espacio disponible */
+/* === Responsive === */
 @media (max-width: 768px) {
-    .nav-search {
-        margin: 0 0.5rem;
-        max-width: none;
-    }
-    .nav-search .search-input {
-        padding: 0.5rem 1rem 0.5rem 2.2rem;
+    .hero-news { padding: 2rem; margin-bottom: 3rem; }
+    .hero-news h1 { font-size: 2.25rem; }
+    .hero-extracto { font-size: 1.1rem; }
+    .news-grid { grid-template-columns: 1fr; }
+    article h1 { font-size: 2.2rem; }
+    
+    .nav-container {
+        flex-wrap: wrap;
+        padding: 1rem;
+        gap: 1rem;
     }
     .logo a { font-size: 1.2rem; }
+    .theme-toggle { padding: 0.4rem; }
+    
+    .nav-search {
+        order: 3;
+        flex-basis: 100%;
+        max-width: none;
+        margin: 0;
+    }
+    .nav-search .search-input {
+        padding: 0.6rem 1rem 0.6rem 2.5rem;
+    }
+    
+    .hero-meta { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .read-more { margin-left: 0; }
 }

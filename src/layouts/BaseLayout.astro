@@ -3,8 +3,33 @@ const { title, description } = Astro.props;
 const siteUrl = "https://hugomrj.github.io/hana";
 const ogImage = `${siteUrl}/og-image.jpg`; 
 ---
-<!-- (El <head> se queda exactamente igual) -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title} | hana</title>
+    <meta name="description" content={description} />
+    
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={Astro.url} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <script is:inline src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text x='50' y='72' font-size='60' font-family='Inter,sans-serif' fill='white' text-anchor='middle' font-weight='bold'>h</text></svg>">
+    
+    <!-- ¡Esta línea es la que carga tu diseño! -->
+    <link rel="stylesheet" href="/hana/global.css">
+</head>
 <body>
+    <!-- Barra de progreso de lectura -->
     <div id="reading-progress" class="reading-progress-bar"></div>
 
     <header class="site-header">
@@ -13,14 +38,16 @@ const ogImage = `${siteUrl}/og-image.jpg`;
                 <a href="/hana/">han<span>a</span></a>
             </div>
             
-            <!-- Nueva barra de búsqueda en Navbar -->
+            <!-- Barra de búsqueda en Navbar -->
             <div class="nav-search">
                 <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                 <input type="text" id="nav-search-input" class="search-input" placeholder="Buscar..." />
             </div>
 
             <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                <!-- Icono Sol -->
                 <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                <!-- Icono Luna -->
                 <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
             </button>
         </div>
