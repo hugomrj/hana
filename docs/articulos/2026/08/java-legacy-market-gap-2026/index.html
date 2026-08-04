@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Java no está muriendo, pero su legado web es una bomba de tiempo para las empresas | hana</title><meta name="description" content="La caída en la cuota profesional de Java y la lentitud crónica en la modernización de aplicaciones empresariales revelan una brecha estructural: no es un problema de lenguaje, es un problema de frameworks y deuda técnica heredada."><!-- Open Graph / Redes Sociales --><meta property="og:type" content="article"><meta property="og:title" content="Java no está muriendo, pero su legado web es una bomba de tiempo para las empresas"><meta property="og:description" content="La caída en la cuota profesional de Java y la lentitud crónica en la modernización de aplicaciones empresariales revelan una brecha estructural: no es un problema de lenguaje, es un problema de frameworks y deuda técnica heredada."><meta property="og:image" content="https://hugomrj.github.io/hana/og-image.jpg"><meta property="og:url" content="https://hugomrj.github.io/hana/articulos/2026/08/java-legacy-market-gap-2026/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Java no está muriendo, pero su legado web es una bomba de tiempo para las empresas"><meta name="twitter:description" content="La caída en la cuota profesional de Java y la lentitud crónica en la modernización de aplicaciones empresariales revelan una brecha estructural: no es un problema de lenguaje, es un problema de frameworks y deuda técnica heredada."><meta name="twitter:image" content="https://hugomrj.github.io/hana/og-image.jpg"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='20' fill='%233b82f6'/&gt;&lt;text x='50' y='72' font-size='60' font-family='Inter,sans-serif' fill='white' text-anchor='middle' font-weight='bold'&gt;h&lt;/text&gt;&lt;/svg&gt;"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/hana/_astro/ClientRouter.astro_astro_type_script_index_0_lang.jmhnZfFy.js"></script><!-- Script crítico para evitar el flash blanco (FOUC) en modo oscuro --><script>
+        const savedTheme = localStorage.getItem('hana-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        document.addEventListener('astro:before-swap', (event) => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            event.newDocument.documentElement.setAttribute('data-theme', currentTheme);
+        });
+    </script><link rel="stylesheet" href="/hana/global.css"><style>.astro-route-announcer{clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;width:1px;height:1px;position:absolute;top:0;left:0;overflow:hidden}
+</style></head><body><div id="reading-progress" class="reading-progress-bar"></div><header class="site-header"><div class="nav-container"><div class="logo"><a href="/hana/">han<span>a</span></a></div><div class="nav-search"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input type="text" id="nav-search-input" class="search-input" placeholder="Buscar..."></div><button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"><svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></div></header><div class="article-layout"><article><div class="article-hero"><span class="kicker">Arquitectura de Software</span><h1>Java no está muriendo, pero su legado web es una bomba de tiempo para las empresas</h1><div class="byline"><span>5 de agosto de 2026</span></div></div><div class="article-content"><p>Java sigue siendo el idioma no oficial de la infraestructura corporativa. Aproximadamente el <a href="https://www.secondtalent.com/resources/domain-java-statistics/">90% de las Fortune 500</a> lo usan para sus sistemas críticos, y millones de desarrolladores lo mantienen vivo cada día. Pero cuando se observa más de cerca, la imagen cambia: el lenguaje no está en declive, pero las aplicaciones web construidas sobre él durante las últimas dos décadas sí lo están. Y esa distinción es la que define el verdadero problema de mercado.</p>
+<h2 id="la-cuota-profesional-de-java-cae-pero-el-ecosistema-sigue-siendo-masivo">La cuota profesional de Java cae, pero el ecosistema sigue siendo masivo</h2>
+<p>Las encuestas de desarrolladores son el termómetro más usado para medir la salud de un lenguaje, aunque a menudo confunden popularidad con relevancia operativa. En la <a href="https://survey.stackoverflow.co/2021">Stack Overflow Developer Survey</a>, la cuota de profesionales que reportaban usar Java como parte de su stack habitual rondaba el 35% en 2021. Tres años después, esa cifra se había reducido en casi cinco puntos porcentuales, estabilizándose alrededor del 30%. La caída es real, pero no catastrófica: Java sigue apareciendo en casi una de cada tres respuestas profesionales.</p>
+<div class="chart-container">
+    <div class="chart-title">Evolución de la cuota profesional de Java en Stack Overflow (2021-2025). Fuente: Stack Overflow Developer Survey</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico1"></canvas>
+    </div>
+</div>
+<p>El problema de interpretación es sutil. Saber cuántas personas escriben Java en 2026 no nos dice cuántas de esas personas están trabajando sobre aplicaciones web heredadas construidas con JSF, Struts o versiones antiguas de Spring MVC. El lenguaje es estable; lo que se vuelve obsoleto es el <em>stack de interfaz</em> que lo acompaña. Una cosa es mantener un microservicio en Java 21, y otra muy distinta es modernizar un sistema interno de formularios construido sobre Java 8 y JSP.</p>
+<h2 id="la-fragmentación-de-versiones-en-producción-el-cuello-de-botella-invisible">La fragmentación de versiones en producción: el cuello de botella invisible</h2>
+<p>Mientras el lenguaje se moderniza con ciclos de seis meses, las aplicaciones empresariales se quedan atrás. El <a href="https://newrelic.com/resources/report/2024-state-of-the-java-ecosystem">informe 2024 State of the Java Ecosystem</a> de New Relic muestra un ecosistema profundamente fragmentado. Java 17, la primera LTS tras Java 11, ha sido adoptado masivamente en producción, pero Java 8 y Java 11 todavía concentran una porción mayoritaria del parque activo.</p>
+<div class="chart-container">
+    <div class="chart-title">Distribución de versiones de Java en producción (2024). Fuente: New Relic</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico2"></canvas>
+    </div>
+</div>
+<p>Esta fragmentación no es un problema cosmético. Cuando Spring Framework decide que <a href="https://spring.io/blog/2022/05/24/preparing-for-spring-boot-3-0/">Spring Boot 3 requiere Java 17</a>, mientras Spring Boot 2.7 aún soporta Java 8, está creando un salto de versión que para muchas organizaciones equivale a un cambio de plataforma. Las aplicaciones que dependen de bibliotecas de terceros no portadas, drivers propietarios o integraciones heredadas se quedan bloqueadas en versiones antiguas. El framework moderno no puede correr donde vive la aplicación real.</p>
+<h2 id="el-caso-federal-tres-años-para-modernizar-dos-aplicaciones">El caso federal: tres años para modernizar dos aplicaciones</h2>
+<p>Los números se vuelven tangibles cuando miramos el ritmo real de modernización en organizaciones complejas. Un <a href="https://vfunction.com/resources/case-study-us-federal-agency/">caso de estudio publicado por vFunction</a> documenta cómo una agencia federal estadounidense, después de tres años de esfuerzo, había modernizado solo dos de más de cien aplicaciones Java bajo su mandato. Este ritmo no es una anomalía estadística; es la realidad operativa de muchas grandes organizaciones con deuda técnica acumulada.</p>
+<div class="chart-container">
+    <div class="chart-title">Aplicaciones modernizadas tras 3 años de esfuerzo. Fuente: vFunction</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico3"></canvas>
+    </div>
+</div>
+<p>Si extrapolamos ese ritmo a una cartera hipotética de cien aplicaciones, el horizonte se vuelve inviable: a ese paso se necesitarían aproximadamente 150 años para completar la migración. Incluso si una herramienta reduce el esfuerzo de ingeniería en un 25%, el horizonte apenas baja a poco más de un siglo. Solo una mejora de un orden de magnitud, como la reportada por <a href="https://www.ibm.com/new/product-blog/how-blue-pearl-modernized-an-outdated-codebase-and-a-resolved-a-risky-security-posture-with-ibm-bob">Blue Pearl al modernizar Java con IBM Bob</a>, donde pasaron de 30 días de ingeniería a aproximadamente 3 días con cero defectos post-despliegue, convierte una tarea imposible en una viable.</p>
+<div class="chart-container">
+    <div class="chart-title">Horizonte de tiempo para modernizar 100 aplicaciones según diferentes velocidades. Fuente: Elaboración propia basada en vFunction</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico4"></canvas>
+    </div>
+</div>
+<h2 id="los-navegadores-heredados-murieron-pero-las-aplicaciones-no">Los navegadores heredados murieron, pero las aplicaciones no</h2>
+<p>El sector público europeo ofrece una pista sobre por qué las aplicaciones internas son el verdadero mercado legacy. En 2024, el <a href="https://github.com/alphagov/govuk-rfcs/blob/main/rfc-171-remove-legacy-browser-js-support.md">RFC 171 de GOV.UK</a> propuso eliminar el soporte de JavaScript para navegadores heredados como Internet Explorer. El argumento era demoledor: esos navegadores representaban menos del 0,04% del tráfico real. Para servicios públicos orientados al ciudadano, el legacy browser ya es un problema resuelto.</p>
+<p>Pero las aplicaciones internas no funcionan igual. No son servicios web para ciudadanos; son interfaces de formularios, paneles administrativos y flujos de trabajo donde el usuario final es un empleado corporativo con un navegador bloqueado por políticas de TI. El problema no es el navegador del usuario, es el runtime de la aplicación que genera la interfaz. Mientras el ciudadano usa Chrome o Edge modernos, el empleado sigue accediendo a una app JSF servida por un Tomcat 8 corriendo sobre Java 8.</p>
+<h2 id="la-deuda-técnica-como-contexto-macroeconómico">La deuda técnica como contexto macroeconómico</h2>
+<p>La magnitud del problema se entiende mejor cuando se contextualiza con los costos globales de la mala calidad del software. El <a href="https://www.it-cisq.org/the-cost-of-poor-quality-software-in-the-us-a-2022-report/">informe de CISQ</a> estima que la deuda técnica acumulada en Estados Unidos superó los 1,52 billones de dólares. Y el mercado de modernización de aplicaciones legacy refleja esa urgencia: según análisis de la industria, se proyecta que <a href="https://www.researchandmarkets.com/reports/6215676/legacy-application-modernization-market-report">crecerá hasta los 37.330 millones de dólares para 2030</a>, duplicándose prácticamente en tres años.</p>
+<p>La hipótesis más sólida para un nuevo producto en este espacio no es un reemplazo web universal para Java. Es un enfoque específico: software interno con formularios intensivos, donde las competencias Java están concentradas y las necesidades de animación o funcionalidad offline son mínimas. Un producto ganador en este segmento debe preservar HTML estándar, APIs documentadas, datos portables, pruebas reutilizables y vías de salida automatizadas. La promesa no es revolucionar el frontend, es ofrecer modernización medible sin crear la siguiente trampa legacy.</p>
+<h2 id="conclusión-el-mercado-real-no-es-java-es-el-legado-web">Conclusión: el mercado real no es Java, es el legado web</h2>
+<p>Los arquitectos y CTOs que evalúan herramientas de modernización no están eligiendo entre Java y otro lenguaje. Están eligiendo entre mantener un sistema interno con una década de vida o invertir años de ingeniería en reescribirlo. El mercado no mide cuántos desarrolladores saben Java; mide cuántas organizaciones tienen aplicaciones web obsoletas que bloquean sus estrategias de cloud, seguridad y productividad.</p>
+<p>La oportunidad está en reducir ese salto de 150 años a una fracción razonable. Herramientas que automatizan el análisis arquitectónico, la migración asistida por IA y la preservación del comportamiento del usuario final están demostrando que la fricción no es una ley física, es una variable técnica. El framework que gane este mercado no será el más moderno, sino el que convierta la modernización en un proceso incremental, reversible y, sobre todo, medible.</p>
+<h3 id="fuentes-y-créditos">Fuentes y Créditos</h3>
+<p>Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.</p>
+<ul>
+<li><a href="https://hanademi.com/decks/java-legacy-market-size-and-framework-gap-20260802-143055/es">Hanademi - Java Legacy Market Size and Framework Gap</a></li>
+<li><a href="https://survey.stackoverflow.co/2021">Stack Overflow Developer Survey 2021</a></li>
+<li><a href="https://survey.stackoverflow.co/2025/technology">Stack Overflow Developer Survey 2025</a></li>
+<li><a href="https://newrelic.com/resources/report/2024-state-of-the-java-ecosystem">New Relic 2024 State of the Java Ecosystem</a></li>
+<li><a href="https://vfunction.com/resources/case-study-us-federal-agency/">vFunction - US Federal Agency Case Study</a></li>
+<li><a href="https://www.ibm.com/new/product-blog/how-blue-pearl-modernized-an-outdated-codebase-and-a-resolved-a-risky-security-posture-with-ibm-bob">IBM - Blue Pearl modernization with IBM Bob</a></li>
+<li><a href="https://spring.io/blog/2022/05/24/preparing-for-spring-boot-3-0/">Spring Boot 3.0 Preparation</a></li>
+<li><a href="https://github.com/alphagov/govuk-rfcs/blob/main/rfc-171-remove-legacy-browser-js-support.md">GOV.UK RFC 171 - Remove legacy browser JS support</a></li>
+<li><a href="https://www.it-cisq.org/the-cost-of-poor-quality-software-in-the-us-a-2022-report/">CISQ - The Cost of Poor Software Quality in the US</a></li>
+<li><a href="https://www.researchandmarkets.com/reports/6215676/legacy-application-modernization-market-report">Legacy Application Modernization Market Report</a></li>
+</ul>
+<script is:inline data-astro-rerun>
+    const styles = getComputedStyle(document.documentElement);
+    const textColor = styles.getPropertyValue('--text-muted').trim();
+    const gridColor = styles.getPropertyValue('--chart-grid').trim();
+    const surfaceColor = styles.getPropertyValue('--surface').trim();
+    
+    const color1 = styles.getPropertyValue('--chart-1').trim();
+
+    const premiumTooltip = {
+        backgroundColor: surfaceColor,
+        titleColor: textColor,
+        bodyColor: textColor,
+        borderColor: gridColor,
+        borderWidth: 1,
+        padding: 12,
+        cornerRadius: 8,
+        displayColors: true
+    };
+
+    const ctx1 = document.getElementById('grafico1');
+    if (ctx1) {
+        new Chart(ctx1, {
+            type: 'line',
+            data: { 
+                labels: ['2021', '2024', '2025'],
+                datasets: [{
+                    label: 'Cuota profesional de Java (%)',
+                    data: [35.35, 30.49, 29.4],
+                    borderColor: color1,
+                    backgroundColor: color1 + '22',
+                    borderWidth: 2,
+                    tension: 0.3,
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: premiumTooltip
+                },
+                scales: { 
+                    x: { ticks: { color: textColor }, grid: { display: false } }, 
+                    y: { ticks: { color: textColor, callback: v => v + '%' }, grid: { color: gridColor }, beginAtZero: false, min: 25, max: 40 } 
+                }
+            }
+        });
+    }
+
+    const ctx2 = document.getElementById('grafico2');
+    if (ctx2) {
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: { 
+                labels: ['Java 17', 'Java 11', 'Java 8', 'Otras versiones'],
+                datasets: [{
+                    data: [35, 32, 28, 5],
+                    backgroundColor: [color1, color1 + 'cc', color1 + '99', color1 + '55'],
+                    borderColor: surfaceColor,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: { 
+                    legend: { 
+                        display: true,
+                        position: 'bottom', 
+                        labels: { color: textColor, usePointStyle: true, padding: 15 } 
+                    },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.label + ': ' + ctx.parsed + '%' }
+                    }
+                }
+            }
+        });
+    }
+
+    const ctx3 = document.getElementById('grafico3');
+    if (ctx3) {
+        new Chart(ctx3, {
+            type: 'doughnut',
+            data: { 
+                labels: ['Modernizadas', 'Pendientes'],
+                datasets: [{
+                    data: [2, 98],
+                    backgroundColor: [color1, color1 + '44'],
+                    borderColor: surfaceColor,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '65%',
+                plugins: { 
+                    legend: { 
+                        display: true,
+                        position: 'bottom', 
+                        labels: { color: textColor, usePointStyle: true, padding: 15 } 
+                    },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.label + ': ' + ctx.parsed + ' aplicaciones' }
+                    }
+                }
+            }
+        });
+    }
+
+    const ctx4 = document.getElementById('grafico4');
+    if (ctx4) {
+        new Chart(ctx4, {
+            type: 'bar',
+            data: { 
+                labels: ['Ritmo observado', 'Mejora 25%', 'Ciclo 10x'],
+                datasets: [{
+                    label: 'Años para modernizar 100 apps',
+                    data: [150, 112.5, 15],
+                    backgroundColor: [color1 + '99', color1 + 'cc', color1],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: { label: ctx => ctx.parsed.y + ' años' }
+                    }
+                },
+                scales: { 
+                    x: { ticks: { color: textColor }, grid: { display: false } }, 
+                    y: { ticks: { color: textColor, callback: v => v + ' años' }, grid: { color: gridColor }, beginAtZero: true } 
+                }
+            }
+        });
+    }
+</script>
+</div><div class="tags"><a href="/hana/etiquetas/Java" class="tag">#Java</a><a href="/hana/etiquetas/Legacy" class="tag">#Legacy</a><a href="/hana/etiquetas/Deuda Técnica" class="tag">#Deuda Técnica</a><a href="/hana/etiquetas/Modernización" class="tag">#Modernización</a><a href="/hana/etiquetas/Spring Boot" class="tag">#Spring Boot</a><a href="/hana/etiquetas/CTO" class="tag">#CTO</a></div><section class="related-articles"><h2 class="section-title">Sigue leyendo</h2><div class="news-grid"><a href="/hana/articulos/2026/08/agentes-ia-planificacion-financiera-confiabilidad-2026" class="news-card"><span class="kicker">Finanzas Tecnológicas</span><h3>Agentes de IA en finanzas: cuando la velocidad supera a la confianza</h3><p>Los agentes autónomos prometen revolucionar la planificación financiera, pero la evidencia revela una paradoja crítica: sistemas que parecen confiables en cada paso fracasan estrepitosamente en workflows complejos. La arquitectura de control importa más que la velocidad.</p></a><a href="/hana/articulos/2026/08/agentes-autonomos-planificacion-financiera-limites" class="news-card"><span class="kicker">Inteligencia Artificial Financiera</span><h3>Agentes financieros autónomos: por qué la autonomía sin límites destruye valor en FP&amp;A</h3><p>La frontera tecnológica de la IA es dentada, no plana. Dentro del perímetro de competencia, los agentes multiplican la productividad; fuera de él, la destruyen. Los CFOs que concedan autoridad sin mapear primero la frontera de cada tarea están comprando riesgo, no eficiencia.</p></a></div></section></article><aside class="toc-sidebar"><div class="toc-container"><h3 class="toc-title">En este artículo</h3><ul class="toc-list"><li class="toc-item toc-depth-2"><a href="#la-cuota-profesional-de-java-cae-pero-el-ecosistema-sigue-siendo-masivo">La cuota profesional de Java cae, pero el ecosistema sigue siendo masivo</a></li><li class="toc-item toc-depth-2"><a href="#la-fragmentación-de-versiones-en-producción-el-cuello-de-botella-invisible">La fragmentación de versiones en producción: el cuello de botella invisible</a></li><li class="toc-item toc-depth-2"><a href="#el-caso-federal-tres-años-para-modernizar-dos-aplicaciones">El caso federal: tres años para modernizar dos aplicaciones</a></li><li class="toc-item toc-depth-2"><a href="#los-navegadores-heredados-murieron-pero-las-aplicaciones-no">Los navegadores heredados murieron, pero las aplicaciones no</a></li><li class="toc-item toc-depth-2"><a href="#la-deuda-técnica-como-contexto-macroeconómico">La deuda técnica como contexto macroeconómico</a></li><li class="toc-item toc-depth-2"><a href="#conclusión-el-mercado-real-no-es-java-es-el-legado-web">Conclusión: el mercado real no es Java, es el legado web</a></li><li class="toc-item toc-depth-3"><a href="#fuentes-y-créditos">Fuentes y Créditos</a></li></ul></div></aside></div><footer class="site-footer"><h3>Impulsado por los decks de <a href="https://hanademi.com/" target="_blank" rel="noopener">Hanademi</a></h3></footer><script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('hana-theme', newTheme);
+            window.dispatchEvent(new Event('themeChanged'));
+        }
+        function applyChartDefaults() {
+            if (typeof Chart === 'undefined') return;
+            const styles = getComputedStyle(document.documentElement);
+            Chart.defaults.color = styles.getPropertyValue('--text-muted').trim();
+            Chart.defaults.borderColor = styles.getPropertyValue('--chart-grid').trim();
+            Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
+        }
+        function initReadingProgress() {
+            const progressBar = document.getElementById('reading-progress');
+            if (!progressBar) return;
+            window.addEventListener('scroll', () => {
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (scrollHeight > 0) {
+                    const scrollTop = window.scrollY;
+                    const progress = (scrollTop / scrollHeight) * 100;
+                    progressBar.style.width = progress + '%';
+                }
+            }, { passive: true });
+        }
+
+        function initNavSearch() {
+            const navSearch = document.getElementById('nav-search-input');
+            if (!navSearch) return;
+            navSearch.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && e.target.value.trim() !== '') {
+                    window.location.href = `/hana/archivo?q=${encodeURIComponent(e.target.value.trim())}`;
+                }
+            });
+        }
+
+        document.addEventListener('astro:page-load', () => {
+            try {
+                applyChartDefaults();
+                initReadingProgress();
+                initNavSearch();
+                const toggleBtn = document.getElementById('theme-toggle');
+                if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
+            } catch (err) { console.error('hana: error:', err); }
+        });
+
+        window.addEventListener('themeChanged', () => { 
+            applyChartDefaults(); 
+        });
+    </script></body></html>
