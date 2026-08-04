@@ -12,6 +12,10 @@
     --accent: #3b82f6;
     --accent-hover: #1e40af; /* Azul marino elegante */
 
+
+    --accent: #3b82f6;        /* Blue 500 (El de siempre) */
+    --accent-hover: #2563eb;  /* Blue 600 (Azul oscuro elegante, no tan marino) */
+
     --accent-light: rgba(59, 130, 246, 0.1);
     --chart-grid: #e2e8f0;
     --code-bg: #f1f5f9;
@@ -37,6 +41,9 @@
 
     --accent: #60a5fa;
     --accent-hover: #93c5fd; /* Azul claro brillante */
+
+    --accent: #60a5fa;        /* Blue 400 (El de siempre) */
+    --accent-hover: #3b82f6;  /* Blue 500 (Un azul más sólido al pasar el ratón) */
 
 
     --accent-light: rgba(96, 165, 250, 0.1);
