@@ -117,22 +117,37 @@ Aquí tienes los requisitos obligatorios:
 - Justo debajo, el PRIMER elemento de la lista de fuentes debe ser el enlace al deck de Hanademi, usando el formato: `- [Hanademi - Título del deck original](URL_PROPORCIONADA)`
 - A continuación, lista todas las fuentes originales verificadas usando SIEMPRE el formato Markdown: `- [Nombre de la fuente](https://url.com)`
 
-5. FORMATO DE SALIDA OBLIGATORIO (COMANDO BASH):
-- NO envuelvas tu respuesta en bloques de código Markdown (no uses ```bash ni ``` al final).
-- NO escribas texto plano antes del comando. Devuelve ÚNICAMENTE el comando de terminal listo para ser ejecutado.
-- Las dos primeras líneas son comentarios (usando #) para mi registro interno.
+5. FORMATO DE SALIDA OBLIGATORIO (TEXTO PLANO):
 - Genera un "slug" corto, descriptivo y sin acentos para el nombre del archivo.
+- Tu respuesta debe tener exactamente esta estructura:
+  1. La primera línea de texto debe ser: `Nombre del archivo: [slug-generado].md`
+  2. La segunda línea de texto debe ser: `URL Procesada: [URL_PROPORCIONADA]` (Esto es para mi registro interno).
+  3. Una línea en blanco.
+  4. El bloque de código Markdown con el artículo, usando ```markdown al inicio y ``` al final.
+- NO escribas explicaciones adicionales, introducciones ni conclusiones ni antes ni después del bloque de código.
+- Asegúrate de usar `##` para todos los subtítulos dentro del texto.
 
-# Archivo: [slug-generado].md
-# URL: [URL_PROPORCIONADA]
-cat << 'EOF' > src/content/blog/[slug-generado].md
+REGLA CRÍTICA DE ASTRO (NO ROMPER EL SITIO):
+- El bloque de código Markdown debe empezar **INMEDIATAMENTE** con `---`. 
+- NO incluyas comentarios HTML, textos ni saludos antes del frontmatter. Si lo haces, el compilador fallará.
+- Es OBLIGATORIO mantener los saltos de línea exactos como en un archivo de texto normal.
+- En el frontmatter, cada campo (titulo, extracto, etc.) debe ir en una línea separada. BAJO NINGUNA CIRCUNSTANCIA compactes el frontmatter en una sola línea.
+- En el cuerpo del artículo, cada párrafo debe estar separado por una línea en blanco de los demás.
+- Los divs de los gráficos y las etiquetas <script> deben ir en líneas separadas, no pegados al texto.
+- BAJO NINGUNA CIRCUNSTANCIA compactes todo el artículo en una sola línea o en pocos párrafos gigantes. Respeta la estructura visual del Markdown.
+
+Ejemplo exacto de cómo debe ser tu respuesta:
+Nombre del archivo: slug-generado.md
+URL Procesada: https://hanademi.com/decks/ejemplo
+
+```markdown
 ---
 titulo: "Título generado"
 extracto: "Resumen de 1-2 frases para la portada"
-fecha: "AAAA-MM-DDTHH:MM:SS"
+fecha: "AAAA-MM-DDTHH:MM:SS" # Ejemplo: 2026-08-03T15:30:00
 categoria: "Categoría generada"
 etiquetas: ["Etiqueta1", "Etiqueta2", "Etiqueta3"]
-link_original: "[URL_PROPORCIONADA]"
+link_original: "URL_PROPORCIONADA"
 ---
 
 (Introducción del artículo en su propio párrafo)
@@ -144,21 +159,15 @@ link_original: "[URL_PROPORCIONADA]"
 ## Fuentes y Créditos
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 
-- [Hanademi - Título del deck original]([URL_PROPORCIONADA])
+- [Hanademi - Título del deck](URL_PROPORCIONADA)
 - [Fuente 1](url)
+- [Fuente 2](url)
 
 <script>
 (Todos los scripts de Chart.js juntos aquí)
 </script>
-EOF
 
-REGLA CRÍTICA DE ASTRO (NO ROMPER EL SITIO):
-- El archivo Markdown debe empezar **INMEDIATAMENTE** con `---` (después del cat << 'EOF'). 
-- Es OBLIGATORIO mantener los saltos de línea exactos como en un archivo de texto normal.
-- En el frontmatter, cada campo debe ir en una línea separada.
-- En el cuerpo del artículo, cada párrafo debe estar separado por una línea en blanco.
-- Los divs de los gráficos y las etiquetas <script> deben ir en líneas separadas, no pegados al texto.
-- BAJO NINGUNA CIRCUNSTANCIA compactes todo el artículo en una sola línea o en pocos párrafos gigantes.
+
 
 Aquí tienes la URL de la presentación de Hanademi a procesar: 
 

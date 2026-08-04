@@ -1,0 +1,445 @@
+---
+titulo: "La paradoja de la IA en el aula: cuando el 127% de mejora enmascara el 17% de daño real"
+extracto: "Un experimento con 1.000 estudiantes reveló que GPT-4 dispara el rendimiento durante la práctica, pero deteriora el aprendizaje cuando no hay supervisión. La evidencia científica sugiere que el problema no es la tecnología, sino el diseño."
+fecha: "2026-08-05T12:00:00"
+categoria: "Educación Tecnológica"
+etiquetas: ["IA", "Educación", "Aprendizaje", "ChatGPT", "Tecnología Educativa", "Investigación"]
+link_original: "https://hanademi.com/decks/ai-learning-sol-high-optimized-20260711/es/"
+---
+
+Durante los últimos dos años, la comunidad educativa ha vivido atrapada entre dos narrativas incompatibles. Por un lado, las empresas de tecnología prometen que la inteligencia artificial democratizará la educación personalizada. Por el otro, profesores y académicos advierten sobre una epidemia de "cerebros atrofiados" incapaces de pensar sin asistencia algorítmica. La realidad, como suele ocurrir, es más compleja y mucho más interesante que cualquiera de esos extremos.
+
+Un experimento publicado en 2025 en *Proceedings of the National Academy of Sciences* (PNAS) ha sacudido el debate con datos que ningún CTO de EdTech, arquitecto de aprendizaje o responsable académico puede ignorar. Los resultados no solo contradicen las expectativas iniciales, sino que obligan a repensar completamente cómo diseñamos herramientas que integren modelos de lenguaje en contextos educativos reales. La pregunta ya no es si la IA ayuda o perjudica. La pregunta es bajo qué condiciones hace una cosa o la otra.
+
+## La trampa del rendimiento inflado
+
+Imagina la siguiente escena: un estudiante de secundaria resuelve problemas de matemáticas durante varias semanas con la ayuda de GPT-4. En sus ejercicios diarios, sus calificaciones se disparan. El tutor adaptativo le guía paso a paso, corrige errores al instante y ajusta la dificultad. Sobre el papel, el éxito es rotundo. Pero cuando llega el momento del examen final, sin conexión a internet ni asistente digital disponible, las calificaciones caen dramáticamente por debajo del grupo de control.
+
+Esta no es una anécdota aislada. Es exactamente lo que ocurrió en el estudio de Hamsa Bastani y su equipo en la Wharton School de la Universidad de Pensilvania, citado ya por más de 347 investigadores en el ámbito académico [[1]]. Casi mil estudiantes de secundaria participaron en un experimento de campo que midió el impacto de GPT-4 sobre el aprendizaje de matemáticas. Los investigadores diseñaron tres condiciones distintas: un chatbot básico sin estructura pedagógica, un tutor adaptativo con guardrails específicos que fomentaban el razonamiento, y un grupo de control sin acceso a IA.
+
+Los resultados fueron desconcertantes. Durante la fase de práctica, el tutor guiado mejoró el rendimiento de los estudiantes en más de un 120%, mientras que el chatbot básico logró una mejora cercana al 50%. Cualquiera diría que la tecnología funcionaba a la perfección. Sin embargo, cuando los investigadores evaluaron el aprendizaje real mediante un examen sin asistencia tecnológica, los estudiantes que habían usado el chatbot básico rindieron un 17% peor que el grupo de control. La paradoja era evidente: cuanto mejor parecía funcionar la herramienta en el momento, peor era el aprendizaje a largo plazo.
+
+<div class="chart-container">
+    <div class="chart-title">Rendimiento según el tipo de uso de IA en matemáticas (Fuente: Bastani et al., PNAS 2025)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico1"></canvas>
+    </div>
+</div>
+
+La explicación propuesta por los investigadores es tan elegante como preocupante. Sin guardrails adecuados, los estudiantes tratan a la IA como una "muleta cognitiva" durante las sesiones de práctica. En lugar de esforzarse por resolver los problemas, delegan el razonamiento al modelo. El chatbot les da las respuestas que necesitan para avanzar, pero al hacerlo, les priva de la carga cognitiva necesaria para consolidar el conocimiento. Cuando se enfrentan solos al examen, esa dependencia se convierte en una desventaja crítica.
+
+## La evidencia acumulada sobre la retención
+
+El estudio de PNAS no fue un caso aislado. Meses después, Andre Barcaui publicó en *Social Sciences & Humanities Open* un ensayo controlado aleatorizado (RCT) que confirmaba el mismo patrón en un contexto universitario [[41]]. Los estudiantes que usaron ChatGPT para aprender conceptos de inteligencia artificial durante un curso regular obtuvieron resultados similares al grupo de control durante las evaluaciones inmediatas. La diferencia apareció 45 días después, en una prueba sorpresa de retención.
+
+El grupo que había estudiado con ChatGPT recordó solo el 57,5% del material, mientras que el grupo tradicional mantuvo un 68,5% de retención. Esa brecha de once puntos porcentuales equivale a perder casi un mes completo de aprendizaje en menos de dos meses. El estudio acuñó formalmente el término "muleta cognitiva" para describir cómo los modelos de lenguaje pueden reemplazar procesos mentales esenciales para la consolidación de la memoria a largo plazo.
+
+<div class="chart-container">
+    <div class="chart-title">Retención de conocimiento a lo largo del tiempo: IA vs. estudio tradicional (Fuente: Barcaui 2025)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico2"></canvas>
+    </div>
+</div>
+
+Estos hallazgos tienen implicaciones profundas para arquitectos de software educativo. Si un producto EdTech optimiza únicamente para métricas de engagement inmediato (tareas completadas, ejercicios resueltos, tiempo en plataforma), puede estar destruyendo involuntariamente el valor educativo real. La arquitectura del producto debe incorporar fricciones cognitivas deliberadas que obliguen al estudiante a pensar, incluso cuando la tecnología podría hacerlo por él.
+
+## Cuando la IA sí funciona: diseño sobre adopción
+
+La historia no termina en el pesimismo. Paralelamente a los estudios que documentaban los riesgos, otros equipos de investigación demostraban que la IA bien diseñada puede superar incluso a los métodos de enseñanza más avanzados. En Harvard, un equipo liderado por Gabriel Kestin publicó en *Scientific Reports* un RCT con resultados espectaculares [[17]].
+
+El estudio comparó un tutor de IA diseñado con principios pedagógicos específicos contra el aprendizaje activo en clase, considerado uno de los métodos más efectivos en educación contemporánea. Los estudiantes que usaron el tutor aprendieron significativamente más en menos tiempo, y reportaron niveles más altos de engagement y motivación. La clave del éxito no estuvo en la tecnología en sí, sino en cómo se implementó: el tutor mantenía al estudiante en el centro del proceso de razonamiento, usaba preguntas socráticas en lugar de respuestas directas, y ajustaba la dificultad en tiempo real sin resolver los problemas por el alumno.
+
+<div class="chart-container">
+    <div class="chart-title">Ganancias de aprendizaje según el diseño de la IA (Fuente: Kestin et al., Scientific Reports 2025)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico3"></canvas>
+    </div>
+</div>
+
+Resultados similares aparecieron en contextos muy diferentes. Un estudio del Banco Mundial en Nigeria demostró que cuando la IA se usaba para asistir a tutores humanos en lugar de reemplazarlos, los mayores beneficios se concentraban precisamente en los estudiantes con menos apoyo previo [[56]]. Los tutores de menor experiencia mejoraron su efectividad cuando recibían recomendaciones validadas por IA sobre cómo guiar a cada estudiante. En este caso, la tecnología no competía con el humano, sino que amplificaba sus capacidades.
+
+Esta distinción es crucial para cualquier estrategia de producto. La evidencia sugiere que la IA educativa más efectiva no es la que elimina fricciones, sino la que las diseña estratégicamente. Los tutoriales que fuerzan al estudiante a intentar resolver un problema antes de recibir ayuda, que le piden explicar su razonamiento, o que usan la mayéutica en lugar de la entrega directa de respuestas, consistently superan a las interfaces conversacionales sin restricciones.
+
+## La crisis de la detección
+
+Mientras los investigadores debatían sobre el impacto cognitivo, las instituciones educativas enfrentaban una crisis paralela: ¿cómo distinguir el trabajo original del generado por IA? La respuesta inicial fue tecnológica. Empresas como Turnitin y Originality lanzaron detectores automáticos que prometían identificar texto generado por modelos de lenguaje con precisión casi perfecta.
+
+La realidad ha sido mucho menos halagüeña. Un estudio publicado en 2026 en el *International Journal for Educational Integrity* evaluó sistemáticamente estos detectores en contextos académicos reales [[25]]. Los resultados fueron demoledores. El detector Originality, considerado uno de los mejores del mercado, tuvo una precisión general del 69%. Turnitin alcanzó apenas el 61%. Ambos sistemas fallaron especialmente con textos de autoría mixta, donde humanos habían editado o parafraseado contenido generado por IA.
+
+<div class="chart-container">
+    <div class="chart-title">Precisión de los principales detectores de texto IA (Fuente: Hadra et al., IJEI 2026)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico4"></canvas>
+    </div>
+</div>
+
+Un error del 30-40% significa que uno de cada tres juicios de integridad académica basados únicamente en estos detectores podría estar equivocado. En un contexto donde las consecuencias incluyen suspensiones, expulsiones o daños reputacionales permanentes, esta tasa de error es inaceptable. Las propias empresas han reconocido públicamente que sus herramientas no deben usarse como veredictos definitivos, sino como señales que requieren investigación humana adicional [[28]].
+
+El problema de fondo es arquitectónico. Los detectores actuales analizan patrones estadísticos en el texto, pero la IA moderna puede generar variaciones estilísticas casi indistinguibles de la escritura humana. Además, herramientas como paraphrasers y traductores automáticos crean capas adicionales de transformación que confunden los algoritmos. La carrera entre generadores y detectores tiene una asimetría fundamental: es mucho más fácil producir texto variado que detectar todas sus posibles formas.
+
+## Adopción masiva, disciplina disparada
+
+Mientras la tecnología de detección fallaba, la adopción estudiantil se aceleraba a velocidad vertiginosa. En el Reino Unido, la encuesta anual del Higher Education Policy Institute (HEPI) documentó un crecimiento exponencial. En 2024, dos tercios de los estudiantes universitarios usaban IA en alguna forma. Un año después, esa cifra había saltado al 92% [[35]]. El uso específico en tareas evaluadas creció del 53% al 88%, un aumento del 66% en solo doce meses.
+
+Esta adopción masiva tuvo consecuencias disciplinarias inmediatas en otros países. En Suecia, la Autoridad de Educación Superior reportó un aumento dramático en casos de conducta académica incorrecta relacionada con IA [[49]]. Las suspensiones por uso no autorizado de herramientas de IA crecieron de 82 casos en 2023 a 214 en 2024, y alcanzaron 467 en 2025. El patrón sugiere que la velocidad de adopción superó ampliamente la capacidad institucional para establecer políticas claras y mecanismos de evaluación alternativos.
+
+<div class="chart-container">
+    <div class="chart-title">Suspensiones por uso no autorizado de IA en universidades suecas (Fuente: Swedish Higher Education Authority)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico5"></canvas>
+    </div>
+</div>
+
+Para arquitectos de plataformas educativas, esta realidad impone requisitos de diseño específicos. Los sistemas deben poder auditar el proceso de aprendizaje, no solo el producto final. Portafolios digitales que capturen versiones intermedias, registros de tiempo que muestren patrones de trabajo, evaluaciones orales que verifiquen comprensión profunda, y sistemas de autenticación contextual que distingan entre uso permitido y no permitido según el tipo de actividad.
+
+## La retractación que cambió el debate
+
+En medio de este panorama complejo, ocurrió algo que sacudió la credibilidad de parte de la investigación existente. Una meta-análisis ampliamente citada, publicada en *Humanities and Social Sciences Communications* en 2026, afirmaba haber sintetizado los resultados de 35 estudios experimentales con más de 4.000 participantes [[8]]. La conclusión era optimista: ChatGPT tenía un efecto moderadamente positivo sobre el aprendizaje estudiantil.
+
+El estudio fue citado docenas de veces en los meses siguientes y usado como evidencia por defensores de la integración agresiva de IA en educación. Sin embargo, en los meses posteriores, Springer Nature retractó el artículo debido a "preocupaciones sobre la integridad de los datos" [[15]]. Investigadores independientes habían identificado inconsistencias estadísticas y problemas metodológicos que invalidaban las conclusiones.
+
+Este episodio ilustra un problema sistémico en la investigación sobre IA educativa. La presión por publicar resultados novedosos, combinada con la dificultad de realizar estudios longitudinales rigurosos, ha creado un ecosistema donde estudios débiles pueden ganar tracción antes de ser cuestionados. Para tomadores de decisiones institucionales, la lección es clara: la evidencia debe evaluarse por la solidez metodológica de cada estudio individual, no por el número de meta-análisis que lo citen.
+
+<div class="chart-container">
+    <div class="chart-title">Estado actual de la evidencia sobre IA y aprendizaje (2024-2026)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico6"></canvas>
+    </div>
+</div>
+
+Los estudios verdaderamente rigurosos—ensayos controlados aleatorizados con seguimientos prolongados y medidas de aprendizaje reales—pintan un cuadro más matizado. La IA puede ayudar significativamente cuando está bien diseñada, pero puede dañar el aprendizaje cuando se implementa sin considerar los procesos cognitivos fundamentales. No existe una respuesta universal. La efectividad depende del diseño específico, del contexto educativo y de las métricas que se utilicen para medir el éxito.
+
+## Hacia un protocolo verificable
+
+Frente a esta evidencia compleja, emerge un consenso entre investigadores serios: el futuro no está en prohibir la IA ni en abrazarla acríticamente, sino en establecer protocolos verificables que garanticen el aprendizaje genuino. La propuesta más articulada sigue tres principios fundamentales: asistir, explicar y verificar.
+
+Primero, asistir. La IA puede expandir las oportunidades de práctica guiada, proporcionando retroalimentación inmediata y personalización que serían imposibles en aulas masificadas. Pero esta asistencia debe diseñarse para mantener al estudiante cognitivamente activo, usando preguntas en lugar de respuestas y andamiaje en lugar de soluciones completas.
+
+Segundo, explicar. Los estudiantes deben demostrar su comprensión a través de múltiples canales: reflexiones escritas sobre su proceso de aprendizaje, defensas orales de sus razonamientos, y registros que muestren la evolución de su pensamiento. Estos artefactos hacen visible la cadena cognitiva que el producto final por sí solo no revela.
+
+Tercero, verificar. La evaluación debe incluir componentes no asistidos que midan la transferencia real del aprendizaje. Problemas que requieran aplicar conceptos en contextos nuevos, sin acceso a herramientas externas, siguen siendo el gold standard para determinar si el conocimiento se consolidó genuinamente o solo se simuló temporalmente.
+
+## Conclusión: diseño como responsabilidad ética
+
+La evidencia acumulada durante los últimos dos años apunta a una conclusión ineludible para quienes construimos productos educativos. La arquitectura de una herramienta de IA educativa no es neutral. Cada decisión de diseño—cuándo ofrecer ayuda, cómo formular las preguntas, qué métricas optimizar—tiene consecuencias medibles sobre el aprendizaje real de las personas que la usan.
+
+Los modelos de lenguaje han llegado para quedarse en la educación. La pregunta ya no es si debemos integrarlos, sino cómo hacerlo de manera responsable. La investigación sugiere que las herramientas más efectivas son aquellas que resisten la tentación de eliminar todas las fricciones cognitivas, y en cambio diseñan experiencias que respeten los procesos fundamentales del aprendizaje humano.
+
+Para CTOs y arquitectos de producto, el mandato es claro: construir sistemas que hagan el pensamiento visible, que privilegien el aprendizaje a largo plazo sobre el engagement inmediato, y que reconozcan honestamente las limitaciones de las tecnologías actuales de detección y verificación. La próxima generación de herramientas educativas no se distinguirá por cuán avanzada sea su IA, sino por cuán profundamente comprenda la naturaleza del aprendizaje humano.
+
+### Fuentes y Créditos
+
+Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
+
+- [Hanademi - AI Learning Solutions: High-Optimized Evidence Review](https://hanademi.com/decks/ai-learning-sol-high-optimized-20260711/es/)
+- [Bastani et al. - Generative AI without guardrails can harm learning (PNAS 2025)](https://www.pnas.org/doi/10.1073/pnas.2422633122)
+- [Barcaui - ChatGPT as a cognitive crutch (Social Sciences & Humanities Open 2025)](https://www.sciencedirect.com/science/article/pii/S2590291125010186)
+- [Kestin et al. - AI tutoring outperforms in-class active learning (Scientific Reports 2025)](https://www.nature.com/articles/s41598-025-97652-6)
+- [Hadra et al. - Evaluating AI content detectors accuracy (IJEI 2026)](https://link.springer.com/article/10.1007/s40979-026-00213-1)
+- [Freeman - Student Generative AI Survey 2025 (HEPI)](https://www.hepi.ac.uk/reports/student-generative-ai-survey-2025/)
+- [Swedish Higher Education Authority - Disciplinary cases involving AI 2024-2025](https://universitetslararen.se/2025/12/11/ai-cheats-more-than-doubled/)
+- [Contractor & Reyes - Experimental evidence on AI learning impact (Middlebury 2026)](https://docs.iza.org/dp18792.pdf)
+- [Wu et al. - ChatGPT meta-analysis (Retracted - Nature Humanities and Social Sciences Communications 2026)](https://www.nature.com/articles/s41599-026-07019-z)
+- [Ars Technica - Influential ChatGPT education study retracted](https://arstechnica.com/ai/2026/05/influential-study-touting-chatgpt-in-education-retracted-over-red-flags/)
+
+<script>
+    document.addEventListener('astro:page-load', () => {
+        const styles = getComputedStyle(document.documentElement);
+        const textColor = styles.getPropertyValue('--text-muted').trim();
+        const gridColor = styles.getPropertyValue('--chart-grid').trim();
+        const surfaceColor = styles.getPropertyValue('--surface').trim();
+        
+        const color1 = styles.getPropertyValue('--chart-1').trim();
+        const color2 = styles.getPropertyValue('--chart-2').trim();
+        const color3 = styles.getPropertyValue('--chart-3').trim();
+        const color4 = styles.getPropertyValue('--chart-4').trim();
+
+        const premiumTooltip = {
+            backgroundColor: surfaceColor,
+            titleColor: textColor,
+            bodyColor: textColor,
+            borderColor: gridColor,
+            borderWidth: 1,
+            padding: 12,
+            cornerRadius: 8,
+            displayColors: true
+        };
+
+        // Gráfico 1: Comparación de rendimiento según tipo de uso
+        const ctx1 = document.getElementById('grafico1');
+        if (ctx1) {
+            new Chart(ctx1, {
+                type: 'bar',
+                data: { 
+                    labels: ['Fase de Práctica', 'Examen sin Ayuda'],
+                    datasets: [
+                        {
+                            label: 'Chatbot Básico',
+                            data: [48, -17],
+                            backgroundColor: color2,
+                            borderColor: color2,
+                            borderWidth: 1,
+                            borderRadius: 4
+                        },
+                        {
+                            label: 'Tutor Guiado',
+                            data: [127, 8],
+                            backgroundColor: color1,
+                            borderColor: color1,
+                            borderWidth: 1,
+                            borderRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { 
+                            display: true,
+                            position: 'bottom',
+                            labels: { color: textColor, usePointStyle: true, padding: 20 } 
+                        },
+                        tooltip: premiumTooltip
+                    },
+                    scales: { 
+                        x: { ticks: { color: textColor }, grid: { display: false } }, 
+                        y: { 
+                            ticks: { 
+                                color: textColor,
+                                callback: function(value) { return value + '%'; }
+                            }, 
+                            grid: { color: gridColor }, 
+                            beginAtZero: false 
+                        } 
+                    }
+                }
+            });
+        }
+
+        // Gráfico 2: Retención a lo largo del tiempo
+        const ctx2 = document.getElementById('grafico2');
+        if (ctx2) {
+            new Chart(ctx2, {
+                type: 'line',
+                data: { 
+                    labels: ['Inmediato', '1 Semana', '45 Días'],
+                    datasets: [
+                        {
+                            label: 'Estudio Tradicional',
+                            data: [75, 72, 68.5],
+                            borderColor: color1,
+                            backgroundColor: color1 + '22',
+                            tension: 0.3,
+                            pointRadius: 4,
+                            fill: true
+                        },
+                        {
+                            label: 'Con ChatGPT',
+                            data: [74, 66, 57.5],
+                            borderColor: color2,
+                            backgroundColor: color2 + '22',
+                            tension: 0.3,
+                            pointRadius: 4,
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { 
+                            display: true,
+                            position: 'bottom',
+                            labels: { color: textColor, usePointStyle: true, padding: 20 } 
+                        },
+                        tooltip: premiumTooltip
+                    },
+                    scales: { 
+                        x: { ticks: { color: textColor }, grid: { display: false } }, 
+                        y: { 
+                            ticks: { 
+                                color: textColor,
+                                callback: function(value) { return value + '%'; }
+                            }, 
+                            grid: { color: gridColor }, 
+                            beginAtZero: false,
+                            min: 50,
+                            max: 80
+                        } 
+                    }
+                }
+            });
+        }
+
+        // Gráfico 3: Ganancias de aprendizaje según diseño
+        const ctx3 = document.getElementById('grafico3');
+        if (ctx3) {
+            new Chart(ctx3, {
+                type: 'bar',
+                data: { 
+                    labels: ['Tutor IA (Harvard)', 'Tutor IA (Nigeria)', 'Aprendizaje Activo Clase', 'Chatbot Básico'],
+                    datasets: [{
+                        label: 'Ganancia de Aprendizaje (Efecto Normalizado)',
+                        data: [2.1, 1.8, 1.0, 0.5],
+                        backgroundColor: [color1, color2, color3, color4],
+                        borderColor: [color1, color2, color3, color4],
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { 
+                            display: false
+                        },
+                        tooltip: premiumTooltip
+                    },
+                    scales: { 
+                        x: { 
+                            ticks: { color: textColor }, 
+                            grid: { color: gridColor },
+                            beginAtZero: true
+                        }, 
+                        y: { 
+                            ticks: { color: textColor }, 
+                            grid: { display: false }
+                        } 
+                    }
+                }
+            });
+        }
+
+        // Gráfico 4: Precisión de detectores
+        const ctx4 = document.getElementById('grafico4');
+        if (ctx4) {
+            new Chart(ctx4, {
+                type: 'doughnut',
+                data: { 
+                    labels: ['Originality - Aciertos', 'Originality - Errores', 'Turnitin - Aciertos', 'Turnitin - Errores'],
+                    datasets: [{
+                        data: [69, 31, 61, 39],
+                        backgroundColor: [color1, color2, color3, color4],
+                        borderColor: surfaceColor,
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { 
+                            display: true,
+                            position: 'bottom',
+                            labels: { color: textColor, usePointStyle: true, padding: 20 } 
+                        },
+                        tooltip: {
+                            ...premiumTooltip,
+                            callbacks: {
+                                label: function(context) {
+                                    return context.label + ': ' + context.parsed + '%';
+                                }
+                            }
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+        }
+
+        // Gráfico 5: Casos disciplinarios Suecia
+        const ctx5 = document.getElementById('grafico5');
+        if (ctx5) {
+            new Chart(ctx5, {
+                type: 'line',
+                data: { 
+                    labels: ['2023', '2024', '2025'],
+                    datasets: [{
+                        label: 'Suspensiones por IA',
+                        data: [82, 214, 467],
+                        borderColor: color1,
+                        backgroundColor: color1 + '22',
+                        tension: 0.3,
+                        pointRadius: 6,
+                        pointHoverRadius: 8,
+                        fill: true
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { 
+                            display: false
+                        },
+                        tooltip: premiumTooltip
+                    },
+                    scales: { 
+                        x: { ticks: { color: textColor }, grid: { display: false } }, 
+                        y: { 
+                            ticks: { color: textColor }, 
+                            grid: { color: gridColor }, 
+                            beginAtZero: true
+                        } 
+                    }
+                }
+            });
+        }
+
+        // Gráfico 6: Estado de la evidencia
+        const ctx6 = document.getElementById('grafico6');
+        if (ctx6) {
+            new Chart(ctx6, {
+                type: 'radar',
+                data: {
+                    labels: ['Diseño Guiado', 'Tutoría Humana+IA', 'Chatbot Básico', 'Uso Sin Restricciones', 'Solo Detección'],
+                    datasets: [
+                        {
+                            label: 'Efectividad para Aprendizaje',
+                            data: [95, 85, 45, 30, 40],
+                            borderColor: color1,
+                            backgroundColor: color1 + '33',
+                            pointRadius: 4
+                        },
+                        {
+                            label: 'Adopción Actual',
+                            data: [35, 50, 80, 90, 75],
+                            borderColor: color2,
+                            backgroundColor: color2 + '33',
+                            pointRadius: 4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { 
+                            display: true,
+                            position: 'bottom',
+                            labels: { color: textColor, usePointStyle: true, padding: 20 } 
+                        },
+                        tooltip: premiumTooltip
+                    },
+                    scales: {
+                        r: {
+                            ticks: { 
+                                color: textColor,
+                                backdropColor: 'transparent'
+                            },
+                            grid: { color: gridColor },
+                            pointLabels: { color: textColor },
+                            angleLines: { color: gridColor },
+                            beginAtZero: true,
+                            max: 100
+                        }
+                    }
+                }
+            });
+        }
+    });
+</script>
