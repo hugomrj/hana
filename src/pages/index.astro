@@ -26,6 +26,8 @@ const archiveArticles = sortedArticles.slice(7); // El resto en la lista compact
             </section>
         )}
 
+
+
         <!-- Grid de artículos recientes -->
         <section class="news-grid-wrapper" id="article-grid">
             <div class="news-grid">
@@ -44,7 +46,14 @@ const archiveArticles = sortedArticles.slice(7); // El resto en la lista compact
                     </a>
                 ))}
             </div>
+            
+            <!-- Botón para ver el archivo -->
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="/hana/archivo" class="read-more" style="font-size: 1.1rem;">Ver archivo completo →</a>
+            </div>
         </section>
+
+
 
         <!-- Sección de Archivo Compacta -->
         {archiveArticles.length > 0 && (

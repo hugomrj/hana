@@ -8,10 +8,10 @@ const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date
 <BaseLayout title="Archivo" description="Todos los análisis de hana">
     <main class="newsroom-container" style="max-width: 800px;">
         
-        <!-- Cabecera de la página -->
+        <!-- Cabecera -->
         <div class="section-header" style="margin-bottom: 2rem; text-align: center;">
             <h1 class="section-title" style="font-size: 2.5rem;">Archivo</h1>
-            <p class="section-subtitle">{sortedArticles.length} análisis publicados hasta la fecha</p>
+            <p class="section-subtitle">{sortedArticles.length} análisis publicados</p>
         </div>
 
         <!-- Barra de Búsqueda -->
@@ -35,11 +35,11 @@ const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date
         </div>
 
         <!-- Mensaje si no hay resultados -->
-        <p id="no-results" style="display: none; text-align: center; color: var(--text-muted); padding: 2rem 0;">No se encontraron artículos para tu búsqueda.</p>
+        <p id="no-results" style="display: none; text-align: center; color: var(--text-muted); padding: 2rem 0;">No se encontraron artículos.</p>
 
     </main>
 
-    <!-- Script para filtrar la lista -->
+    <!-- Script para filtrar -->
     <script is:inline>
         document.addEventListener('DOMContentLoaded', () => {
             const searchInput = document.getElementById('archive-search');
@@ -47,7 +47,6 @@ const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date
             const items = archiveList.querySelectorAll('.archive-item');
             const noResults = document.getElementById('no-results');
 
-            // Función para filtrar
             function filterItems(query) {
                 let visibleCount = 0;
                 items.forEach(item => {
@@ -72,12 +71,11 @@ const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date
                 }
             }
 
-            // Escuchar cuando el usuario escribe en el archivo
             searchInput.addEventListener('input', (e) => {
                 filterItems(e.target.value.toLowerCase());
             });
 
-            // Leer si viene de una búsqueda en la navbar (URL ?q=)
+            // Leer si viene de una búsqueda en la navbar (?q=)
             const urlParams = new URLSearchParams(window.location.search);
             const queryParam = urlParams.get('q');
             if (queryParam) {
@@ -86,8 +84,4 @@ const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date
             }
         });
     </script>
-
-
-
-
 </BaseLayout>
