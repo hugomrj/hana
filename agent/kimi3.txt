@@ -14,15 +14,19 @@ Aquí tienes los requisitos obligatorios:
 2. ESTRUCTURA, NARRATIVA Y EXTENSIÓN:
 - No escribas una lista de diapositivas. Escribe un ARTÍCULO fluido con introducción, desarrollo y conclusión.
 - Usa un tono técnico pero accesible (para perfiles de arquitectos, CTOs y desarrolladores).
-- EXTENSIÓN OBLIGATORIA: El artículo debe tener un MÍNIMO de 1200 palabras. Si al terminar el borrador tienes menos, amplía las secciones con más datos verificados, ejemplos de la industria, contexto histórico y análisis técnico adicional. No resumas, profundiza.
-
-
-
-
-
+- REGLA ANTI-ABURRIMIENTO (MUY IMPORTANTE): Evita las "listas de la compra" de números y porcentajes en el texto. Los datos fríos (cifras exactas, montos, años) deben vivir en los GRÁFICOS. El texto debe usarse para explicar el *porqué*, el contexto y el impacto de esos datos, no para repetirlos. Escribe de forma narrativa y atractiva. Si mencionas un número en el texto, úsalo para dar impacto, no para amontonar estadísticas.
+- EXTENSIÓN OBLIGATORIA: El artículo debe tener un MÍNIMO de 1200 palabras. Si al terminar el borrador tienes menos, amplía las secciones con más contexto, ejemplos de la industria y análisis técnico, NO añadiendo más números.
 
 3. VISUALIZACIÓN DE DATOS (CON CHART.JS):
 - Debes recrear los gráficos del deck usando Chart.js.
+- AMPLIACIÓN VISUAL: Visita y analiza la librería de ejemplos de Chart.js (https://www.chartjs.org/docs/latest/samples/information.html) para inspirarte. No te limites a gráficos de barras simples. Si los datos lo permiten, utiliza gráficos de líneas con múltiples ejes, barras apiladas (stacked), radar, scatter, o doughnuts.
+- REGLAS CRÍTICAS DE SENTIDO COMÚN GRÁFICO (¡CUMPLIR OBLIGATORIAMENTE!):
+  1. EVOLUCIÓN TEMPORAL: Si el dato muestra cambios en el tiempo (ej. 2018, 2020, 2025), DEBES usar type: 'line'.
+  2. PROPORCIONES: Si el dato es un porcentaje o parte de un total, DEBES usar type: 'doughnut'.
+  3. COMPARACIÓN: Si comparas 2 o más categorías, USA type: 'bar'.
+  4. PROHIBIDO BARRAS DE 1 ELEMENTO: NUNCA hagas un gráfico 'bar' con un solo dato. Si solo hay un número aislado sin con quién compararlo, OMITE el gráfico (escribe el dato en el texto) o usa 'doughnut' si representa un porcentaje (ej. 40% vs 60%).
+  5. VARIEDAD: Exige variedad visual. No hagas todos los gráficos de barras. Analiza el deck original y replica su lógica visual.
+
 - En el Markdown, inserta directamente este HTML donde corresponda un gráfico (respetando las clases y los saltos de línea):
 <div class="chart-container">
     <div class="chart-title">Título del gráfico y fuente</div>
@@ -60,7 +64,7 @@ Aquí tienes los requisitos obligatorios:
         const ctx1 = document.getElementById('grafico1');
         if (ctx1) {
             new Chart(ctx1, {
-                type: 'bar', // o line, doughnut, radar, scatter, etc.
+                type: 'line', // ELIGE SEGÚN LAS REGLAS (line, bar, doughnut, radar, scatter, bubble, etc.)
                 data: { 
                     /* datos verificados */,
                     datasets: [{
@@ -105,11 +109,6 @@ Aquí tienes los requisitos obligatorios:
     });
 </script>
 
-
-
-
-
-
 4. CRÉDITOS Y FUENTES:
 - Al final del artículo, incluye una sección con el subtítulo "## Fuentes y Créditos".
 - Debes mencionar explícitamente: "Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original."
@@ -119,8 +118,9 @@ Aquí tienes los requisitos obligatorios:
 - Genera un "slug" corto, descriptivo y sin acentos para el nombre del archivo.
 - Tu respuesta debe tener exactamente esta estructura:
   1. La primera línea de texto debe ser: `Nombre del archivo: [slug-generado].md`
-  2. Una línea en blanco.
-  3. El bloque de código Markdown con el artículo, usando ```markdown al inicio y ``` al final.
+  2. La segunda línea de texto debe ser: `URL Procesada: [URL_PROPORCIONADA]` (Esto es para mi registro interno).
+  3. Una línea en blanco.
+  4. El bloque de código Markdown con el artículo, usando ```markdown al inicio y ``` al final.
 - NO escribas explicaciones adicionales, introducciones ni conclusiones ni antes ni después del bloque de código.
 - Asegúrate de usar `##` para todos los subtítulos dentro del texto.
 
@@ -135,6 +135,7 @@ REGLA CRÍTICA DE ASTRO (NO ROMPER EL SITIO):
 
 Ejemplo exacto de cómo debe ser tu respuesta:
 Nombre del archivo: slug-generado.md
+URL Procesada: https://hanademi.com/decks/ejemplo
 
 ```markdown
 ---
@@ -146,7 +147,6 @@ etiquetas: ["Etiqueta1", "Etiqueta2", "Etiqueta3"]
 link_original: "URL_PROPORCIONADA"
 ---
 
-
 (Introducción del artículo en su propio párrafo)
 
 ## (Subtítulo en Markdown con ##)
@@ -156,6 +156,7 @@ link_original: "URL_PROPORCIONADA"
 ## Fuentes y Créditos
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 
+- [Hanademi - Título del deck](URL_PROPORCIONADA)
 - [Fuente 1](url)
 - [Fuente 2](url)
 

@@ -1,0 +1,69 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('blog');
+const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date(a.data.fecha));
+
+// Lógica para detectar enlaces duplicados
+const linkCounts = {};
+sortedArticles.forEach(art => {
+    if (art.data.link_original) {
+        if (!linkCounts[art.data.link_original]) {
+            linkCounts[art.data.link_original] = [];
+        }
+        linkCounts[art.data.link_original].push(art.data.titulo);
+    }
+});
+
+const duplicates = Object.entries(linkCounts).filter(([link, titles]) => titles.length > 1);
+---
+<BaseLayout title="Base de Datos" description="Panel interno">
+    <main class="newsroom-container" style="max-width: 900px; margin: 4rem auto;">
+        <h1 class="section-title" style="font-size: 2rem; margin-bottom: 2rem;">Base de Publicaciones</h1>
+        
+        {/* Alerta de Duplicados */}
+        {duplicates.length > 0 ? (
+            <div style="background: var(--accent-light); border: 1px solid var(--accent); color: var(--accent); padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                <strong>⚠️ ALERTA DE DUPLICADOS</strong>
+                <p style="margin-top: 0.5rem;">Se encontraron enlaces originales repetidos:</p>
+                <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                    {duplicates.map(([link, titles]) => (
+                        <li style="margin-bottom: 0.5rem;">
+                            <a href={link} target="_blank" style="color: var(--accent);">{link}</a> está en:
+                            <strong> {titles.join(" | ")}</strong>
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        ) : (
+            <div style="background: #f0fdf4; border: 1px solid #22c55e; color: #166534; padding: 1.5rem; border-radius: 8px; margin-bottom: 2rem;">
+                <strong>✅ SIN DUPLICADOS</strong>
+                <p style="margin-top: 0.5rem;">Todos los enlaces originales son únicos.</p>
+            </div>
+        )}
+
+        {/* Historial */}
+        <h2 class="section-title" style="font-size: 1.5rem;">Historial ({sortedArticles.length} artículos)</h2>
+        <div class="archive-list">
+            {sortedArticles.map(art => (
+                <div class="archive-item" style="text-decoration: none; color: var(--text);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <span class="kicker">{art.data.categoria}</span>
+                            <h3 style="font-size: 1.2rem; margin: 0.25rem 0;">{art.data.titulo}</h3>
+                        </div>
+                        <div style="font-size: 0.85rem; color: var(--text-muted); text-align: right;">
+                            <div>{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</div>
+                            {art.data.link_original ? (
+                                <a href={art.data.link_original} target="_blank" style="font-size: 0.75rem; color: var(--accent);">Ver original ↗</a>
+                            ) : (
+                                <span style="font-size: 0.75rem; color: var(--text-muted);">(Sin link)</span>
+                            )}
+                        </div>
+                    </div>
+                </div>
+            ))}
+        </div>
+    </main>
+</BaseLayout>

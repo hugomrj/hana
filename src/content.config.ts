@@ -9,6 +9,7 @@ const blog = defineCollection({
     fecha: z.string(),
     categoria: z.string(),
     etiquetas: z.array(z.string()),
+    link_original: z.string().url().optional(), // <-- AÑADE ESTA LÍNEA
   }),
 });
 
