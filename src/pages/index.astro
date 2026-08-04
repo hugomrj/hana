@@ -16,12 +16,14 @@ const archiveArticles = sortedArticles.slice(7); // El resto en la lista compact
                     <span class="kicker">{heroArticle.data.categoria}</span>
                     <h1><a href={`/hana/articulos/${heroArticle.id}`}>{heroArticle.data.titulo}</a></h1>
                     <p class="hero-extracto">{heroArticle.data.extracto}</p>
+
+
                     <div class="hero-meta">
                         <span>{new Date(heroArticle.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                        <span class="dot">•</span>
-                        <span>{heroArticle.data.tiempo_lectura} de lectura</span>
                         <a href={`/hana/articulos/${heroArticle.id}`} class="read-more">Leer análisis completo →</a>
                     </div>
+
+
                 </div>
             </section>
         )}
@@ -38,11 +40,14 @@ const archiveArticles = sortedArticles.slice(7); // El resto en la lista compact
                         </div>
                         <h3>{art.data.titulo}</h3>
                         <p>{art.data.extracto}</p>
+
+
                         <div class="byline">
                             <span>{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
-                            <span class="dot">•</span>
-                            <span>{art.data.tiempo_lectura}</span>
                         </div>
+
+
+
                     </a>
                 ))}
             </div>

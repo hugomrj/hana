@@ -7,7 +7,6 @@ const blog = defineCollection({
     titulo: z.string(),
     extracto: z.string(),
     fecha: z.string(),
-    tiempo_lectura: z.string(),
     categoria: z.string(),
     etiquetas: z.array(z.string()),
   }),

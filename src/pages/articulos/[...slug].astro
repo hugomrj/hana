@@ -28,13 +28,13 @@ const suggestedArticles = allArticles
             <div class="article-hero">
                 <span class="kicker">{article.data.categoria}</span>
                 <h1>{article.data.titulo}</h1>
+
+
                 <div class="byline">
-                    <div class="author">Por <strong>hana</strong></div>
-                    <span class="dot">•</span>
                     <span>{new Date(article.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-                    <span class="dot">•</span>
-                    <span>{article.data.tiempo_lectura} de lectura</span>
                 </div>
+
+
             </div>
             
             <div class="article-content">
