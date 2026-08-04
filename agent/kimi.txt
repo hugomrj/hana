@@ -16,11 +16,6 @@ Aquí tienes los requisitos obligatorios:
 - Usa un tono técnico pero accesible (para perfiles de arquitectos, CTOs y desarrolladores).
 - EXTENSIÓN OBLIGATORIA: El artículo debe tener un MÍNIMO de 1200 palabras. Si al terminar el borrador tienes menos, amplía las secciones con más datos verificados, ejemplos de la industria, contexto histórico y análisis técnico adicional. No resumas, profundiza.
 
-
-
-
-
-
 3. VISUALIZACIÓN DE DATOS (CON CHART.JS):
 - Debes recrear los gráficos del deck usando Chart.js.
 - En el Markdown, inserta directamente este HTML donde corresponda un gráfico (respetando las clases y los saltos de línea):
@@ -30,52 +25,34 @@ Aquí tienes los requisitos obligatorios:
         <canvas id="graficoN"></canvas>
     </div>
 </div>
-- Al final del archivo Markdown, inserta UN ÚNICO bloque `<script>` con la configuración de todos los gráficos. ES OBLIGATORIO leer los colores del CSS del sitio usando este patrón exacto para que los gráficos se vean bien en modo claro y oscuro:
+- Al final del archivo Markdown, inserta un script con la configuración de Chart.js. ES OBLIGATORIO leer los colores del CSS del sitio usando este patrón exacto para que los gráficos se vean bien en modo claro y oscuro:
 <script>
     document.addEventListener('astro:page-load', () => {
-        const styles = getComputedStyle(document.documentElement);
-        const textColor = styles.getPropertyValue('--text-muted').trim();
-        const gridColor = styles.getPropertyValue('--chart-grid').trim();
-        const surfaceColor = styles.getPropertyValue('--surface').trim();
-        
-        // Colores para datasets (usar en orden si hay múltiples)
-        const color1 = styles.getPropertyValue('--chart-1').trim();
-        const color2 = styles.getPropertyValue('--chart-2').trim();
-        const color3 = styles.getPropertyValue('--chart-3').trim();
-        const color4 = styles.getPropertyValue('--chart-4').trim();
+        const ctx = document.getElementById('graficoN');
+        if (ctx) {
+            const styles = getComputedStyle(document.documentElement);
+            const textColor = styles.getPropertyValue('--text-muted').trim();
+            const gridColor = styles.getPropertyValue('--chart-grid').trim();
+            
+            // Colores para datasets
+            const color1 = styles.getPropertyValue('--chart-1').trim();
+            const color2 = styles.getPropertyValue('--chart-2').trim();
+            const color3 = styles.getPropertyValue('--chart-3').trim();
+            const color4 = styles.getPropertyValue('--chart-4').trim();
 
-        // Configuración global de Tooltips para que se vean premium
-        const premiumTooltip = {
-            backgroundColor: surfaceColor,
-            titleColor: textColor,
-            bodyColor: textColor,
-            borderColor: gridColor,
-            borderWidth: 1,
-            padding: 12,
-            cornerRadius: 8,
-            displayColors: true
-        };
-
-        // Ejemplo de configuración para el Gráfico 1
-        const ctx1 = document.getElementById('grafico1');
-        if (ctx1) {
-            new Chart(ctx1, {
-                type: 'bar', // o line, doughnut, radar, scatter, etc.
+            new Chart(ctx, {
+                type: 'bar', // o line, doughnut, etc.
                 data: { 
                     /* datos verificados */,
                     datasets: [{
-                        // REGLAS DE ESTILO (SEGÚN EL TIPO DE GRÁFICO):
-                        // 1. Bar (Vertical): usa color1 puro. borderRadius: 4.
-                        // 2. Bar (Horizontal): añade indexAxis: 'y' en options. borderRadius: 4.
-                        // 3. Line: usa borderColor: color1, tension: 0.3, pointRadius: 4, fill: true, backgroundColor: color1 + '22' (relleno sutil).
-                        // 4. Doughnut: usa un array de colores [color1, color2, color3, color4], cutout: '60%', y borderColor: surfaceColor.
-                        // 5. Radar: usa color1 para borderColor y color1 + '33' para backgroundColor. pointRadius: 4.
-                        // 6. Scatter: usa backgroundColor: color1, pointRadius: 6, borderColor: surfaceColor, borderWidth: 2.
-                        // 7. NUNCA uses opacidades aleatorias (no añadas '77' o 'aa' al hex), excepto el relleno '22' o '33' indicado.
-                        backgroundColor: color1, 
+                        // REGLAS DE ESTILO:
+                        // 1. Si es un solo dataset (ej. barras simples), usa color1 puro. NO uses opacidades aleatorias (no añadas '77' o 'aa' al hex).
+                        // 2. Si hay múltiples datasets (ej. comparar 2 años), usa color1 para el primero, color2 para el segundo, etc.
+                        // 3. Si es un gráfico de líneas (line), usa color1 para el borderColor, fill: false, tension: 0.3, y pointRadius: 5.
+                        backgroundColor: color1, // Ejemplo para barras simples
                         borderColor: color1,
                         borderWidth: 1,
-                        borderRadius: 4
+                        borderRadius: 4 // Siempre añade borderRadius: 4 para barras
                     }]
                 },
                 options: {
@@ -84,31 +61,18 @@ Aquí tienes los requisitos obligatorios:
                     plugins: { 
                         legend: { 
                             display: false, // Falso si hay 1 solo dataset. Verdadero si hay múltiples.
-                            position: 'bottom', // Siempre abajo para mejor responsive
-                            labels: { color: textColor, usePointStyle: true, padding: 20 } 
-                        },
-                        tooltip: premiumTooltip // Siempre usar el tooltip premium
+                            labels: { color: textColor } 
+                        } 
                     },
                     scales: { 
-                        x: { ticks: { color: textColor }, grid: { display: false } }, 
+                        x: { ticks: { color: textColor }, grid: { display: false } }, // En ejes X, oculta las líneas verticales para que se vea más limpio
                         y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true } 
                     }
                 }
             });
         }
-
-        // Configuración para el Gráfico 2 (si existe)
-        const ctx2 = document.getElementById('grafico2');
-        if (ctx2) {
-            // ... mismo patrón
-        }
     });
 </script>
-
-
-
-
-
 
 4. CRÉDITOS Y FUENTES:
 - Al final del artículo, incluye una sección con el subtítulo "## Fuentes y Créditos".

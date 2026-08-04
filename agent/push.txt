@@ -3,3 +3,8 @@ bun run build
 git add .
 git commit -m "Feat: mensaje definido por la ia"
 git push
+
+
+compila y sube a git, define el mensaje
+si hay errores detenlo y avisame
+
