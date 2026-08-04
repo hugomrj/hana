@@ -7,24 +7,87 @@ const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date
 ---
 <BaseLayout title="Archivo" description="Todos los análisis de hana">
     <main class="newsroom-container" style="max-width: 800px;">
-        <section class="news-grid-wrapper">
-            <div class="section-header" style="margin-bottom: 2rem;">
-                <h2 class="section-title">Archivo</h2>
-                <p class="section-subtitle">{sortedArticles.length} análisis publicados</p>
-            </div>
-            
-            <div class="archive-list">
-                {sortedArticles.map(art => (
-                    <a href={`/hana/articulos/${art.id}`} class="archive-item">
-                        <div class="archive-meta">
-                            <span class="archive-date">{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
-                            <span class="kicker">{art.data.categoria}</span>
-                        </div>
-                        <h3>{art.data.titulo}</h3>
-                        <p>{art.data.extracto}</p>
-                    </a>
-                ))}
-            </div>
-        </section>
+        
+        <!-- Cabecera de la página -->
+        <div class="section-header" style="margin-bottom: 2rem; text-align: center;">
+            <h1 class="section-title" style="font-size: 2.5rem;">Archivo</h1>
+            <p class="section-subtitle">{sortedArticles.length} análisis publicados hasta la fecha</p>
+        </div>
+
+        <!-- Barra de Búsqueda -->
+        <div class="search-container" style="margin-bottom: 3rem;">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            <input type="text" id="archive-search" class="search-input" placeholder="Buscar por título, categoría o etiqueta..." />
+        </div>
+
+        <!-- Lista de Artículos -->
+        <div class="archive-list" id="archive-list">
+            {sortedArticles.map(art => (
+                <a href={`/hana/articulos/${art.id}`} class="archive-item" data-title={art.data.titulo} data-category={art.data.categoria} data-tags={art.data.etiquetas.join(', ')}>
+                    <div class="archive-meta">
+                        <span class="archive-date">{new Date(art.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
+                        <span class="kicker">{art.data.categoria}</span>
+                    </div>
+                    <h3>{art.data.titulo}</h3>
+                    <p>{art.data.extracto}</p>
+                </a>
+            ))}
+        </div>
+
+        <!-- Mensaje si no hay resultados -->
+        <p id="no-results" style="display: none; text-align: center; color: var(--text-muted); padding: 2rem 0;">No se encontraron artículos para tu búsqueda.</p>
+
     </main>
+
+    <!-- Script para filtrar la lista -->
+    <script is:inline>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('archive-search');
+            const archiveList = document.getElementById('archive-list');
+            const items = archiveList.querySelectorAll('.archive-item');
+            const noResults = document.getElementById('no-results');
+
+            // Función para filtrar
+            function filterItems(query) {
+                let visibleCount = 0;
+                items.forEach(item => {
+                    const title = item.getAttribute('data-title').toLowerCase();
+                    const category = item.getAttribute('data-category').toLowerCase();
+                    const tags = item.getAttribute('data-tags').toLowerCase();
+                    
+                    if (title.includes(query) || category.includes(query) || tags.includes(query)) {
+                        item.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                if (visibleCount === 0) {
+                    noResults.style.display = 'block';
+                    archiveList.style.display = 'none';
+                } else {
+                    noResults.style.display = 'none';
+                    archiveList.style.display = 'flex';
+                }
+            }
+
+            // Escuchar cuando el usuario escribe en el archivo
+            searchInput.addEventListener('input', (e) => {
+                filterItems(e.target.value.toLowerCase());
+            });
+
+            // Leer si viene de una búsqueda en la navbar (URL ?q=)
+            const urlParams = new URLSearchParams(window.location.search);
+            const queryParam = urlParams.get('q');
+            if (queryParam) {
+                searchInput.value = queryParam;
+                filterItems(queryParam.toLowerCase());
+            }
+        });
+    </script>
+
+
+
+
 </BaseLayout>

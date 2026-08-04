@@ -386,3 +386,49 @@ article p { font-size: clamp(1.1rem, 0.2vw + 1rem, 1.25rem); line-height: 1.8; }
     color: var(--text-muted);
     font-family: 'SF Mono', monospace; /* Toque técnico */
 }
+
+
+/* === Búsqueda en Navbar === */
+.nav-search {
+    position: relative;
+    flex-grow: 1;
+    max-width: 400px;
+    margin: 0 1rem;
+}
+.nav-search .search-input {
+    width: 100%;
+    padding: 0.6rem 1rem 0.6rem 2.5rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.nav-search .search-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
+}
+.nav-search .search-icon {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+/* En móviles, la búsqueda ocupa el espacio disponible */
+@media (max-width: 768px) {
+    .nav-search {
+        margin: 0 0.5rem;
+        max-width: none;
+    }
+    .nav-search .search-input {
+        padding: 0.5rem 1rem 0.5rem 2.2rem;
+    }
+    .logo a { font-size: 1.2rem; }
+}
