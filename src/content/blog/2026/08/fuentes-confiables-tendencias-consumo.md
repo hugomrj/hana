@@ -138,6 +138,8 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [OECD Economic Surveys: Argentina 2025](https://www.oecd.org/en/publications/oecd-economic-surveys-argentina-2025_27dd6e27-en/full-report/macroeconomic-developments-and-policy-challenges_8e6a0236.html)
 
 <script is:inline data-astro-rerun>
+(function() {
+
     const styles = getComputedStyle(document.documentElement);
     const textColor = styles.getPropertyValue('--text-muted').trim();
     const gridColor = styles.getPropertyValue('--chart-grid').trim();
@@ -369,4 +371,5 @@ Este artículo es una adaptación de la investigación original y los datos reco
             }
         });
     }
+})();    
 </script>

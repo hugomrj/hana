@@ -37,9 +37,11 @@ Aquí tienes los requisitos obligatorios:
         <canvas id="graficoN"></canvas>
     </div>
 </div>
+
 - Al final del archivo Markdown, inserta UN ÚNICO bloque `<script is:inline data-astro-rerun>` con la configuración de todos los gráficos. ES OBLIGATORIO leer los colores del CSS del sitio usando este patrón exacto. El script NO debe usar document.addEventListener, debe ejecutarse directamente:
 <script is:inline data-astro-rerun>
-(function() {
+(function() { // OBLIGATORIO: No borres esta línea. Todo el código debe ir aquí dentro.
+
     const styles = getComputedStyle(document.documentElement);
     const textColor = styles.getPropertyValue('--text-muted').trim();
     const gridColor = styles.getPropertyValue('--chart-grid').trim();
@@ -102,7 +104,18 @@ Aquí tienes los requisitos obligatorios:
         // ... mismo patrón
     }
 })();    
-</script>
+</script> // OBLIGATORIO: El script debe cerrar con })();
+
+
+
+
+<script is:inline data-astro-rerun>
+(function() { // OBLIGATORIO: No borres esta línea. Todo el código debe ir aquí dentro.
+    const styles = getComputedStyle(document.documentElement);
+    const textColor = styles.getPropertyValue('--text-muted').trim();
+    // ... todo el código ...
+})();
+</script> // OBLIGATORIO: El script debe cerrar con })();
 
 
 
@@ -161,9 +174,7 @@ Este artículo es una adaptación de la investigación original y los datos reco
 
 <script is:inline data-astro-rerun>
 (function() {
-    // NO USAR document.addEventListener ni astro:page-load aquí. El script se ejecuta directamente.
     // Todos los scripts de Chart.js juntos aquí
-    // Recordar cerrar SIEMPRE con: })();
 })();
 </script>
 
