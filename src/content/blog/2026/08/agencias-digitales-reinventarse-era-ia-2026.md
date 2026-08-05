@@ -105,6 +105,8 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [U.S. Securities and Exchange Commission - Alphabet Inc. Filings](https://www.sec.gov/Archives/edgar/data/1652044/000165204426000018/goog-20251231.htm)
 
 <script is:inline data-astro-rerun>
+(function() {
+    
     const styles = getComputedStyle(document.documentElement);
     const textColor = styles.getPropertyValue('--text-muted').trim();
     const gridColor = styles.getPropertyValue('--chart-grid').trim();
@@ -321,4 +323,5 @@ Este artículo es una adaptación de la investigación original y los datos reco
             }
         });
     }
+})();
 </script>

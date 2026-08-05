@@ -96,7 +96,11 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Mialon et al. (2023) - GAIA: A Benchmark for General AI Assistants](https://arxiv.org/abs/2311.12983)
 - [OWASP Top 10 for Large Language Model Applications 2025](https://owasp.org/www-project-top-10-for-large-language-model-applications/)
 
+
 <script is:inline data-astro-rerun>
+(function() {
+
+
     const styles = getComputedStyle(document.documentElement);
     const textColor = styles.getPropertyValue('--text-muted').trim();
     const gridColor = styles.getPropertyValue('--chart-grid').trim();
@@ -294,4 +298,5 @@ Este artículo es una adaptación de la investigación original y los datos reco
             }
         });
     }
+)();
 </script>

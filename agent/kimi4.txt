@@ -16,7 +16,7 @@ Aquí tienes los requisitos obligatorios:
 - Usa un tono técnico pero accesible (para perfiles de arquitectos, CTOs y desarrolladores).
 - REGLA DEL TÍTULO: El "titulo" (en el frontmatter) debe ser un titular periodístico atractivo, con gancho y basado en el CONTENIDO y la conclusión del deck. NUNCA uses el texto de la URL o el slug como título.
 - REGLA ANTI-ABURRIMIENTO (MUY IMPORTANTE): Evita las "listas de la compra" de números y porcentajes en el texto. Los datos fríos (cifras exactas, montos, años) deben vivir en los GRÁFICOS. El texto debe usarse para explicar el *porqué*, el contexto y el impacto de esos datos, no para repetirlos. Escribe de forma narrativa y atractiva. Si mencionas un número en el texto, úsalo para dar impacto, no para amontonar estadísticas.
-- EXTENSIÓN OBLIGATORIA: El artículo debe tener aproximadamente 1000 palabras. Si al terminar el borrador tienes menos, amplía las secciones con más contexto, ejemplos de la industria y análisis técnico, NO añadiendo más números.
+- EXTENSIÓN OBLIGATORIA: El artículo debe tener aproximadamete de 1000 palabras. Si al terminar el borrador tienes menos, amplía las secciones con más contexto, ejemplos de la industria y análisis técnico, NO añadiendo más números.
 
 
 3. VISUALIZACIÓN DE DATOS (CON CHART.JS):
@@ -39,6 +39,7 @@ Aquí tienes los requisitos obligatorios:
 </div>
 - Al final del archivo Markdown, inserta UN ÚNICO bloque `<script is:inline data-astro-rerun>` con la configuración de todos los gráficos. ES OBLIGATORIO leer los colores del CSS del sitio usando este patrón exacto. El script NO debe usar document.addEventListener, debe ejecutarse directamente:
 <script is:inline data-astro-rerun>
+(function() {
     const styles = getComputedStyle(document.documentElement);
     const textColor = styles.getPropertyValue('--text-muted').trim();
     const gridColor = styles.getPropertyValue('--chart-grid').trim();
@@ -100,6 +101,7 @@ Aquí tienes los requisitos obligatorios:
     if (ctx2) {
         // ... mismo patrón
     }
+})();    
 </script>
 
 
@@ -157,7 +159,7 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Fuente 1](url)
 - [Fuente 2](url)
 
-<script>
+<script is:inline data-astro-rerun>
 (Todos los scripts de Chart.js juntos aquí)
 </script>
 

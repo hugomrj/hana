@@ -134,7 +134,10 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [UNESCO. (2023). Report of the International Bioethics Committee on the ethical issues of neurotechnology.](https://unesdoc.unesco.org/ark:/48223/pf0000385472)
 - [Information Commissioner's Office. (2023). ICO tech futures: Neurotechnology.](https://ico.org.uk/for-organisations/ico-and-stakeholder-consultations/ico-tech-futures/neurotechnology/)
 
-<script>
+
+<script is:inline data-astro-rerun>
+(function() {
+    
     document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
@@ -332,4 +335,5 @@ Este artículo es una adaptación de la investigación original y los datos reco
             });
         }
     });
+})();
 </script>

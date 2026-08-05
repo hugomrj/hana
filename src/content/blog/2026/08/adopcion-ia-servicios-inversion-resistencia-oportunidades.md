@@ -149,7 +149,8 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [consultancy.eu. KPN partners with McKinsey](https://consultancy.eu)
 - [zawya.com. UAE Ministry of Finance service outcomes](https://www.zawya.com)
 
-<script>
+<script is:inline data-astro-rerun>
+(function() {
     document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
@@ -360,4 +361,5 @@ Este artículo es una adaptación de la investigación original y los datos reco
             });
         }
     });
+})();
 </script>

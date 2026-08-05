@@ -185,7 +185,10 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Insight Partners - Wiz Investment](https://www.insightpartners.com/portfolio/wiz/)
 - [TechCrunch - Mercor raises $100M at $2B valuation](https://techcrunch.com/2025/02/20/mercor-an-ai-recruiting-startup-founded-by-21-year-olds-raises-100m-at-2b-valuation/)
 
-<script>
+
+<script is:inline data-astro-rerun>
+(function() {
+    
     document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
@@ -673,4 +676,5 @@ Este artículo es una adaptación de la investigación original y los datos reco
             });
         }
     });
+})();
 </script>

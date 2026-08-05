@@ -156,7 +156,9 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Havana Times. (2025). An Aging Population Clouds Cuba's Future.](https://havanatimes.org/)
 - [El País. (2025). Cuba gets older: The island reports its lowest birth rate since the Revolution.](https://english.elpais.com/)
 
-<script>
+<script is:inline data-astro-rerun>
+(function() {
+
     document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
@@ -382,4 +384,5 @@ Este artículo es una adaptación de la investigación original y los datos reco
             });
         }
     });
+)();
 </script>

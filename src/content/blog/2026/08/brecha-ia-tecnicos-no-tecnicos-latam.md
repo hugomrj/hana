@@ -111,7 +111,13 @@ Este artículo se basa en el análisis "La brecha de IA entre profesionales téc
 - [Stack Overflow Developer Survey 2024](https://survey.stackoverflow.co/2024/ai)
 - [EY AI Sentiment Index Study 2025](https://www.ey.com/content/dam/ey-unified-site/ey-com/en-gl/insights/ai/documents/ey-how-a-license-to-lead-can-transform-human-potential-in-an-ai-world-04-2025.pdf)
 
+
+
 <script is:inline data-astro-rerun>
+(function() {
+
+
+
 const styles = getComputedStyle(document.documentElement);
 const color1 = styles.getPropertyValue('--chart-1').trim();
 const color2 = styles.getPropertyValue('--chart-2').trim();
@@ -310,4 +316,5 @@ new Chart(document.getElementById('grafico5'), {
     }
   }
 });
+})();
 </script>

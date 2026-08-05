@@ -113,6 +113,8 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [An Empirical Study of Code Review Agents in Pull Requests (arXiv)](https://arxiv.org/html/2604.03196v1)
 
 <script is:inline data-astro-rerun>
+(function() {
+
     const styles = getComputedStyle(document.documentElement);
     const textColor = styles.getPropertyValue('--text-muted').trim();
     const gridColor = styles.getPropertyValue('--chart-grid').trim();
@@ -314,4 +316,5 @@ Este artículo es una adaptación de la investigación original y los datos reco
             }
         });
     }
+})();
 </script>

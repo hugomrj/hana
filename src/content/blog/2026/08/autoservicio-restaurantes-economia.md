@@ -100,6 +100,8 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Destatis - Germany inflation rate 2025](https://www.destatis.de/EN/Press/2026/01/PE26_019_611.html)
 
 <script is:inline data-astro-rerun>
+(function() {
+
     const styles = getComputedStyle(document.documentElement);
     const textColor = styles.getPropertyValue('--text-muted').trim();
     const gridColor = styles.getPropertyValue('--chart-grid').trim();
@@ -285,4 +287,5 @@ Este artículo es una adaptación de la investigación original y los datos reco
             }
         });
     }
+})();    
 </script>

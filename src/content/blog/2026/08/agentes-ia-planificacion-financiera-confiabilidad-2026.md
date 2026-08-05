@@ -119,7 +119,9 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Security for AI Agents: Protecting Intelligent Systems (Obsidian Security)](https://www.obsidiansecurity.com/blog/security-for-ai-agents)
 - [Yordanova & Hristozov - The Evolution of Financial Analysis: From Manual Methods to AI Agents (ECONOMICS 2025)](https://www.researchgate.net/publication/395199423_The_Evolution_of_Financial_Analysis_From_Manual_Methods_to_AI_and_AI_Agents)
 
-<script>
+<script is:inline data-astro-rerun>
+(function() {
+    
     document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
@@ -361,4 +363,5 @@ Este artículo es una adaptación de la investigación original y los datos reco
             });
         }
     });
+})();
 </script>

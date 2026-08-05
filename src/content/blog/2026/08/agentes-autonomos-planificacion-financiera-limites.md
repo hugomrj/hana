@@ -88,6 +88,9 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Cooper, L. A., et al. (2019). Robotic Process Automation in Public Accounting - Accounting Horizons](https://publications.aaahq.org/accounting-horizons)
 
 <script is:inline data-astro-rerun>
+(function() {
+
+
     const styles = getComputedStyle(document.documentElement);
     const textColor = styles.getPropertyValue('--text-muted').trim();
     const gridColor = styles.getPropertyValue('--chart-grid').trim();
@@ -283,4 +286,5 @@ Este artículo es una adaptación de la investigación original y los datos reco
             }
         });
     }
+})();
 </script>
