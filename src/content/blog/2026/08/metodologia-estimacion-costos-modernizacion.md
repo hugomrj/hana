@@ -108,7 +108,10 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [PMI - Monte Carlo Simulation in Cost Estimating](https://www.pmi.org/learning/library/monte-carlo-simulation-cost-estimating-6195)
 - [Boehm - COCOMO II Software Cost Estimation](https://boehmcsse.org/tools/cocomo-ii/)
 
+
 <script is:inline data-astro-rerun>
+(function() {
+
     const styles = getComputedStyle(document.documentElement);
     const textColor = styles.getPropertyValue('--text-muted').trim();
     const gridColor = styles.getPropertyValue('--chart-grid').trim();
@@ -290,4 +293,6 @@ Este artículo es una adaptación de la investigación original y los datos reco
             }
         });
     }
-</script>
+    
+})();    
+</script>        

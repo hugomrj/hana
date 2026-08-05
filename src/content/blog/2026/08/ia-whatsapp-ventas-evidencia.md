@@ -122,7 +122,9 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Consorci AOC de Cataluña. (2024). Ahorro con chatbots de IA.](https://aoc.cat)
 - [Salesforce Research. (2022). State of Sales, 5th edition.](https://www.salesforce.com/resources/research-reports/state-of-sales/)
 
-<script>
+<script is:inline data-astro-rerun>
+(function() {
+
     document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
@@ -332,4 +334,6 @@ Este artículo es una adaptación de la investigación original y los datos reco
             });
         }
     });
-</script>
+
+})();    
+</script>        

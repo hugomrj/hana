@@ -111,7 +111,9 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [U.S. Small Business Administration (2024). Manage your finances and cash flow.](https://www.sba.gov)
 - [Banco Central de Chile - Política Monetaria 2025-2026](https://www.bcentral.cl)
 
-<script>
+<script is:inline data-astro-rerun>
+(function() {
+
     document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
@@ -295,4 +297,6 @@ Este artículo es una adaptación de la investigación original y los datos reco
             });
         }
     });
+
+})();    
 </script>

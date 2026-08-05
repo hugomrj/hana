@@ -137,7 +137,9 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Vasilev, M. R., et al. (2018). Auditory distraction during reading: A Bayesian meta-analysis. Perspectives on Psychological Science, 13(5), 567-597.](https://journals.sagepub.com/doi/10.1177/1745691618775410)
 - [de la Mora Velasco, E., & Hirumi, A. (2023). The impact of background music on learners: A systematic review and meta-analysis.](https://www.frontiersin.org/journals/psychology/articles/)
 
-<script>
+<script is:inline data-astro-rerun>
+(function() {
+
     document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
@@ -370,4 +372,6 @@ Este artículo es una adaptación de la investigación original y los datos reco
             });
         }
     });
-</script>
+    
+})();    
+</script>    

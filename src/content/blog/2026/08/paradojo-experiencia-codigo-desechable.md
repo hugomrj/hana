@@ -128,7 +128,9 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [U.S. Bureau of Labor Statistics. (2024). Software developers, quality assurance analysts, and testers. Occupational Outlook Handbook.](https://www.bls.gov/ooh/computer-and-information-technology/software-developers.htm)
 - [OECD. (n.d.). Talento Digital para Chile.](https://www.oecd.org/)
 
-<script>
+<script is:inline data-astro-rerun>
+(function() {
+    
     document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
@@ -352,4 +354,6 @@ Este artículo es una adaptación de la investigación original y los datos reco
             });
         }
     });
+    
+})();    
 </script>

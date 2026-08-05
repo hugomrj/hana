@@ -149,7 +149,11 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Cueto, S., Beuermann, D., Cristia, J., Malamud, O., & Ramos Pardo, F. J. (2025). Laptops in the long run: Evidence from the One Laptop per Child program in rural Peru. NBER Working Paper 34495.](https://www.nber.org/system/files/working_papers/w34495/w34495.pdf)
 - [Kosmyna, N., et al. (2025). Your brain on ChatGPT: Accumulation of cognitive debt when using an AI assistant for essay writing task. MIT Media Lab.](https://www.media.mit.edu/posts/your-brain-on-chatgpt-in-the-news/)
 
-<script>
+
+
+<script is:inline data-astro-rerun>
+(function() {
+
     document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
@@ -352,4 +356,6 @@ Este artículo es una adaptación de la investigación original y los datos reco
             });
         }
     });
+
+})();    
 </script>

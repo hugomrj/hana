@@ -117,7 +117,10 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Chirikov, I. (2026). Artificial intelligence and grade inflation. CSHE Working Paper 26(3).](https://escholarship.org/uc/item/80x8d3qd)
 - [Ke, L., Chen, Z., Lv, P., & Fan, C. (2026). Exploring the effect of GenAI on learning outcomes: A three-level meta-analysis. Frontiers in Psychology, 17.](https://www.frontiersin.org)
 
-<script>
+
+<script is:inline data-astro-rerun>
+(function() {
+
     document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
@@ -338,4 +341,6 @@ Este artículo es una adaptación de la investigación original y los datos reco
             });
         }
     });
+
+})();    
 </script>

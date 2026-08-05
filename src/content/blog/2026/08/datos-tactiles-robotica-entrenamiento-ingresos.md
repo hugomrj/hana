@@ -166,7 +166,10 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Light Reading (2026). Japan to develop physical AI with cross-industry initiative](https://www.lightreading.com/)
 - [Forbes (2026). Japan bets $2.3 trillion to reboot its innovation engine](https://www.forbes.com/)
 
-<script>
+
+<script is:inline data-astro-rerun>
+(function() {
+
     document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
@@ -356,4 +359,6 @@ Este artículo es una adaptación de la investigación original y los datos reco
             });
         }
     });
+
+})();    
 </script>

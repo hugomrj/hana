@@ -174,7 +174,10 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Trobz.ai. Casos de automatización de facturas con Document AI.](https://trobz.ai)
 - [KalviumLabs. Casos de reducción de tiempo de procesamiento con IA.](https://kalviumlabs.ai)
 
-<script>
+
+<script is:inline data-astro-rerun>
+(function() {
+
     document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
@@ -466,4 +469,6 @@ Este artículo es una adaptación de la investigación original y los datos reco
             });
         }
     });
-</script>
+    
+})();    
+</script>    

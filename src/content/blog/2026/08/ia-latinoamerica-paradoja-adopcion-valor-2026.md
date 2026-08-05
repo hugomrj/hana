@@ -140,6 +140,7 @@ Este artículo es una adaptación de la investigación original y los datos reco
 
 <script is:inline data-astro-rerun>
 (function() {
+    
     const styles = getComputedStyle(document.documentElement);
     const textColor = styles.getPropertyValue('--text-muted').trim();
     const gridColor = styles.getPropertyValue('--chart-grid').trim();

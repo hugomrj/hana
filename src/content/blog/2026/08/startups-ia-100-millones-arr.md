@@ -154,7 +154,9 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Quantonica (2026). Why horizontal AI SDRs fail](https://quantonica.com/quantonica-vs-11x)
 - [TechCrunch (2025). 11x has been claiming customers it doesn't have](https://techcrunch.com/2025/03/24/a16z-and-benchmark-backed-11x-has-been-claiming-customers-it-doesnt-have/)
 
-<script>
+<script is:inline data-astro-rerun>
+(function() {
+
     document.addEventListener('astro:page-load', () => {
         const styles = getComputedStyle(document.documentElement);
         const textColor = styles.getPropertyValue('--text-muted').trim();
@@ -392,5 +394,7 @@ Este artículo es una adaptación de la investigación original y los datos reco
                 }
             });
         }
-    });
+    });    
+
+})();    
 </script>
