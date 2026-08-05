@@ -21,13 +21,12 @@ Aquí tienes los requisitos obligatorios:
 
 3. VISUALIZACIÓN DE DATOS (CON CHART.JS):
 - Debes recrear los gráficos del deck usando Chart.js.
-- AMPLIACIÓN VISUAL: Visita y analiza la librería de ejemplos de Chart.js (https://www.chartjs.org/docs/latest/samples/information.html) para inspirarte. No te limites a gráficos de barras simples. Si los datos lo permiten, utiliza gráficos de líneas con múltiples ejes, barras apiladas (stacked), radar, scatter, o doughnuts.
+- AMPLIACIÓN VISUAL: Visita y analiza la librería de ejemplos de Chart.js (https://www.chartjs.org/docs/latest/samples/information.html) para inspirarte. No te limites a gráficos de barras simples. Cuando los datos lo permitan, utiliza líneas con múltiples series o múltiples ejes, barras horizontales, barras agrupadas (grouped), barras apiladas (stacked), doughnuts, pies, radar, scatter o gráficos combinados (bar + line).
 - REGLAS CRÍTICAS DE SENTIDO COMÚN GRÁFICO (¡CUMPLIR OBLIGATORIAMENTE!):
   1. EVOLUCIÓN TEMPORAL: Si el dato muestra cambios en el tiempo (ej. 2018, 2020, 2025), DEBES usar type: 'line'.
-  2. PROPORCIONES: Si el dato es un porcentaje o parte de un total, DEBES usar type: 'doughnut'.
-  3. COMPARACIÓN: Si comparas 2 o más categorías, USA type: 'bar'.
+  2. PROPORCIONES: Si el dato representa la composición de un total (porcentajes o partes de un todo), DEBES usar type: 'doughnut' o 'pie'. Si se comparan porcentajes independientes entre varias categorías, utiliza type: 'bar'.  3. COMPARACIÓN: Si comparas 2 o más categorías, USA type: 'bar'.
   4. PROHIBIDO BARRAS DE 1 ELEMENTO: NUNCA hagas un gráfico 'bar' con un solo dato. Si solo hay un número aislado sin con quién compararlo, OMITE el gráfico (escribe el dato en el texto) o usa 'doughnut' si representa un porcentaje (ej. 40% vs 60%).
-  5. VARIEDAD: Exige variedad visual. No hagas todos los gráficos de barras. Analiza el deck original y replica su lógica visual.
+  5. VARIEDAD: Evita repetir siempre el mismo tipo de gráfico, pero nunca sacrifiques la claridad solo para aumentar la variedad. Cada visualización debe ser la más adecuada para los datos.
   6. LÍMITE DE GRÁFICOS: El artículo debe tener un MÁXIMO de 5 a 6 gráficos en total. Si el deck original tiene más datos, selecciona solo los más impactantes y relevantes para la narrativa. No satures el artículo con visualizaciones; prioriza calidad sobre cantidad. Los demás datos pueden mencionarse en el texto de forma narrativa.
 
 - En el Markdown, inserta directamente este HTML donde corresponda un gráfico (respetando las clases y los saltos de línea):
@@ -152,7 +151,7 @@ URL Procesada: https://hanademi.com/decks/ejemplo
 ---
 titulo: "Título generado"
 extracto: "Resumen de 1-2 frases para la portada"
-fecha: "AAAA-MM-DDTHH:MM:SS" # Ejemplo: 2026-08-03T15:30:00
+fecha: "AAAA-MM-DDTHH:MM:SS" # pon la hora del servidor
 categoria: "Categoría generada"
 etiquetas: ["Etiqueta1", "Etiqueta2", "Etiqueta3"]
 link_original: "URL_PROPORCIONADA"
