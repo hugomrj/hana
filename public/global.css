@@ -1,49 +1,49 @@
 /* === Variables de Tema (Claro - SaaS Premium) === */
 :root {
-    --bg: #ffffff;
-    --surface: #f9fafb;
-    --surface-2: #ffffff;
-    --text: #0f172a;
-    --text: #1e293b; /* Slate 800: Negro suave para no cansar la vista */
-
-    --text-muted: #64748b; /* Mejor contraste */
-    --border: #e2e8f0;
-
-    --accent: #3b82f6;        /* Blue 500*/
-    --accent-hover: #2563eb;  /* Blue 600 */
-
-    --accent-light: rgba(59, 130, 246, 0.1);
-    --chart-grid: #e2e8f0;
-    --code-bg: #f1f5f9;
-    --radius: 16px;
+    --bg:        #ffffff;
+    --surface:   #f8fafc;
+    --surface-2: #fcfcfd;
     
-    /* Colores para Gráficos Chart.js */
-    --chart-1: #3b82f6; /* Azul Base */
-    --chart-2: #1e40af; /* Azul Muy Oscuro (por si hay 2 datasets) */
-    --chart-3: #60a5fa; /* Azul Claro */
-    --chart-4: #1d4ed8; /* Azul Oscuro */
-    --chart-5: #93c5fd; /* Azul Muy Claro */
-    --chart-6: #94a3b8; /* Gris Slate */
+    --text:       #1e293b;
+    --text-muted: #64748b;
+    --border:     #e2e8f0;
 
+    --accent:       #3b82f6;
+    --accent-hover: #2563eb;
+    --accent-light: rgba(59, 130, 246, 0.1);
 
+    --chart-grid: #e2e8f0;
+    --code-bg:    #f1f5f9;
+
+    --radius: 16px;
+
+    --chart-1: #3b82f6;
+    --chart-2: #1e40af;
+    --chart-3: #60a5fa;
+    --chart-4: #1d4ed8;
+    --chart-5: #93c5fd;
+    --chart-6: #94a3b8;
 }
 
 
 /* === Tema Oscuro === */
 [data-theme="dark"] {
-    --bg: #09090b;
-    --surface: #18181b;
-    --surface-2: #1e1e22;
+
+    --bg:        #0c0c0e;
+    --surface:   #17171a;
+    --surface-2: #1d1d22;
+    
+
     --text: #e4e4e7; /* Blanco suavizado para no cansar la vista */
     --text-muted: #a1a1aa;
-    --border: #27272a;
+    --border:  #2b2b31;
 
     --accent: #60a5fa;
     --accent-hover: #93c5fd; /* Azul claro brillante */
 
     --accent-light: rgba(96, 165, 250, 0.1);
     --chart-grid: #27272a;
-    --code-bg: #1e1e22;
+    --code-bg: #141417;
     
     /* Colores para Gráficos Chart.js en Oscuro */
     --chart-1: #60a5fa;
@@ -102,7 +102,11 @@ body {
     top: 0;
     z-index: 1000;
 }
-[data-theme="dark"] .site-header { background-color: rgba(9, 9, 11, 0.8); }
+
+[data-theme="dark"] .site-header {
+    background-color: rgba(12, 12, 14, 0.8); /* Fallback */
+    background-color: color-mix(in srgb, var(--bg) 80%, transparent);
+}
 
 .nav-container {
     max-width: 1200px;
