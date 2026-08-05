@@ -1,7 +1,7 @@
 ---
 titulo: "Cuando tu organización no puede seguirte el ritmo: la trampa invisible del escalamiento prematuro"
 extracto: "El crecimiento se rompe no cuando falla la estrategia o el capital, sino cuando las capacidades internas —coordinación, decisiones, gestión— no evolucionan al compás de la complejidad. La evidencia empírica revela patrones que toda empresa en expansión debería conocer."
-fecha: "2026-08-05T14:45:00"
+fecha: "2026-08-05T21:10:00"
 categoria: "Gestión Empresarial"
 etiquetas: ["escalabilidad", "gestión organizacional", "crecimiento empresarial", "transformación digital", "liderazgo"]
 link_original: "https://hanademi.com/decks/las-capacidades-organizacionales-son-el-cuello-de-botella-del-crecimiento-20260805-013719/es/"
