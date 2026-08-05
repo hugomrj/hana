@@ -11,7 +11,6 @@ si hay errores detenlo y avisame
 
 
 
-
 rm -rf docs
 bun run build
 git add .

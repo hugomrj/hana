@@ -1,7 +1,7 @@
 ---
 titulo: "Agencias digitales: el colapso silencioso del modelo de ejecución y el nacimiento de una nueva elite"
 extracto: "La caída del 47% del tráfico informativo de Google, la deflación brutal de los costos de inferencia y el auge de las búsquedas sin clic están partiendo el mercado en dos. Sobrevivirán solo las agencias que vendan criterio, no horas de producción."
-fecha: "2026-08-05T10:00:00"
+fecha: "2026-08-05T22:49:04"
 categoria: "Industria Digital"
 etiquetas: ["Agencias", "Inteligencia Artificial", "SEO", "Publicidad Digital", "Estrategia"]
 link_original: "https://hanademi.com/decks/agencias-digitales-reinventarse-o-desaparecer-20260804-210943/es/"
