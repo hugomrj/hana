@@ -1,7 +1,7 @@
 ---
 titulo: "La paradoja del celular en el aula: lo que realmente revelan los estudios sobre prohibiciones y aprendizaje"
 extracto: "Los datos revelan una realidad compleja: prohibir celulares mejora el rendimiento a largo plazo pero genera caos inicial, mientras que la IA dispara las notas de tareas pero hunde los exámenes. Las escuelas deben convertirse en gimnasios cerebrales, no en laboratorios de conveniencia."
-fecha: "2026-08-06T15:00:00"
+fecha: "2026-08-06T10:29:00"
 categoria: "Educación Digital"
 etiquetas: ["celulares", "educación", "aprendizaje", "tecnología", "IA", "estudios", "multitarea"]
 link_original: "https://hanademi.com/decks/schools-as-brain-gyms-for-the-ai-era-20260728-060911/es/"
