@@ -28,33 +28,41 @@
 
 }
 
+
 /* === Tema Oscuro === */
 [data-theme="dark"] {
     --bg: #09090b;
     --surface: #18181b;
     --surface-2: #1e1e22;
-    --text: #fafafa;
+    --text: #e4e4e7; /* Blanco suavizado para no cansar la vista */
     --text-muted: #a1a1aa;
     --border: #27272a;
 
-
     --accent: #60a5fa;
     --accent-hover: #93c5fd; /* Azul claro brillante */
-
 
     --accent-light: rgba(96, 165, 250, 0.1);
     --chart-grid: #27272a;
     --code-bg: #1e1e22;
     
-
     /* Colores para Gráficos Chart.js en Oscuro */
-    --chart-1: #60a5fa; /* Azul Base en oscuro */
-    --chart-2: #bfdbfe; /* Azul Muy Claro */
-    --chart-3: #2563eb; /* Azul Medio */
-    --chart-4: #93c5fd; /* Azul Claro */
-    --chart-5: #3b82f6; /* Azul Estándar */
-    --chart-6: #64748b; /* Gris Slate */
+    --chart-1: #60a5fa;
+    --chart-2: #bfdbfe;
+    --chart-3: #2563eb;
+    --chart-4: #93c5fd;
+    --chart-5: #3b82f6;
+    --chart-6: #64748b;
+}
 
+/* === Profundidad en Modo Oscuro === */
+[data-theme="dark"] a.news-card:hover { 
+    box-shadow: 0 12px 24px rgba(0,0,0,0.4); 
+}
+[data-theme="dark"] .chart-container {
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3);
+}
+[data-theme="dark"] .hero-news {
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
 }
 
 
@@ -258,7 +266,7 @@ article {
 
 .article-hero { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
 
-article h1 { font-size: clamp(1.8rem, 2vw + 1rem, 2.8rem); margin-bottom: 1.5rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; color: #1e293b; }
+article h1 { font-size: clamp(1.8rem, 2vw + 1rem, 2.8rem); margin-bottom: 1.5rem; font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; color: var(--text); }
 
 article h2 { font-size: clamp(1.5rem, 1vw + 1rem, 2.2rem); margin: 3rem 0 1rem; font-weight: 800; }
 article h3 { font-size: 1.3rem; margin: 2rem 0 0.5rem; font-weight: 700; }
