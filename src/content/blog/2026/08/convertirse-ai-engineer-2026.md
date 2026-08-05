@@ -1,7 +1,7 @@
 ---
 titulo: "La regla de las 10,000 horas no aplica para AI Engineers: lo que realmente mide el mercado"
 extracto: "Un meta-análisis demuestra que la práctica deliberada explica menos del 1% de la varianza en desempeño profesional. Para AI engineers en 2026, el verdadero diferenciador no es acumular horas frente al teclado sino construir sistemas operados, medidos y seguros."
-fecha: "2026-08-05T22:00:00"
+fecha: "2026-08-04T22:00:00"
 categoria: "Carrera Profesional"
 etiquetas: ["AI Engineer", "Carrera Tech", "LLM", "Machine Learning", "LoRA", "QLoRA"]
 link_original: "https://hanademi.com/decks/convertirse-en-ai-engineer-profesional-en-2026-20260801-221135/es/"
