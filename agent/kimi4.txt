@@ -106,7 +106,6 @@ Aquí tienes los requisitos obligatorios:
 
 
 
-
 4. CRÉDITOS Y FUENTES:
 - Al final del artículo, incluye una sección con el subtítulo "### Fuentes y Créditos".
 - El primer párrafo de esta sección debe ser EXACTAMENTE: "Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original."
@@ -159,10 +158,14 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Fuente 1](url)
 - [Fuente 2](url)
 
-<script is:inline data-astro-rerun>
-(Todos los scripts de Chart.js juntos aquí)
-</script>
 
+<script is:inline data-astro-rerun>
+(function() {
+    // NO USAR document.addEventListener ni astro:page-load aquí. El script se ejecuta directamente.
+    // Todos los scripts de Chart.js juntos aquí
+    // Recordar cerrar SIEMPRE con: })();
+})();
+</script>
 
 
 Aquí tienes la URL de la presentación de Hanademi a procesar: 
