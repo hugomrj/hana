@@ -44,6 +44,9 @@ const sortedArticles = articles.sort((a, b) => new Date(b.data.fecha) - new Date
         document.addEventListener('astro:page-load', () => {
             const searchInput = document.getElementById('archive-search');
             const archiveList = document.getElementById('archive-list');
+
+            if (!searchInput || !archiveList) return; 
+
             const items = archiveList.querySelectorAll('.archive-item');
             const noResults = document.getElementById('no-results');
 
