@@ -8,3 +8,12 @@ git push
 compila y sube a git, define el mensaje
 si hay errores detenlo y avisame
 
+
+
+
+
+rm -rf docs
+bun run build
+git add .
+git commit -m "5ago2026:1044"
+git push
