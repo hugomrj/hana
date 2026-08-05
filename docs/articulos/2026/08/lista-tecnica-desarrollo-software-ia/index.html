@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Más allá del autocompletado: la lista de verificación técnica para escalar el desarrollo con IA sin destruir la arquitectura | hana</title><meta name="description" content="Guía práctica para líderes de ingeniería sobre cómo establecer un marco de gobernanza técnica, pruebas estáticas y supervisión de arquitectura cuando el código es generado por inteligencia artificial."><!-- Open Graph / Redes Sociales --><meta property="og:type" content="article"><meta property="og:title" content="Más allá del autocompletado: la lista de verificación técnica para escalar el desarrollo con IA sin destruir la arquitectura"><meta property="og:description" content="Guía práctica para líderes de ingeniería sobre cómo establecer un marco de gobernanza técnica, pruebas estáticas y supervisión de arquitectura cuando el código es generado por inteligencia artificial."><meta property="og:image" content="https://hugomrj.github.io/hana/og-image.jpg"><meta property="og:url" content="https://hugomrj.github.io/hana/articulos/2026/08/lista-tecnica-desarrollo-software-ia/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Más allá del autocompletado: la lista de verificación técnica para escalar el desarrollo con IA sin destruir la arquitectura"><meta name="twitter:description" content="Guía práctica para líderes de ingeniería sobre cómo establecer un marco de gobernanza técnica, pruebas estáticas y supervisión de arquitectura cuando el código es generado por inteligencia artificial."><meta name="twitter:image" content="https://hugomrj.github.io/hana/og-image.jpg"><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><link rel="icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;rect width='100' height='100' rx='20' fill='%233b82f6'/&gt;&lt;text x='50' y='72' font-size='60' font-family='Inter,sans-serif' fill='white' text-anchor='middle' font-weight='bold'&gt;h&lt;/text&gt;&lt;/svg&gt;"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/hana/_astro/ClientRouter.astro_astro_type_script_index_0_lang.jmhnZfFy.js"></script><!-- Script crítico para evitar el flash blanco (FOUC) en modo oscuro --><script>
+        const savedTheme = localStorage.getItem('hana-theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+
+        document.addEventListener('astro:before-swap', (event) => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            event.newDocument.documentElement.setAttribute('data-theme', currentTheme);
+        });
+    </script><link rel="stylesheet" href="/hana/global.css"><style>.astro-route-announcer{clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;width:1px;height:1px;position:absolute;top:0;left:0;overflow:hidden}
+</style></head><body><div id="reading-progress" class="reading-progress-bar"></div><header class="site-header"><div class="nav-container"><div class="logo"><a href="/hana/">han<span>a</span></a></div><div class="nav-search"><svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><input type="text" id="nav-search-input" class="search-input" placeholder="Buscar..."></div><button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema"><svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg><svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button></div></header><div class="article-layout"><article><div class="article-hero"><span class="kicker">Ingeniería y Software</span><h1>Más allá del autocompletado: la lista de verificación técnica para escalar el desarrollo con IA sin destruir la arquitectura</h1><div class="byline"><span>5 de agosto de 2026</span></div></div><div class="article-content"><p>La adopción masiva de asistentes de código basados en inteligencia artificial y agentes autónomos ha transformado radicalmente los flujos de trabajo en el desarrollo de software moderno. La capacidad de generar fragmentos de código, boilerplate y funciones complejas en cuestión de segundos ha desplazado el cuello de botella tradicional: la velocidad de mecanografiado e implementación básica ya no es la restricción principal de los equipos de ingeniería.</p>
+<p>Sin embargo, esta aceleración ha puesto de manifiesto un nuevo desafío operativo. La velocidad sin barreras de contención suele derivar en duplicación de lógica, introducción de vulnerabilidades sutiles y un incremento acelerado del impuesto de depuración. Según proyecciones del análisis del mercado corporativo de <a href="https://www.gartner.com/en/newsroom/press-releases/2025-06-30-gartner-survey-finds-45-percent-of-organizations-with-high-ai-maturity-keep-ai-projects-operational">Gartner</a>, la adopción de asistentes asistidos por IA alcanzará a la inmensa mayoría de los desarrolladores corporativos, consolidando la necesidad urgente de marcos de control técnico estructurados.</p>
+<div class="chart-container">
+    <div class="chart-title">Evolución en la adopción de asistentes de código con IA en empresas</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico1"></canvas>
+    </div>
+</div>
+<h2 id="la-paradoja-de-la-productividad-y-la-brecha-de-complejidad">La paradoja de la productividad y la brecha de complejidad</h2>
+<p>El impacto real de la inteligencia artificial en la ingeniería de software no es uniforme. La investigación liderada por <a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/unleash-developer-productivity-with-generative-ai">McKinsey &amp; Company</a> sobre miles de desarrolladores reveló un patrón crítico: mientras que las tareas rutinarias y la generación de estructuras repetitivas experimentan reducciones masivas de tiempo, los beneficios se reducen drásticamente cuando se enfrentan a problemas de alta complejidad arquitectónica o marcos de trabajo no familiares.</p>
+<div class="chart-container">
+    <div class="chart-title">Ahorro de tiempo estimado según la complejidad de la tarea (McKinsey)</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico2"></canvas>
+    </div>
+</div>
+<p>Cuando los desarrolladores utilizan la IA para abordar problemas complejos sin un marco de verificación estricto, la herramienta tiende a generar soluciones sobredimensionadas que fragmentan la coherencia de la base de código. La IA sobresale en la generación local de sintaxis, pero carece de la visión holística necesaria para mantener la cohesión del sistema a largo plazo.</p>
+<h2 id="la-degradación-silenciosa-el-impuesto-de-la-depuración">La degradación silenciosa: el impuesto de la depuración</h2>
+<p>El código generado por IA que se aprueba sin una auditoría rigurosa impone un coste diferido en las etapas de revisión e integración. Análisis del ecosistema de desarrollo recopilados por <a href="https://survey.stackoverflow.co/">Stack Overflow Developer Survey</a> señalan que casi la mitad de los profesionales consideran que validar y depurar el código sintético consume un tiempo desproporcionado, neutralizando las ganancias iniciales de velocidad.</p>
+<p>Las métricas comparativas entre código redactado por humanos y propuestas generadas por agentes muestran que, si bien el tiempo para abrir un <em>Pull Request</em> disminuye, el tiempo de permanencia en revisión y la tasa de vulnerabilidades en producción tienden a incrementarse si no existen controles automatizados.</p>
+<div class="chart-container">
+    <div class="chart-title">Métricas relativas de impacto entre código sintético sin validar vs. código estándar</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico3"></canvas>
+    </div>
+</div>
+<p>El principal riesgo del desarrollo asistido sin gobernanza es la deriva arquitectónica (<em>architectural drift</em>). Los modelos de lenguaje tienden a resolver cada problema de forma aislada, lo que lleva a la reinstanciación de patrones que ya existían en otras partes de la aplicación, rompiendo el principio de no repetición (<em>Don’t Repeat Yourself</em>).</p>
+<div class="chart-container">
+    <div class="chart-title">Distribución de los principales factores de fricción al integrar IA en desarrollo</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico4"></canvas>
+    </div>
+</div>
+<h2 id="la-lista-de-verificación-técnica-los-5-niveles-de-control-para-software-asistido-por-ia">La lista de verificación técnica: los 5 niveles de control para software asistido por IA</h2>
+<p>Para capturar la eficiencia de la inteligencia artificial sin comprometer la sostenibilidad del sistema, los equipos de arquitectura deben implementar una lista de verificación técnica obligatoria en la tubería de integración continua.</p>
+<h3 id="1-delimitación-de-contexto-y-archivos-de-instrucciones-system-prompting">1. Delimitación de contexto y archivos de instrucciones (<em>System Prompting</em>)</h3>
+<p>Antes de escribir una sola línea, la herramienta de IA debe estar acotada por reglas del proyecto. Esto incluye la inclusión de archivos de configuración como <code>.cursorrules</code> o configuraciones de proyecto en el editor que especifiquen:</p>
+<ul>
+<li>Versiones exactas del lenguaje y librerías permitidas.</li>
+<li>Patrones de diseño preferidos (ej. Inyección de dependencias, Clean Architecture).</li>
+<li>Convenciones de nombres y límites de responsabilidad por módulo.</li>
+</ul>
+<h3 id="2-análisis-estático-y-verificación-de-tipos-estricta">2. Análisis estático y verificación de tipos estricta</h3>
+<p>El código generado no debe enviarse a revisión humana si no ha pasado primero por un motor de compilación o linter automatizado.</p>
+<ul>
+<li>Habilitar el modo estricto en el compilador (ej. <code>strict: true</code> en TypeScript).</li>
+<li>Ejecutar linters con reglas de complejidad ciclomática para rechazar bloques de código extensos o anidados que la IA suele generar al intentar cubrir casos de esquina.</li>
+</ul>
+<h3 id="3-cobertura-de-pruebas-orientadas-al-comportamiento-tdd-asistido">3. Cobertura de pruebas orientadas al comportamiento (TDD asistido)</h3>
+<p>En lugar de pedirle a la IA que escriba el código y luego las pruebas, el flujo debe invertirse:</p>
+<ul>
+<li>Definir la prueba unitaria o de integración basada en la especificación funcional.</li>
+<li>Solicitar a la IA únicamente la implementación que haga pasar la prueba existente.</li>
+<li>Verificar que las pruebas incluyan entradas nulas, valores límite y manejo explícito de excepciones.</li>
+</ul>
+<h3 id="4-auditoría-de-dependencias-y-vectores-de-seguridad">4. Auditoría de dependencias y vectores de seguridad</h3>
+<p>Un riesgo común en sugerencias sintéticas es la invención de librerías inexistentes (<em>hallucinated packages</em>) o la recomendación de paquetes obsoletos.</p>
+<ul>
+<li>Escaneo automático con herramientas de análisis de composición de software (SCA) para verificar la autenticidad y seguridad de cada nueva dependencia propuesta.</li>
+<li>Bloqueo de código que deshabilite verificaciones de seguridad (como saltarse la validación TLS o usar contraseñas hardcodeadas en pruebas).</li>
+</ul>
+<h3 id="5-auditoría-de-reutilización-y-modularidad-en-revisión-humana">5. Auditoría de reutilización y modularidad en revisión humana</h3>
+<p>El papel del revisor humano cambia de buscar errores sintácticos a evaluar decisiones de diseño:</p>
+<ul>
+<li>¿Esta función ya existe en la biblioteca común de la organización?</li>
+<li>¿La abstracción introducida es necesaria o genera acoplamiento innecesario?</li>
+</ul>
+<div class="chart-container">
+    <div class="chart-title">Reducción en la tasa de defectos en producción según el nivel de verificación aplicado</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico5"></canvas>
+    </div>
+</div>
+<h2 id="estrategias-de-implementación-para-ctos-y-líderes-de-ingeniería">Estrategias de implementación para CTOs y Líderes de Ingeniería</h2>
+<p>Integrar esta lista técnica no requiere ralentizar a los desarrolladores, sino automatizar las barreras de contención dentro del propio flujo de trabajo del IDE y el CI/CD.</p>
+<p>Los estudios sobre calidad de software publicados por <a href="https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-code-quality/">GitHub Research</a> confirman que cuando los asistentes de código se combinan con revisiones estructuradas y herramientas de prueba en tiempo real, la confianza del equipo en la solidez del sistema aumenta significativamente, manteniendo la velocidad de despliegue sin acumular pasivos técnicos.</p>
+<p>La inteligencia artificial es un multiplicador de capacidad en la ingeniería de software, pero no un sustituto de la responsabilidad de diseño. Adoptar un marco de verificación disciplinado garantiza que la velocidad alcanzada hoy no se pague con la parálisis operativa del mañana.</p>
+<h2 id="fuentes-y-créditos">Fuentes y Créditos</h2>
+<p>Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.</p>
+<ul>
+<li><a href="https://hanademi.com/decks/lista-tecnica-para-desarrollar-software-con-ia-20260731-020744/es/">Hanademi - Lista técnica para desarrollar software con IA</a></li>
+<li><a href="https://www.gartner.com/en/newsroom/press-releases/2025-06-30-gartner-survey-finds-45-percent-of-organizations-with-high-ai-maturity-keep-ai-projects-operational">Gartner - AI Code Assistants Survey &amp; Market Analysis</a></li>
+<li><a href="https://www.mckinsey.com/capabilities/mckinsey-digital/our-insights/unleash-developer-productivity-with-generative-ai">McKinsey &amp; Company - Unleash Developer Productivity with Generative AI</a></li>
+<li><a href="https://survey.stackoverflow.co/">Stack Overflow - Developer Survey &amp; Debugging Analysis</a></li>
+<li><a href="https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-code-quality/">GitHub Research - Quantifying Copilot Impact on Code Quality</a></li>
+</ul>
+<script is:inline data-astro-rerun>
+(function() {
+    const styles = getComputedStyle(document.documentElement);
+    const textColor = styles.getPropertyValue('--text-muted').trim();
+    const gridColor = styles.getPropertyValue('--chart-grid').trim();
+    const surfaceColor = styles.getPropertyValue('--surface').trim();
+    const color1 = styles.getPropertyValue('--chart-1').trim();
+
+    const premiumTooltip = {
+        backgroundColor: surfaceColor,
+        titleColor: textColor,
+        bodyColor: textColor,
+        borderColor: gridColor,
+        borderWidth: 1,
+        padding: 12,
+        cornerRadius: 8,
+        displayColors: true
+    };
+
+    const ctx1 = document.getElementById('grafico1');
+    if (ctx1) {
+        new Chart(ctx1, {
+            type: 'line',
+            data: {
+                labels: ['2023', '2024', '2025', '2026'],
+                datasets: [{
+                    label: 'Adopción en desarrolladores corporativos (%)',
+                    data: [14, 60, 84, 90],
+                    borderColor: color1,
+                    backgroundColor: color1 + '22',
+                    tension: 0.3,
+                    pointRadius: 4,
+                    fill: true
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: premiumTooltip
+                },
+                scales: {
+                    x: { ticks: { color: textColor }, grid: { display: false } },
+                    y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                }
+            }
+        });
+    }
+
+    const ctx2 = document.getElementById('grafico2');
+    if (ctx2) {
+        new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['Tareas Rutinarias / Boilerplate', 'Refactorización Media', 'Alta Complejidad / Arquitectura'],
+                datasets: [{
+                    label: 'Ahorro de Tiempo (%)',
+                    data: [46, 22, 9],
+                    backgroundColor: [color1, color1 + '99', color1 + '44'],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: premiumTooltip
+                },
+                scales: {
+                    x: { ticks: { color: textColor }, grid: { display: false } },
+                    y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                }
+            }
+        });
+    }
+
+    const ctx3 = document.getElementById('grafico3');
+    if (ctx3) {
+        new Chart(ctx3, {
+            type: 'bar',
+            data: {
+                labels: ['Tiempo de Espera en Code Review', 'Tasa de Vulnerabilidades Detectadas', 'Reescritura Temprana / Churn'],
+                datasets: [{
+                    label: 'Factor de Incremento vs. Código Humano (x)',
+                    data: [4.6, 2.7, 2.1],
+                    backgroundColor: [color1, color1 + 'cc', color1 + '88'],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: premiumTooltip
+                },
+                scales: {
+                    x: { ticks: { color: textColor }, grid: { display: false } },
+                    y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                }
+            }
+        });
+    }
+
+    const ctx4 = document.getElementById('grafico4');
+    if (ctx4) {
+        new Chart(ctx4, {
+            type: 'doughnut',
+            data: {
+                labels: ['Tiempo Consumido Depurando', 'Deriva Arquitectónica y Acoplamiento', 'Riesgos de Seguridad y Privacidad', 'Licencias y Cumplimiento'],
+                datasets: [{
+                    data: [45, 30, 15, 10],
+                    backgroundColor: [color1, color1 + 'cc', color1 + '99', color1 + '66'],
+                    borderColor: surfaceColor,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                        labels: { color: textColor, usePointStyle: true, padding: 15 }
+                    },
+                    tooltip: premiumTooltip
+                }
+            }
+        });
+    }
+
+    const ctx5 = document.getElementById('grafico5');
+    if (ctx5) {
+        new Chart(ctx5, {
+            type: 'bar',
+            data: {
+                labels: ['Sin Protocolo de Control', 'Linter Básico e IDE Prompting', 'TDD Asistido y CI/CD Estricto', 'Checklist Técnico de 5 Niveles'],
+                datasets: [{
+                    label: 'Reducción de Defectos en Producción (%)',
+                    data: [10, 35, 68, 88],
+                    backgroundColor: [color1 + '33', color1 + '66', color1 + '99', color1],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: premiumTooltip
+                },
+                scales: {
+                    x: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true },
+                    y: { ticks: { color: textColor }, grid: { display: false } }
+                }
+            }
+        });
+    }
+})();
+</script>
+</div><div class="tags"><a href="/hana/etiquetas/Inteligencia Artificial" class="tag">#Inteligencia Artificial</a><a href="/hana/etiquetas/Arquitectura de Software" class="tag">#Arquitectura de Software</a><a href="/hana/etiquetas/Calidad de Código" class="tag">#Calidad de Código</a><a href="/hana/etiquetas/DevOps" class="tag">#DevOps</a></div><section class="related-articles"><h2 class="section-title">Sigue leyendo</h2><div class="news-grid"><a href="/hana/articulos/2026/08/la-frontera-dentada-de-la-ia-claude-y-el-trabajo" class="news-card"><span class="kicker">Inteligencia Artificial</span><h3>La frontera dentada de la IA: por qué Claude toca millones de empleos sin automatizar ninguno</h3><p>El Anthropic Economic Index revela una verdad incómoda: la IA generativa actúa más como una herramienta de poder que como una fábrica autónoma, con efectos radicalmente desiguales según el tipo de trabajo, el ingreso y la geografía.</p></a><a href="/hana/articulos/2026/08/maximizar-roi-inversion-minima-software" class="news-card"><span class="kicker">Estrategia Tecnológica</span><h3>El arte del retorno mínimo viable: cómo optimizar el capital técnico sin hundir la arquitectura</h3><p>Aprenda a balancear la velocidad de entrega y la sostenibilidad financiera identificando el punto exacto de inversión en ingeniería antes de que la deuda técnica devore su ROI.</p></a></div></section></article><aside class="toc-sidebar"><div class="toc-container"><h3 class="toc-title">En este artículo</h3><ul class="toc-list"><li class="toc-item toc-depth-2"><a href="#la-paradoja-de-la-productividad-y-la-brecha-de-complejidad">La paradoja de la productividad y la brecha de complejidad</a></li><li class="toc-item toc-depth-2"><a href="#la-degradación-silenciosa-el-impuesto-de-la-depuración">La degradación silenciosa: el impuesto de la depuración</a></li><li class="toc-item toc-depth-2"><a href="#la-lista-de-verificación-técnica-los-5-niveles-de-control-para-software-asistido-por-ia">La lista de verificación técnica: los 5 niveles de control para software asistido por IA</a></li><li class="toc-item toc-depth-3"><a href="#1-delimitación-de-contexto-y-archivos-de-instrucciones-system-prompting">1. Delimitación de contexto y archivos de instrucciones (System Prompting)</a></li><li class="toc-item toc-depth-3"><a href="#2-análisis-estático-y-verificación-de-tipos-estricta">2. Análisis estático y verificación de tipos estricta</a></li><li class="toc-item toc-depth-3"><a href="#3-cobertura-de-pruebas-orientadas-al-comportamiento-tdd-asistido">3. Cobertura de pruebas orientadas al comportamiento (TDD asistido)</a></li><li class="toc-item toc-depth-3"><a href="#4-auditoría-de-dependencias-y-vectores-de-seguridad">4. Auditoría de dependencias y vectores de seguridad</a></li><li class="toc-item toc-depth-3"><a href="#5-auditoría-de-reutilización-y-modularidad-en-revisión-humana">5. Auditoría de reutilización y modularidad en revisión humana</a></li><li class="toc-item toc-depth-2"><a href="#estrategias-de-implementación-para-ctos-y-líderes-de-ingeniería">Estrategias de implementación para CTOs y Líderes de Ingeniería</a></li><li class="toc-item toc-depth-2"><a href="#fuentes-y-créditos">Fuentes y Créditos</a></li></ul></div></aside></div><footer class="site-footer"><h3>Impulsado por los decks de <a href="https://hanademi.com/" target="_blank" rel="noopener">Hanademi</a></h3></footer><script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('hana-theme', newTheme);
+            window.dispatchEvent(new Event('themeChanged'));
+        }
+        function applyChartDefaults() {
+            if (typeof Chart === 'undefined') return;
+            const styles = getComputedStyle(document.documentElement);
+            Chart.defaults.color = styles.getPropertyValue('--text-muted').trim();
+            Chart.defaults.borderColor = styles.getPropertyValue('--chart-grid').trim();
+            Chart.defaults.font.family = "'Inter', system-ui, sans-serif";
+        }
+        function initReadingProgress() {
+            const progressBar = document.getElementById('reading-progress');
+            if (!progressBar) return;
+            window.addEventListener('scroll', () => {
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (scrollHeight > 0) {
+                    const scrollTop = window.scrollY;
+                    const progress = (scrollTop / scrollHeight) * 100;
+                    progressBar.style.width = progress + '%';
+                }
+            }, { passive: true });
+        }
+
+        function initNavSearch() {
+            const navSearch = document.getElementById('nav-search-input');
+            if (!navSearch) return;
+            navSearch.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' && e.target.value.trim() !== '') {
+                    window.location.href = `/hana/archivo?q=${encodeURIComponent(e.target.value.trim())}`;
+                }
+            });
+        }
+        
+        document.addEventListener('astro:page-load', () => {
+            try {
+                applyChartDefaults();
+                initReadingProgress();
+                initNavSearch();
+                const toggleBtn = document.getElementById('theme-toggle');
+                if (toggleBtn) toggleBtn.addEventListener('click', toggleTheme);
+            } catch (err) { console.error('hana: error:', err); }
+        });
+
+        window.addEventListener('themeChanged', () => { 
+            applyChartDefaults(); 
+        });
+    </script></body></html>

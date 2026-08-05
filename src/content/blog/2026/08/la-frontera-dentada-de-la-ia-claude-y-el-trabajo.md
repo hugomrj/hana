@@ -1,7 +1,7 @@
 ---
 titulo: "La frontera dentada de la IA: por qué Claude toca millones de empleos sin automatizar ninguno"
 extracto: "El Anthropic Economic Index revela una verdad incómoda: la IA generativa actúa más como una herramienta de poder que como una fábrica autónoma, con efectos radicalmente desiguales según el tipo de trabajo, el ingreso y la geografía."
-fecha: "2026-08-05T10:30:00"
+fecha: "2026-08-05T22:49:02"
 categoria: "Inteligencia Artificial"
 etiquetas: ["IA generativa", "Claude", "automatización", "productividad", "trabajo del futuro"]
 link_original: "https://hanademi.com/decks/indice-economico-de-anthropic-explicado-20260801-200245/es/"
