@@ -1,7 +1,7 @@
 ---
 titulo: "El dilema socrático de la inteligencia artificial: ¿puede el software enseñarnos a pensar más profundo?"
 extracto: "Frente a la tentación del atajo cognitivo que ofrecen las respuestas automáticas, los modelos socráticos de IA rediseñan la interacción pedagógica para priorizar la retención y la metacognición sobre la inmediatez."
-fecha: "2026-08-05T10:00:00"
+fecha: "2026-08-05T22:48:00"
 categoria: "Tecnología Educativa"
 etiquetas: ["Inteligencia Artificial", "Educación", "Pensamiento Crítico", "Chart.js", "EdTech"]
 link_original: "https://hanademi.com/decks/can-ai-teach-students-to-think-deeper-20260804-171941/es/"
