@@ -89,6 +89,8 @@ Este artículo es una adaptación de la investigación original y los datos reco
 - [Legacy Application Modernization Market Report](https://www.researchandmarkets.com/reports/6215676/legacy-application-modernization-market-report)
 
 <script is:inline data-astro-rerun>
+(function() {
+    
     const styles = getComputedStyle(document.documentElement);
     const textColor = styles.getPropertyValue('--text-muted').trim();
     const gridColor = styles.getPropertyValue('--chart-grid').trim();
@@ -236,4 +238,5 @@ Este artículo es una adaptación de la investigación original y los datos reco
             }
         });
     }
+})();    
 </script>
