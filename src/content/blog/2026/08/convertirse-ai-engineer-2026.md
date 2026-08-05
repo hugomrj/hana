@@ -298,5 +298,5 @@ Este artículo es una adaptación de la investigación original y los datos reco
             }
         });
     }
-)();
+})();
 </script>
