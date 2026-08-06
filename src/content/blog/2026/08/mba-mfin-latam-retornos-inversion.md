@@ -1,7 +1,7 @@
 ---
 titulo: "Un MBA o MFin en Latinoamérica: cuándo el título paga y cuándo solo educa"
 extracto: "El retorno de un posgrado depende menos de la marca que del encaje con la trayectoria. En Colombia la matrícula terciaria se duplicó en dos décadas, pero eso no garantiza que el mercado laboral absorba a todos los graduados con salarios superiores."
-fecha: "2026-08-06T16:32:43"
+fecha: "2026-08-06T22:32:43"
 categoria: "Educación superior y carrera"
 etiquetas: ["MBA", "MFin", "Latinoamérica", "Retorno de inversión", "Educación superior"]
 link_original: "https://hanademi.com/decks/mba-and-mfin-degrees-shape-latin-american-careers-20260806-163243/es/"

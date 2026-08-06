@@ -1,7 +1,7 @@
 ---
 titulo: "Adoptar IA es trivial; integrarla decide quién gana y quién pierde en la pyme"
 extracto: "Tres desajustes definen el éxito real de la IA en pequeñas empresas: productividad asimétrica, base digital delgada y retorno por profundidad de despliegue. Ninguno se resuelve comprando otra licencia SaaS."
-fecha: "2026-08-06T11:21:18"
+fecha: "2026-08-06T21:21:18"
 categoria: "Industria del software"
 etiquetas: ["SaaS", "Inteligencia artificial", "Pymes", "Productividad", "Cloud"]
 link_original: "https://hanademi.com/decks/saas-e-ia-en-pymes-oportunidades-y-desafios-actuales-20260806-112118/es/"
