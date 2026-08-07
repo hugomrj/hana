@@ -189,7 +189,207 @@
                     tooltip: {
                         ...premiumTooltip,
                         callbacks: {
-                            label: function(context)
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Gráfico 3: Bar horizontal - Productividad por tipo de tarea
+    const ctx3 = document.getElementById('grafico3');
+    if (ctx3) {
+        new Chart(ctx3, {
+            type: 'bar',
+            data: { 
+                labels: ['Coding tasks (Noy & Zhang)', 'Escritura profesional', 'Soporte (Brynjolfsson)', 'Ahorro Dinamarca', 'Devs expertos (METR)'],
+                datasets: [{
+                    label: 'Variación productividad',
+                    data: [55.8, 40, 15, 2.8, -19],
+                    backgroundColor: [color1, color1 + 'cc', color1 + '99', color1 + '66', color1 + '44'],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: {
+                            label: function(context) {
+                                const v = context.parsed.x;
+                                return (v > 0 ? '+' : '') + v + '%';
+                            }
+                        }
+                    }
+                },
+                scales: { 
+                    y: { ticks: { color: textColor, font: { size: 11 } }, grid: { display: false } }, 
+                    x: { 
+                        ticks: { 
+                            color: textColor,
+                            callback: function(value) { return (value > 0 ? '+' : '') + value + '%'; }
+                        }, 
+                        grid: { color: gridColor },
+                        min: -25,
+                        max: 65
+                    } 
+                }
+            }
+        });
+    }
+
+    // Gráfico 4: Line multi-serie - Eurostat digital skills
+    const ctx4 = document.getElementById('grafico4');
+    if (ctx4) {
+        new Chart(ctx4, {
+            type: 'line',
+            data: { 
+                labels: ['2021', '2023', '2025'],
+                datasets: [
+                    {
+                        label: 'Netherlands',
+                        data: [3.5, 3.8, 4.2],
+                        borderColor: color1,
+                        backgroundColor: color1 + '22',
+                        borderWidth: 3,
+                        tension: 0.3,
+                        pointRadius: 5
+                    },
+                    {
+                        label: 'Denmark',
+                        data: [2.8, 2.8, 2.8],
+                        borderColor: color1 + 'cc',
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        tension: 0.3,
+                        pointRadius: 4
+                    },
+                    {
+                        label: 'Spain',
+                        data: [2.46, 2.02, 2.21],
+                        borderColor: color1 + '99',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        pointRadius: 4
+                    },
+                    {
+                        label: 'Germany',
+                        data: [1.35, 1.27, 1.4],
+                        borderColor: color1 + '77',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        pointRadius: 4
+                    },
+                    {
+                        label: 'Italy',
+                        data: [3.2, 3.97, 2.43],
+                        borderColor: color1 + '55',
+                        borderWidth: 2,
+                        borderDash: [3, 3],
+                        tension: 0.3,
+                        pointRadius: 4
+                    },
+                    {
+                        label: 'Poland',
+                        data: [4.12, 3.78, 3.45],
+                        borderColor: color1 + '33',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        pointRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { 
+                        display: true,
+                        position: 'bottom', 
+                        labels: { color: textColor, usePointStyle: true, padding: 12, font: { size: 10 } } 
+                    },
+                    tooltip: premiumTooltip
+                },
+                scales: { 
+                    x: { ticks: { color: textColor }, grid: { display: false } }, 
+                    y: { 
+                        ticks: { color: textColor }, 
+                        grid: { color: gridColor }
+                    } 
+                }
+            }
+        });
+    }
+
+    // Gráfico 5: Bar stacked - WEF jobs forecast
+    const ctx5 = document.getElementById('grafico5');
+    if (ctx5) {
+        new Chart(ctx5, {
+            type: 'bar',
+            data: { 
+                labels: ['Proyección global 2025-2030 (WEF)'],
+                datasets: [
+                    {
+                        label: 'Empleos creados (millones)',
+                        data: [170],
+                        backgroundColor: color1,
+                        borderColor: color1,
+                        borderWidth: 1,
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Empleos desplazados (millones)',
+                        data: [-92],
+                        backgroundColor: color1 + '55',
+                        borderColor: color1 + '55',
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { 
+                        display: true,
+                        position: 'bottom', 
+                        labels: { color: textColor, usePointStyle: true, padding: 20 } 
+                    },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + Math.abs(context.parsed.y) + 'M';
+                            }
+                        }
+                    }
+                },
+                scales: { 
+                    x: { ticks: { color: textColor }, grid: { display: false }, stacked: true }, 
+                    y: { 
+                        ticks: { 
+                            color: textColor,
+                            callback: function(value) { return (value > 0 ? '+' : '') + value + 'M'; }
+                        }, 
+                        grid: { color: gridColor },
+                        stacked: true
+                    } 
+                }
+            }
+        });
+    }
+})();
+</script>
 </div><div class="tags"><a href="/hana/etiquetas/Inteligencia Artificial" class="tag">#Inteligencia Artificial</a><a href="/hana/etiquetas/Productividad" class="tag">#Productividad</a><a href="/hana/etiquetas/Deuda Cognitiva" class="tag">#Deuda Cognitiva</a><a href="/hana/etiquetas/NBER" class="tag">#NBER</a><a href="/hana/etiquetas/MIT" class="tag">#MIT</a><a href="/hana/etiquetas/HBS" class="tag">#HBS</a><a href="/hana/etiquetas/Eurostat" class="tag">#Eurostat</a></div><section class="related-articles"><h2 class="section-title">Sigue leyendo</h2><div class="news-grid"><a href="/hana/articulos/2026/08/networking-lazos-debiles-evidencia-causal" class="news-card"><span class="kicker">Carrera Profesional</span><h3>La paradoja del networking moderno: por qué tus conocidos lejanos valen más que tus amigos cercanos</h3><p>Medio siglo después de la teoría de los lazos débiles, un experimento masivo con 20 millones de usuarios de LinkedIn confirma lo que la sociología sospechaba: las oportunidades laborales fluyen a través de conexiones moderadamente distantes, no de tu círculo íntimo. La evidencia causal revela qué estrategias de networking realmente funcionan.</p></a><a href="/hana/articulos/2026/08/mba-mfin-roi-latam-carreras-2026" class="news-card"><span class="kicker">Desarrollo Profesional</span><h3>El dilema del posgrado en América Latina: cuándo un MBA o MFin realmente transforma tu carrera</h3><p>Con inversiones que superan los 160 mil dólares y retornos que varían dramáticamente según el campo y la región, los profesionales latinoamericanos enfrentan una decisión compleja. Los datos revelan que el éxito no depende solo del prestigio de la escuela, sino de factores estructurales que pocos consideran antes de matricularse.</p></a></div></section></article><aside class="toc-sidebar"><div class="toc-container"><h3 class="toc-title">En este artículo</h3><ul class="toc-list"><li class="toc-item toc-depth-2"><a href="#el-efecto-espejismo-cuando-completar-no-es-aprender">El efecto espejismo: cuando completar no es aprender</a></li><li class="toc-item toc-depth-2"><a href="#la-frontera-dentada-por-qué-la-ia-brilla-en-unas-tareas-y-falla-en-otras-adjuntas">La frontera dentada: por qué la IA brilla en unas tareas y falla en otras adjuntas</a></li><li class="toc-item toc-depth-2"><a href="#productividad-real-versus-productividad-percibida">Productividad real versus productividad percibida</a></li><li class="toc-item toc-depth-2"><a href="#creatividad-individual-contra-diversidad-colectiva">Creatividad individual contra diversidad colectiva</a></li><li class="toc-item toc-depth-2"><a href="#europa-fragmentada-no-existe-una-línea-base-común-de-habilidades">Europa fragmentada: no existe una línea base común de habilidades</a></li><li class="toc-item toc-depth-2"><a href="#alucinaciones-legales-y-el-coste-regulatorio">Alucinaciones legales y el coste regulatorio</a></li><li class="toc-item toc-depth-2"><a href="#el-saldo-neto-laboral-78-millones-de-empleos-de-diferencia">El saldo neto laboral: 78 millones de empleos de diferencia</a></li><li class="toc-item toc-depth-2"><a href="#hacia-una-política-organizacional-defendible">Hacia una política organizacional defendible</a></li><li class="toc-item toc-depth-2"><a href="#fuentes-y-créditos">Fuentes y Créditos</a></li></ul></div></aside></div><footer class="site-footer"><h3>Impulsado por los decks de <a href="https://hanademi.com/" target="_blank" rel="noopener">Hanademi</a></h3></footer><script>
         function toggleTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');

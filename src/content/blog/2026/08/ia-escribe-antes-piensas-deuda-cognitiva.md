@@ -223,4 +223,204 @@ Este artículo es una adaptación de la investigación original y los datos reco
                     tooltip: {
                         ...premiumTooltip,
                         callbacks: {
-                            label: function(context)
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + '%';
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
+
+    // Gráfico 3: Bar horizontal - Productividad por tipo de tarea
+    const ctx3 = document.getElementById('grafico3');
+    if (ctx3) {
+        new Chart(ctx3, {
+            type: 'bar',
+            data: { 
+                labels: ['Coding tasks (Noy & Zhang)', 'Escritura profesional', 'Soporte (Brynjolfsson)', 'Ahorro Dinamarca', 'Devs expertos (METR)'],
+                datasets: [{
+                    label: 'Variación productividad',
+                    data: [55.8, 40, 15, 2.8, -19],
+                    backgroundColor: [color1, color1 + 'cc', color1 + '99', color1 + '66', color1 + '44'],
+                    borderColor: color1,
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: {
+                            label: function(context) {
+                                const v = context.parsed.x;
+                                return (v > 0 ? '+' : '') + v + '%';
+                            }
+                        }
+                    }
+                },
+                scales: { 
+                    y: { ticks: { color: textColor, font: { size: 11 } }, grid: { display: false } }, 
+                    x: { 
+                        ticks: { 
+                            color: textColor,
+                            callback: function(value) { return (value > 0 ? '+' : '') + value + '%'; }
+                        }, 
+                        grid: { color: gridColor },
+                        min: -25,
+                        max: 65
+                    } 
+                }
+            }
+        });
+    }
+
+    // Gráfico 4: Line multi-serie - Eurostat digital skills
+    const ctx4 = document.getElementById('grafico4');
+    if (ctx4) {
+        new Chart(ctx4, {
+            type: 'line',
+            data: { 
+                labels: ['2021', '2023', '2025'],
+                datasets: [
+                    {
+                        label: 'Netherlands',
+                        data: [3.5, 3.8, 4.2],
+                        borderColor: color1,
+                        backgroundColor: color1 + '22',
+                        borderWidth: 3,
+                        tension: 0.3,
+                        pointRadius: 5
+                    },
+                    {
+                        label: 'Denmark',
+                        data: [2.8, 2.8, 2.8],
+                        borderColor: color1 + 'cc',
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        tension: 0.3,
+                        pointRadius: 4
+                    },
+                    {
+                        label: 'Spain',
+                        data: [2.46, 2.02, 2.21],
+                        borderColor: color1 + '99',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        pointRadius: 4
+                    },
+                    {
+                        label: 'Germany',
+                        data: [1.35, 1.27, 1.4],
+                        borderColor: color1 + '77',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        pointRadius: 4
+                    },
+                    {
+                        label: 'Italy',
+                        data: [3.2, 3.97, 2.43],
+                        borderColor: color1 + '55',
+                        borderWidth: 2,
+                        borderDash: [3, 3],
+                        tension: 0.3,
+                        pointRadius: 4
+                    },
+                    {
+                        label: 'Poland',
+                        data: [4.12, 3.78, 3.45],
+                        borderColor: color1 + '33',
+                        borderWidth: 2,
+                        tension: 0.3,
+                        pointRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { 
+                        display: true,
+                        position: 'bottom', 
+                        labels: { color: textColor, usePointStyle: true, padding: 12, font: { size: 10 } } 
+                    },
+                    tooltip: premiumTooltip
+                },
+                scales: { 
+                    x: { ticks: { color: textColor }, grid: { display: false } }, 
+                    y: { 
+                        ticks: { color: textColor }, 
+                        grid: { color: gridColor }
+                    } 
+                }
+            }
+        });
+    }
+
+    // Gráfico 5: Bar stacked - WEF jobs forecast
+    const ctx5 = document.getElementById('grafico5');
+    if (ctx5) {
+        new Chart(ctx5, {
+            type: 'bar',
+            data: { 
+                labels: ['Proyección global 2025-2030 (WEF)'],
+                datasets: [
+                    {
+                        label: 'Empleos creados (millones)',
+                        data: [170],
+                        backgroundColor: color1,
+                        borderColor: color1,
+                        borderWidth: 1,
+                        borderRadius: 4
+                    },
+                    {
+                        label: 'Empleos desplazados (millones)',
+                        data: [-92],
+                        backgroundColor: color1 + '55',
+                        borderColor: color1 + '55',
+                        borderWidth: 1,
+                        borderRadius: 4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { 
+                    legend: { 
+                        display: true,
+                        position: 'bottom', 
+                        labels: { color: textColor, usePointStyle: true, padding: 20 } 
+                    },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + Math.abs(context.parsed.y) + 'M';
+                            }
+                        }
+                    }
+                },
+                scales: { 
+                    x: { ticks: { color: textColor }, grid: { display: false }, stacked: true }, 
+                    y: { 
+                        ticks: { 
+                            color: textColor,
+                            callback: function(value) { return (value > 0 ? '+' : '') + value + 'M'; }
+                        }, 
+                        grid: { color: gridColor },
+                        stacked: true
+                    } 
+                }
+            }
+        });
+    }
+})();
+</script>
