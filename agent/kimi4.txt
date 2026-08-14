@@ -14,7 +14,7 @@ Aquí tienes los requisitos obligatorios:
 2. ESTRUCTURA, NARRATIVA Y EXTENSIÓN:
 - No escribas una lista de diapositivas. Escribe un ARTÍCULO fluido con introducción, desarrollo y conclusión.
 - Usa un tono técnico pero accesible (para perfiles de arquitectos, CTOs y desarrolladores).
-- REGLA DEL TÍTULO: El "titulo" (en el frontmatter) debe ser un titular periodístico atractivo, con gancho y basado en el CONTENIDO y la conclusión del deck. NUNCA uses el texto de la URL o el slug como título.
+- REGLA DEL TÍTULO: El "titulo" (en el frontmatter) debe ser un titular periodístico atractivo, basado en el CONTENIDO. NUNCA uses el texto de la URL o el slug como título.
 - REGLA ANTI-ABURRIMIENTO (MUY IMPORTANTE): Evita las "listas de la compra" de números y porcentajes en el texto. Los datos fríos (cifras exactas, montos, años) deben vivir en los GRÁFICOS. El texto debe usarse para explicar el *porqué*, el contexto y el impacto de esos datos, no para repetirlos. Escribe de forma narrativa y atractiva. Si mencionas un número en el texto, úsalo para dar impacto, no para amontonar estadísticas.
 - EXTENSIÓN OBLIGATORIA: El artículo debe tener aproximadamete de 1000 palabras. Si al terminar el borrador tienes menos, amplía las secciones con más contexto, ejemplos de la industria y análisis técnico, NO añadiendo más números.
 

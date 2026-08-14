@@ -1,7 +1,7 @@
 rm -rf docs
 bun run build
 git add .
-git commit -m "Feat: mensaje definido por la ia"
+git commit -m "Feat: define el mensaje aqui"
 git push
 
 
