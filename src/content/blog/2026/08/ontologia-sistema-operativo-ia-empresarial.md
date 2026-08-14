@@ -1,111 +1,110 @@
 ---
-titulo: "El sistema operativo que falta: por qué la ontología operativa es la capa decisiva entre la adopción de IA y el valor real"
-extracto: "Mientras el 80% de los proyectos de IA fracasa y las empresas invierten miles de millones sin retorno, una ontología operativa bien diseñada emerge como el sistema operativo invisible que separa a las organizaciones que escalan inteligencia artificial de las que desperdician capital tecnológico."
-fecha: "2026-08-13T23:58:00"
-categoria: "Inteligencia Artificial"
-etiquetas: ["IA agéntica", "ontología empresarial", "Palantir", "transformación digital", "sistemas legados"]
+titulo: "La ontología: el sistema operativo empresarial que separa el experimento IA del valor real"
+extracto: "Mientras la adopción de IA se dispara, solo un puñado de empresas logra escalar valor. La clave está en un modelo gobernado de objetos, relaciones y acciones ejecutables."
+fecha: "2026-08-14T10:30:00"
+categoria: "Arquitectura Empresarial"
+etiquetas: ["IA Agéntica", "Ontología", "Arquitectura", "Transformación Digital", "Gobernanza"]
 link_original: "https://hanademi.com/decks/how-ontology-becomes-the-enterprise-operating-system-20260809-195922/es/"
 ---
 
-La inteligencia artificial ha dejado de ser una promesa de laboratorio para convertirse en una realidad operativa. Sin embargo, entre la euforia de la adopción y los resultados concretos existe una brecha que pocos logran cruzar. Mientras las empresas invierten miles de millones y despliegan agentes autónomos en cada rincón del stack tecnológico, la pregunta que define la próxima década no es si usar IA, sino cómo construir el sistema operativo que la haga confiable a escala. Ese sistema operativo, según una creciente evidencia empírica, no es otro modelo de lenguaje ni una interfaz conversacional más pulida: es una ontología operativa.
+La inteligencia artificial ha dejado de ser una promesa para convertirse en una realidad operativa en la mayoría de las organizaciones. Según la [Encuesta Global sobre el Estado de la IA de McKinsey](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024), la adopción organizacional saltó del 20% en 2017 al 72% a principios de 2024, mientras que la inversión privada en IA generativa alcanzó los $33.9 mil millones ese mismo año según el [AI Index Report de Stanford HAI](https://hai.stanford.edu/ai-index/2025-ai-index-report). Sin embargo, esta explosión de experimentación no se traduce en valor escalado: la mayoría de las empresas siguen atrapadas en pilotos que no logran impacto medible en sus operaciones.
 
-## La paradoja de la adopción masiva
+## El abismo entre adopción y valor
 
-La adopción de inteligencia artificial en las organizaciones ha sido vertiginosa. Según encuestas de McKinsey, el uso organizativo de IA saltó del 20% en 2017 al 72% a comienzos de 2024, y la inversión privada en IA generativa alcanzó los 33.900 millones de dólares en 2024, multiplicando por más de ocho la cifra de 2022. En Alemania, una encuesta del Bundesbank a más de 7.000 empresas mostró que la proporción de firmas que usan o esperan usar IA generativa creció del 26% en 2024 al 56% en 2026. Los números hablan de una transformación sin precedentes.
+El problema fundamental no es la falta de tecnología, sino la ausencia de un modelo compartido que conecte el significado del negocio con las acciones ejecutables. Mientras que casi tres cuartas partes de las organizaciones han adoptado IA, [BCG identificó](https://www.bcg.com/press/24october2024-ai-adoption-in-2024-74-of-companies-struggle-to-achieve-and-scale-value) que el 74% de las empresas carece de valor demostrable a escala. Una encuesta separada de [Roland Berger](https://www.rolandberger.com/en/Insights/Publications/Profitless-prosperity-in-AI.html) a 203 ejecutivos senior reveló que aproximadamente el 90% reportó retornos inferiores a su inversión en diciembre de 2025, fenómeno que denominan "prosperidad sin ganancias".
 
-Pero los números también ocultan una verdad incómoda. La misma investigación de McKinsey encontró que casi dos tercios de las organizaciones aún no han comenzado a escalar la IA en toda la empresa. El [Atlanta Fed](https://www.atlantafed.org/research-and-data/publications/working-papers/2026/03/24/03-firm-data-on-ai), tras encuestar a casi 6.000 ejecutivos en cuatro países, descubrió que aunque cerca del 70% de las empresas usan activamente IA, los altos directivos promedian apenas una hora y media de uso semanal. La tecnología ha entrado por la puerta, pero no ha llegado al centro de operaciones.
+Este abismo se refleja incluso en el liderazgo ejecutivo. Aunque encuestas representativas en cuatro países muestran que alrededor del 70% de las empresas utilizan IA activamente, la [Reserva Federal de Atlanta](https://www.atlantafed.org/research-and-data/publications/working-papers/2026/03/24/03-firm-data-on-ai) encontró que los altos ejecutivos promedian apenas 1.5 horas de uso semanal, con una cuarta parte reportando ningún uso. La adopción puede propagarse rápidamente, pero el liderazgo necesita experiencia práctica para rediseñar operaciones, y esa brecha de comprensión está frenando la transformación.
 
-La consecuencia es un valle de resultados. [Boston Consulting Group](https://www.bcg.com/publications/2024/wheres-value-in-ai) clasificó al 74% de las empresas como carentes de valor demostrado de IA a escala en 2024. Un estudio de [Roland Berger](https://www.mynewsdesk.com/rolandberger/pressreleases/roland-berger-study-many-companies-fail-to-adopt-ai-in-their-processes-in-spite-of-massive-investments-3386160) señaló que, pese a que el gasto empresarial en IA se multiplicó por seis entre 2023 y 2024, solo el 27% de las organizaciones había integrado completamente la IA generativa en sus operaciones. La brecha entre inversión y retorno no es una anomalía: es el patrón dominante.
+<div class="chart-container">
+    <div class="chart-title">Evolución de la adopción organizacional de IA (2017-2024) - McKinsey</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico1"></canvas>
+    </div>
+</div>
 
-&lt;div class="chart-container"&gt;
-    &lt;div class="chart-title"&gt;Inversión privada en IA generativa (miles de millones USD). Fuente: Stanford HAI, AI Index 2025&lt;/div&gt;
-    &lt;div class="chart-canvas-wrapper"&gt;
-        &lt;canvas id="grafico1"&gt;&lt;/canvas&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<div class="chart-container">
+    <div class="chart-title">Inversión privada global en IA generativa (miles de millones USD) - Stanford HAI</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico2"></canvas>
+    </div>
+</div>
 
-## Cuando los agentes encuentran un sistema sin mapa
+## La próxima ola: IA agéntica sin autonomía real
 
-[Gartner](https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027) predijo que la IA agéntica —sistemas capaces de planificar, decidir y actuar con mínima supervisión humana— estará presente en el 33% de las aplicaciones empresariales para 2028, frente a menos del 1% en 2024. McKinsey, por su parte, encontró que el 62% de las organizaciones ya experimenta con agentes de IA. La transición de asistentes pasivos a agentes operativos es real, pero plantea un problema de arquitectura que pocos habían anticipado.
+Gartner pronostica que el 33% de las aplicaciones empresariales incluirán IA agéntica para 2028, frente a menos del 1% en 2024, según su [informe sobre tendencias estratégicas](https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027). Sin embargo, esa misma predicción indica que solo el 15% de las decisiones rutinarias del trabajo se tomarán de forma autónoma mediante IA agéntica en ese mismo período. La presencia de agentes superará su autoridad de decisión en 18 puntos porcentuales, creando una tensión operativa significativa.
 
-Un agente autónomo no puede operar en el vacío. Necesita saber qué es un cliente, una orden de compra, un umbral de aprobación o una regla de gobierno de datos. Necesita permisos granulares, contexto compartido y la capacidad de ejecutar acciones dentro de un modelo de negocio que no puede detenerse para ser reescrito. Esa capa de significado compartido es precisamente lo que una ontología operativa proporciona.
+Esta discrepancia revela un problema de gobernanza: los agentes pueden estar integrados en múltiples sistemas, pero las empresas aún no confían en ellos para tomar decisiones rutinarias de forma independiente. Sin un modelo compartido de permisos, reglas de negocio y contexto, cada agente opera en silos, aumentando el riesgo de acciones contradictorias o decisiones no auditables.
 
-Palantir documentó cinco conceptos que convierten el significado empresarial en un modelo operativo: objetos, propiedades, vínculos, acciones y funciones. No es filosofía académica: es la descripción formal de cómo funciona un negocio, expresada en términos que una máquina puede interpretar y ejecutar. El 31 de julio de 2026, [AWS](https://github.com/aws/context-ontology-accelerator) lanzó un acelerador de ontología de código abierto para decisiones de agentes explicables y auditables, señalando que el concepto ya trasciende a un único proveedor.
+<div class="chart-container">
+    <div class="chart-title">Brecha entre presencia de IA agéntica y autonomía de decisión (2028) - Gartner</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico3"></canvas>
+    </div>
+</div>
 
-&lt;div class="chart-container"&gt;
-    &lt;div class="chart-title"&gt;Tasa de fracaso de proyectos de IA vs proyectos IT tradicionales (%). Fuente: RAND Corporation, 2024&lt;/div&gt;
-    &lt;div class="chart-canvas-wrapper"&gt;
-        &lt;canvas id="grafico2"&gt;&lt;/canvas&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+## La ontología como capa decisiva
 
-## El motor que Palantir encendió
+Una ontología empresarial resuelve este problema al proporcionar un modelo compartido de objetos de negocio, propiedades, relaciones, reglas y acciones ejecutables. No es una interfaz más, sino la capa que define cómo funciona el negocio. Palantir documenta cinco conceptos que transforman el significado empresarial en un modelo operativo: objetos y propiedades describen el negocio, enlaces lo conectan, y acciones y funciones hacen que el trabajo sea ejecutable.
 
-El caso de Palantir ilustra con claridad qué ocurre cuando una ontología se convierte en motor de crecimiento. La compañía reportó un crecimiento interanual de ingresos del 93% en el segundo trimestre de 2026, con su negocio comercial en Estados Unidos disparándose un 149%. Su resultado operativo, que fue negativo en 2020, se volvió positivo en 2023 y alcanzó 1.410 millones de dólares en 2025. El flujo de caja operativo superó los 2.100 millones de dólares ese mismo año.
+AWS lanzó un acelerador de ontología de código abierto el 31 de julio de 2026, diseñado específicamente para decisiones de agentes explicables y auditables. Esta inversión en infraestructura semántica refleja un reconocimiento creciente: la IA necesita contexto gobernado para operar de manera confiable en entornos empresariales complejos.
 
-Pero los números financieros solo cuentan la mitad de la historia. La base de clientes de Palantir creció cinco veces más rápido que los ingresos entre 2020 y 2024, lo que implicó una reducción del ingreso anual por cliente cercana al 49%. Esa democratización del acceso —más clientes pagando menos por cliente— es consistente con una plataforma que escala mediante un modelo compartido de negocio, no mediante integraciones custom y costosas.
+<div class="chart-container">
+    <div class="chart-title">Estado del valor de IA en empresas globales (2024) - BCG</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico4"></canvas>
+    </div>
+</div>
 
-El alcance operativo también se extiende al sector público. La Plataforma Federada de Datos del Servicio Nacional de Salud británico se expandió a 115 organizaciones —87 hospitales de agudos y 28 juntas de atención integrada— apenas un año después de su introducción. La adopción no garantiza resultados clínicos, pero demuestra que una ontología bien diseñada puede atravesar fronteras institucionales sin perder coherencia semántica.
+## El caso Palantir: de pérdidas a rentabilidad mediante AIP
 
-&lt;div class="chart-container"&gt;
-    &lt;div class="chart-title"&gt;Palantir: resultado operativo y flujo de caja operativo (miles de millones USD). Fuente: SEC EDGAR&lt;/div&gt;
-    &lt;div class="chart-canvas-wrapper"&gt;
-        &lt;canvas id="grafico3"&gt;&lt;/canvas&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+El lanzamiento de la Plataforma de Inteligencia Artificial (AIP) de Palantir en 2023 marcó un punto de inflexión. Según [filings de la SEC](https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm), la empresa pasó de una pérdida neta de $1.17 mil millones en 2020 a una ganancia de $1.63 mil millones en 2025, mientras mantenía su inversión en I+D en aproximadamente $558 millones. En el segundo trimestre de 2026, reportó un crecimiento interanual del 93% en ingresos comerciales estadounidenses, demostrando que un enfoque basado en ontología puede escalar valor real.
 
-## La fragmentación como enemiga del valor
+La diferencia crítica no está en el modelo de IA, sino en cómo se conecta con sistemas legacy que no pueden detenerse. La [Oficina de Responsabilidad Gubernamental de EE.UU.](https://www.gao.gov) identificó diez sistemas federales críticos con entre ocho y 51 años de antigüedad en 2019. La modernización completa no es una opción viable; en su lugar, las organizaciones necesitan agentes que puedan integrarse incrementalmente con estos sistemas mientras mantienen coherencia semántica.
 
-La barrera más silenciosa y más pesada es la fragmentación. Según el Connectivity Benchmark Report de MuleSoft, la empresa promedio ejecutaba 991 aplicaciones en 2024. Ese ecosistema fragmentado explica por qué el 95% de los líderes de TI citan la dificultad de integrar la IA con otros sistemas como una barrera principal, y por qué el 81% enfrenta silos de datos persistentes.
+<div class="chart-container">
+    <div class="chart-title">Transformación financiera de Palantir (2020-2025) - SEC Filings</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico5"></canvas>
+    </div>
+</div>
 
-[Bain & Company](https://www.bain.com/insights/100-billion-saas-opportunity-hiding-in-cross-system-labor/) estimó en 2026 un mercado de 100.000 millones de dólares para automatizar el trabajo de coordinación entre sistemas, del cual más del 90% permanece sin capturar. Ese trabajo —reconciliar un ERP con una hoja de cálculo, interpretar un correo ambiguo de un proveedor, decidir si escalar una incidencia— es precisamente donde los agentes autónomos pueden generar valor, pero solo si disponen de un contexto empresarial unificado.
+## El costo del fracaso y la deuda técnica
 
-La deuda técnica agrava el problema. Un estudio de Stripe de 2018 estimó que el trabajo productivo de los desarrolladores representa solo dos tercios de su tiempo; el resto se pierde en deuda técnica. GitHub Copilot ha demostrado mejoras medibles en productividad de codificación, pero esas ganancias solo compensan la fricción existente si se generalizan más allá de tareas acotadas. Sin una capa ontológica que normalice definiciones, permisos y reglas de negocio, cada agente nuevo reproduce el caos del sistema que pretende automatizar.
+La [Corporación RAND](https://www.rand.org) documentó que más del 80% de los proyectos de IA fallan, aproximadamente el doble de la tasa de fracaso atribuida comúnmente a proyectos de TI no relacionados con IA. Esta tasa de fracaso no es accidental; refleja la complejidad de coordinar múltiples sistemas, modelos y procesos sin una capa semántica unificada.
 
-&lt;div class="chart-container"&gt;
-    &lt;div class="chart-title"&gt;Distribución de empresas según madurez de IA (%). Fuente: BCG, Where's the Value in AI?, 2024&lt;/div&gt;
-    &lt;div class="chart-canvas-wrapper"&gt;
-        &lt;canvas id="grafico4"&gt;&lt;/canvas&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+MuleSoft encuestó que las organizaciones promedian alrededor de 991 aplicaciones en 2024, frente a 843 en 2021. Cada aplicación adicional multiplica la complejidad de integración y el riesgo de inconsistencias. Bain estima un mercado estadounidense de $100 mil millones para automatizar el trabajo de coordinación entre sistemas, con más del 90% aún sin capturar. La ontología no es solo un concepto académico; es la infraestructura necesaria para capturar ese valor.
 
-&lt;div class="chart-container"&gt;
-    &lt;div class="chart-title"&gt;Promedio de aplicaciones por organización. Fuente: MuleSoft Connectivity Benchmark Report, 2024&lt;/div&gt;
-    &lt;div class="chart-canvas-wrapper"&gt;
-        &lt;canvas id="grafico5"&gt;&lt;/canvas&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
+<div class="chart-container">
+    <div class="chart-title">Tasa de fracaso de proyectos: IA vs TI tradicional - RAND Corporation</div>
+    <div class="chart-canvas-wrapper">
+        <canvas id="grafico6"></canvas>
+    </div>
+</div>
 
-## El precio del fracaso y la senda adelante
+## Conclusión: gobernanza antes que velocidad
 
-RAND Corporation reportó que más del 80% de los proyectos de IA fracasan, aproximadamente el doble de la tasa atribuida a proyectos informáticos sin IA. La causa raíz no suele ser el modelo, sino la ausencia de una capa operativa que conecte el significado del negocio con la ejecución técnica. Cuando un agente autónomo actúa sobre datos que definen "cliente" de cinco maneras distintas en cinco sistemas diferentes, el fracaso no es un bug: es una consecuencia arquitectónica.
+La próxima década de IA empresarial no se definirá por qué tan rápido las organizaciones adoptan modelos, sino por qué tan efectivamente pueden gobernar el contexto en el que operan. La ontología proporciona el puente entre el significado del negocio y la ejecución automatizada, permitiendo que los agentes tomen decisiones coherentes dentro de permisos definidos y reglas auditables.
 
-La evidencia converge en una sola dirección. La adopción de IA es universal, pero el valor está concentrado. Los agentes están llegando, pero necesitan un mapa. Las empresas que construyan ese mapa —una ontología operativa que una objetos, relaciones, reglas y acciones ejecutables— no solo reducirán la tasa de fracaso: redefinirán qué significa operar una empresa en la era de la inteligencia artificial. La ontología no es un lujo académico. Es el sistema operativo que falta.
+Las empresas que logren implementar esta capa semántica gobernada tendrán una ventaja estructural: podrán escalar IA sin sacrificar control, integrar sistemas legacy sin reemplazarlos, y permitir autonomía sin perder visibilidad. El sistema operativo empresarial del futuro no es una plataforma más; es el modelo compartido que define cómo funciona el negocio, ejecutado de manera confiable por humanos y agentes por igual.
 
-## Fuentes y Créditos
+### Fuentes y Créditos
 
 Este artículo es una adaptación de la investigación original y los datos recopilados por Hanademi, presentada en su formato de deck original.
 
 - [Hanademi - How Ontology Becomes the Enterprise Operating System](https://hanademi.com/decks/how-ontology-becomes-the-enterprise-operating-system-20260809-195922/es/)
-- [McKinsey & Company - The State of AI: Global Survey 2025](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai)
+- [McKinsey - The State of AI in Early 2024](https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai-2024)
 - [Stanford HAI - AI Index Report 2025](https://hai.stanford.edu/ai-index/2025-ai-index-report)
-- [CEPR / VoxEU - Generative AI in German firms](https://cepr.org/voxeu/columns/generative-ai-german-firms-diffusion-costs-and-expected-economic-effects)
+- [BCG - AI Adoption in 2024: 74% of Companies Struggle](https://www.bcg.com/press/24october2024-ai-adoption-in-2024-74-of-companies-struggle-to-achieve-and-scale-value)
+- [Roland Berger - The AI Value Gap](https://www.rolandberger.com/en/Insights/Publications/Profitless-prosperity-in-AI.html)
+- [Gartner - Top Strategic Technology Trends 2025](https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027)
 - [Federal Reserve Bank of Atlanta - Firm Data on AI](https://www.atlantafed.org/research-and-data/publications/working-papers/2026/03/24/03-firm-data-on-ai)
-- [Boston Consulting Group - Where's the Value in AI?](https://www.bcg.com/publications/2024/wheres-value-in-ai)
-- [Roland Berger - The Data Imperative](https://www.mynewsdesk.com/rolandberger/pressreleases/roland-berger-study-many-companies-fail-to-adopt-ai-in-their-processes-in-spite-of-massive-investments-3386160)
-- [Gartner - Top Strategic Technology Trends for 2025: Agentic AI](https://www.gartner.com/en/newsroom/press-releases/2025-06-25-gartner-predicts-over-40-percent-of-agentic-ai-projects-will-be-canceled-by-end-of-2027)
-- [AWS - Context Ontology Accelerator](https://github.com/aws/context-ontology-accelerator)
-- [Palantir Technologies - Q2 2026 Earnings Release](https://investors.palantir.com/news-details/2026/Palantir-Reports-Q2-2026-U-S--Comm-Revenue-Growth-of-149-YY-and-Revenue-Growth-of-93-YY-Raises-FY-2026-Revenue-Guidance-to-82-YY-Growth-and-U-S--Comm-Revenue-Guidance-to-134-YY-Crushing-Consensus-Expectations/)
-- [U.S. Securities and Exchange Commission - Palantir Technologies Inc. Filings](https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0001321655)
-- [NHS England - Federated Data Platform](https://www.england.nhs.uk/digital/)
-- [MuleSoft - 2024 Connectivity Benchmark Report](https://resources.wisdominterface.com/wp-content/uploads/2024/02/rp-connectivity-benchmark.pdf)
-- [Bain & Company - The $100-Billion SaaS Opportunity Hiding in Cross-System Labor](https://www.bain.com/insights/100-billion-saas-opportunity-hiding-in-cross-system-labor/)
-- [RAND Corporation - The Root Causes of Failure for Artificial Intelligence Projects](https://www.rand.org/pubs/research_reports/RRA3311-1.html)
-- [Salesforce, Inc. - Annual Report FY2024](https://s205.q4cdn.com/626266368/files/doc_financials/2024/ar/salesforce-fy24-annual-report.pdf)
+- [Palantir Technologies - SEC Filings](https://www.sec.gov/Archives/edgar/data/1321655/000132165526000011/pltr-20251231.htm)
+- [RAND Corporation - AI Project Failure Rates](https://www.rand.org)
+- [U.S. Government Accountability Office - Legacy IT Systems](https://www.gao.gov)
 
-&lt;script is:inline data-astro-rerun&gt;
+
+<script is:inline data-astro-rerun>
 (function() {
-
     const styles = getComputedStyle(document.documentElement);
     const textColor = styles.getPropertyValue('--text-muted').trim();
     const gridColor = styles.getPropertyValue('--chart-grid').trim();
@@ -124,21 +123,62 @@ Este artículo es una adaptación de la investigación original y los datos reco
         displayColors: true
     };
 
+    // Gráfico 1: Evolución adopción IA
     const ctx1 = document.getElementById('grafico1');
     if (ctx1) {
         new Chart(ctx1, {
             type: 'line',
             data: {
+                labels: ['2017', '2023', '2024'],
+                datasets: [{
+                    label: 'Adopción IA (%)',
+                    data: [20, 55, 72],
+                    borderColor: color1,
+                    backgroundColor: color1 + '22',
+                    tension: 0.3,
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    fill: true,
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: premiumTooltip
+                },
+                scales: {
+                    x: { ticks: { color: textColor }, grid: { display: false } },
+                    y: { 
+                        ticks: { color: textColor, callback: function(value) { return value + '%'; } }, 
+                        grid: { color: gridColor }, 
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    }
+
+    // Gráfico 2: Inversión IA generativa
+    const ctx2 = document.getElementById('grafico2');
+    if (ctx2) {
+        new Chart(ctx2, {
+            type: 'line',
+            data: {
                 labels: ['2022', '2023', '2024'],
                 datasets: [{
-                    label: 'Inversión privada en IA generativa (miles de millones USD)',
+                    label: 'Inversión (miles de millones USD)',
                     data: [3, 25.2, 33.9],
                     borderColor: color1,
                     backgroundColor: color1 + '22',
                     tension: 0.3,
-                    pointRadius: 4,
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
                     fill: true,
-                    borderWidth: 2
+                    borderWidth: 3
                 }]
             },
             options: {
@@ -150,134 +190,156 @@ Este artículo es una adaptación de la investigación original y los datos reco
                 },
                 scales: {
                     x: { ticks: { color: textColor }, grid: { display: false } },
-                    y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                    y: { 
+                        ticks: { color: textColor, callback: function(value) { return '$' + value + 'B'; } }, 
+                        grid: { color: gridColor }, 
+                        beginAtZero: true
+                    }
                 }
             }
         });
     }
 
-    const ctx2 = document.getElementById('grafico2');
-    if (ctx2) {
-        new Chart(ctx2, {
-            type: 'bar',
-            data: {
-                labels: ['Proyectos de IA', 'Proyectos IT sin IA'],
-                datasets: [{
-                    label: 'Tasa de fracaso (%)',
-                    data: [80, 40],
-                    backgroundColor: [color1, color1 + '99'],
-                    borderColor: color1,
-                    borderWidth: 1,
-                    borderRadius: 4
-                }]
-            },
-            options: {
-                indexAxis: 'y',
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { display: false },
-                    tooltip: premiumTooltip
-                },
-                scales: {
-                    x: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true },
-                    y: { ticks: { color: textColor }, grid: { display: false } }
-                }
-            }
-        });
-    }
-
+    // Gráfico 3: Gap presencia vs autonomía
     const ctx3 = document.getElementById('grafico3');
     if (ctx3) {
         new Chart(ctx3, {
-            type: 'line',
+            type: 'bar',
             data: {
-                labels: ['2020', '2021', '2022', '2023', '2024', '2025'],
-                datasets: [
-                    {
-                        label: 'Resultado operativo (miles de millones USD)',
-                        data: [-1.17, -0.52, -0.16, 0.10, 0.69, 1.41],
-                        borderColor: color1,
-                        backgroundColor: color1 + '18',
-                        tension: 0.3,
-                        pointRadius: 4,
-                        fill: true,
-                        borderWidth: 2
-                    },
-                    {
-                        label: 'Flujo de caja operativo (miles de millones USD)',
-                        data: [-0.30, -0.15, 0.23, 0.71, 1.47, 2.13],
-                        borderColor: color1,
-                        borderDash: [6, 4],
-                        backgroundColor: color1 + '0d',
-                        tension: 0.3,
-                        pointRadius: 4,
-                        pointStyle: 'rectRot',
-                        fill: true,
-                        borderWidth: 2
-                    }
-                ]
+                labels: ['Presencia en Apps (2028)', 'Autonomía Decisiones (2028)'],
+                datasets: [{
+                    label: 'Porcentaje',
+                    data: [33, 15],
+                    backgroundColor: [color1, color1 + '99'],
+                    borderColor: color1,
+                    borderWidth: 2,
+                    borderRadius: 6
+                }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: {
-                        display: true,
-                        position: 'bottom',
-                        labels: { color: textColor, usePointStyle: true, padding: 20 }
-                    },
+                    legend: { display: false },
                     tooltip: premiumTooltip
                 },
                 scales: {
                     x: { ticks: { color: textColor }, grid: { display: false } },
-                    y: { ticks: { color: textColor }, grid: { color: gridColor } }
+                    y: { 
+                        ticks: { color: textColor, callback: function(value) { return value + '%'; } }, 
+                        grid: { color: gridColor }, 
+                        beginAtZero: true,
+                        max: 50
+                    }
                 }
             }
         });
     }
 
+    // Gráfico 4: Estado valor IA
     const ctx4 = document.getElementById('grafico4');
     if (ctx4) {
         new Chart(ctx4, {
             type: 'doughnut',
             data: {
-                labels: ['Motores de valor', 'Escalando valor', 'Aún en POCs', 'Sin actividad significativa'],
+                labels: ['Sin valor escalado', 'Emergente', 'Líderes'],
                 datasets: [{
-                    data: [4, 22, 49, 25],
-                    backgroundColor: [color1, color1 + 'cc', color1 + '99', color1 + '66'],
+                    data: [74, 22, 4],
+                    backgroundColor: [color1 + '33', color1 + '99', color1],
                     borderColor: surfaceColor,
-                    borderWidth: 2
+                    borderWidth: 3
                 }]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
+                cutout: '60%',
                 plugins: {
                     legend: {
                         display: true,
                         position: 'bottom',
                         labels: { color: textColor, usePointStyle: true, padding: 20 }
                     },
-                    tooltip: premiumTooltip
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: {
+                            label: function(context) {
+                                return context.label + ': ' + context.parsed + '%';
+                            }
+                        }
+                    }
                 }
             }
         });
     }
 
+    // Gráfico 5: Transformación Palantir
     const ctx5 = document.getElementById('grafico5');
     if (ctx5) {
         new Chart(ctx5, {
+            type: 'line',
+            data: {
+                labels: ['2020', '2023', '2025'],
+                datasets: [{
+                    label: 'Resultado Neto (miles de millones USD)',
+                    data: [-1.17, 0, 1.63],
+                    borderColor: color1,
+                    backgroundColor: color1 + '22',
+                    tension: 0.3,
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    fill: true,
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        ...premiumTooltip,
+                        callbacks: {
+                            label: function(context) {
+                                const value = context.parsed.y;
+                                const prefix = value >= 0 ? '+' : '';
+                                return 'Resultado: ' + prefix + '$' + value + 'B';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { ticks: { color: textColor }, grid: { display: false } },
+                    y: { 
+                        ticks: { 
+                            color: textColor, 
+                            callback: function(value) { 
+                                const prefix = value >= 0 ? '+' : '';
+                                return prefix + '$' + value + 'B'; 
+                            } 
+                        }, 
+                        grid: { color: gridColor },
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+    }
+
+    // Gráfico 6: Tasa fracaso proyectos
+    const ctx6 = document.getElementById('grafico6');
+    if (ctx6) {
+        new Chart(ctx6, {
             type: 'bar',
             data: {
-                labels: ['2021', '2022', '2023', '2024'],
+                labels: ['Proyectos IA', 'Proyectos TI tradicional'],
                 datasets: [{
-                    label: 'Aplicaciones por organización',
-                    data: [843, 976, 1061, 991],
-                    backgroundColor: [color1, color1 + 'cc', color1 + '99', color1 + '66'],
+                    label: 'Tasa de fracaso (%)',
+                    data: [80, 40],
+                    backgroundColor: [color1, color1 + '66'],
                     borderColor: color1,
-                    borderWidth: 1,
-                    borderRadius: 4
+                    borderWidth: 2,
+                    borderRadius: 6
                 }]
             },
             options: {
@@ -289,10 +351,15 @@ Este artículo es una adaptación de la investigación original y los datos reco
                 },
                 scales: {
                     x: { ticks: { color: textColor }, grid: { display: false } },
-                    y: { ticks: { color: textColor }, grid: { color: gridColor }, beginAtZero: true }
+                    y: { 
+                        ticks: { color: textColor, callback: function(value) { return value + '%'; } }, 
+                        grid: { color: gridColor }, 
+                        beginAtZero: true,
+                        max: 100
+                    }
                 }
             }
         });
     }
 })();
-&lt;/script&gt;
+</script>
